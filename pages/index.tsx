@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import NavButtom from "../component/NavButtom";
+import Nav from "../component/Nav";
+import HowManyVcpus from "../component/HowManyVcpus";
+import Lottie from "lottie-react";
+import lottie3 from "../asset/3.json";
 
 const SKuber1920: NextPage = () => {
   return (
@@ -21,10 +24,7 @@ const SKuber1920: NextPage = () => {
           </div>
           <div className={styles.gnbParent}>
             <div className={styles.gnb}>
-              <div className={styles.layer1Parent}>
-                <img className={styles.layer1Icon} alt="" src="/layer-1.svg" />
-                <NavButtom />
-              </div>
+              <Nav />
             </div>
             <div className={styles.solutionForYourCloudStrateParent}>
               <b className={styles.solutionForYourContainer}>
@@ -44,23 +44,8 @@ const SKuber1920: NextPage = () => {
                   <div className={styles.frameContainer}>
                     <div className={styles.frameParent}>
                       <div className={styles.frameGroup}>
-                        <div className={styles.howManyVcpusParent}>
-                          <div className={styles.howManyVcpus}>
-                            How many vCPUs?
-                          </div>
-                          <div className={styles.iconCpuParent}>
-                            <img
-                              className={styles.iconCpu}
-                              alt=""
-                              src="/-icon-cpu.svg"
-                            />
-                            <div className={styles.vcpu}>2 vCPU</div>
-                          </div>
-                          <div className={styles.rectangleParent}>
-                            <div className={styles.groupChild} />
-                            <div className={styles.groupItem} />
-                          </div>
-                        </div>
+                        <HowManyVcpus />
+
                         <div className={styles.howManyVcpusParent}>
                           <div className={styles.howManyVcpus}>
                             How much RAM?
@@ -110,6 +95,7 @@ const SKuber1920: NextPage = () => {
                         </div>
                       </div>
                       <div className={styles.frameChild} />
+
                       <div className={styles.frameDiv}>
                         <div className={styles.frameWrapper1}>
                           <div className={styles.frameParent1}>
@@ -308,47 +294,6 @@ const SKuber1920: NextPage = () => {
               <div className={styles.frameParent11}>
                 <div className={styles.frameWrapper3}>
                   <div className={styles.imageSkuberazurecrioskubeParent}>
-                    <div className={styles.imageSkuberazurecrioskube}>
-                      <p className={styles.solutionForYour}>
-                        image: skuber.azurecr.io/skuber-frontend: v0.0.2
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        imagePullPolicy: Always
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        name: skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>ports:</p>
-                    </div>
-                    <div className={styles.resources}>resources</div>
-                    <div className={styles.terminationmessagepathDevt}>
-                      <p className={styles.solutionForYour}>
-                        terminationMessagePath: /dev/termination-log
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        terminationMessagePolicy: File
-                      </p>
-                      <p className={styles.solutionForYour}>volumeMounts:</p>
-                    </div>
-                    <div className={styles.args}>args</div>
-                    <div className={styles.env}>env:</div>
-                    <div className={styles.containerport4173ProtocolContainer}>
-                      <p className={styles.solutionForYour}>
-                        containerPort: 4173
-                      </p>
-                      <p className={styles.solutionForYour}>protocol: TCP</p>
-                    </div>
-                    <div className={styles.limits}>limits:</div>
-                    <div className={styles.limits1}>limits:</div>
-                    <div className={styles.mountpathVarrunsecretsku}>
-                      <p className={styles.solutionForYour}>
-                        mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        name: kube-api-access-78z9n
-                      </p>
-                      <p className={styles.solutionForYour}>readOnly: true</p>
-                    </div>
                     <div className={styles.sideecarDomainPodNamespContainer}>
                       <p className={styles.solutionForYour}>sideecar</p>
                       <p className={styles.solutionForYour}>--domain</p>
@@ -368,164 +313,15 @@ const SKuber1920: NextPage = () => {
                       <p className={styles.solutionForYour}>--concurrency</p>
                       <p className={styles.solutionForYour}>“2”</p>
                     </div>
-                    <div className={styles.valueThirdPartyJwtNameContainer}>
-                      <p className={styles.solutionForYour}>
-                        value: third-party-jwt
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        name: PILOT CERT_PROVIDER
-                      </p>
-                      <p className={styles.solutionForYour}>value: istiod</p>
-                      <p className={styles.solutionForYour}>name: CA_ADDR</p>
-                      <p className={styles.solutionForYour}>
-                        value: istiod.istio-system.svc:15012
-                      </p>
-                      <p className={styles.solutionForYour}>valueFrom:</p>
-                    </div>
-                    <div className={styles.namePodNamespace}>
-                      name: POD_NAMESPACE
-                    </div>
-                    <div className={styles.nameInstanceIp}>
-                      name: INSTANCE_IP
-                    </div>
-                    <div className={styles.nameServiceAccount}>
-                      name: SERVICE_ACCOUNT
-                    </div>
-                    <div className={styles.nameHostIp}>name: HOST_IP</div>
-                    <div className={styles.cpu500m}>cpu: 500m</div>
-                    <div className={styles.cpu250m}>cpu: 250m</div>
-                    <div className={styles.fieldref}>fieldRef:</div>
-                    <div className={styles.fieldref1}>fieldRef:</div>
-                    <div className={styles.valuefrom1}>valueFrom:</div>
-                    <div className={styles.valuefrom2}>valueFrom:</div>
-                    <div className={styles.valuefrom3}>valueFrom:</div>
+
+                    <Lottie animationData={lottie3} />
                     <div className={styles.apiversionV1FieldpathContainer}>
                       <p className={styles.solutionForYour}>apiVersion: v1</p>
                       <p className={styles.solutionForYour}>
                         fieldPath: metadata.name
                       </p>
                     </div>
-                    <div className={styles.apiversionV1FieldpathContainer1}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>
-                        fieldPath: metadata.namespace
-                      </p>
-                    </div>
-                    <div className={styles.apiversionV1FieldpathContainer2}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>
-                        fieldPath: status.podIP
-                      </p>
-                    </div>
-                    <div className={styles.fieldref2}>fieldRef:</div>
-                    <div className={styles.fieldref3}>fieldRef:</div>
-                    <div className={styles.fieldpathSpecserviceaccount}>
-                      fieldPath: spec.serviceAccountName
-                    </div>
-                    <div className={styles.apiversionV13}>apiVersion: v1</div>
-                    <div className={styles.spec}>spec:</div>
-                    <div className={styles.creationtimestamp20230428}>
-                      <p className={styles.solutionForYour}>
-                        creationTimestamp: "2023-04-28T10:21:18Z"
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        generateName: skuber-frontend-6bdc44594-
-                      </p>
-                      <p className={styles.solutionForYour}>labels:</p>
-                    </div>
-                    <div className={styles.nameSkuberFrontend6bdc4459}>
-                      <p className={styles.solutionForYour}>
-                        name: skuber-frontend-6bdc44594-cfd6m
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        namespace: default
-                      </p>
-                      <p className={styles.solutionForYour}>ownerReferences:</p>
-                    </div>
-                    <div className={styles.resourceversion3167988UidContainer}>
-                      <p className={styles.solutionForYour}>
-                        resourceVersion: "3167988"
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        uid: b351f33c-d125-44ac-95f4-2080996f08e6
-                      </p>
-                    </div>
-                    <div className={styles.containers}>containers:</div>
-                    <div className={styles.appSkuberFrontendIstioioContainer}>
-                      <p className={styles.solutionForYour}>
-                        app: skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        istio.io/rev: default
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        pod-template-hash: 6bdc44594
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        security.istio.io/tlsMode: istio
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        service.istio.io/canonical-name: skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        service.istio.io/canonical-revision: latest
-                      </p>
-                    </div>
-                    <div className={styles.apiversionAppsv1BlockownerContainer}>
-                      <p className={styles.solutionForYour}>
-                        apiVersion: apps/v1
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        blockOwnerDeletion: true
-                      </p>
-                      <p className={styles.solutionForYour}>controller: true</p>
-                      <p className={styles.solutionForYour}>kind: ReplicaSet</p>
-                      <p className={styles.solutionForYour}>
-                        name: skuber-frontend-6bdc44594
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        uid: 1b5702af-8b15-43b5-88f5-c52e6e5b92d4
-                      </p>
-                    </div>
-                    <div className={styles.kubectlkubernetesiodefault}>
-                      <p className={styles.solutionForYour}>
-                        kubectl.kubernetes.io/default-container: skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        kubectl.kubernetes.io/default-logs-container:
-                        skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        prometheus.io/path: /stats/prometheus
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        prometheus.io/port: "15020"
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        prometheus.io/scrape: "true"
-                      </p>
-                      <p
-                        className={styles.solutionForYour}
-                      >{`sidecar.istio.io/status: '{"initContainers": ["dns-probe", "istio-init"],"containers":["istio-proxy"],"volumes":["cilium-unix-sock-dir", "istio-envoy","istio-data","istio-podinfo", "istio-token","istiod-ca-cert"], "imagePullSecrets":null}'`}</p>
-                    </div>
-                    <div className={styles.annotations}>annotations:</div>
-                    <div className={styles.apiversionV1KindContainer}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>kind: Pod</p>
-                      <p className={styles.solutionForYour}>metadata:</p>
-                    </div>
                   </div>
-                </div>
-                <div className={styles.groupParent1}>
-                  <div className={styles.rectangleParent1}>
-                    <div className={styles.groupChild1} />
-                    <div className={styles.sKuber1}>S-kuber</div>
-                  </div>
-                  <img
-                    className={styles.frameChild9}
-                    alt=""
-                    src="/group-3156@2x.png"
-                  />
                 </div>
               </div>
             </div>
@@ -558,53 +354,6 @@ const SKuber1920: NextPage = () => {
                 alt=""
                 src="/frame-3190.svg"
               />
-            </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent15}>
-                <div className={styles.ellipseContainer}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
-                </div>
-                <div className={styles.optimizedLargeScaleServiceParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>Optimized</p>
-                    <p
-                      className={styles.wonderAbout}
-                    >{`large-scale service `}</p>
-                    <p className={styles.solutionForYour}>management</p>
-                  </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
-                    Take control with S-Kuber's intelligent services monitoring.
-                    Seamlessly oversee the flow between connected services
-                    (MSAs) and ensure reliable management of large-scale
-                    services.
-                  </div>
-                </div>
-              </div>
-              <div className={styles.image670Parent}>
-                <img
-                  className={styles.image670Icon}
-                  alt=""
-                  src="/image-670@2x.png"
-                />
-                <img
-                  className={styles.vectorIcon}
-                  alt=""
-                  src="/vector-1552.svg"
-                />
-                <div className={styles.groupWrapper}>
-                  <div className={styles.image675Parent}>
-                    <img
-                      className={styles.image675Icon}
-                      alt=""
-                      src="/image-675@2x.png"
-                    />
-                    <div className={styles.groupChild2} />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
