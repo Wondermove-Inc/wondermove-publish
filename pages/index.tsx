@@ -335,10 +335,10 @@ const SKuber1920: NextPage = () => {
                   </div>
                   <div className={styles.offerKubernetesBasedManagemContainer}>
                     <p className={styles.solutionForYour}>
-                      Prevent resource waste on out-of-policy traffic, such as
+                      {`Prevent resource waste on out-of-policy traffic, such as
                       DDoS attacks, by utilizing eBPF's XDP technology for Linux
                       Kernel control. (Limit the number of requests you receive
-                      from a specific IP address)
+                      from a specific IP address)`}
                     </p>
                   </div>
                 </div>
@@ -403,8 +403,8 @@ const SKuber1920: NextPage = () => {
                       DDoS attacks,
                     </p>
                     <p className={styles.solutionForYour}>
-                      by utilizing eBPF's XDP technology for Linux Kernel
-                      control.
+                      {`by utilizing eBPF's XDP technology for Linux Kernel
+                      control.`}
                     </p>
                     <p className={styles.solutionForYour}>
                       (Limit the number of requests you receive from a specific
