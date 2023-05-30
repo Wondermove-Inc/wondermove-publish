@@ -1,149 +1,764 @@
 import type { NextPage } from "next";
-import styles from "./index.module.css";
-import NavButtom from "../component/NavButtom";
 
 const SKuber1920: NextPage = () => {
   return (
-    <div className={styles.sKuber1920}>
-      <div className={styles.groupParent}>
-        <div className={styles.groupContainer}>
-          <div className={styles.image549Parent}>
+    <div
+      style={{
+        position: "relative",
+        backgroundColor: "#1a1a1a",
+        width: "100%",
+        height: "10256px",
+        overflow: "hidden",
+        textAlign: "left",
+        fontSize: "16px",
+        color: "#fff",
+        fontFamily: "Montserrat",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: "0px",
+          left: "0px",
+          width: "1920px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
+        }}
+      >
+        <div
+          style={{ position: "relative", width: "1920px", height: "2967px" }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              width: "1920px",
+              height: "2967px",
+            }}
+          >
             <img
-              className={styles.image549Icon}
+              style={{
+                position: "absolute",
+                top: "0px",
+                left: "0px",
+                width: "1920px",
+                height: "1364px",
+                objectFit: "cover",
+                opacity: "0.3",
+              }}
               alt=""
               src="/image-549@2x.png"
             />
             <img
-              className={styles.image647Icon}
+              style={{
+                position: "absolute",
+                top: "1364px",
+                left: "0px",
+                width: "1920px",
+                height: "1603px",
+                objectFit: "cover",
+                opacity: "0.3",
+              }}
               alt=""
               src="/image-647@2x.png"
             />
           </div>
-          <div className={styles.gnbParent}>
-            <div className={styles.gnb}>
-              <div className={styles.layer1Parent}>
-                <img className={styles.layer1Icon} alt="" src="/layer-1.svg" />
-                <NavButtom />
+          <div
+            style={{
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "rgba(0, 0, 0, 0.2)",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                boxSizing: "border-box",
+                width: "1920px",
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
+                padding: "29px 240px",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                textAlign: "center",
+                color: "#aaa",
+              }}
+            >
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <img
+                  style={{
+                    position: "relative",
+                    width: "200px",
+                    height: "22px",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                  }}
+                  alt=""
+                  src="/layer-1.svg"
+                />
+                <div
+                  style={{
+                    width: "586px",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      fontWeight: "500",
+                      color: "#fff",
+                      display: "inline-block",
+                      width: "80px",
+                      flexShrink: "0",
+                    }}
+                  >
+                    S-kuber
+                  </div>
+                  <div
+                    style={{
+                      position: "relative",
+                      display: "inline-block",
+                      width: "80px",
+                      flexShrink: "0",
+                    }}
+                  >
+                    P-LUG
+                  </div>
+                  <div
+                    style={{
+                      position: "relative",
+                      display: "inline-block",
+                      width: "80px",
+                      flexShrink: "0",
+                    }}
+                  >
+                    VIVA UI
+                  </div>
+                  <div
+                    style={{
+                      position: "relative",
+                      display: "inline-block",
+                      width: "80px",
+                      flexShrink: "0",
+                    }}
+                  >
+                    Contact
+                  </div>
+                </div>
               </div>
             </div>
-            <div className={styles.solutionForYourCloudStrateParent}>
-              <b className={styles.solutionForYourContainer}>
-                <p className={styles.solutionForYour}>Solution for Your</p>
-                <p className={styles.solutionForYour}>
-                  Cloud Strategy and Costs
-                </p>
+            <div
+              style={{
+                width: "1920px",
+                display: "flex",
+                flexDirection: "column",
+                padding: "240px 240px 120px",
+                boxSizing: "border-box",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                gap: "80px",
+                fontSize: "56px",
+              }}
+            >
+              <b
+                style={{
+                  alignSelf: "stretch",
+                  position: "relative",
+                  lineHeight: "80px",
+                }}
+              >
+                <p style={{ margin: "0" }}>Solution for Your</p>
+                <p style={{ margin: "0" }}>Cloud Strategy and Costs</p>
               </b>
-              <div className={styles.frameWrapper}>
-                <div className={styles.wonderAboutCuttingYourClouParent}>
-                  <div className={styles.wonderAboutCuttingContainer}>
-                    <p className={styles.wonderAbout}>Wonder about</p>
-                    <p className={styles.solutionForYour}>
-                      cutting your cloud costs?
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  borderRadius: "20px",
+                  background:
+                    "linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0))",
+                  backdropFilter: "blur(30px)",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "80px 80px 120px",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  fontSize: "42px",
+                }}
+              >
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "80px",
+                  }}
+                >
+                  <div
+                    style={{
+                      alignSelf: "stretch",
+                      position: "relative",
+                      fontWeight: "600",
+                    }}
+                  >
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >
+                      Wonder about
                     </p>
+                    <p style={{ margin: "0" }}>cutting your cloud costs?</p>
                   </div>
-                  <div className={styles.frameContainer}>
-                    <div className={styles.frameParent}>
-                      <div className={styles.frameGroup}>
-                        <div className={styles.howManyVcpusParent}>
-                          <div className={styles.howManyVcpus}>
+                  <div
+                    style={{
+                      alignSelf: "stretch",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                      justifyContent: "center",
+                      fontSize: "16px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        alignSelf: "stretch",
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "80px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          flex: "1",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "60px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            alignSelf: "stretch",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                            gap: "20px",
+                          }}
+                        >
+                          <div
+                            style={{
+                              alignSelf: "stretch",
+                              position: "relative",
+                              lineHeight: "32px",
+                              fontWeight: "500",
+                            }}
+                          >
                             How many vCPUs?
                           </div>
-                          <div className={styles.iconCpuParent}>
+                          <div
+                            style={{
+                              alignSelf: "stretch",
+                              display: "flex",
+                              flexDirection: "row",
+                              alignItems: "center",
+                              justifyContent: "flex-start",
+                              gap: "16px",
+                              fontSize: "24px",
+                            }}
+                          >
                             <img
-                              className={styles.iconCpu}
+                              style={{
+                                position: "relative",
+                                width: "24px",
+                                height: "24px",
+                                overflow: "hidden",
+                                flexShrink: "0",
+                                opacity: "0.4",
+                              }}
                               alt=""
                               src="/-icon-cpu.svg"
                             />
-                            <div className={styles.vcpu}>2 vCPU</div>
+                            <div
+                              style={{
+                                position: "relative",
+                                fontWeight: "600",
+                              }}
+                            >
+                              2 vCPU
+                            </div>
                           </div>
-                          <div className={styles.rectangleParent}>
-                            <div className={styles.groupChild} />
-                            <div className={styles.groupItem} />
+                          <div
+                            style={{
+                              alignSelf: "stretch",
+                              position: "relative",
+                              height: "40px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                position: "absolute",
+                                top: "12px",
+                                left: "calc(50% - 280px)",
+                                borderRadius: "31px",
+                                background:
+                                  "linear-gradient(90.18deg, rgba(235, 78, 135, 0.5), rgba(148, 99, 255, 0.5) 60.42%, rgba(18, 90, 237, 0.5)), #aaa",
+                                width: "560px",
+                                height: "16px",
+                              }}
+                            />
+                            <div
+                              style={{
+                                position: "absolute",
+                                top: "0px",
+                                left: "0px",
+                                borderRadius: "50%",
+                                background:
+                                  "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 79.69%, rgba(255, 255, 255, 0.4))",
+                                backdropFilter: "blur(12px)",
+                                border: "1px solid rgba(255, 255, 255, 0.34)",
+                                boxSizing: "border-box",
+                                width: "40px",
+                                height: "40px",
+                              }}
+                            />
                           </div>
                         </div>
-                        <div className={styles.howManyVcpusParent}>
-                          <div className={styles.howManyVcpus}>
+                        <div
+                          style={{
+                            alignSelf: "stretch",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                            gap: "20px",
+                          }}
+                        >
+                          <div
+                            style={{
+                              alignSelf: "stretch",
+                              position: "relative",
+                              lineHeight: "32px",
+                              fontWeight: "500",
+                            }}
+                          >
                             How much RAM?
                           </div>
-                          <div className={styles.component191Parent}>
-                            <div className={styles.component191}>
+                          <div
+                            style={{
+                              alignSelf: "stretch",
+                              display: "flex",
+                              flexDirection: "row",
+                              alignItems: "flex-start",
+                              justifyContent: "space-between",
+                              fontSize: "18px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                borderRadius: "49px",
+                                background:
+                                  "linear-gradient(95.34deg, rgba(235, 78, 135, 0.5), rgba(148, 99, 255, 0.5) 60.42%, rgba(18, 90, 237, 0.5)), #aaa",
+                                backdropFilter: "blur(30px)",
+                                width: "69px",
+                                display: "flex",
+                                flexDirection: "row",
+                                padding: "12px",
+                                boxSizing: "border-box",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "10px",
+                              }}
+                            >
                               <img
-                                className={styles.iconRam2}
+                                style={{
+                                  position: "relative",
+                                  width: "24px",
+                                  height: "24px",
+                                  overflow: "hidden",
+                                  flexShrink: "0",
+                                  display: "none",
+                                  opacity: "0.4",
+                                }}
                                 alt=""
                                 src="/-icon-ram-2.svg"
                               />
-                              <div className={styles.text}>4 GB</div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                4 GB
+                              </div>
                             </div>
-                            <div className={styles.component192}>
+                            <div
+                              style={{
+                                borderRadius: "49px",
+                                background:
+                                  "linear-gradient(100.46deg, rgba(255, 255, 255, 0.1) 31.25%, rgba(255, 255, 255, 0))",
+                                backdropFilter: "blur(30px)",
+                                width: "102px",
+                                display: "flex",
+                                flexDirection: "row",
+                                padding: "12px",
+                                boxSizing: "border-box",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "10px",
+                              }}
+                            >
                               <img
-                                className={styles.iconRam2}
+                                style={{
+                                  position: "relative",
+                                  width: "24px",
+                                  height: "24px",
+                                  overflow: "hidden",
+                                  flexShrink: "0",
+                                  display: "none",
+                                  opacity: "0.4",
+                                }}
                                 alt=""
                                 src="/-icon-ram-21.svg"
                               />
-                              <div className={styles.text}>8 GB</div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                8 GB
+                              </div>
                             </div>
-                            <div className={styles.component192}>
+                            <div
+                              style={{
+                                borderRadius: "49px",
+                                background:
+                                  "linear-gradient(100.46deg, rgba(255, 255, 255, 0.1) 31.25%, rgba(255, 255, 255, 0))",
+                                backdropFilter: "blur(30px)",
+                                width: "102px",
+                                display: "flex",
+                                flexDirection: "row",
+                                padding: "12px",
+                                boxSizing: "border-box",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "10px",
+                              }}
+                            >
                               <img
-                                className={styles.iconRam2}
+                                style={{
+                                  position: "relative",
+                                  width: "24px",
+                                  height: "24px",
+                                  overflow: "hidden",
+                                  flexShrink: "0",
+                                  display: "none",
+                                  opacity: "0.4",
+                                }}
                                 alt=""
                                 src="/-icon-ram-22.svg"
                               />
-                              <div className={styles.text}>14 GB</div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                14 GB
+                              </div>
                             </div>
-                            <div className={styles.component192}>
+                            <div
+                              style={{
+                                borderRadius: "49px",
+                                background:
+                                  "linear-gradient(100.46deg, rgba(255, 255, 255, 0.1) 31.25%, rgba(255, 255, 255, 0))",
+                                backdropFilter: "blur(30px)",
+                                width: "102px",
+                                display: "flex",
+                                flexDirection: "row",
+                                padding: "12px",
+                                boxSizing: "border-box",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "10px",
+                              }}
+                            >
                               <img
-                                className={styles.iconRam2}
+                                style={{
+                                  position: "relative",
+                                  width: "24px",
+                                  height: "24px",
+                                  overflow: "hidden",
+                                  flexShrink: "0",
+                                  display: "none",
+                                  opacity: "0.4",
+                                }}
                                 alt=""
                                 src="/-icon-ram-21.svg"
                               />
-                              <div className={styles.text}>28 GB</div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                28 GB
+                              </div>
                             </div>
-                            <div className={styles.component192}>
+                            <div
+                              style={{
+                                borderRadius: "49px",
+                                background:
+                                  "linear-gradient(100.46deg, rgba(255, 255, 255, 0.1) 31.25%, rgba(255, 255, 255, 0))",
+                                backdropFilter: "blur(30px)",
+                                width: "102px",
+                                display: "flex",
+                                flexDirection: "row",
+                                padding: "12px",
+                                boxSizing: "border-box",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "10px",
+                              }}
+                            >
                               <img
-                                className={styles.iconRam2}
+                                style={{
+                                  position: "relative",
+                                  width: "24px",
+                                  height: "24px",
+                                  overflow: "hidden",
+                                  flexShrink: "0",
+                                  display: "none",
+                                  opacity: "0.4",
+                                }}
                                 alt=""
                                 src="/-icon-ram-2.svg"
                               />
-                              <div className={styles.text}>56 GB</div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                56 GB
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameDiv}>
-                        <div className={styles.frameWrapper1}>
-                          <div className={styles.frameParent1}>
-                            <div className={styles.withSKuberParent}>
-                              <div className={styles.vcpu}>with S-kuber</div>
-                              <div className={styles.kubernetesSmContainer}>
+                      <div
+                        style={{
+                          alignSelf: "stretch",
+                          position: "relative",
+                          borderRight: "1px solid #fff",
+                          boxSizing: "border-box",
+                          width: "1px",
+                          opacity: "0.1",
+                        }}
+                      />
+                      <div
+                        style={{
+                          flex: "1",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-end",
+                          justifyContent: "flex-start",
+                          gap: "40px",
+                          fontSize: "24px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            alignSelf: "stretch",
+                            borderRadius: "20px",
+                            background:
+                              "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                            backdropFilter: "blur(30px)",
+                            border: "1px solid rgba(255, 255, 255, 0.6)",
+                            overflow: "hidden",
+                            display: "flex",
+                            flexDirection: "column",
+                            padding: "40px",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <div
+                            style={{
+                              alignSelf: "stretch",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                              justifyContent: "flex-start",
+                              gap: "24px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                alignSelf: "stretch",
+                                display: "flex",
+                                flexDirection: "row",
+                                alignItems: "center",
+                                justifyContent: "flex-start",
+                                gap: "8px",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                with S-kuber
+                              </div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
                                 <span>{` `}</span>
-                                <span className={styles.span}>(</span>
-                                <span className={styles.kubernetesSm}>
+                                <span style={{ color: "#aaa" }}>(</span>
+                                <span style={{ color: "#ccc" }}>
                                   Kubernetes + SM + eBPF)
                                 </span>
                               </div>
                             </div>
-                            <div className={styles.parent}>
-                              <div className={styles.vcpu}>$2,087</div>
-                              <div className={styles.perMonth}>per month</div>
+                            <div
+                              style={{
+                                alignSelf: "stretch",
+                                display: "flex",
+                                flexDirection: "row",
+                                alignItems: "flex-end",
+                                justifyContent: "flex-start",
+                                gap: "12px",
+                                textAlign: "right",
+                                fontSize: "42px",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                $2,087
+                              </div>
+                              <div
+                                style={{
+                                  position: "relative",
+                                  fontSize: "16px",
+                                  lineHeight: "32px",
+                                  fontWeight: "500",
+                                  color: "#ccc",
+                                }}
+                              >
+                                per month
+                              </div>
                             </div>
-                            <div className={styles.costReduction}>
+                            <div
+                              style={{
+                                alignSelf: "stretch",
+                                position: "relative",
+                                fontSize: "20px",
+                                fontWeight: "600",
+                              }}
+                            >
                               $1,708 (45%) cost reduction
                             </div>
                           </div>
                         </div>
-                        <div className={styles.virtualMachineParent}>
-                          <div className={styles.text}>Virtual machine</div>
-                          <div className={styles.group}>
-                            <div className={styles.vcpu}>$3,796</div>
-                            <div className={styles.perMonth1}>per month</div>
+                        <div
+                          style={{
+                            alignSelf: "stretch",
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            fontSize: "16px",
+                            color: "#ccc",
+                          }}
+                        >
+                          <div
+                            style={{ position: "relative", fontWeight: "500" }}
+                          >
+                            Virtual machine
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              alignItems: "flex-end",
+                              justifyContent: "flex-end",
+                              gap: "16px",
+                              textAlign: "right",
+                              fontSize: "32px",
+                              color: "#fff",
+                            }}
+                          >
+                            <div
+                              style={{
+                                position: "relative",
+                                fontWeight: "600",
+                              }}
+                            >
+                              $3,796
+                            </div>
+                            <div
+                              style={{
+                                position: "relative",
+                                fontSize: "16px",
+                                lineHeight: "32px",
+                                fontWeight: "500",
+                                color: "#aaa",
+                              }}
+                            >
+                              per month
+                            </div>
                           </div>
                         </div>
-                        <div className={styles.basedOnUsingContainer}>
-                          <p className={styles.solutionForYour}>
+                        <div
+                          style={{
+                            alignSelf: "stretch",
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "24px",
+                            fontWeight: "500",
+                            color: "#888",
+                            textAlign: "right",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
                             * Based on using 100 VMs
                           </p>
-                          <p className={styles.solutionForYour}>
+                          <p style={{ margin: "0" }}>
                             * This is an approximate figure and may differ from
                             the actual amount
                           </p>
@@ -154,29 +769,159 @@ const SKuber1920: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.groupDiv}>
-              <img className={styles.groupInner} alt="" src="/group-3157.svg" />
-              <img className={styles.groupIcon} alt="" src="/group-3158.svg" />
-              <div className={styles.frameWrapper2}>
-                <div className={styles.globallyValidatedSolutionsParent}>
-                  <div className={styles.globallyValidatedSolutions}>
+            <div
+              style={{
+                position: "relative",
+                width: "1920px",
+                height: "681px",
+                fontSize: "42px",
+                color: "#000",
+              }}
+            >
+              <img
+                style={{
+                  position: "absolute",
+                  top: "49px",
+                  left: "1204px",
+                  width: "660px",
+                  height: "444px",
+                  opacity: "0.3",
+                }}
+                alt=""
+                src="/group-3157.svg"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  top: "59px",
+                  left: "0px",
+                  width: "444px",
+                  height: "622px",
+                  opacity: "0.3",
+                }}
+                alt=""
+                src="/group-3158.svg"
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "0px",
+                  left: "0px",
+                  width: "1920px",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "160px 240px",
+                  boxSizing: "border-box",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                }}
+              >
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "80px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      fontWeight: "600",
+                      background:
+                        "linear-gradient(92.35deg, rgba(255, 255, 255, 0.4), rgba(235, 78, 135, 0.4) 22.4%, rgba(148, 99, 255, 0.4) 60.42%, rgba(18, 90, 237, 0.4)), #fff",
+                      webkitBackgroundClip: "text",
+                      webkitTextFillColor: "transparent",
+                    }}
+                  >
                     Globally validated solutions
                   </div>
-                  <div className={styles.rectangleGroup}>
-                    <div className={styles.rectangleDiv} />
-                    <div className={styles.runningASuccessfulProofOfParent}>
-                      <div className={styles.vcpu}>
-                        <p className={styles.wonderAbout}>
+                  <div
+                    style={{
+                      alignSelf: "stretch",
+                      position: "relative",
+                      height: "230px",
+                      fontSize: "24px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        width: "100%",
+                        top: "0px",
+                        right: "0px",
+                        left: "0px",
+                        borderRadius: "20px",
+                        background:
+                          "linear-gradient(91.4deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                        filter: "blur(83px)",
+                        border: "1px solid rgba(255, 255, 255, 0.6)",
+                        boxSizing: "border-box",
+                        height: "230px",
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px",
+                        borderRadius: "20px",
+                        backgroundColor: "#fff",
+                        border: "1px solid rgba(255, 255, 255, 0.6)",
+                        boxSizing: "border-box",
+                        width: "1440px",
+                        overflow: "hidden",
+                        display: "flex",
+                        flexDirection: "row",
+                        padding: "80px",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <div style={{ position: "relative", fontWeight: "600" }}>
+                        <p
+                          style={{
+                            marginBlockStart: "0",
+                            marginBlockEnd: "12px",
+                          }}
+                        >
                           Running a successful proof of concept in
                         </p>
                         <p
-                          className={styles.solutionForYour}
+                          style={{ margin: "0" }}
                         >{`4 European counteris with `}</p>
                       </div>
-                      <div className={styles.container}>
-                        <img className={styles.icon} alt="" src="/--2.svg" />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          padding: "0px 80px",
+                          alignItems: "center",
+                          justifyContent: "flex-start",
+                          gap: "120px",
+                        }}
+                      >
                         <img
-                          className={styles.image646Icon}
+                          style={{
+                            position: "relative",
+                            width: "260px",
+                            height: "36px",
+                            overflow: "hidden",
+                            flexShrink: "0",
+                          }}
+                          alt=""
+                          src="/--2.svg"
+                        />
+                        <img
+                          style={{
+                            position: "relative",
+                            width: "175px",
+                            height: "50px",
+                            objectFit: "cover",
+                          }}
                           alt=""
                           src="/image-646@2x.png"
                         />
@@ -186,61 +931,180 @@ const SKuber1920: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.frameParent2}>
-              <div className={styles.frameParent3}>
+            <div
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(34, 34, 34, 0.57), rgba(34, 34, 34, 0))",
+                width: "1920px",
+                display: "flex",
+                flexDirection: "row",
+                padding: "160px 240px",
+                boxSizing: "border-box",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "24px",
+                fontSize: "24px",
+              }}
+            >
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  flex: "1",
+                  borderRadius: "20px",
+                  background:
+                    "linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0))",
+                  backdropFilter: "blur(30px)",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "40px",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "40px",
+                }}
+              >
                 <img
-                  className={styles.frameItem}
+                  style={{
+                    position: "relative",
+                    width: "100px",
+                    height: "100px",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                  }}
                   alt=""
                   src="/frame-3102.svg"
                 />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>Transition to the latest</p>
-                  <p className={styles.solutionForYour}>cloud technology</p>
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    fontWeight: "600",
+                  }}
+                >
+                  <p style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}>
+                    Transition to the latest
+                  </p>
+                  <p style={{ margin: "0" }}>cloud technology</p>
                 </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  <p className={styles.solutionForYour}>
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    fontSize: "16px",
+                    lineHeight: "32px",
+                    fontWeight: "500",
+                    color: "#ccc",
+                  }}
+                >
+                  <p style={{ margin: "0" }}>
                     By transitioning from virtual machines to Kubernetes, you
                     can reduce cloud costs by more than 40% while improving
                     efficiency.
                   </p>
-                  <p className={styles.solutionForYour}>&nbsp;</p>
-                  <p className={styles.solutionForYour}>{` `}</p>
+                  <p style={{ margin: "0" }}>&nbsp;</p>
+                  <p style={{ margin: "0" }}>{` `}</p>
                 </div>
               </div>
-              <div className={styles.frameParent4}>
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  flex: "1",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "40px",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "40px",
+                }}
+              >
                 <img
-                  className={styles.frameItem}
+                  style={{
+                    position: "relative",
+                    width: "100px",
+                    height: "100px",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                  }}
                   alt=""
                   src="/frame-3103.svg"
                 />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>Reduction in</p>
-                  <p className={styles.solutionForYour}>resource costs</p>
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    fontWeight: "600",
+                  }}
+                >
+                  <p style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}>
+                    Reduction in
+                  </p>
+                  <p style={{ margin: "0" }}>resource costs</p>
                 </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  <p className={styles.solutionForYour}>
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    fontSize: "16px",
+                    lineHeight: "32px",
+                    fontWeight: "500",
+                    color: "#ccc",
+                  }}
+                >
+                  <p style={{ margin: "0" }}>
                     S-Kuber service can leverage eBPF to protect against
                     unnecessary traffic and DoS attacks to avoid additional
                     costs.
                   </p>
-                  <p className={styles.solutionForYour}>&nbsp;</p>
+                  <p style={{ margin: "0" }}>&nbsp;</p>
                 </div>
               </div>
-              <div className={styles.frameParent4}>
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  flex: "1",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "40px",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "40px",
+                }}
+              >
                 <img
-                  className={styles.frameItem}
+                  style={{
+                    position: "relative",
+                    width: "100px",
+                    height: "100px",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                  }}
                   alt=""
                   src="/frame-3104.svg"
                 />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    fontWeight: "600",
+                  }}
+                >
+                  <p style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}>
                     Accessible management for
                   </p>
-                  <p className={styles.solutionForYour}>
-                    all technology levels
-                  </p>
+                  <p style={{ margin: "0" }}>all technology levels</p>
                 </div>
-                <div className={styles.byTransitioningFromContainer}>
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    fontSize: "16px",
+                    lineHeight: "32px",
+                    fontWeight: "500",
+                    color: "#ccc",
+                  }}
+                >
                   Utilize a high-level control UX that can be managed without
                   DevOps expertise, while also providing low-level access for
                   DevOps engineers to monitor and respond to service failures in
@@ -250,295 +1114,1045 @@ const SKuber1920: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.bgParent}>
-          <img className={styles.bgIcon} alt="" src="/bg.svg" />
-          <div className={styles.frameParent6}>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent8}>
-                <div className={styles.identifyIssuesAndReduceCosParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>Identify issues and</p>
-                    <p className={styles.wonderAbout}>reduce costs with</p>
-                    <p className={styles.solutionForYour}>
-                      real-time monitoring
+        <div
+          style={{
+            alignSelf: "stretch",
+            position: "relative",
+            height: "4320px",
+            fontSize: "42px",
+          }}
+        >
+          <img
+            style={{
+              position: "absolute",
+              top: "0px",
+              right: "0px",
+              width: "960px",
+              height: "4320px",
+              overflow: "hidden",
+            }}
+            alt=""
+            src="/bg.svg"
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              width: "1920px",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  backgroundColor: "#111",
+                  width: "960px",
+                  height: "1080px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "calc(50% - 188.5px)",
+                    left: "calc(50% - 240px)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "40px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      fontWeight: "600",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >
+                      Identify issues and
                     </p>
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >
+                      reduce costs with
+                    </p>
+                    <p style={{ margin: "0" }}>real-time monitoring</p>
                   </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
-                    <p className={styles.solutionForYour}>
+                  <div
+                    style={{
+                      position: "relative",
+                      fontSize: "18px",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                      color: "#ccc",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
+                    <p style={{ margin: "0" }}>
                       Offer Kubernetes-based management/monitoring services with
                       innovative technology not previously included and reduce
                       cloud costs by leveraging eBPF and Service Mesh.
                     </p>
                   </div>
                 </div>
-                <div className={styles.rectangleContainer}>
-                  <div className={styles.frameChild1} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "477px",
+                    left: "80px",
+                    height: "126px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "23px",
+                      backgroundColor: "#ccc",
+                      width: "10px",
+                      height: "36px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
                 </div>
               </div>
               <img
-                className={styles.frameChild4}
+                style={{
+                  position: "relative",
+                  width: "960px",
+                  height: "1080px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  objectFit: "cover",
+                }}
                 alt=""
                 src="/frame-3194@2x.png"
               />
             </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent10}>
-                <div className={styles.identifyIssuesAndReduceCosParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  backgroundColor: "#1a1a1a",
+                  width: "960px",
+                  height: "1077px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "calc(50% - 188.5px)",
+                    left: "calc(50% - 240px)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "40px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      fontWeight: "600",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
                     <p
-                      className={styles.wonderAbout}
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
                     >{`Intelligent Server `}</p>
-                    <p className={styles.wonderAbout}>{`Forecasting for `}</p>
-                    <p className={styles.solutionForYour}>Reduce cloud cost</p>
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >{`Forecasting for `}</p>
+                    <p style={{ margin: "0" }}>Reduce cloud cost</p>
                   </div>
                   <div
-                    className={styles.offerKubernetesBasedManagemContainer}
+                    style={{
+                      position: "relative",
+                      fontSize: "18px",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                      color: "#ccc",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
                   >{`Save costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.`}</div>
                 </div>
-                <div className={styles.ellipseParent}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "477px",
+                    left: "78px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "23px",
+                      backgroundColor: "#ccc",
+                      width: "10px",
+                      height: "36px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
                 </div>
               </div>
-              <div className={styles.frameParent11}>
-                <div className={styles.frameWrapper3}>
-                  <div className={styles.imageSkuberazurecrioskubeParent}>
-                    <div className={styles.imageSkuberazurecrioskube}>
-                      <p className={styles.solutionForYour}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "960px",
+                  height: "1080px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  fontSize: "10px",
+                  color: "#6ebdb8",
+                  fontFamily: "'Roboto Mono'",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "152px",
+                    left: "148px",
+                    borderRadius: "20px",
+                    backgroundColor: "rgba(255, 255, 255, 0.01)",
+                    boxShadow: "-21px 18px 41px rgba(0, 0, 0, 0.28)",
+                    backdropFilter: "blur(80px)",
+                    overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "23px 20px",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      width: "624px",
+                      height: "666px",
+                      overflow: "hidden",
+                      flexShrink: "0",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "487px",
+                        left: "86px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "369px",
+                        height: "58px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>
                         image: skuber.azurecr.io/skuber-frontend: v0.0.2
                       </p>
-                      <p className={styles.solutionForYour}>
-                        imagePullPolicy: Always
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        name: skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>ports:</p>
+                      <p style={{ margin: "0" }}>imagePullPolicy: Always</p>
+                      <p style={{ margin: "0" }}>name: skuber-frontend</p>
+                      <p style={{ margin: "0" }}>ports:</p>
                     </div>
-                    <div className={styles.resources}>resources</div>
-                    <div className={styles.terminationmessagepathDevt}>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "573px",
+                        left: "86px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "69px",
+                        height: "14px",
+                      }}
+                    >
+                      resources
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "643px",
+                        left: "86px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "338px",
+                        height: "43px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>
                         terminationMessagePath: /dev/termination-log
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         terminationMessagePolicy: File
                       </p>
-                      <p className={styles.solutionForYour}>volumeMounts:</p>
+                      <p style={{ margin: "0" }}>volumeMounts:</p>
                     </div>
-                    <div className={styles.args}>args</div>
-                    <div className={styles.env}>env:</div>
-                    <div className={styles.containerport4173ProtocolContainer}>
-                      <p className={styles.solutionForYour}>
-                        containerPort: 4173
-                      </p>
-                      <p className={styles.solutionForYour}>protocol: TCP</p>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "729px",
+                        left: "86px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "31px",
+                        height: "14px",
+                      }}
+                    >
+                      args
                     </div>
-                    <div className={styles.limits}>limits:</div>
-                    <div className={styles.limits1}>limits:</div>
-                    <div className={styles.mountpathVarrunsecretsku}>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "873px",
+                        left: "86px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "31px",
+                        height: "14px",
+                      }}
+                    >
+                      env:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "544px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "146px",
+                        height: "29px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>containerPort: 4173</p>
+                      <p style={{ margin: "0" }}>protocol: TCP</p>
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "587px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "54px",
+                        height: "14px",
+                      }}
+                    >
+                      limits:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "615px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "54px",
+                        height: "14px",
+                      }}
+                    >
+                      limits:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "686px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "431px",
+                        height: "43px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>
                         mountPath: /var/run/secrets/kubernetes.io/serviceaccount
                       </p>
-                      <p className={styles.solutionForYour}>
-                        name: kube-api-access-78z9n
-                      </p>
-                      <p className={styles.solutionForYour}>readOnly: true</p>
+                      <p style={{ margin: "0" }}>name: kube-api-access-78z9n</p>
+                      <p style={{ margin: "0" }}>readOnly: true</p>
                     </div>
-                    <div className={styles.sideecarDomainPodNamespContainer}>
-                      <p className={styles.solutionForYour}>sideecar</p>
-                      <p className={styles.solutionForYour}>--domain</p>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "743px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "270px",
+                        height: "130px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>sideecar</p>
+                      <p style={{ margin: "0" }}>--domain</p>
+                      <p style={{ margin: "0" }}>
                         $(POD_NAMESPACE).svc.cluster.local
                       </p>
-                      <p className={styles.solutionForYour}>--serviceCluster</p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>--serviceCluster</p>
+                      <p style={{ margin: "0" }}>
                         skuber-frontend.$(POD_NAMESPACE)
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         --proxyComponentLogLevel=misc:error
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         --log_output_level=default:info
                       </p>
-                      <p className={styles.solutionForYour}>--concurrency</p>
-                      <p className={styles.solutionForYour}>“2”</p>
+                      <p style={{ margin: "0" }}>--concurrency</p>
+                      <p style={{ margin: "0" }}>“2”</p>
                     </div>
-                    <div className={styles.valueThirdPartyJwtNameContainer}>
-                      <p className={styles.solutionForYour}>
-                        value: third-party-jwt
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        name: PILOT CERT_PROVIDER
-                      </p>
-                      <p className={styles.solutionForYour}>value: istiod</p>
-                      <p className={styles.solutionForYour}>name: CA_ADDR</p>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "887px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "277px",
+                        height: "87px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>value: third-party-jwt</p>
+                      <p style={{ margin: "0" }}>name: PILOT CERT_PROVIDER</p>
+                      <p style={{ margin: "0" }}>value: istiod</p>
+                      <p style={{ margin: "0" }}>name: CA_ADDR</p>
+                      <p style={{ margin: "0" }}>
                         value: istiod.istio-system.svc:15012
                       </p>
-                      <p className={styles.solutionForYour}>valueFrom:</p>
+                      <p style={{ margin: "0" }}>valueFrom:</p>
                     </div>
-                    <div className={styles.namePodNamespace}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1016px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "146px",
+                        height: "14px",
+                      }}
+                    >
                       name: POD_NAMESPACE
                     </div>
-                    <div className={styles.nameInstanceIp}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1073px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "131px",
+                        height: "14px",
+                      }}
+                    >
                       name: INSTANCE_IP
                     </div>
-                    <div className={styles.nameServiceAccount}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1130px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "162px",
+                        height: "14px",
+                      }}
+                    >
                       name: SERVICE_ACCOUNT
                     </div>
-                    <div className={styles.nameHostIp}>name: HOST_IP</div>
-                    <div className={styles.cpu500m}>cpu: 500m</div>
-                    <div className={styles.cpu250m}>cpu: 250m</div>
-                    <div className={styles.fieldref}>fieldRef:</div>
-                    <div className={styles.fieldref1}>fieldRef:</div>
-                    <div className={styles.valuefrom1}>valueFrom:</div>
-                    <div className={styles.valuefrom2}>valueFrom:</div>
-                    <div className={styles.valuefrom3}>valueFrom:</div>
-                    <div className={styles.apiversionV1FieldpathContainer}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>
-                        fieldPath: metadata.name
-                      </p>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1186px",
+                        left: "115px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "101px",
+                        height: "14px",
+                      }}
+                    >
+                      name: HOST_IP
                     </div>
-                    <div className={styles.apiversionV1FieldpathContainer1}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "601px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "70px",
+                        height: "14px",
+                      }}
+                    >
+                      cpu: 500m
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "629px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "70px",
+                        height: "14px",
+                      }}
+                    >
+                      cpu: 250m
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "973px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "70px",
+                        height: "14px",
+                      }}
+                    >
+                      fieldRef:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1030px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "70px",
+                        height: "14px",
+                      }}
+                    >
+                      fieldRef:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1087px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "78px",
+                        height: "14px",
+                      }}
+                    >
+                      valueFrom:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1144px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "78px",
+                        height: "14px",
+                      }}
+                    >
+                      valueFrom:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1200px",
+                        left: "156px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "78px",
+                        height: "14px",
+                      }}
+                    >
+                      valueFrom:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "987px",
+                        left: "195px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "185px",
+                        height: "29px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>apiVersion: v1</p>
+                      <p style={{ margin: "0" }}>fieldPath: metadata.name</p>
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1044px",
+                        left: "195px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "224px",
+                        height: "29px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>apiVersion: v1</p>
+                      <p style={{ margin: "0" }}>
                         fieldPath: metadata.namespace
                       </p>
                     </div>
-                    <div className={styles.apiversionV1FieldpathContainer2}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>
-                        fieldPath: status.podIP
-                      </p>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1101px",
+                        left: "195px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "178px",
+                        height: "29px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>apiVersion: v1</p>
+                      <p style={{ margin: "0" }}>fieldPath: status.podIP</p>
                     </div>
-                    <div className={styles.fieldref2}>fieldRef:</div>
-                    <div className={styles.fieldref3}>fieldRef:</div>
-                    <div className={styles.fieldpathSpecserviceaccount}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1158px",
+                        left: "195px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "70px",
+                        height: "14px",
+                      }}
+                    >
+                      fieldRef:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1214px",
+                        left: "195px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "70px",
+                        height: "14px",
+                      }}
+                    >
+                      fieldRef:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1172px",
+                        left: "236px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "261px",
+                        height: "14px",
+                      }}
+                    >
                       fieldPath: spec.serviceAccountName
                     </div>
-                    <div className={styles.apiversionV13}>apiVersion: v1</div>
-                    <div className={styles.spec}>spec:</div>
-                    <div className={styles.creationtimestamp20230428}>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1228px",
+                        left: "236px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "108px",
+                        height: "14px",
+                      }}
+                    >
+                      apiVersion: v1
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "459px",
+                        left: "0px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "40px",
+                        height: "14px",
+                      }}
+                    >
+                      spec:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "172px",
+                        left: "38px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "316px",
+                        height: "43px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>
                         creationTimestamp: "2023-04-28T10:21:18Z"
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         generateName: skuber-frontend-6bdc44594-
                       </p>
-                      <p className={styles.solutionForYour}>labels:</p>
+                      <p style={{ margin: "0" }}>labels:</p>
                     </div>
-                    <div className={styles.nameSkuberFrontend6bdc4459}>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "301px",
+                        left: "38px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "286px",
+                        height: "43px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>
                         name: skuber-frontend-6bdc44594-cfd6m
                       </p>
-                      <p className={styles.solutionForYour}>
-                        namespace: default
-                      </p>
-                      <p className={styles.solutionForYour}>ownerReferences:</p>
+                      <p style={{ margin: "0" }}>namespace: default</p>
+                      <p style={{ margin: "0" }}>ownerReferences:</p>
                     </div>
-                    <div className={styles.resourceversion3167988UidContainer}>
-                      <p className={styles.solutionForYour}>
-                        resourceVersion: "3167988"
-                      </p>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "430px",
+                        left: "38px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "316px",
+                        height: "29px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>resourceVersion: "3167988"</p>
+                      <p style={{ margin: "0" }}>
                         uid: b351f33c-d125-44ac-95f4-2080996f08e6
                       </p>
                     </div>
-                    <div className={styles.containers}>containers:</div>
-                    <div className={styles.appSkuberFrontendIstioioContainer}>
-                      <p className={styles.solutionForYour}>
-                        app: skuber-frontend
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        istio.io/rev: default
-                      </p>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "473px",
+                        left: "38px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "85px",
+                        height: "14px",
+                      }}
+                    >
+                      containers:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "215px",
+                        left: "87px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "370px",
+                        height: "87px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>app: skuber-frontend</p>
+                      <p style={{ margin: "0" }}>istio.io/rev: default</p>
+                      <p style={{ margin: "0" }}>
                         pod-template-hash: 6bdc44594
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         security.istio.io/tlsMode: istio
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         service.istio.io/canonical-name: skuber-frontend
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         service.istio.io/canonical-revision: latest
                       </p>
                     </div>
-                    <div className={styles.apiversionAppsv1BlockownerContainer}>
-                      <p className={styles.solutionForYour}>
-                        apiVersion: apps/v1
-                      </p>
-                      <p className={styles.solutionForYour}>
-                        blockOwnerDeletion: true
-                      </p>
-                      <p className={styles.solutionForYour}>controller: true</p>
-                      <p className={styles.solutionForYour}>kind: ReplicaSet</p>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "344px",
+                        left: "87px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "316px",
+                        height: "87px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>apiVersion: apps/v1</p>
+                      <p style={{ margin: "0" }}>blockOwnerDeletion: true</p>
+                      <p style={{ margin: "0" }}>controller: true</p>
+                      <p style={{ margin: "0" }}>kind: ReplicaSet</p>
+                      <p style={{ margin: "0" }}>
                         name: skuber-frontend-6bdc44594
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         uid: 1b5702af-8b15-43b5-88f5-c52e6e5b92d4
                       </p>
                     </div>
-                    <div className={styles.kubectlkubernetesiodefault}>
-                      <p className={styles.solutionForYour}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "57px",
+                        left: "87px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "793px",
+                        height: "115px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>
                         kubectl.kubernetes.io/default-container: skuber-frontend
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         kubectl.kubernetes.io/default-logs-container:
                         skuber-frontend
                       </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>
                         prometheus.io/path: /stats/prometheus
                       </p>
-                      <p className={styles.solutionForYour}>
-                        prometheus.io/port: "15020"
-                      </p>
-                      <p className={styles.solutionForYour}>
+                      <p style={{ margin: "0" }}>prometheus.io/port: "15020"</p>
+                      <p style={{ margin: "0" }}>
                         prometheus.io/scrape: "true"
                       </p>
                       <p
-                        className={styles.solutionForYour}
+                        style={{ margin: "0" }}
                       >{`sidecar.istio.io/status: '{"initContainers": ["dns-probe", "istio-init"],"containers":["istio-proxy"],"volumes":["cilium-unix-sock-dir", "istio-envoy","istio-data","istio-podinfo", "istio-token","istiod-ca-cert"], "imagePullSecrets":null}'`}</p>
                     </div>
-                    <div className={styles.annotations}>annotations:</div>
-                    <div className={styles.apiversionV1KindContainer}>
-                      <p className={styles.solutionForYour}>apiVersion: v1</p>
-                      <p className={styles.solutionForYour}>kind: Pod</p>
-                      <p className={styles.solutionForYour}>metadata:</p>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "43px",
+                        left: "38px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "92px",
+                        height: "14px",
+                      }}
+                    >
+                      annotations:
+                    </div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px",
+                        fontWeight: "500",
+                        display: "inline-block",
+                        width: "108px",
+                        height: "43px",
+                      }}
+                    >
+                      <p style={{ margin: "0" }}>apiVersion: v1</p>
+                      <p style={{ margin: "0" }}>kind: Pod</p>
+                      <p style={{ margin: "0" }}>metadata:</p>
                     </div>
                   </div>
                 </div>
-                <div className={styles.groupParent1}>
-                  <div className={styles.rectangleParent1}>
-                    <div className={styles.groupChild1} />
-                    <div className={styles.sKuber1}>S-kuber</div>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "417px",
+                    left: "148px",
+                    borderRadius: "20px",
+                    backgroundColor: "rgba(255, 255, 255, 0.01)",
+                    boxShadow: "-21px 18px 41px rgba(0, 0, 0, 0.28)",
+                    backdropFilter: "blur(80px)",
+                    overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "column",
+                    padding: "20px",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    color: "#fff",
+                  }}
+                >
+                  <div
+                    style={{
+                      alignSelf: "stretch",
+                      position: "relative",
+                      height: "25px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px",
+                        borderRadius: "5px 5px 0px 0px",
+                        background:
+                          "linear-gradient(26.74deg, #002f65, #005599)",
+                        width: "624px",
+                        height: "25px",
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "6px",
+                        left: "12px",
+                        fontWeight: "500",
+                      }}
+                    >
+                      S-kuber
+                    </div>
                   </div>
                   <img
-                    className={styles.frameChild9}
+                    style={{
+                      position: "relative",
+                      width: "624px",
+                      height: "445px",
+                      objectFit: "cover",
+                    }}
                     alt=""
                     src="/group-3156@2x.png"
                   />
                 </div>
               </div>
             </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent8}>
-                <div className={styles.resourceOptimizationDuringDParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>{`Resource `}</p>
-                    <p className={styles.wonderAbout}>Optimization</p>
-                    <p className={styles.solutionForYour}>during DoS Attacks</p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  backgroundColor: "#111",
+                  width: "960px",
+                  height: "1080px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "calc(50% - 190px)",
+                    left: "calc(50% - 240px)",
+                    width: "480px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "40px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      fontWeight: "600",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >{`Resource `}</p>
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >
+                      Optimization
+                    </p>
+                    <p style={{ margin: "0" }}>during DoS Attacks</p>
                   </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
-                    <p className={styles.solutionForYour}>
+                  <div
+                    style={{
+                      position: "relative",
+                      fontSize: "18px",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                      color: "#ccc",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
+                    <p style={{ margin: "0" }}>
                       Prevent resource waste on out-of-policy traffic, such as
                       DDoS attacks, by utilizing eBPF's XDP technology for Linux
                       Kernel control. (Limit the number of requests you receive
@@ -546,36 +2160,174 @@ const SKuber1920: NextPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className={styles.ellipseParent}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
-                  <div className={styles.ellipseDiv} />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "477px",
+                    left: "78px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "23px",
+                      backgroundColor: "#ccc",
+                      width: "10px",
+                      height: "36px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
                 </div>
               </div>
               <img
-                className={styles.image670Parent}
+                style={{
+                  position: "relative",
+                  width: "960px",
+                  height: "1080px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                }}
                 alt=""
                 src="/frame-3190.svg"
               />
             </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent15}>
-                <div className={styles.ellipseContainer}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  backgroundColor: "#1a1a1a",
+                  width: "960px",
+                  height: "1077px",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "475.5px",
+                    left: "78px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "50%",
+                      backgroundColor: "#444",
+                      width: "10px",
+                      height: "10px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: "23px",
+                      backgroundColor: "#ccc",
+                      width: "10px",
+                      height: "36px",
+                    }}
+                  />
                 </div>
-                <div className={styles.optimizedLargeScaleServiceParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>Optimized</p>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "calc(50% - 172.5px)",
+                    left: "calc(50% - 240px)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    gap: "40px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      fontWeight: "600",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
                     <p
-                      className={styles.wonderAbout}
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
+                    >
+                      Optimized
+                    </p>
+                    <p
+                      style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}
                     >{`large-scale service `}</p>
-                    <p className={styles.solutionForYour}>management</p>
+                    <p style={{ margin: "0" }}>management</p>
                   </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
+                  <div
+                    style={{
+                      position: "relative",
+                      fontSize: "18px",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                      color: "#ccc",
+                      display: "inline-block",
+                      width: "480px",
+                    }}
+                  >
                     Take control with S-Kuber's intelligent services monitoring.
                     Seamlessly oversee the flow between connected services
                     (MSAs) and ensure reliable management of large-scale
@@ -583,48 +2335,212 @@ const SKuber1920: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.image670Parent}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "960px",
+                  height: "1080px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                }}
+              >
                 <img
-                  className={styles.image670Icon}
+                  style={{
+                    position: "absolute",
+                    top: "74px",
+                    left: "63px",
+                    borderRadius: "20px",
+                    width: "1159px",
+                    height: "931px",
+                    objectFit: "cover",
+                  }}
                   alt=""
                   src="/image-670@2x.png"
                 />
                 <img
-                  className={styles.vectorIcon}
+                  style={{
+                    position: "absolute",
+                    top: "218px",
+                    left: "165px",
+                    width: "856px",
+                    height: "601px",
+                    opacity: "0.6",
+                  }}
                   alt=""
                   src="/vector-1552.svg"
                 />
-                <div className={styles.groupWrapper}>
-                  <div className={styles.image675Parent}>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "388px",
+                    left: "325px",
+                    borderRadius: "20px",
+                    backgroundColor: "rgba(255, 255, 255, 0.01)",
+                    boxShadow: "-21px 18px 41px rgba(0, 0, 0, 0.28)",
+                    backdropFilter: "blur(20px)",
+                    overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "column",
+                    padding: "20px",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      width: "727px",
+                      height: "409px",
+                    }}
+                  >
                     <img
-                      className={styles.image675Icon}
+                      style={{
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px",
+                        borderRadius: "20px",
+                        width: "727px",
+                        height: "409px",
+                        objectFit: "cover",
+                      }}
                       alt=""
                       src="/image-675@2x.png"
                     />
-                    <div className={styles.groupChild2} />
+                    <div
+                      style={{
+                        position: "absolute",
+                        height: "18.09%",
+                        width: "89.27%",
+                        top: "100%",
+                        right: "-78.54%",
+                        bottom: "-18.09%",
+                        left: "89.27%",
+                        borderRadius: "20px 20px 0px 0px",
+                        background:
+                          "linear-gradient(180deg, #1e2533, rgba(37, 37, 37, 0), #1e2533)",
+                        transform: " rotate(-180deg)",
+                        transformOrigin: "0 0",
+                      }}
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.groupParent2}>
-          <div className={styles.frameParent16}>
-            <img className={styles.groupChild3} alt="" src="/frame-3184.svg" />
-            <div className={styles.groupChild4} />
+        <div
+          style={{
+            position: "relative",
+            width: "1920px",
+            height: "2969px",
+            fontSize: "18px",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: "0px",
+              width: "1920px",
+              height: "2969px",
+            }}
+          >
+            <img
+              style={{
+                position: "absolute",
+                bottom: "0px",
+                left: "0px",
+                width: "1920px",
+                height: "866px",
+                overflow: "hidden",
+              }}
+              alt=""
+              src="/frame-3184.svg"
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: "0px",
+                left: "calc(50% - 960px)",
+                backgroundColor: "rgba(255, 255, 255, 0.01)",
+                backdropFilter: "blur(342px)",
+                width: "1920px",
+                height: "2966px",
+              }}
+            />
           </div>
-          <div className={styles.footer}>
-            <div className={styles.layer1Group}>
-              <img className={styles.layer1Icon} alt="" src="/layer-1.svg" />
-              <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                <div className={styles.howManyVcpus}>
+          <div
+            style={{
+              position: "absolute",
+              top: "2653px",
+              left: "0px",
+              borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+              boxSizing: "border-box",
+              width: "1920px",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+            }}
+          >
+            <div
+              style={{
+                alignSelf: "stretch",
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "row",
+                padding: "80px 240px",
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+              }}
+            >
+              <img
+                style={{
+                  position: "relative",
+                  width: "200px",
+                  height: "22px",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                }}
+                alt=""
+                src="/layer-1.svg"
+              />
+              <div
+                style={{
+                  width: "585px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "24px",
+                }}
+              >
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    lineHeight: "32px",
+                    fontWeight: "500",
+                  }}
+                >
                   wondermove Spin-off of Hyundai Motor Company
                 </div>
-                <div className={styles.wondermoveIncContainer}>
+                <div
+                  style={{
+                    position: "relative",
+                    fontSize: "14px",
+                    lineHeight: "32px",
+                    fontWeight: "500",
+                    color: "rgba(255, 255, 255, 0.6)",
+                    display: "inline-block",
+                    width: "585px",
+                  }}
+                >
                   <p
-                    className={styles.solutionForYour}
+                    style={{ margin: "0" }}
                   >{`wondermove Inc. | Business Registration Number: 518-81-01644 | `}</p>
-                  <p className={styles.solutionForYour}>
+                  <p style={{ margin: "0" }}>
                     Address: Gangnam office building of the Korea Real Estate
                     Agency 4th floor, Seoun-ro 3, Seocho-gu, Seoul | Use
                     Inquiries: hawkeye@wondermove.net
@@ -633,369 +2549,1590 @@ const SKuber1920: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className={styles.frequentlyAskedQuestionsParent}>
-            <div className={styles.globallyValidatedSolutions}>
+          <div
+            style={{
+              position: "absolute",
+              top: "1450px",
+              left: "0px",
+              width: "1920px",
+              display: "flex",
+              flexDirection: "column",
+              padding: "160px 486px",
+              boxSizing: "border-box",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "80px",
+              textAlign: "center",
+              fontSize: "42px",
+            }}
+          >
+            <div
+              style={{
+                position: "relative",
+                fontWeight: "600",
+                background:
+                  "linear-gradient(92.35deg, rgba(255, 255, 255, 0.4), rgba(235, 78, 135, 0.4) 22.4%, rgba(148, 99, 255, 0.4) 60.42%, rgba(18, 90, 237, 0.4)), #fff",
+                webkitBackgroundClip: "text",
+                webkitTextFillColor: "transparent",
+              }}
+            >
               Frequently Asked Questions
             </div>
-            <div className={styles.frameParent17}>
-              <div className={styles.allBusinessFeaturesPlusParent}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+            <div
+              style={{
+                alignSelf: "stretch",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                gap: "16px",
+                textAlign: "left",
+                fontSize: "18px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "12px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild19}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "1px",
+                    }}
                     alt=""
                     src="/group-3185.svg"
                   />
                 </div>
-                <div className={styles.preventResourceWasteOnOutWrapper}>
-                  <div className={styles.paymentOptions}>
-                    <p className={styles.solutionForYour}>
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    fontSize: "16px",
+                    color: "#aaa",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    <p style={{ margin: "0" }}>
                       Prevent resource waste on out-of-policy traffic, such as
                       DDoS attacks,
                     </p>
-                    <p className={styles.solutionForYour}>
+                    <p style={{ margin: "0" }}>
                       by utilizing eBPF's XDP technology for Linux Kernel
                       control.
                     </p>
-                    <p className={styles.solutionForYour}>
+                    <p style={{ margin: "0" }}>
                       (Limit the number of requests you receive from a specific
                       IP address)
                     </p>
                   </div>
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild20}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "27px",
+                    }}
                     alt=""
                     src="/group-31851.svg"
                   />
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild20}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "27px",
+                    }}
                     alt=""
                     src="/group-31851.svg"
                   />
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild20}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "27px",
+                    }}
                     alt=""
                     src="/group-31851.svg"
                   />
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild20}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "27px",
+                    }}
                     alt=""
                     src="/group-31851.svg"
                   />
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild20}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "27px",
+                    }}
                     alt=""
                     src="/group-31851.svg"
                   />
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>Payment options</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "952px",
+                    display: "flex",
+                    flexDirection: "row",
+                    padding: "12px",
+                    boxSizing: "border-box",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "60px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: "1",
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Payment options
+                  </div>
                   <img
-                    className={styles.frameChild20}
+                    style={{
+                      position: "relative",
+                      width: "27px",
+                      height: "27px",
+                    }}
                     alt=""
                     src="/group-31851.svg"
                   />
                 </div>
-                <div className={styles.lineDiv} />
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    position: "relative",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.4)",
+                    boxSizing: "border-box",
+                    height: "1px",
+                  }}
+                />
               </div>
             </div>
           </div>
-          <div className={styles.frameParent25}>
-            <div className={styles.pricingParent}>
-              <div className={styles.pricing}>Pricing</div>
-              <div className={styles.experienceTheNextGenerationContainer}>
-                <p className={styles.wonderAbout}>
+          <div
+            style={{
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              width: "1920px",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              padding: "160px 240px",
+              boxSizing: "border-box",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              gap: "80px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                gap: "32px",
+                textAlign: "center",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  lineHeight: "32px",
+                  fontWeight: "500",
+                }}
+              >
+                Pricing
+              </div>
+              <div
+                style={{
+                  position: "relative",
+                  fontSize: "42px",
+                  fontWeight: "600",
+                  background:
+                    "linear-gradient(92.35deg, rgba(255, 255, 255, 0.4), rgba(235, 78, 135, 0.4) 22.4%, rgba(148, 99, 255, 0.4) 60.42%, rgba(18, 90, 237, 0.4)), #fff",
+                  webkitBackgroundClip: "text",
+                  webkitTextFillColor: "transparent",
+                }}
+              >
+                <p style={{ marginBlockStart: "0", marginBlockEnd: "12px" }}>
                   Experience the Next-Generation
                 </p>
-                <p className={styles.solutionForYour}>Cloud Solution?</p>
+                <p style={{ margin: "0" }}>Cloud Solution?</p>
               </div>
             </div>
-            <div className={styles.groupParent3}>
-              <div className={styles.rectangleParent2}>
-                <div className={styles.groupChild5} />
-                <div className={styles.rectangleParent3}>
-                  <div className={styles.groupChild6} />
-                  <div className={styles.maskGroup}>
-                    <div className={styles.maskGroupChild} />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                gap: "32px",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  width: "1440px",
+                  height: "624px",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "15px",
+                    left: "0px",
+                    borderRadius: "20px",
+                    background:
+                      "linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0))",
+                    backdropFilter: "blur(30px)",
+                    width: "1440px",
+                    height: "390px",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "576px",
+                    width: "288px",
+                    height: "624px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "0px",
+                      left: "0px",
+                      borderRadius: "20px",
+                      background:
+                        "linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0))",
+                      backdropFilter: "blur(30px)",
+                      width: "288px",
+                      height: "441.05px",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "0px",
+                      left: "0px",
+                      width: "288px",
+                      height: "624px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px",
+                        borderRadius: "20px",
+                        background:
+                          "linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0))",
+                        backdropFilter: "blur(30px)",
+                        width: "288px",
+                        height: "1031.73px",
+                      }}
+                    />
                   </div>
                 </div>
-                <div className={styles.frameWrapper4}>
-                  <div className={styles.frameParent26}>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Free</div>
-                      <div className={styles.frameParent27}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.div2}>$0</div>
-                          <div className={styles.noMonthlyFees}>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    left: "0px",
+                    width: "1440px",
+                    height: "608px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "0px",
+                      left: "0px",
+                      borderRadius: "20px",
+                      backdropFilter: "blur(30px)",
+                      overflow: "hidden",
+                      display: "flex",
+                      flexDirection: "row",
+                      padding: "32px 24px",
+                      alignItems: "flex-start",
+                      justifyContent: "flex-start",
+                      gap: "48px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "28px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          lineHeight: "32px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Free
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          fontSize: "32px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <div
+                            style={{
+                              position: "relative",
+                              fontWeight: "600",
+                              display: "flex",
+                              alignItems: "center",
+                              width: "102px",
+                              height: "44px",
+                              flexShrink: "0",
+                            }}
+                          >
+                            $0
+                          </div>
+                          <div
+                            style={{
+                              position: "relative",
+                              fontSize: "14px",
+                              fontWeight: "500",
+                              color: "#888",
+                            }}
+                          >
                             No monthly fees
                           </div>
                         </div>
                         <div
-                          className={styles.billedAnnuallyOrContainer}
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "20px",
+                            fontWeight: "500",
+                            color: "#aaa",
+                            display: "inline-block",
+                            width: "171px",
+                            height: "55px",
+                            flexShrink: "0",
+                          }}
                         >{` `}</div>
                       </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
+                      <div
+                        style={{
+                          alignSelf: "stretch",
+                          position: "relative",
+                          borderTop: "1px solid #fff",
+                          boxSizing: "border-box",
+                          height: "1px",
+                          opacity: "0.1",
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          fontSize: "16px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "relative",
+                            lineHeight: "32px",
+                            fontWeight: "600",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
                           What’s included
                         </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "32px",
+                            fontWeight: "500",
+                            whiteSpace: "pre-wrap",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Up to 10 vCPU</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Cluster only 1</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Realtime Monitoring</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Legacy Migration tool</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Reatime Log viewer</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Service Flow Mgmt</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Service Mesh Mgmt</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Config-map/Secret Mgmt</span>
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Plus</div>
-                      <div className={styles.frameParent27}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.div2}>$1,500</div>
-                          <div className={styles.noMonthlyFees}>per month</div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "28px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          lineHeight: "32px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Plus
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          fontSize: "32px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <div
+                            style={{
+                              position: "relative",
+                              fontWeight: "600",
+                              display: "flex",
+                              alignItems: "center",
+                              width: "102px",
+                              height: "44px",
+                              flexShrink: "0",
+                            }}
+                          >
+                            $1,500
+                          </div>
+                          <div
+                            style={{
+                              position: "relative",
+                              fontSize: "14px",
+                              fontWeight: "500",
+                              color: "#888",
+                            }}
+                          >
+                            per month
+                          </div>
                         </div>
-                        <div className={styles.billedAnnuallyOrContainer}>
-                          <p className={styles.solutionForYour}>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "20px",
+                            fontWeight: "500",
+                            color: "#aaa",
+                            display: "inline-block",
+                            width: "171px",
+                            height: "55px",
+                            flexShrink: "0",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
                             Billed annually or $1,990
                           </p>
-                          <p className={styles.solutionForYour}>
-                            month-to-month
-                          </p>
+                          <p style={{ margin: "0" }}>month-to-month</p>
                         </div>
                       </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
+                      <div
+                        style={{
+                          alignSelf: "stretch",
+                          position: "relative",
+                          borderTop: "1px solid #fff",
+                          boxSizing: "border-box",
+                          height: "1px",
+                          opacity: "0.1",
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          fontSize: "16px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "relative",
+                            lineHeight: "32px",
+                            fontWeight: "600",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
                           All Free features, plus
                         </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "32px",
+                            fontWeight: "500",
+                            whiteSpace: "pre-wrap",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> 11 - 100 vCPU</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited Cluster</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Cost Tracing</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Account management</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Service log viewer</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited members</span>
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Pro</div>
-                      <div className={styles.frameParent29}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.xVcpu}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "28px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          lineHeight: "32px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Pro
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "20px",
+                          fontSize: "22px",
+                          color: "#888",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <div
+                            style={{
+                              position: "relative",
+                              fontWeight: "600",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              width: "240px",
+                              height: "44px",
+                              flexShrink: "0",
+                            }}
+                          >
                             $1,500 + $12 x vCPU
                           </div>
-                          <div className={styles.perMonth3}>per month</div>
-                          <div className={styles.perMonth4}>per month</div>
+                          <div
+                            style={{
+                              position: "relative",
+                              fontSize: "16px",
+                              lineHeight: "32px",
+                              fontWeight: "500",
+                              display: "none",
+                            }}
+                          >
+                            per month
+                          </div>
+                          <div
+                            style={{
+                              position: "relative",
+                              fontSize: "14px",
+                              fontWeight: "500",
+                            }}
+                          >
+                            per month
+                          </div>
                         </div>
-                        <div className={styles.billedAnnuallyOrContainer1}>
-                          <p className={styles.solutionForYour}>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "20px",
+                            fontWeight: "500",
+                            color: "#ccc",
+                            display: "inline-block",
+                            width: "171px",
+                            height: "47px",
+                            flexShrink: "0",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
                             Billed annually or $1,990
                           </p>
-                          <p className={styles.solutionForYour}>
-                            month-to-month
-                          </p>
+                          <p style={{ margin: "0" }}>month-to-month</p>
                         </div>
                       </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
+                      <div
+                        style={{
+                          alignSelf: "stretch",
+                          position: "relative",
+                          borderTop: "1px solid #fff",
+                          boxSizing: "border-box",
+                          height: "1px",
+                          opacity: "0.1",
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          fontSize: "16px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "relative",
+                            lineHeight: "32px",
+                            fontWeight: "600",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
                           All Plus features, plus
                         </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "32px",
+                            fontWeight: "500",
+                            whiteSpace: "pre-wrap",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> 101 - 1,000 vCPU</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited Cluster</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Cost Tracing</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Account management</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Service log viewer</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited members</span>
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Business</div>
-                      <div className={styles.frameParent30}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.xVcpu1}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "28px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          lineHeight: "32px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Business
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "20px",
+                          fontSize: "22px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <div
+                            style={{
+                              position: "relative",
+                              fontWeight: "600",
+                              display: "flex",
+                              alignItems: "center",
+                              width: "240px",
+                              height: "44px",
+                              flexShrink: "0",
+                            }}
+                          >
                             $13,500 + $10 x vCPU
                           </div>
-                          <div className={styles.noMonthlyFees}>per month</div>
+                          <div
+                            style={{
+                              position: "relative",
+                              fontSize: "14px",
+                              fontWeight: "500",
+                              color: "#888",
+                            }}
+                          >
+                            per month
+                          </div>
                         </div>
-                        <div className={styles.billedAnnuallyOrContainer2}>
-                          <p className={styles.solutionForYour}>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "20px",
+                            fontWeight: "500",
+                            color: "#ccc",
+                            display: "inline-block",
+                            width: "190px",
+                            height: "47px",
+                            flexShrink: "0",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
                             Billed annually or $16,990
                           </p>
-                          <p className={styles.solutionForYour}>
-                            month-to-month
-                          </p>
+                          <p style={{ margin: "0" }}>month-to-month</p>
                         </div>
                       </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
+                      <div
+                        style={{
+                          alignSelf: "stretch",
+                          position: "relative",
+                          borderTop: "1px solid #fff",
+                          boxSizing: "border-box",
+                          height: "1px",
+                          opacity: "0.1",
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          fontSize: "16px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "relative",
+                            lineHeight: "32px",
+                            fontWeight: "600",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
                           All Pro features, plus
                         </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "32px",
+                            fontWeight: "500",
+                            whiteSpace: "pre-wrap",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> 1,001 - Unlimited vCPU</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited Cluster</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Installation support</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Issue support</span>
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className={styles.enterpriseParent}>
-                      <div className={styles.enterprise}>Enterprise</div>
-                      <div className={styles.frameParent31}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "28px",
+                        fontSize: "16px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          fontSize: "18px",
+                          lineHeight: "32px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Enterprise
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                          color: "#888",
+                        }}
+                      >
                         <img
-                          className={styles.frameChild36}
+                          style={{
+                            position: "relative",
+                            width: "36px",
+                            height: "36px",
+                            overflow: "hidden",
+                            flexShrink: "0",
+                          }}
                           alt=""
                           src="/frame-3203.svg"
                         />
-                        <div className={styles.contactSalesFor}>
+                        <div
+                          style={{
+                            position: "relative",
+                            lineHeight: "32px",
+                            fontWeight: "500",
+                            display: "none",
+                          }}
+                        >
                           Contact Sales for pricing
                         </div>
-                        <div className={styles.fullPlatformMonitoring}>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "20px",
+                            fontWeight: "500",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
                           Full platform monitoring with cross-project insights
                           and optional Premium Customer Success.
                         </div>
                       </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.allBusinessFeaturesPlusParent}>
-                        <div className={styles.whatsIncluded}>
+                      <div
+                        style={{
+                          alignSelf: "stretch",
+                          position: "relative",
+                          borderTop: "1px solid #fff",
+                          boxSizing: "border-box",
+                          height: "1px",
+                          opacity: "0.1",
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
+                          gap: "12px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "relative",
+                            lineHeight: "32px",
+                            fontWeight: "600",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
                           All Business features, plus
                         </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                        <div
+                          style={{
+                            position: "relative",
+                            fontSize: "14px",
+                            lineHeight: "32px",
+                            fontWeight: "500",
+                            whiteSpace: "pre-wrap",
+                            display: "inline-block",
+                            width: "240px",
+                          }}
+                        >
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited vCPU</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Unlimited Cluster</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Installation support</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Issue support</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Custom Dashboard</span>
                           </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
+                          <p style={{ margin: "0" }}>
+                            <span
+                              style={{
+                                background:
+                                  "linear-gradient(95.34deg, #eb4e87, #9463ff 60.42%, #125aed)",
+                                webkitBackgroundClip: "text",
+                                webkitTextFillColor: "transparent",
+                              }}
+                            >
+                              ✓
+                            </span>
                             <span> Cloud Strategy Consulting</span>
                           </p>
                         </div>
@@ -1004,19 +4141,78 @@ const SKuber1920: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.frameWrapper5}>
-                <div className={styles.seeAllFeaturesParent}>
-                  <div className={styles.pricing}>See all features</div>
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  borderRadius: "20px 20px 0px 0px",
+                  background:
+                    "linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0))",
+                  backdropFilter: "blur(30px)",
+                  height: "72px",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "20px 635px",
+                  boxSizing: "border-box",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  fontSize: "16px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    gap: "8px",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "relative",
+                      lineHeight: "32px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    See all features
+                  </div>
                   <img
-                    className={styles.iconNavArrowDown}
+                    style={{
+                      position: "relative",
+                      width: "16px",
+                      height: "16px",
+                      overflow: "hidden",
+                      flexShrink: "0",
+                    }}
                     alt=""
                     src="/-icon-nav-arrow-down.svg"
                   />
                 </div>
               </div>
             </div>
-            <div className={styles.getStartedWrapper}>
-              <div className={styles.pricing}>GET STARTED</div>
+            <div
+              style={{
+                borderRadius: "10px",
+                width: "312px",
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "row",
+                padding: "16px 100px",
+                boxSizing: "border-box",
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+                fontSize: "16px",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  lineHeight: "32px",
+                  fontWeight: "500",
+                }}
+              >
+                GET STARTED
+              </div>
             </div>
           </div>
         </div>
