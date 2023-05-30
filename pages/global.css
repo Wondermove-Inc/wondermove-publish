@@ -66,4 +66,11 @@ body {
 
   /* Effects */
   --effect: blur(30px);
+
+  /* react slider bar */
+  --main-color: rgb(104, 117, 217);
+  --main-color-hover: rgb(104, 117, 217, 0.2);
+  --track-color: #ddd;
+  /* Default mark color*/
+  --mark-color: #aaaaaa;
 }

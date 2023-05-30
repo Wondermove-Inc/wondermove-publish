@@ -1636,3 +1636,48 @@
   color: var(--grayscale-fff);
   font-family: var(--body-b2);
 }
+
+/* react slider bar */
+.customSlider {
+  /* max width of your slider */
+  max-width: 100%;
+  /* Optional: Only If you want to center your slider in the page */
+  margin: auto;
+}
+.customSlider_thumb {
+  cursor: pointer;
+  /*color for the thumb */
+  background: var(--main-color);
+  /* shape of the thumb: circle */
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  /* remove default outline when selected */
+  outline: none;
+}
+
+.customSlider_thumb:hover {
+  box-shadow: 0 0 0 8px var(--main-color-hover);
+}
+
+.customSlider_mark {
+  cursor: pointer;
+  top: 6px;
+  width: 1.5px;
+  height: 8px;
+  background-color: var(--mark-color);
+}
+
+.customSlider_track {
+  /* Top value to align your track to the center of your thumb */
+  top: 8px;
+  /* thickness of the track */
+  height: 4px;
+  /* default color of your track */
+  background: var(--track-color);
+}
+
+.customSlider_track.customSlider_track-0 {
+  /* color of the track before the thumb */
+  background: var(--main-color);
+}
