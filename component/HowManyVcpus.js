@@ -59,7 +59,7 @@ const HowManyVcpus = () => {
             className={`${styles.groupItem} ${
               progress >= index ? styles.active : ""
             }`}
-            onClick={() => handleDataPointClick(index)}
+            //onClick={() => handleDataPointClick(index)}
           />
         ))}
       </div>
