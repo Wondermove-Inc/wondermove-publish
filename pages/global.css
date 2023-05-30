@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --body-b2: Montserrat;
+  --font-roboto-mono: "Roboto Mono";
+
+  /* font sizes */
+  --body-b2-size: 16px;
+  --body-b3-size: 14px;
+  --body-b1-size: 18px;
+  --font-size-3xl: 22px;
+  --title-h3-size: 32px;
+  --title-h2-size: 42px;
+  --font-size-3xs: 10px;
+  --title-s1-size: 24px;
+  --title-s2-size: 20px;
+  --title-h1-size: 56px;
+
+  /* Colors */
+  --grayscale-888: #888;
+  --bg-1a: #1a1a1a;
+  --bg-111: #111;
+  --color-gray-100: rgba(255, 255, 255, 0.01);
+  --color-gray-200: rgba(255, 255, 255, 0.6);
+  --color-gray-300: rgba(255, 255, 255, 0.1);
+  --color-gray-400: rgba(255, 255, 255, 0.4);
+  --grayscale-fff: #fff;
+  --grayscale-ccc: #ccc;
+  --grayscale-aaa: #aaa;
+  --color-darkslategray: #444;
+  --color-cadetblue: #6ebdb8;
+  --grayscale-000: #000;
+
+  /* Gaps */
+  --gap-61xl: 80px;
+  --gap-13xl: 32px;
+  --gap-5xs: 8px;
+  --gap-9xl: 28px;
+  --gap-xs: 12px;
+  --gap-xl: 20px;
+  --gap-base: 16px;
+  --gap-41xl: 60px;
+  --gap-5xl: 24px;
+  --gap-21xl: 40px;
+  --gap-3xs: 10px;
+
+  /* Paddings */
+  --padding-141xl: 160px;
+  --padding-221xl: 240px;
+  --padding-xl: 20px;
+  --padding-xs: 12px;
+  --padding-61xl: 80px;
+  --padding-21xl: 40px;
+  --padding-101xl: 120px;
+
+  /* border radiuses */
+  --br-xl: 20px;
+  --br-4xl: 23px;
+  --br-8xs: 5px;
+  --br-30xl: 49px;
+
+  /* Effects */
+  --effect: blur(30px);
+}
