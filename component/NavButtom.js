@@ -4,7 +4,7 @@ import styles from "../pages/index.module.css";
 const NavButtom = () => {
   const handleButtonClick = (buttonName) => {
     if (buttonName !== "S-kuber") {
-      alert("preparing...");
+      alert("coming soon...");
     }
   };
 
