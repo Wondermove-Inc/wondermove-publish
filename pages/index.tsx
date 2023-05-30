@@ -45,7 +45,6 @@ const SKuber1920: NextPage = () => {
                     <div className={styles.frameParent}>
                       <div className={styles.frameGroup}>
                         <HowManyVcpus />
-
                         <div className={styles.howManyVcpusParent}>
                           <div className={styles.howManyVcpus}>
                             How much RAM?
