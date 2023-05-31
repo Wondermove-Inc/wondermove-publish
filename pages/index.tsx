@@ -4,6 +4,7 @@ import Nav from "../component/Nav";
 import HowManyVcpus from "../component/HowManyVcpus";
 import Lottie from "lottie-react";
 import lottie3 from "../asset/3.json";
+import lottie1 from "../asset/1.json";
 
 const SKuber1920: NextPage = () => {
   return (
@@ -44,7 +45,20 @@ const SKuber1920: NextPage = () => {
                   <div className={styles.frameContainer}>
                     <div className={styles.frameParent}>
                       <div className={styles.frameGroup}>
-                        <HowManyVcpus />
+                        <div className={styles.howManyVcpusParent}>
+                          <div className={styles.howManyVcpus}>
+                            How many vCPUs?
+                          </div>
+                          <div className={styles.iconCpuParent}>
+                            <img
+                              className={styles.iconCpu}
+                              alt=""
+                              src="/-icon-cpu.svg"
+                            />
+                            <div className={styles.vcpu}>2 vCPU</div>
+                          </div>
+                          <HowManyVcpus />
+                        </div>
                         <div className={styles.howManyVcpusParent}>
                           <div className={styles.howManyVcpus}>
                             How much RAM?
@@ -263,12 +277,14 @@ const SKuber1920: NextPage = () => {
                   <div className={styles.ellipseDiv} />
                 </div>
               </div>
-              <img
+              {/* <img
                 className={styles.frameChild4}
                 alt=""
                 src="/frame-3194@2x.png"
-              />
+              /> */}
+              <Lottie className={styles.frameChild4} animationData={lottie1} />
             </div>
+
             <div className={styles.frameParent7}>
               <div className={styles.frameParent10}>
                 <div className={styles.identifyIssuesAndReduceCosParent}>

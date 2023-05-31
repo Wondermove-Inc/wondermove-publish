@@ -18,6 +18,7 @@
   opacity: 0.3;
 }
 .image549Parent {
+  width: auto;
   top: 0;
   height: 2967px;
 }
@@ -104,7 +105,16 @@
   opacity: 0.4;
 }
 .vcpu {
+  font-family: Montserrat;
+  font-size: 24px;
   font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: left;
+  height: 29px;
+  width: 88px;
+  top: 0px;
+  border-radius: nullpx;
 }
 .iconCpuParent {
   align-self: stretch;
@@ -559,7 +569,7 @@
 }
 .groupContainer {
   position: relative;
-  width: 1920px;
+  width: 100%;
   height: 2967px;
 }
 .bgIcon {
@@ -990,7 +1000,7 @@
   background-color: var(--color-gray-100);
   box-shadow: -21px 18px 41px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(80px);
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   padding: var(--padding-xl);
@@ -1118,6 +1128,7 @@
 }
 .bgParent {
   align-self: stretch;
+  /* width: 70%; */
   position: relative;
   height: 4320px;
   font-size: var(--title-h2-size);
@@ -1612,29 +1623,41 @@
 .groupParent2 {
   position: relative;
   width: 1920px;
+  /* width: 70%; */
   height: 2969px;
   font-size: var(--body-b1-size);
 }
 .groupParent {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 1920px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  justify-content: center;
 }
 .sKuber1920 {
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-color: var(--bg-1a);
-  width: 100%;
+  /* background-color: #9463ff; */
+  /* width: 100%; */
+  width: 100vw;
   height: 10256px;
   overflow: hidden;
   text-align: left;
   font-size: var(--body-b2-size);
   color: var(--grayscale-fff);
   font-family: var(--body-b2);
+  /* min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center; */
 }
 
 /* react slider bar */
@@ -1647,13 +1670,19 @@
 .customSlider_thumb {
   cursor: pointer;
   /*color for the thumb */
-  background: var(--main-color);
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.5) 79.69%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34));
+
   /* shape of the thumb: circle */
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   /* remove default outline when selected */
-  outline: none;
+  border: rgba(255, 255, 255, 0.34) solid 1px;
 }
 
 .customSlider_thumb:hover {
@@ -1662,19 +1691,20 @@
 
 .customSlider_mark {
   cursor: pointer;
-  top: 6px;
-  width: 1.5px;
-  height: 8px;
-  background-color: var(--mark-color);
+  top: 13px;
+  width: 1px;
+  height: 15px;
+  /* background-color: var(--mark-color); */
 }
 
 .customSlider_track {
   /* Top value to align your track to the center of your thumb */
-  top: 8px;
+  top: 12px;
   /* thickness of the track */
-  height: 4px;
-  /* default color of your track */
-  background: var(--track-color);
+  height: 16px;
+  /* default color of the track */
+  background: var(--main-color);
+  border-radius: 31px;
 }
 
 .customSlider_track.customSlider_track-0 {

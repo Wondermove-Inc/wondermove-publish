@@ -68,7 +68,13 @@ body {
   --effect: blur(30px);
 
   /* react slider bar */
-  --main-color: rgb(104, 117, 217);
+  --main-color: linear-gradient(
+      90.18deg,
+      rgba(235, 78, 135, 0.5),
+      rgba(148, 99, 255, 0.5) 60.42%,
+      rgba(18, 90, 237, 0.5)
+    ),
+    #aaa;
   --main-color-hover: rgb(104, 117, 217, 0.2);
   --track-color: #ddd;
   /* Default mark color*/
