@@ -308,10 +308,10 @@ const SKuber393: NextPage = () => {
               </div>
               <div className={styles.offerKubernetesBasedManagemContainer}>
                 <p className={styles.resourceCosts}>
-                  Prevent resource waste on non-compliant traffic such as DDoS
+                  {`Prevent resource waste on non-compliant traffic such as DDoS
                   attacks by utilizing eBPF's XDP technology for Linux Kernel
                   control. (Limit the number of requests you receive from a
-                  specific IP address)
+                  specific IP address)`}
                 </p>
               </div>
             </div>
@@ -336,9 +336,9 @@ const SKuber393: NextPage = () => {
               </div>
               <div className={styles.offerKubernetesBasedManagemContainer}>
                 <p className={styles.resourceCosts}>
-                  Take control with S-Kuber's intelligent services monitoring.
+                  {`Take control with S-Kuber's intelligent services monitoring.
                   Seamlessly oversee the flow between connected services (MSAs)
-                  and ensure reliable management of large-scale services.
+                  and ensure reliable management of large-scale services.`}
                 </p>
               </div>
             </div>
@@ -400,8 +400,8 @@ const SKuber393: NextPage = () => {
                       DDoS attacks,
                     </p>
                     <p className={styles.resourceCosts}>
-                      by utilizing eBPF's XDP technology for Linux Kernel
-                      control.
+                      {`by utilizing eBPF's XDP technology for Linux Kernel
+                      control.`}
                     </p>
                     <p className={styles.resourceCosts}>
                       (Limit the number of requests you receive from a specific
