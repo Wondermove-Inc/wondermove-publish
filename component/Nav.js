@@ -58,7 +58,7 @@ const Nav = () => {
 
   return (
     <GnbContainer>
-      <GnbLogo alt="" src="/layer-1.svg" />
+      <GnbLogo alt="" src="/1920_desktop/layer-1.svg" />
       <GnbMenu>
         <GnbMenuItem>
           <NavButtom />

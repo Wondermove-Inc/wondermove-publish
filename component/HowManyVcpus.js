@@ -1,6 +1,6 @@
 import React from "react";
 import ReactSlider from "react-slider";
-import styles from "../pages/index.module.css";
+import styles from "../pages/1920_desktop/styles.module.css";
 import styled from "@emotion/styled";
 
 const StyledSlider = styled(ReactSlider)`
