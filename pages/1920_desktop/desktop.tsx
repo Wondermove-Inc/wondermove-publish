@@ -794,7 +794,7 @@ const SKuber1920: NextPage = () => {
               </div>
             </div>
             <div className={styles.getStartedWrapper}>
-              <div className={styles.pricing}>GET STARTED</div>
+              <div className={styles.pricing}>Get in touch</div>
             </div>
           </div>
         </div>

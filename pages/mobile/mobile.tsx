@@ -50,7 +50,7 @@ const SKuber393: NextPage = () => {
             </div>
           </div>
           <div className={styles.rectangleParent}>
-            <div className={styles.groupChild} />
+            {/* <div className={styles.groupChild} /> */}
             <div className={styles.frameParent}>
               <div className={styles.instanceParent}>
                 <img
@@ -169,7 +169,7 @@ const SKuber393: NextPage = () => {
                         alt=""
                         src="/393_mobile/-icon-ram-2.svg"
                       />
-                      <div className={styles.vcpu}>348 GB</div>
+                      <div className={styles.vcpuGB}>348 GB</div>
                     </div>
                     <div className={styles.component197}>
                       <img
@@ -660,7 +660,7 @@ const SKuber393: NextPage = () => {
                 <img
                   className={styles.frameChild12}
                   alt=""
-                  src="/393_mobile/frame-3203.svg"
+                  src="/393_mobile/Frame-3203.png"
                 />
                 <div className={styles.fullPlatformMonitoring}>
                   Full platform monitoring with cross-project insights and
@@ -701,7 +701,7 @@ const SKuber393: NextPage = () => {
               </div>
             </div>
             <div className={styles.getStartedWrapper}>
-              <div className={styles.howManyVcpus}>GET STARTED</div>
+              <div className={styles.howManyVcpus}>Get in touch</div>
             </div>
           </div>
         </div>
