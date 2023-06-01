@@ -5,10 +5,22 @@ import lottie1 from "../../asset/1.json";
 import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
+import LogoMobile from "../../component/LogoMobile";
 const SKuber393: NextPage = () => {
   return (
     <div className={styles.sKuber393}>
-      <img className={styles.gnbIcon} alt="" src="/393_mobile/gnb.svg" />
+      <div className={styles.logoIcon}>
+        <div className={styles.logoLayerIcon}>
+          <LogoMobile />
+        </div>
+
+        <img
+          className={styles.logoGroupIcon}
+          alt=""
+          src="/393_mobile/logo-group-3118.png"
+        />
+      </div>
+
       <div className={styles.groupParent}>
         <div className={styles.bgParent}>
           <div className={styles.bg}>
@@ -360,11 +372,10 @@ const SKuber393: NextPage = () => {
           <div className={styles.lineParent}>
             <div className={styles.frameChild1} />
             <div className={styles.layer1Parent}>
-              <img
-                className={styles.layer1Icon}
-                alt=""
-                src="/393_mobile/layer-1.svg"
-              />
+              <div className={styles.layer1Icon}>
+                <LogoMobile className={styles.layer1Icon} />
+              </div>
+
               <div className={styles.howManyVcpusParent}>
                 <div className={styles.wondermoveSpinOffOf}>
                   wondermove Spin-off of Hyundai Motor Company

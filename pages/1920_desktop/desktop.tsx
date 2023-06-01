@@ -7,6 +7,7 @@ import lottie1 from "../../asset/1.json";
 import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
+import Logo from "../../component/Logo";
 
 const SKuber1920: NextPage = () => {
   return (
@@ -389,11 +390,10 @@ const SKuber1920: NextPage = () => {
           </div>
           <div className={styles.footer}>
             <div className={styles.layer1Group}>
-              <img
-                className={styles.layer1Icon}
-                alt=""
-                src="/1920_desktop/layer-1.svg"
-              />
+              <div className={styles.layer1Icon}>
+                <Logo />
+              </div>
+
               <div className={styles.wondermoveSpinOffOfHyundaiParent}>
                 <div className={styles.howManyVcpus}>
                   wondermove Spin-off of Hyundai Motor Company

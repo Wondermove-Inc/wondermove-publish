@@ -2,6 +2,8 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import NavButtom from "../component/NavButtom";
+import Link from "next/link";
+import Logo from "../component/Logo";
 
 const GnbContainer = styled("div")(({ theme }) => ({
   height: "60px",
@@ -58,7 +60,7 @@ const Nav = () => {
 
   return (
     <GnbContainer>
-      <GnbLogo alt="" src="/1920_desktop/layer-1.svg" />
+      <Logo />
       <GnbMenu>
         <GnbMenuItem>
           <NavButtom />
