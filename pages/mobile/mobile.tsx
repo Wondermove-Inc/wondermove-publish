@@ -256,11 +256,6 @@ const SKuber393: NextPage = () => {
         </div>
         <div className={styles.frameParent2}>
           <div className={styles.image720Parent}>
-            {/* <img
-              className={styles.image720Icon}
-              alt=""
-              src="/393_mobile/image-720@2x.png"
-            /> */}
             <Lottie className={styles.image720Icon} animationData={lottie1} />
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
@@ -270,9 +265,9 @@ const SKuber393: NextPage = () => {
               </div>
               <div className={styles.offerKubernetesBasedManagemContainer}>
                 <p className={styles.resourceCosts}>
-                  Offer Kubernetes-based management/monitoring services with
+                  {`Offer Kubernetes-based management/monitoring services with
                   innovative technology not previously included and reduce cloud
-                  costs by leveraging eBPF and Service Mesh.
+                  costs by leveraging eBPF and Service Mesh.`}
                 </p>
               </div>
             </div>
@@ -283,12 +278,9 @@ const SKuber393: NextPage = () => {
               <div className={styles.instanceItem} />
             </div>
           </div>
+
           <div className={styles.image720Parent}>
-            <img
-              className={styles.image720Icon}
-              alt=""
-              src="/393_mobile/image-721@2x.png"
-            />
+            <Lottie className={styles.image720Icon} animationData={lottie2} />
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>{`Intelligent Server `}</p>
@@ -307,11 +299,7 @@ const SKuber393: NextPage = () => {
             </div>
           </div>
           <div className={styles.image720Parent}>
-            <img
-              className={styles.image720Icon}
-              alt=""
-              src="/393_mobile/image-722@2x.png"
-            />
+            <Lottie className={styles.image720Icon} animationData={lottie3} />
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>{`Resource `}</p>
@@ -334,12 +322,8 @@ const SKuber393: NextPage = () => {
               <div className={styles.instanceItem} />
             </div>
           </div>
-          <div className={styles.image723Parent}>
-            <img
-              className={styles.image720Icon}
-              alt=""
-              src="/393_mobile/image-723@2x.png"
-            />
+          <div className={styles.image720Parent}>
+            <Lottie className={styles.image720Icon} animationData={lottie4} />
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>Optimized</p>
