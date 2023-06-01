@@ -161,7 +161,7 @@
   justify-content: flex-start;
 }
 .instanceParent {
-  gap: var(--gap-5xl);
+  /* gap: var(--gap-5xl); */
   padding: var(--padding-5xl) var(--padding-5xl) var(--padding-21xl);
 }
 .frameParent {
