@@ -521,6 +521,7 @@
   color: var(--grayscale-aaa);
 }
 .container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
