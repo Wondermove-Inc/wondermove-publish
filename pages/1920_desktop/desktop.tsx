@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import styles from "./styles.module.css";
 import Nav from "../../component/Nav";
-import HowManyVcpus from "../../component/HowManyVcpus";
+import SliderBar from "../../component/SliderBar";
 import Lottie from "lottie-react";
 import lottie1 from "../../asset/1.json";
 import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
 import Logo from "../../component/Logo";
+import { useState } from "react";
 
 const SKuber1920: NextPage = () => {
   return (
@@ -47,110 +48,7 @@ const SKuber1920: NextPage = () => {
                   </div>
                   <div className={styles.frameContainer}>
                     <div className={styles.frameParent}>
-                      <div className={styles.frameGroup}>
-                        <div className={styles.howManyVcpusParent}>
-                          <div className={styles.howManyVcpus}>
-                            How many vCPUs?
-                          </div>
-                          <div className={styles.iconCpuParent}>
-                            <img
-                              className={styles.iconCpu}
-                              alt=""
-                              src="/1920_desktop/-icon-cpu.svg"
-                            />
-                            <div className={styles.vcpu}>2 vCPU</div>
-                          </div>
-                          <HowManyVcpus />
-                        </div>
-                        <div className={styles.howManyVcpusParent}>
-                          <div className={styles.howManyVcpus}>
-                            How much RAM?
-                          </div>
-                          <div className={styles.component191Parent}>
-                            <div className={styles.component191}>
-                              <img
-                                className={styles.iconRam2}
-                                alt=""
-                                src="/1920_desktop/-icon-ram-2.svg"
-                              />
-                              <div className={styles.text}>4 GB</div>
-                            </div>
-                            <div className={styles.component192}>
-                              <img
-                                className={styles.iconRam2}
-                                alt=""
-                                src="/1920_desktop/-icon-ram-21.svg"
-                              />
-                              <div className={styles.text}>8 GB</div>
-                            </div>
-                            <div className={styles.component192}>
-                              <img
-                                className={styles.iconRam2}
-                                alt=""
-                                src="/1920_desktop/-icon-ram-22.svg"
-                              />
-                              <div className={styles.text}>14 GB</div>
-                            </div>
-                            <div className={styles.component192}>
-                              <img
-                                className={styles.iconRam2}
-                                alt=""
-                                src="/1920_desktop/-icon-ram-21.svg"
-                              />
-                              <div className={styles.text}>28 GB</div>
-                            </div>
-                            <div className={styles.component192}>
-                              <img
-                                className={styles.iconRam2}
-                                alt=""
-                                src="/1920_desktop/-icon-ram-2.svg"
-                              />
-                              <div className={styles.text}>56 GB</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.frameChild} />
-
-                      <div className={styles.frameDiv}>
-                        <div className={styles.frameWrapper1}>
-                          <div className={styles.frameParent1}>
-                            <div className={styles.withSKuberParent}>
-                              <div className={styles.vcpu}>with S-kuber</div>
-                              <div className={styles.kubernetesSmContainer}>
-                                <span>{` `}</span>
-                                <span className={styles.span}>(</span>
-                                <span className={styles.kubernetesSm}>
-                                  Kubernetes + SM + eBPF)
-                                </span>
-                              </div>
-                            </div>
-                            <div className={styles.parent}>
-                              <div className={styles.vcpu}>$2,087</div>
-                              <div className={styles.perMonth}>per month</div>
-                            </div>
-                            <div className={styles.costReduction}>
-                              $1,708 (45%) cost reduction
-                            </div>
-                          </div>
-                        </div>
-                        <div className={styles.virtualMachineParent}>
-                          <div className={styles.text}>Virtual machine</div>
-                          <div className={styles.group}>
-                            <div className={styles.vcpu}>$3,796</div>
-                            <div className={styles.perMonth1}>per month</div>
-                          </div>
-                        </div>
-                        <div className={styles.basedOnUsingContainer}>
-                          <p className={styles.solutionForYour}>
-                            * Based on using 100 VMs
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            * This is an approximate figure and may differ from
-                            the actual amount
-                          </p>
-                        </div>
-                      </div>
+                      <SliderBar />
                     </div>
                   </div>
                 </div>
@@ -201,45 +99,6 @@ const SKuber1920: NextPage = () => {
               </div>
             </div>
             <div className={styles.frameParent2}>
-              <div className={styles.frameParent3}>
-                <img
-                  className={styles.frameItem}
-                  alt=""
-                  src="/1920_desktop/frame-3102.svg"
-                />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>Transition to the latest</p>
-                  <p className={styles.solutionForYour}>cloud technology</p>
-                </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  <p className={styles.solutionForYour}>
-                    By transitioning from virtual machines to Kubernetes, you
-                    can reduce cloud costs by more than 40% while improving
-                    efficiency.
-                  </p>
-                  <p className={styles.solutionForYour}>&nbsp;</p>
-                  <p className={styles.solutionForYour}>{` `}</p>
-                </div>
-              </div>
-              <div className={styles.frameParent4}>
-                <img
-                  className={styles.frameItem}
-                  alt=""
-                  src="/1920_desktop/frame-3103.svg"
-                />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>Reduction in</p>
-                  <p className={styles.solutionForYour}>resource costs</p>
-                </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  <p className={styles.solutionForYour}>
-                    S-Kuber service can leverage eBPF to protect against
-                    unnecessary traffic and DoS attacks to avoid additional
-                    costs.
-                  </p>
-                  <p className={styles.solutionForYour}>&nbsp;</p>
-                </div>
-              </div>
               <div className={styles.frameParent4}>
                 <img
                   className={styles.frameItem}
@@ -259,6 +118,46 @@ const SKuber1920: NextPage = () => {
                   DevOps expertise, while also providing low-level access for
                   DevOps engineers to monitor and respond to service failures in
                   real time.
+                </div>
+              </div>
+
+              <div className={styles.frameParent4}>
+                <img
+                  className={styles.frameItem}
+                  alt=""
+                  src="/1920_desktop/frame-3103.svg"
+                />
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <p className={styles.wonderAbout}>Reduction in</p>
+                  <p className={styles.solutionForYour}>resource costs</p>
+                </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <p className={styles.solutionForYour}>
+                    S-Kuber service can leverage eBPF to protect against
+                    unnecessary traffic and DoS attacks to avoid additional
+                    costs.
+                  </p>
+                  <p className={styles.solutionForYour}>&nbsp;</p>
+                </div>
+              </div>
+              <div className={styles.frameParent3}>
+                <img
+                  className={styles.frameItem}
+                  alt=""
+                  src="/1920_desktop/frame-3102.svg"
+                />
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <p className={styles.wonderAbout}>Transition to the latest</p>
+                  <p className={styles.solutionForYour}>cloud technology</p>
+                </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <p className={styles.solutionForYour}>
+                    By transitioning from virtual machines to Kubernetes, you
+                    can reduce cloud costs by more than 40% while improving
+                    efficiency.
+                  </p>
+                  <p className={styles.solutionForYour}>&nbsp;</p>
+                  <p className={styles.solutionForYour}>{` `}</p>
                 </div>
               </div>
             </div>
@@ -399,13 +298,15 @@ const SKuber1920: NextPage = () => {
                   wondermove Spin-off of Hyundai Motor Company
                 </div>
                 <div className={styles.wondermoveIncContainer}>
+                  <p className={styles.solutionForYour}>{`wondermove Inc. `}</p>
                   <p
                     className={styles.solutionForYour}
-                  >{`wondermove Inc. | Business Registration Number: 518-81-01644 | `}</p>
+                  >{` Business Registration Number: 518-81-01644`}</p>
+                  <p
+                    className={styles.solutionForYour}
+                  >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea`}</p>
                   <p className={styles.solutionForYour}>
-                    Address: Gangnam office building of the Korea Real Estate
-                    Agency 4th floor, Seoun-ro 3, Seocho-gu, Seoul | Use
-                    Inquiries: hawkeye@wondermove.net
+                    South Korea Use Inquiries: hawkeye@wondermove.net
                   </p>
                 </div>
               </div>
