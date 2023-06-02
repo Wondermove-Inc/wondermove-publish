@@ -64,6 +64,19 @@
   /* Effects */
   --blur-bar-top: blur(16px);
   --effect: blur(30px);
+
+  /* react slider bar */
+  --main-color: linear-gradient(
+      90.18deg,
+      rgba(235, 78, 135, 0.5),
+      rgba(148, 99, 255, 0.5) 60.42%,
+      rgba(18, 90, 237, 0.5)
+    ),
+    #aaa;
+  --main-color-hover: rgb(104, 117, 217, 0.2);
+  --track-color: #ddd;
+  /* Default mark color*/
+  --mark-color: #aaaaaa;
 }
 
 /* mobile */
@@ -396,10 +409,21 @@
 .component197 {
   border-radius: var(--br-35xl);
   backdrop-filter: var(--effect);
+
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+.component198 {
+  border-radius: var(--br-35xl);
+  backdrop-filter: var(--effect);
   /* width: 104px; */
   /* width: 100%; */
   display: flex;
   flex-direction: row;
+  flex: 1;
+  flex-basis: 25%;
+  align-items: center;
+  justify-content: center;
   /* padding: var(--padding-base) var(--padding-13xl); */
   padding: 20px 25px;
   box-sizing: border-box;
@@ -423,15 +447,12 @@
     rgba(255, 255, 255, 0)
   );
 }
-.component196Parent,
-.frameContainer {
+.component196Parent {
   width: 100%;
-  display: flex;
-
-  flex-direction: row;
+  display: grid;
   align-items: flex-start;
-  justify-content: flex-start;
   gap: var(--gap-base);
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .frameContainer {
   width: 100%;
@@ -483,7 +504,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   gap: var(--gap-5xs);
-  text-align: right;
+  text-align: center;
   font-size: var(--mobile-h2-size);
 }
 .costReduction {
@@ -1239,4 +1260,57 @@
   font-size: var(--mobile-s1-size);
   color: var(--grayscale-fff);
   font-family: var(--mobile-b2);
+}
+
+/* react slider bar */
+.customSlider {
+  /* max width of your slider */
+  max-width: 100%;
+  /* Optional: Only If you want to center your slider in the page */
+  margin: auto;
+}
+.customSlider_thumb {
+  cursor: pointer;
+  /*color for the thumb */
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.5) 79.69%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34));
+
+  /* shape of the thumb: circle */
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  /* remove default outline when selected */
+  border: rgba(255, 255, 255, 0.34) solid 1px;
+}
+
+.customSlider_thumb:hover {
+  box-shadow: 0 0 0 8px var(--main-color-hover);
+}
+
+.customSlider_mark {
+  cursor: pointer;
+  top: 13px;
+  /* width: 1px; */
+  height: 12px;
+  /* background-color: var(--mark-color); */
+}
+
+.customSlider_track {
+  /* Top value to align your track to the center of your thumb */
+  top: 11px;
+  /* thickness of the track */
+  height: 12px;
+  /* default color of the track */
+  background: var(--main-color);
+  border-radius: 31px;
+  /* width: 560px; */
+}
+
+.customSlider_track.customSlider_track-0 {
+  /* color of the track before the thumb */
+  background: var(--main-color);
 }

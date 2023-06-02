@@ -6,6 +6,7 @@ import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
 import LogoMobile from "../../component/LogoMobile";
+import MobilrSliderBar from "../../component/MobileSliderBar";
 const SKuber393: NextPage = () => {
   return (
     <div className={styles.sKuber393}>
@@ -139,7 +140,8 @@ const SKuber393: NextPage = () => {
             </div>
           </div>
           <div className={styles.frameWrapper}>
-            <div className={styles.wonderAboutCuttingYourClouParent}>
+            <MobilrSliderBar />
+            {/* <div className={styles.wonderAboutCuttingYourClouParent}>
               <div className={styles.wonderAboutCuttingContainer}>
                 <p className={styles.resourceCosts}>Wonder about cutting</p>
                 <p className={styles.resourceCosts}>your cloud costs?</p>
@@ -246,7 +248,7 @@ const SKuber393: NextPage = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <b className={styles.solutionForYourContainer}>
             <p className={styles.resourceCosts}>{`Solution for `}</p>
