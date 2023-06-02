@@ -398,8 +398,6 @@
 }
 .iconRam2 {
   position: relative;
-  width: 24px;
-  height: 24px;
   overflow: hidden;
   flex-shrink: 0;
   display: none;
@@ -410,8 +408,13 @@
   border-radius: var(--br-35xl);
   backdrop-filter: var(--effect);
 
-  padding: 20px 20px;
+  /* padding: 20px 20px; */
   box-sizing: border-box;
+  text-align: center;
+}
+.text {
+  margin: 20px 25px;
+  white-space: nowrap;
 }
 .component198 {
   border-radius: var(--br-35xl);
@@ -458,6 +461,8 @@
   width: 100%;
   flex-direction: column;
   font-size: var(--mobile-s2-size);
+  /* align-items: center;
+  justify-items: center; */
 }
 .lineDiv {
   position: relative;
