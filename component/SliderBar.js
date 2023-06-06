@@ -100,7 +100,7 @@ const HowManyVcpus = () => {
         <div className={styles.frameWrapper1}>
           <div className={styles.frameParent1}>
             <div className={styles.withSKuberParent}>
-              <div className={styles.vcpu}>with S-kuber</div>
+              <div className={styles.vcpuText}>with S-kuber</div>
               <div className={styles.kubernetesSmContainer}>
                 <span>{` `}</span>
                 <span className={styles.span}>(</span>
@@ -133,7 +133,7 @@ const HowManyVcpus = () => {
         <div className={styles.virtualMachineParent}>
           <div className={styles.text}>Virtual machine</div>
           <div className={styles.group}>
-            <div className={styles.vcpu}>
+            <div className={styles.vcpuVirtual}>
               $
               {parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
                 "en-US"

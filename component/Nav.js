@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import NavButtom from "../component/NavButtom";
 import Link from "next/link";
 import Logo from "../component/Logo";
+import styles from "../pages/1920_desktop/styles.module.css";
 
 const GnbContainer = styled("div")(({ theme }) => ({
   height: "60px",
@@ -11,6 +12,8 @@ const GnbContainer = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
+  top: "0",
+  position: "sticky",
 }));
 
 const GnbLogo = styled("img")({

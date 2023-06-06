@@ -258,7 +258,9 @@ const SKuber393: NextPage = () => {
         </div>
         <div className={styles.frameParent2}>
           <div className={styles.image720Parent}>
-            <Lottie className={styles.image720Icon} animationData={lottie1} />
+            <div className={styles.lottie1Cintainer}>
+              <Lottie className={styles.image720Icon} animationData={lottie1} />
+            </div>
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>Identify issues and</p>
@@ -282,7 +284,9 @@ const SKuber393: NextPage = () => {
           </div>
 
           <div className={styles.image720Parent}>
-            <Lottie className={styles.image720Icon} animationData={lottie2} />
+            <div className={styles.lottie2Cintainer}>
+              <Lottie className={styles.image720Icon} animationData={lottie2} />
+            </div>
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>{`Intelligent Server `}</p>
@@ -301,7 +305,9 @@ const SKuber393: NextPage = () => {
             </div>
           </div>
           <div className={styles.image720Parent}>
-            <Lottie className={styles.image720Icon} animationData={lottie3} />
+            <div className={styles.lottie3Cintainer}>
+              <Lottie className={styles.image720Icon} animationData={lottie3} />
+            </div>
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>{`Resource `}</p>
@@ -325,7 +331,9 @@ const SKuber393: NextPage = () => {
             </div>
           </div>
           <div className={styles.image720Parent}>
-            <Lottie className={styles.image720Icon} animationData={lottie4} />
+            <div className={styles.lottie4Cintainer}>
+              <Lottie className={styles.image720Icon} animationData={lottie4} />
+            </div>
             <div className={styles.instanceParent}>
               <div className={styles.identifyIssuesAndContainer}>
                 <p className={styles.resourceCosts}>Optimized</p>
@@ -703,7 +711,7 @@ const SKuber393: NextPage = () => {
               </div>
             </div>
             <div className={styles.getStartedWrapper}>
-              <div className={styles.howManyVcpus}>Get in touch</div>
+              <div className={styles.pricing}>Get in touch</div>
             </div>
           </div>
         </div>
