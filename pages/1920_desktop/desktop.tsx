@@ -557,7 +557,7 @@ const SKuber1920: NextPage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className={styles.frameParent26}>
+                  <div className={styles.frameParent28}>
                     <div className={styles.freeParent}>
                       <div className={styles.pricing}>Pro</div>
                       <div className={styles.frameParent29}>
