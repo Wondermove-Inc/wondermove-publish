@@ -391,7 +391,7 @@ const SKuber1920: NextPage = () => {
               <div className={styles.frameParent19}>
                 <div className={styles.paymentOptionsParent}>
                   <div className={styles.paymentOptions}>
-                    What are the key features of S-Kuber's service management?
+                    {`What are the key features of S-Kuber's service management?`}
                   </div>
                   <img
                     className={styles.frameChild20}
