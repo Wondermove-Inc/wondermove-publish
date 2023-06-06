@@ -542,6 +542,7 @@
 
 .frameWrapper {
   position: relative;
+  width: 100%;
   backdrop-filter: blur(15px);
   overflow: hidden;
   font-size: var(--title-h2-size);
