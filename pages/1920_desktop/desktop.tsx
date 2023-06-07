@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Nav from "../../component/Nav";
 import SliderBar from "../../component/SliderBar";
@@ -8,12 +9,13 @@ import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
 import Logo from "../../component/Logo";
-import { useState } from "react";
+
 import SolutionMenu from "../../component/SolutionMenu";
 import VideoBackground from "../../component/VideoBackground";
-import SlickCarousel from "../../component/SlickCarousel";
-import VerticalSlider from "../../component/VerticalSlider";
+import LottieSliderBar from "../../component/LottieSliderBar";
+import SolutionCost from "../../component/SolutionCost";
 import AdvantageHover from "../../component/AdvantageHover";
+import QA from "../../component/QA";
 
 const SKuber1920: NextPage = () => {
   return (
@@ -40,8 +42,8 @@ const SKuber1920: NextPage = () => {
           <div className={styles.gnbParent}>
             <div className={styles.solutionForYourCloudStrateParent}>
               <b className={styles.solutionForYourContainer}>
-                <p className={styles.solutionForYour}>Solution for Your</p>
-                <p className={styles.solutionForYour}>
+                <p className={styles.solutionForYourCosts}>Solution for Your</p>
+                <p className={styles.solutionForYourCosts}>
                   Cloud Strategy and Costs
                 </p>
               </b>
@@ -49,7 +51,7 @@ const SKuber1920: NextPage = () => {
                 <div className={styles.wonderAboutCuttingYourClouParent}>
                   <div className={styles.wonderAboutCuttingContainer}>
                     <p className={styles.wonderAbout}>Wonder about</p>
-                    <p className={styles.solutionForYour}>
+                    <p className={styles.wonderAbout}>
                       cutting your cloud costs?
                     </p>
                   </div>
@@ -83,7 +85,7 @@ const SKuber1920: NextPage = () => {
                           Running a successful proof of concept in
                         </p>
                         <p
-                          className={styles.solutionForYour}
+                          className={styles.wonderAbout}
                         >{`4 European counteris with `}</p>
                       </div>
                       <div className={styles.container}>
@@ -104,195 +106,10 @@ const SKuber1920: NextPage = () => {
               </div>
             </div>
             <AdvantageHover />
-            {/* <div className={styles.frameParent2}>
-              <div className={styles.frameParent4}>
-                <img
-                  className={styles.frameItem}
-                  alt=""
-                  src="/1920_desktop/hover-off-1-100.png
-                  "
-                />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>Reduction in</p>
-                  <p className={styles.solutionForYour}>resource costs</p>
-                </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  <p className={styles.solutionForYour}>
-                    S-Kuber service can leverage eBPF to protect against
-                    unnecessary traffic and DoS attacks to avoid additional
-                    costs.
-                  </p>
-                  <p className={styles.solutionForYour}>&nbsp;</p>
-                </div>
-              </div>
-              <div className={styles.frameParent4}>
-                <img
-                  className={styles.frameItem}
-                  alt=""
-                  src="/1920_desktop/hover-off-2-100.svg"
-                />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>
-                    Accessible management for
-                  </p>
-                  <p className={styles.solutionForYour}>
-                    all technology levels
-                  </p>
-                </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  Utilize a high-level control UX that can be managed without
-                  DevOps expertise, while also providing low-level access for
-                  DevOps engineers to monitor and respond to service failures in
-                  real time.
-                </div>
-              </div>
-
-              <div className={styles.frameParent3}>
-                <img
-                  className={styles.frameItem}
-                  alt=""
-                  src="/1920_desktop/hover-on-3-100.png"
-                />
-                <div className={styles.wonderAboutCuttingContainer}>
-                  <p className={styles.wonderAbout}>Transition to the latest</p>
-                  <p className={styles.solutionForYour}>cloud technology</p>
-                </div>
-                <div className={styles.byTransitioningFromContainer}>
-                  <p className={styles.solutionForYour}>
-                    By transitioning from virtual machines to Kubernetes, you
-                    can reduce cloud costs by more than 40% while improving
-                    efficiency.
-                  </p>
-                  <p className={styles.solutionForYour}>&nbsp;</p>
-                  <p className={styles.solutionForYour}>{` `}</p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
-        <div className={styles.bgParent}>
-          {/* <img className={styles.bgIcon} alt="" src="/1920_desktop/bg.svg" /> */}
-          <div className={styles.frameParent6}>
-            {/* <SlickCarousel /> */}
-            {/* <VerticalSlider /> */}
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent8}>
-                <div className={styles.identifyIssuesAndReduceCosParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>Identify issues and</p>
-                    <p className={styles.wonderAbout}>reduce costs with</p>
-                    <p className={styles.solutionForYour}>
-                      real-time monitoring
-                    </p>
-                  </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
-                    <p className={styles.solutionForYour}>
-                      Offer Kubernetes-based management/monitoring services with
-                      innovative technology not previously included and reduce
-                      cloud costs by leveraging eBPF and Service Mesh.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.rectangleContainer}>
-                  <div className={styles.frameChild1} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                </div>
-              </div>
-              <div className={styles.lottie1Cintainer}>
-                <Lottie
-                  className={styles.frameChild4}
-                  animationData={lottie1}
-                />
-              </div>
-            </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent10}>
-                <div className={styles.identifyIssuesAndReduceCosParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p
-                      className={styles.wonderAbout}
-                    >{`Intelligent Server `}</p>
-                    <p className={styles.wonderAbout}>{`Forecasting for `}</p>
-                    <p className={styles.solutionForYour}>Reduce cloud cost</p>
-                  </div>
-                  <div
-                    className={styles.offerKubernetesBasedManagemContainer}
-                  >{`Save costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.`}</div>
-                </div>
-
-                <div className={styles.ellipseParent}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                </div>
-              </div>
-              <div className={styles.frameParent11}>
-                <div className={styles.lottie2Cintainer}>
-                  <Lottie animationData={lottie2} />
-                </div>
-              </div>
-            </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent8}>
-                <div className={styles.resourceOptimizationDuringDParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>{`Resource `}</p>
-                    <p className={styles.wonderAbout}>Optimization</p>
-                    <p className={styles.solutionForYour}>during DoS Attacks</p>
-                  </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
-                    <p className={styles.solutionForYour}>
-                      {`Prevent resource waste on out-of-policy traffic, such as
-                      DDoS attacks, by utilizing eBPF's XDP technology for Linux
-                      Kernel control. (Limit the number of requests you receive
-                      from a specific IP address)`}
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.ellipseParent}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
-                  <div className={styles.ellipseDiv} />
-                </div>
-              </div>
-              <div className={styles.lottie3Cintainer}>
-                <Lottie animationData={lottie3} />
-              </div>
-            </div>
-            <div className={styles.frameParent7}>
-              <div className={styles.frameParent10}>
-                <div className={styles.resourceOptimizationDuringDParent}>
-                  <div className={styles.identifyIssuesAndContainer}>
-                    <p className={styles.wonderAbout}>{`Optimized `}</p>
-                    <p className={styles.wonderAbout}>large-scale service</p>
-                    <p className={styles.solutionForYour}>management</p>
-                  </div>
-                  <div className={styles.offerKubernetesBasedManagemContainer}>
-                    <p className={styles.solutionForYour}>
-                      {`Take control with S-Kuber's intelligent services monitoring.
-                    Seamlessly oversee the flow between connected services
-                    (MSAs) and ensure reliable management of large-scale
-                    services.`}
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.ellipseParent}>
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.ellipseDiv} />
-                  <div className={styles.frameChild1} />
-                </div>
-              </div>
-              <div className={styles.lottie4Cintainer}>
-                <Lottie animationData={lottie4} />
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* <img className={styles.bgIcon} alt="" src="/1920_desktop/bg.svg" /> */}
+        <LottieSliderBar />
         <div className={styles.groupParent2}>
           <div className={styles.frameParent16}>
             <img
@@ -327,7 +144,8 @@ const SKuber1920: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className={styles.frequentlyAskedQuestionsParent}>
+          <QA />
+          {/* <div className={styles.frequentlyAskedQuestionsParent}>
             <div className={styles.globallyValidatedSolutions}>
               Frequently Asked Questions
             </div>
@@ -432,7 +250,7 @@ const SKuber1920: NextPage = () => {
                 <div className={styles.lineDiv} />
               </div>
             </div>
-          </div>
+          </div> */}
           <div className={styles.frameParent25}>
             <div className={styles.pricingParent}>
               <div className={styles.pricing}>Pricing</div>
@@ -440,7 +258,7 @@ const SKuber1920: NextPage = () => {
                 <p className={styles.wonderAbout}>
                   Experience the Next-Generation
                 </p>
-                <p className={styles.solutionForYour}>Cloud Solution?</p>
+                <p className={styles.wonderAbout}>Cloud Solution?</p>
               </div>
             </div>
             <div className={styles.groupParent3}>
@@ -452,266 +270,9 @@ const SKuber1920: NextPage = () => {
                     <div className={styles.maskGroupChild} />
                   </div>
                 </div> */}
-                <div className={styles.frameWrapper4}>
-                  <div className={styles.frameParent26}>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Free</div>
-                      <div className={styles.frameParent27}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.div2}>$0</div>
-                          <div className={styles.noMonthlyFees}>
-                            No monthly fees
-                          </div>
-                        </div>
-                        <div
-                          className={styles.billedAnnuallyOrContainer}
-                        >{` `}</div>
-                      </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
-                          What’s included
-                        </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Up to 10 vCPU</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Cluster only 1</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Realtime Monitoring</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Legacy Migration tool</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Reatime Log viewer</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Service Flow Mgmt</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Service Mesh Mgmt</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Config-map/Secret Mgmt</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.frameParent26}>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Plus</div>
-                      <div className={styles.frameParent27}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.div2}>$1,500</div>
-                          <div className={styles.noMonthlyFees}>per month</div>
-                        </div>
-                        <div className={styles.billedAnnuallyOrContainer}>
-                          <p className={styles.solutionForYour}>
-                            Billed annually or $1,990
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            month-to-month
-                          </p>
-                        </div>
-                      </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
-                          All Free features, plus
-                        </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> 11 - 100 vCPU</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited Cluster</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Cost Tracing</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Account management</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Service log viewer</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited members</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.frameParent28}>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Pro</div>
-                      <div className={styles.frameParent29}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.xVcpu}>
-                            $1,500 + $12 x vCPU
-                          </div>
-                          <div className={styles.perMonth3}>per month</div>
-                          <div className={styles.perMonth4}>per month</div>
-                        </div>
-                        <div className={styles.billedAnnuallyOrContainer1}>
-                          <p className={styles.solutionForYour}>
-                            Billed annually or $1,990
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            month-to-month
-                          </p>
-                        </div>
-                      </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
-                          All Plus features, plus
-                        </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> 101 - 1,000 vCPU</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited Cluster</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Cost Tracing</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Account management</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Service log viewer</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited members</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.frameParent26}>
-                    <div className={styles.freeParent}>
-                      <div className={styles.pricing}>Business</div>
-                      <div className={styles.frameParent30}>
-                        <div className={styles.xVcpuParent}>
-                          <div className={styles.xVcpu1}>
-                            $13,500 + $10 x vCPU
-                          </div>
-                          <div className={styles.noMonthlyFees}>per month</div>
-                        </div>
-                        <div className={styles.billedAnnuallyOrContainer2}>
-                          <p className={styles.solutionForYour}>
-                            Billed annually or $16,990
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            month-to-month
-                          </p>
-                        </div>
-                      </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.whatsIncludedParent}>
-                        <div className={styles.whatsIncluded}>
-                          All Pro features, plus
-                        </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> 1,001 - Unlimited vCPU</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited Cluster</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Installation support</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Issue support</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.frameParent26}>
-                    <div className={styles.enterpriseParent}>
-                      <div className={styles.enterprise}>Enterprise</div>
-                      <div className={styles.frameParent31}>
-                        <img
-                          className={styles.frameChild36}
-                          alt=""
-                          src="/1920_desktop/frame-3203.svg"
-                        />
-                        <div className={styles.contactSalesFor}>
-                          Contact Sales for pricing
-                        </div>
-                        <div className={styles.fullPlatformMonitoring}>
-                          Full platform monitoring with cross-project insights
-                          and optional Premium Customer Success.
-                        </div>
-                      </div>
-                      <div className={styles.frameChild32} />
-                      <div className={styles.allBusinessFeaturesPlusParent}>
-                        <div className={styles.whatsIncluded}>
-                          All Business features, plus
-                        </div>
-                        <div className={styles.upTo10Container}>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited vCPU</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Unlimited Cluster</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Installation support</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Issue support</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Custom Dashboard</span>
-                          </p>
-                          <p className={styles.solutionForYour}>
-                            <span className={styles.span1}>✓</span>
-                            <span> Cloud Strategy Consulting</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SolutionCost />
               </div>
+
               <div className={styles.frameWrapper5}>
                 {/* <div className={styles.seeAllFeaturesParent}>
                   <div className={styles.pricing}>See all features</div>
@@ -721,6 +282,7 @@ const SKuber1920: NextPage = () => {
                     src="/1920_desktop/-icon-nav-arrow-down.svg"
                   />
                 </div> */}
+
                 <SolutionMenu />
               </div>
             </div>
