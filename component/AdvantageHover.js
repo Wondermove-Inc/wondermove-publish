@@ -44,7 +44,7 @@ function AdvantageHover() {
         )}
         <div className={styles.wonderAboutCuttingContainer}>
           <p className={styles.wonderAbout}>Reduction in</p>
-          <p className={styles.solutionForYour}>resource costs</p>
+          <p className={styles.wonderAbout}>resource costs</p>
         </div>
         <div className={styles.byTransitioningFromContainer}>
           <p className={styles.solutionForYour}>
@@ -67,7 +67,7 @@ function AdvantageHover() {
         )}
         <div className={styles.wonderAboutCuttingContainer}>
           <p className={styles.wonderAbout}>Accessible management for</p>
-          <p className={styles.solutionForYour}>all technology levels</p>
+          <p className={styles.wonderAbout}>all technology levels</p>
         </div>
         <div className={styles.byTransitioningFromContainer}>
           Utilize a high-level control UX that can be managed without DevOps
@@ -88,7 +88,7 @@ function AdvantageHover() {
         )}
         <div className={styles.wonderAboutCuttingContainer}>
           <p className={styles.wonderAbout}>Transition to the latest</p>
-          <p className={styles.solutionForYour}>cloud technology</p>
+          <p className={styles.wonderAbout}>cloud technology</p>
         </div>
         <div className={styles.byTransitioningFromContainer}>
           <p className={styles.solutionForYour}>
