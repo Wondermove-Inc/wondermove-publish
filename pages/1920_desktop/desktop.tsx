@@ -13,6 +13,7 @@ import SolutionMenu from "../../component/SolutionMenu";
 import VideoBackground from "../../component/VideoBackground";
 import SlickCarousel from "../../component/SlickCarousel";
 import VerticalSlider from "../../component/VerticalSlider";
+import AdvantageHover from "../../component/AdvantageHover";
 
 const SKuber1920: NextPage = () => {
   return (
@@ -102,12 +103,14 @@ const SKuber1920: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.frameParent2}>
+            <AdvantageHover />
+            {/* <div className={styles.frameParent2}>
               <div className={styles.frameParent4}>
                 <img
                   className={styles.frameItem}
                   alt=""
-                  src="/1920_desktop/group-3108.png"
+                  src="/1920_desktop/hover-off-1-100.png
+                  "
                 />
                 <div className={styles.wonderAboutCuttingContainer}>
                   <p className={styles.wonderAbout}>Reduction in</p>
@@ -126,7 +129,7 @@ const SKuber1920: NextPage = () => {
                 <img
                   className={styles.frameItem}
                   alt=""
-                  src="/1920_desktop/frame-3104.svg"
+                  src="/1920_desktop/hover-off-2-100.svg"
                 />
                 <div className={styles.wonderAboutCuttingContainer}>
                   <p className={styles.wonderAbout}>
@@ -148,7 +151,7 @@ const SKuber1920: NextPage = () => {
                 <img
                   className={styles.frameItem}
                   alt=""
-                  src="/1920_desktop/frame-3104.png"
+                  src="/1920_desktop/hover-on-3-100.png"
                 />
                 <div className={styles.wonderAboutCuttingContainer}>
                   <p className={styles.wonderAbout}>Transition to the latest</p>
@@ -164,7 +167,7 @@ const SKuber1920: NextPage = () => {
                   <p className={styles.solutionForYour}>{` `}</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.bgParent}>

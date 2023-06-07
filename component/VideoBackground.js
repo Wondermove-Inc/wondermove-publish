@@ -7,12 +7,12 @@ const VideoBackground = () => {
       <video autoPlay muted loop playsInline className={styles.videoPlay}>
         <source src="/1920_desktop/bpmp4.mp4" type="video/mp4" />
       </video>
-      <video autoPlay muted loop playsInline className={styles.videoPlay}>
+      {/* <video autoPlay muted loop playsInline className={styles.videoPlay}>
         <source src="/1920_desktop/bpmp4.mp4" type="video/mp4" />
       </video>
       <video autoPlay muted loop playsInline className={styles.videoPlay}>
         <source src="/1920_desktop/bpmp4.mp4" type="video/mp4" />
-      </video>
+      </video> */}
       <div className={styles.overlay}></div>
     </div>
   );
