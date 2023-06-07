@@ -143,8 +143,8 @@ const HowManyVcpus = () => {
           </div>
         </div>
         <div className={styles.basedOnUsingContainer}>
-          <p className={styles.solutionForYour}>* Based on using 100 VMs</p>
-          <p className={styles.solutionForYour}>
+          <p className={styles.solutionForYourBase}>* Based on using 100 VMs</p>
+          <p className={styles.solutionForYourBase}>
             * This is an approximate figure and may differ from the actual
             amount
           </p>
