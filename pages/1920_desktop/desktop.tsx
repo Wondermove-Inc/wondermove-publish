@@ -16,8 +16,17 @@ import LottieSliderBar from "../../component/LottieSliderBar";
 import SolutionCost from "../../component/SolutionCost";
 import AdvantageHover from "../../component/AdvantageHover";
 import QA from "../../component/QA";
+import GetInTouch from "../../component/GetInTouch";
+import Modal from "react-modal";
 
 const SKuber1920: NextPage = () => {
+  const [sendModalVisible, setSendModalVisible] = useState(false);
+  const [successModalVisible, setSuccessModalVisible] = useState(false);
+
+  const toggleSendModalVisible = () => setSendModalVisible(!sendModalVisible);
+  const toggleSuccessModalVisible = () =>
+    setSuccessModalVisible(!successModalVisible);
+
   return (
     <div className={styles.sKuber1920}>
       <div className={styles.groupParent}>
@@ -119,138 +128,7 @@ const SKuber1920: NextPage = () => {
             />
             {/* <div className={styles.groupChild4} /> */}
           </div>
-          <div className={styles.footer}>
-            <div className={styles.layer1Group}>
-              <div className={styles.layer1Icon}>
-                <Logo />
-              </div>
 
-              <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                <div className={styles.howManyVcpus}>
-                  wondermove Spin-off of Hyundai Motor Company
-                </div>
-                <div className={styles.wondermoveIncContainer}>
-                  <p className={styles.solutionForYour}>{`wondermove Inc. `}</p>
-                  <p
-                    className={styles.solutionForYour}
-                  >{` Business Registration Number: 518-81-01644`}</p>
-                  <p
-                    className={styles.solutionForYour}
-                  >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea`}</p>
-                  <p className={styles.solutionForYour}>
-                    South Korea Use Inquiries: hawkeye@wondermove.net
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <QA />
-          {/* <div className={styles.frequentlyAskedQuestionsParent}>
-            <div className={styles.globallyValidatedSolutions}>
-              Frequently Asked Questions
-            </div>
-            <div className={styles.frameParent17}>
-              <div className={styles.allBusinessFeaturesPlusParent}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>
-                    What is S-Kuber and how can it benefit my organization?
-                  </div>
-                  <img
-                    className={styles.frameChild19}
-                    alt=""
-                    src="/1920_desktop/group-3185.svg"
-                  />
-                </div>
-                <div className={styles.preventResourceWasteOnOutWrapper}>
-                  <div className={styles.paymentOptions}>
-                    <p className={styles.solutionForYour}>
-                      S-Kuber is a cloud management service that helps you
-                      optimize your resource costs and cloud technology
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      reducing additional costs. Moreover, it facilitates the
-                      transition from traditional virtual machines to
-                      Kubernetes,
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      enabling you to decrease your cloud costs by over 40%
-                      while enhancing efficiency.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.lineDiv} />
-              </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>
-                    Does S-Kuber require specialized knowledge to operate?
-                  </div>
-                  <img
-                    className={styles.frameChild20}
-                    alt=""
-                    src="/1920_desktop/group-31851.svg"
-                  />
-                </div>
-                <div className={styles.lineDiv} />
-              </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>
-                    How does S-Kuber ensure cost reduction?
-                  </div>
-                  <img
-                    className={styles.frameChild20}
-                    alt=""
-                    src="/1920_desktop/group-31851.svg"
-                  />
-                </div>
-                <div className={styles.lineDiv} />
-              </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>
-                    {`What are the key features of S-Kuber's service management?`}
-                  </div>
-                  <img
-                    className={styles.frameChild20}
-                    alt=""
-                    src="/1920_desktop/group-31851.svg"
-                  />
-                </div>
-                <div className={styles.lineDiv} />
-              </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>
-                    What pricing plans does S-Kuber offer and what are their
-                    features?
-                  </div>
-                  <img
-                    className={styles.frameChild20}
-                    alt=""
-                    src="/1920_desktop/group-31851.svg"
-                  />
-                </div>
-                <div className={styles.lineDiv} />
-              </div>
-              <div className={styles.frameParent19}>
-                <div className={styles.paymentOptionsParent}>
-                  <div className={styles.paymentOptions}>
-                    What measures does S-Kuber take against DDoS attacks?
-                  </div>
-                  <img
-                    className={styles.frameChild20}
-                    alt=""
-                    src="/1920_desktop/group-31851.svg"
-                  />
-                </div>
-                <div className={styles.lineDiv} />
-              </div>
-            </div>
-          </div> */}
           <div className={styles.frameParent25}>
             <div className={styles.pricingParent}>
               <div className={styles.pricing}>Pricing</div>
@@ -274,20 +152,44 @@ const SKuber1920: NextPage = () => {
               </div>
 
               <div className={styles.frameWrapper5}>
-                {/* <div className={styles.seeAllFeaturesParent}>
-                  <div className={styles.pricing}>See all features</div>
-                  <img
-                    className={styles.iconNavArrowDown}
-                    alt=""
-                    src="/1920_desktop/-icon-nav-arrow-down.svg"
-                  />
-                </div> */}
-
                 <SolutionMenu />
               </div>
             </div>
-            <div className={styles.getStartedWrapper}>
+            {/* <GetInTouch
+              sendModalVisible={sendModalVisible}
+              onCloseOff={toggleSendModalVisible}
+              successModalVisible={successModalVisible}
+              toggleSendModalVisible={toggleSendModalVisible}
+              toggleSuccessModalVisible={toggleSuccessModalVisible}
+            /> */}
+            {/* <div className={styles.getStartedWrapper}>
               <div className={styles.pricing}>Get in touch</div>
+            </div> */}
+          </div>
+          <QA />
+          <div className={styles.footer}>
+            <div className={styles.layer1Group}>
+              <div className={styles.layer1Icon}>
+                <Logo />
+              </div>
+
+              <div className={styles.wondermoveSpinOffOfHyundaiParent}>
+                <div className={styles.howManyVcpus}>
+                  wondermove Spin-off of Hyundai Motor Company
+                </div>
+                <div className={styles.wondermoveIncContainer}>
+                  <p className={styles.solutionForYour}>{`wondermove Inc. `}</p>
+                  <p
+                    className={styles.solutionForYour}
+                  >{` Business Registration Number: 518-81-01644`}</p>
+                  <p
+                    className={styles.solutionForYour}
+                  >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea`}</p>
+                  <p className={styles.solutionForYour}>
+                    South Korea Use Inquiries: hawkeye@wondermove.net
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
