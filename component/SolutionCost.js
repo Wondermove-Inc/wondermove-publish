@@ -17,9 +17,9 @@ const SolutionCost = () => {
       >
         <div className={styles.freeParent}>
           <div className={styles.pricing}>Free</div>
-          <div className={styles.frameParent27}>
+          <div className={styles.frameParent29}>
             <div className={styles.xVcpuParent}>
-              <div className={styles.div2}>$0</div>
+              <div className={styles.xVcpu}>$0</div>
               <div className={styles.noMonthlyFees}>No monthly fees</div>
             </div>
             <div className={styles.billedAnnuallyOrContainer}>{` `}</div>
@@ -28,35 +28,35 @@ const SolutionCost = () => {
           <div className={styles.whatsIncludedParent}>
             <div className={styles.whatsIncluded}>What’s included</div>
             <div className={styles.upTo10Container}>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Up to 10 vCPU</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Cluster only 1</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Realtime Monitoring</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Legacy Migration tool</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Reatime Log viewer</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Service Flow Mgmt</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Service Mesh Mgmt</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Config-map/Secret Mgmt</span>
               </p>
@@ -71,12 +71,12 @@ const SolutionCost = () => {
       >
         <div className={styles.freeParent}>
           <div className={styles.pricing}>Plus</div>
-          <div className={styles.frameParent27}>
+          <div className={styles.frameParent29}>
             <div className={styles.xVcpuParent}>
-              <div className={styles.div2}>$1,500</div>
+              <div className={styles.xVcpu}>$1,500</div>
               <div className={styles.noMonthlyFees}>per month</div>
             </div>
-            <div className={styles.billedAnnuallyOrContainer}>
+            <div className={styles.billedAnnuallyOrContainer1}>
               <p className={styles.Billed}>Billed annually or $1,990</p>
               <p className={styles.Billed}>month-to-month</p>
             </div>
@@ -85,27 +85,27 @@ const SolutionCost = () => {
           <div className={styles.whatsIncludedParent}>
             <div className={styles.whatsIncluded}>All Free features, plus</div>
             <div className={styles.upTo10Container}>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> 11 - 100 vCPU</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited Cluster</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Cost Tracing</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Account management</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Service log viewer</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited members</span>
               </p>
@@ -135,27 +135,27 @@ const SolutionCost = () => {
           <div className={styles.whatsIncludedParent}>
             <div className={styles.whatsIncluded}>All Plus features, plus</div>
             <div className={styles.upTo10Container}>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> 101 - 1,000 vCPU</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited Cluster</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Cost Tracing</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Account management</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Service log viewer</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited members</span>
               </p>
@@ -184,19 +184,19 @@ const SolutionCost = () => {
           <div className={styles.whatsIncludedParent}>
             <div className={styles.whatsIncluded}>All Pro features, plus</div>
             <div className={styles.upTo10Container}>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> 1,001 - Unlimited vCPU</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited Cluster</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Installation support</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Issue support</span>
               </p>
@@ -231,27 +231,27 @@ const SolutionCost = () => {
               All Business features, plus
             </div>
             <div className={styles.upTo10Container}>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited vCPU</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Unlimited Cluster</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Installation support</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Issue support</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Custom Dashboard</span>
               </p>
-              <p className={styles.solutionForYour}>
+              <p className={styles.upTo10ContainerText}>
                 <span className={styles.span1}>✓</span>
                 <span> Cloud Strategy Consulting</span>
               </p>
