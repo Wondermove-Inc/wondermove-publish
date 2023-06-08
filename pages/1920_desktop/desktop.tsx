@@ -18,6 +18,8 @@ import AdvantageHover from "../../component/AdvantageHover";
 import QA from "../../component/QA";
 import GetInTouch from "../../component/GetInTouch";
 import Modal from "react-modal";
+import SendMessage from "../../component/SendMessage";
+import SentSuccessfully from "../../component/SentSuccessfully";
 
 const SKuber1920: NextPage = () => {
   const [sendModalVisible, setSendModalVisible] = useState(false);
@@ -26,6 +28,11 @@ const SKuber1920: NextPage = () => {
   const toggleSendModalVisible = () => setSendModalVisible(!sendModalVisible);
   const toggleSuccessModalVisible = () =>
     setSuccessModalVisible(!successModalVisible);
+
+  const onSendMessagePress = () => {
+    toggleSendModalVisible();
+    toggleSuccessModalVisible();
+  };
 
   return (
     <div className={styles.sKuber1920}>
@@ -155,13 +162,13 @@ const SKuber1920: NextPage = () => {
                 <SolutionMenu />
               </div>
             </div>
-            {/* <GetInTouch
+            <GetInTouch
               sendModalVisible={sendModalVisible}
-              onCloseOff={toggleSendModalVisible}
+              onClick={toggleSendModalVisible}
               successModalVisible={successModalVisible}
               toggleSendModalVisible={toggleSendModalVisible}
               toggleSuccessModalVisible={toggleSuccessModalVisible}
-            /> */}
+            />
             {/* <div className={styles.getStartedWrapper}>
               <div className={styles.pricing}>Get in touch</div>
             </div> */}
@@ -194,6 +201,15 @@ const SKuber1920: NextPage = () => {
           </div>
         </div>
       </div>
+      <SendMessage
+        isVisible={sendModalVisible}
+        toggleVisible={toggleSendModalVisible}
+        onSendMessagePress={onSendMessagePress}
+      />
+      <SentSuccessfully
+        isVisible={successModalVisible}
+        toggleSuccessModalVisible={toggleSuccessModalVisible}
+      />
     </div>
   );
 };

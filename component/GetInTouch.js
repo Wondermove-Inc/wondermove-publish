@@ -3,7 +3,7 @@ import SendMessage from "./SendMessage";
 import styles from "../pages/1920_desktop/styles.module.css";
 
 const GetInTouch = ({
-  onCloseOff,
+  onClick,
   sendModalVisible,
   toggleSuccessModalVisible,
   successModalVisible,
@@ -17,19 +17,18 @@ const GetInTouch = ({
 
   return (
     <div className={styles.getStarted}>
-      {!sendModalVisible && (
-        <div className={styles.getStartedWrapper} onClick={onCloseOff}>
-          <div className={styles.pricing}>Get in touch</div>
-        </div>
-      )}
-      {sendModalVisible && (
+      <div className={styles.getStartedWrapper} onClick={onClick}>
+        <div className={styles.pricing}>Get in touch</div>
+      </div>
+
+      {/* {sendModalVisible && (
         <SendMessage
           onCloseOff={onCloseOff}
           toggleSuccessModalVisible={toggleSuccessModalVisible}
           successModalVisible={successModalVisible}
           toggleSendModalVisible={toggleSendModalVisible}
         />
-      )}
+      )} */}
     </div>
   );
 };
