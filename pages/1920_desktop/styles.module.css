@@ -81,19 +81,19 @@
   --mark-color: #aaaaaa;
 }
 
-/*  */
+/* vedio */
 .videoContainer {
-  position: relative;
+  /* position: absolute; */
+  /* width: 1920px; */
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .videoPlay {
-  top: 0;
-  left: 0;
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -181,7 +181,8 @@
   background: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid var(--color-gray-300);
   box-sizing: border-box;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   flex-direction: column;
   padding: 9.5px var(--padding-221xl);
   align-items: flex-start;
@@ -200,7 +201,7 @@
   line-height: 32px;
   letter-spacing: 0px;
   text-align: left;
-  color: rgba(170, 170, 170, 1);
+  color: var(--grayscale-ccc);
 }
 .solutionForYourContainer {
   align-self: stretch;
@@ -548,11 +549,14 @@
   justify-content: center;
   font-size: var(--body-b2-size);
 }
+
 .wonderAboutCuttingYourClouParent {
+  position: relative;
   align-self: stretch;
   gap: var(--gap-61xl);
   padding: var(--padding-61xl) var(--padding-61xl) var(--padding-101xl);
 }
+
 .frameWrapper,
 .solutionForYourCloudStrateParent,
 .wonderAboutCuttingYourClouParent {
@@ -593,7 +597,9 @@
 }
 
 .solutionForYourCloudStrateParent {
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
+  height: 100%;
   padding: var(--padding-221xl) var(--padding-221xl) var(--padding-101xl);
   box-sizing: border-box;
   gap: var(--gap-61xl);
@@ -674,7 +680,8 @@
   background-color: var(--grayscale-fff);
   border: 1px solid var(--color-gray-200);
   box-sizing: border-box;
-  width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
   overflow: hidden;
   padding: var(--padding-61xl);
   display: flex;
@@ -698,10 +705,11 @@
   gap: var(--gap-61xl);
 }
 .frameWrapper2 {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   overflow: hidden;
   padding: var(--padding-141xl) var(--padding-221xl);
   box-sizing: border-box;
@@ -709,8 +717,10 @@
 }
 .groupDiv {
   position: relative;
-  width: 1920px;
-  height: 681px;
+  /* width: 1920px; */
+  /* height: 681px; */
+  width: 100%;
+  height: 100%;
   font-size: var(--title-h2-size);
   color: var(--grayscale-000);
 }
@@ -747,7 +757,7 @@
     rgba(255, 255, 255, 0.01) 61.89%,
     rgba(255, 255, 255, 0) 100%
   );
-  /* backdrop-filter: blur(15px); */
+  backdrop-filter: blur(15px);
 }
 
 .frameParent3::before {
@@ -790,7 +800,9 @@
     rgba(34, 34, 34, 0.57),
     rgba(34, 34, 34, 0)
   );
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   padding: var(--padding-141xl) var(--padding-221xl);
@@ -804,6 +816,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -814,6 +828,8 @@
   position: relative;
   width: 100%;
   height: 2967px;
+  /* height: 100vh; */
+  overflow-y: scroll;
 }
 .bgIcon {
   position: absolute;
@@ -883,7 +899,8 @@
 .frameChild4,
 .frameParent8 {
   position: relative;
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   height: 1080px;
   overflow: hidden;
   flex-shrink: 0;
@@ -895,7 +912,8 @@
 .frameParent10 {
   position: relative;
   background-color: var(--bg-1a);
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   height: 1080px;
   overflow: hidden;
   flex-shrink: 0;
@@ -913,7 +931,8 @@
 
 .lottie1Cintainer {
   position: relative;
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   height: 1080px;
   overflow: hidden;
   background-image: url("/1920_desktop/1.png");
@@ -923,7 +942,8 @@
 
 .lottie2Cintainer {
   position: relative;
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   height: 1080px;
   overflow: hidden;
   background-image: url("/1920_desktop/2.png");
@@ -933,7 +953,8 @@
 
 .lottie3Cintainer {
   position: relative;
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   height: 1080px;
   overflow: hidden;
   background-image: url("/1920_desktop/3.png");
@@ -942,7 +963,8 @@
 }
 .lottie4Cintainer {
   position: relative;
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   height: 1080px;
   overflow: hidden;
   background-image: url("/1920_desktop/4.png");
@@ -958,9 +980,7 @@
 }
 
 .frameParent7 {
-  /* background: red;
   width: 100%;
-  height: 100%; */
 }
 .ellipseParent {
   position: absolute;
@@ -1424,7 +1444,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -1442,14 +1463,15 @@
 .groupChild3 {
   bottom: 0;
   left: 0;
-  height: 866px;
+  /* height: 866px; */
   overflow: hidden;
 }
 .frameParent16,
 .groupChild3,
 .groupChild4 {
   position: absolute;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
 }
 .groupChild4 {
   top: 0;
@@ -1461,7 +1483,11 @@
 .frameParent16 {
   bottom: 0;
   left: 0;
-  height: 2969px;
+  /* height: 2969px; */
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: #1c1c1c;
 }
 .wondermoveIncContainer {
   position: relative;
@@ -1493,13 +1519,14 @@
   justify-content: space-between;
 }
 .footer {
-  position: absolute;
-  top: 2653px;
+  /* position: absolute; */
+  /* top: 2653px; */
   height: 100%;
   left: 0;
   border-top: 1px solid var(--color-gray-300);
   box-sizing: border-box;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -1517,13 +1544,16 @@
 }
 .paymentOptionsParent,
 .preventResourceWasteOnOutWrapper {
-  width: 952px;
+  /* width: 952px; */
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding: var(--padding-xs);
   box-sizing: border-box;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 .paymentOptionsParent {
   gap: var(--gap-41xl);
@@ -1551,15 +1581,19 @@
 }
 .frameParent17 {
   align-self: stretch;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--gap-base);
   text-align: left;
   font-size: var(--body-b1-size);
 }
 .frequentlyAskedQuestionsParent {
-  position: absolute;
-  top: 350px;
+  position: inherit;
+  /* top: 350px; */
   left: 0;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1570,6 +1604,7 @@
   gap: var(--gap-61xl);
   text-align: center;
   font-size: var(--title-h2-size);
+  z-index: 1;
 }
 
 .pricing {
@@ -1614,7 +1649,8 @@
     rgba(255, 255, 255, 0)
   );
   backdrop-filter: var(--effect);
-  width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
   height: 390px;
 }
 .groupChild6,
@@ -1689,6 +1725,17 @@
   white-space: pre-wrap;
   display: inline-block;
   width: 240px;
+}
+
+.upTo10ContainerText {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #fff;
 }
 .freeParent,
 .whatsIncludedParent {
@@ -1836,6 +1883,13 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+.allBusinessFeaturesPlusParent {
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
 .enterpriseParent {
   flex-direction: column;
   gap: var(--gap-9xl);
@@ -1843,6 +1897,7 @@
 }
 .frameParent26 {
   /* position: absolute; */
+  width: 100%;
   top: 0;
   left: 0;
   border-radius: var(--br-xl);
@@ -1908,7 +1963,8 @@
   position: absolute;
   top: 16px;
   left: 0;
-  width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
   height: 100%;
   /* height: 608px; */
   display: flex;
@@ -1936,7 +1992,8 @@
 
 .rectangleParent2 {
   position: relative;
-  width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
   height: 624px;
 }
 .iconNavArrowDown {
@@ -1946,7 +2003,7 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.seeAllFeaturesParent {
+/* .seeAllFeaturesParent {
   display: flex;
   width: 100%;
   height: 100%;
@@ -1954,7 +2011,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: var(--gap-5xs);
-}
+} */
 .frameWrapper5,
 .groupParent3 {
   display: flex;
@@ -1963,12 +2020,10 @@
 }
 
 .frameWrapper5 {
-  /* position: absolute; */
   align-self: stretch;
-  backdrop-filter: var(--effect);
-  /* height: 72px; */
+  /* backdrop-filter: var(--effect); */
+  width: 100%;
   height: 100%;
-  /* padding: var(--padding-xl) 635px; */
   box-sizing: border-box;
   justify-content: space-between;
   font-size: var(--body-b2-size);
@@ -1979,10 +2034,6 @@
   content: "";
   position: absolute;
   z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   padding: 1px;
   border-radius: var(--br-xl);
   background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
@@ -1992,8 +2043,9 @@
 }
 
 .groupParent3 {
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--gap-13xl);
+  width: 100%;
 }
 .frameParent25,
 .getStartedWrapper {
@@ -2019,6 +2071,12 @@
   justify-content: space-between;
   font-size: var(--body-b2-size);
 } */
+.getStarted {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+}
 
 .getStartedWrapper {
   width: 312px;
@@ -2053,10 +2111,11 @@
 }
 
 .frameParent25 {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   flex-direction: column;
   padding: var(--padding-141xl) var(--padding-221xl);
   align-items: center;
@@ -2065,16 +2124,19 @@
 }
 .groupParent2 {
   position: relative;
-  width: 1920px;
+  /* width: 1920px; */
   /* width: 70%; */
-  height: 2969px;
+  /* height: 2969px; */
+  width: 100%;
+  height: 100%;
   font-size: var(--body-b1-size);
 }
 .groupParent {
   /* position: absolute; */
   top: 0;
   left: 0;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2182,7 +2244,8 @@
 
 .scrollableContainer {
   width: 100%;
-  height: 1080px;
+  /* height: 1080px; */
+  height: 100%;
   overflow: auto;
   /* overflow-y: auto; */
 }
@@ -2223,6 +2286,7 @@
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  width: 50%;
 }
 
 .Billed {
