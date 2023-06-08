@@ -78,7 +78,7 @@ const QA = () => {
           <div className={styles.lineDiv} />
         </div>
 
-        <div className={styles.frameParent19}>
+        <div className={styles.allBusinessFeaturesPlusParent}>
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               Does S-Kuber require specialized knowledge to operate?
@@ -115,7 +115,7 @@ const QA = () => {
           <div className={styles.lineDiv} />
         </div>
 
-        <div className={styles.frameParent19}>
+        <div className={styles.allBusinessFeaturesPlusParent}>
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               How does S-Kuber ensure cost reduction?
@@ -157,7 +157,7 @@ const QA = () => {
 
           <div className={styles.lineDiv} />
         </div>
-        <div className={styles.frameParent19}>
+        <div className={styles.allBusinessFeaturesPlusParent}>
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               {`What are the key features of S-Kuber's service management?`}
@@ -193,7 +193,7 @@ const QA = () => {
 
           <div className={styles.lineDiv} />
         </div>
-        <div className={styles.frameParent19}>
+        <div className={styles.allBusinessFeaturesPlusParent}>
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               What pricing plans does S-Kuber offer and what are their features?
@@ -249,7 +249,7 @@ const QA = () => {
 
           <div className={styles.lineDiv} />
         </div>
-        <div className={styles.frameParent19}>
+        <div className={styles.allBusinessFeaturesPlusParent}>
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               What measures does S-Kuber take against DDoS attacks?
