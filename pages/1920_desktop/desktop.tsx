@@ -140,6 +140,23 @@ const useStyles = (theme: Theme) => ({
       padding: " 0px 0px 80px",
     },
   },
+  runningASuccessfulProofOfParent: {
+    padding: "80px",
+    [theme.breakpoints.down("xl")]: {
+      padding: "80px",
+      gap: "165px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      padding: "80px 60px",
+      gap: "69px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: " 60px 40px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: " 24px",
+    },
+  },
 });
 const classes = useStyles(theme);
 
@@ -172,6 +189,11 @@ const SKuber1920: NextPage = () => {
   const [companyName, setCompanyName] = useState("");
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const parentRef = useRef<HTMLDivElement>(null);
+  const childRef = useRef<HTMLDivElement>(null);
+  const [isPageScrollDisabled, setPageScrollDisabled] = useState(false);
+  const [isChildScrollDisabled, setChildScrollDisabled] = useState(false);
 
   const toggleSendModalVisible = () => setSendModalVisible(!sendModalVisible);
   const toggleSuccessModalVisible = () =>
@@ -186,10 +208,75 @@ const SKuber1920: NextPage = () => {
     setIsChecked(!isChecked);
   };
 
+  const handlePagerClick = (index: number) => {
+    setCurrentPageIndex(index);
+    scrollToPage(index);
+  };
+
+  const scrollToPage = (index: number) => {
+    const textContainer = document.getElementById("textContainer");
+    if (!textContainer) return;
+    const pageHeight = textContainer.clientHeight;
+    textContainer.scrollTop = index * pageHeight;
+  };
+
+  useEffect(() => {
+    const textContainer = document.getElementById("textContainer");
+    if (!textContainer) return;
+
+    const handleScroll = () => {
+      const scrollTop = textContainer.scrollTop;
+      const containerHeight = textContainer.clientHeight;
+      const contentHeight = textContainer.scrollHeight;
+      const percentage = (scrollTop / (contentHeight - containerHeight)) * 100;
+      // setScrollPercentage(percentage);
+
+      const textCount = 4;
+      const lastIndex = pages.length - 1;
+      const index = Math.min(
+        Math.floor((percentage / 100) * textCount),
+        lastIndex
+      );
+      // setCurrentTextIndex(index);
+
+      const pageHeight = textContainer.clientHeight;
+      const currentPage = Math.round(textContainer.scrollTop / pageHeight);
+      setCurrentPageIndex(currentPage);
+    };
+
+    textContainer.addEventListener("scroll", handleScroll);
+
+    return () => {
+      textContainer.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const parentElement = parentRef.current;
+      const childElement = childRef.current;
+
+      // 同步更新整个页面的滚动位置
+      if (!parentElement) return;
+      if (!childElement) return;
+      parentElement.scrollTop = childElement.scrollTop;
+    };
+
+    // 监听页面内滚动区域的滚动事件
+    const childElement = childRef.current;
+    if (!childElement) return;
+    childElement.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      // 清除事件监听器
+      childElement.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.sKuber1920}>
       <div className={styles.groupParent}>
-        <div className={styles.groupContainer}>
+        <div className={styles.groupContainer} ref={parentRef}>
           {/* <div className={styles.image549Parent}>
             <img
               className={styles.image549Icon}
@@ -255,27 +342,35 @@ const SKuber1920: NextPage = () => {
                     </div>
                     <div className={styles.rectangleGroup}>
                       <div className={styles.rectangleDiv} />
+
                       <div className={styles.runningASuccessfulProofOfParent}>
-                        <div className={styles.vcpuRunning}>
-                          <p className={styles.wonderAbout}>
-                            Running a successful proof of concept in
-                          </p>
-                          <p
-                            className={styles.wonderAbout}
-                          >{`4 European counteris with `}</p>
-                        </div>
-                        <div className={styles.container}>
-                          <img
-                            className={styles.icon}
-                            alt=""
-                            src="/1920_desktop/--2.svg"
-                          />
-                          <img
-                            className={styles.image646Icon}
-                            alt=""
-                            src="/1920_desktop/image-646@2x.png"
-                          />
-                        </div>
+                        <Grid
+                          container
+                          sx={classes.runningASuccessfulProofOfParent}
+                        >
+                          <div className={styles.vcpuRunning}>
+                            <p className={styles.wonderAbout}>
+                              Running a successful proof of concept in
+                            </p>
+                            <p
+                              className={styles.wonderAbout}
+                            >{`4 European counteris with `}</p>
+                          </div>
+                          <div className={styles.container}>
+                            <img
+                              className={styles.icon}
+                              alt=""
+                              src="/1920_desktop/--2.svg"
+                            />
+                          </div>
+                          <div>
+                            <img
+                              className={styles.image646Icon}
+                              alt=""
+                              src="/1920_desktop/image-646@2x.png"
+                            />
+                          </div>
+                        </Grid>
                       </div>
                     </div>
                   </div>
@@ -290,6 +385,59 @@ const SKuber1920: NextPage = () => {
         {/* <img className={styles.bgIcon} alt="" src="/1920_desktop/bg.svg" /> */}
         <div className={styles.scrollableContainer}>
           <LottieSliderBar />
+          {/* <LottieSliderBar
+            currentPageIndex={currentPageIndex}
+            onIndicatorItemPress={handlePagerClick}
+          /> */}
+          {/* Lottie */}
+          {/* <div className={styles.frameParentContainer}>
+            <div
+              ref={childRef}
+              className={styles.rightContent}
+              id="textContainer"
+            >
+              <div
+                className={`${styles.lottieContainer} ${styles.lottie1Cintainer}`}
+              >
+                <Lottie
+                  animationData={lottie1}
+                  loop={true}
+                  autoplay={true}
+                  style={{ height: "1080px", width: "100%" }}
+                />
+              </div>
+              <div
+                className={`${styles.lottieContainer} ${styles.lottie2Cintainer}`}
+              >
+                <Lottie
+                  animationData={lottie2}
+                  loop={true}
+                  autoplay={true}
+                  style={{ height: "1080px", width: "100%" }}
+                />
+              </div>
+              <div
+                className={`${styles.lottieContainer} ${styles.lottie3Cintainer}`}
+              >
+                <Lottie
+                  animationData={lottie3}
+                  loop={true}
+                  autoplay={true}
+                  style={{ height: "1080px", width: "100%" }}
+                />
+              </div>
+              <div
+                className={`${styles.lottieContainer} ${styles.lottie4Cintainer}`}
+              >
+                <Lottie
+                  animationData={lottie4}
+                  loop={true}
+                  autoplay={true}
+                  style={{ height: "1080px", width: "100%" }}
+                />
+              </div>
+            </div>
+          </div> */}
         </div>
         <div className={styles.groupParent2}>
           <div className={styles.frameParent16}>

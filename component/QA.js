@@ -35,7 +35,10 @@ const QA = () => {
         Frequently Asked Questions
       </div>
       <div className={styles.frameParent17}>
-        <div className={styles.allBusinessFeaturesPlusParent}>
+        <div
+          className={styles.allBusinessFeaturesPlusParent}
+          onClick={toggleContent1}
+        >
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               What is S-Kuber and how can it benefit my organization?
@@ -48,7 +51,6 @@ const QA = () => {
                   ? "/1920_desktop/minus.svg"
                   : "/1920_desktop/plus.svg"
               }
-              onClick={toggleContent1}
             />
           </div>
 
@@ -78,7 +80,10 @@ const QA = () => {
           <div className={styles.lineDiv} />
         </div>
 
-        <div className={styles.allBusinessFeaturesPlusParent}>
+        <div
+          className={styles.allBusinessFeaturesPlusParent}
+          onClick={toggleContent2}
+        >
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               Does S-Kuber require specialized knowledge to operate?
@@ -91,7 +96,6 @@ const QA = () => {
                   ? "/1920_desktop/minus.svg"
                   : "/1920_desktop/plus.svg"
               }
-              onClick={toggleContent2}
             />
           </div>
 
@@ -115,7 +119,10 @@ const QA = () => {
           <div className={styles.lineDiv} />
         </div>
 
-        <div className={styles.allBusinessFeaturesPlusParent}>
+        <div
+          className={styles.allBusinessFeaturesPlusParent}
+          onClick={toggleContent3}
+        >
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               How does S-Kuber ensure cost reduction?
@@ -128,7 +135,6 @@ const QA = () => {
                   ? "/1920_desktop/minus.svg"
                   : "/1920_desktop/plus.svg"
               }
-              onClick={toggleContent3}
             />
           </div>
 
@@ -157,7 +163,10 @@ const QA = () => {
 
           <div className={styles.lineDiv} />
         </div>
-        <div className={styles.allBusinessFeaturesPlusParent}>
+        <div
+          className={styles.allBusinessFeaturesPlusParent}
+          onClick={toggleContent4}
+        >
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               {`What are the key features of S-Kuber's service management?`}
@@ -170,7 +179,6 @@ const QA = () => {
                   ? "/1920_desktop/minus.svg"
                   : "/1920_desktop/plus.svg"
               }
-              onClick={toggleContent4}
             />
           </div>
 
@@ -193,7 +201,10 @@ const QA = () => {
 
           <div className={styles.lineDiv} />
         </div>
-        <div className={styles.allBusinessFeaturesPlusParent}>
+        <div
+          className={styles.allBusinessFeaturesPlusParent}
+          onClick={toggleContent5}
+        >
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               What pricing plans does S-Kuber offer and what are their features?
@@ -206,7 +217,6 @@ const QA = () => {
                   ? "/1920_desktop/minus.svg"
                   : "/1920_desktop/plus.svg"
               }
-              onClick={toggleContent5}
             />
           </div>
 
@@ -249,7 +259,10 @@ const QA = () => {
 
           <div className={styles.lineDiv} />
         </div>
-        <div className={styles.allBusinessFeaturesPlusParent}>
+        <div
+          className={styles.allBusinessFeaturesPlusParent}
+          onClick={toggleContent6}
+        >
           <div className={styles.paymentOptionsParent}>
             <div className={styles.paymentOptions}>
               What measures does S-Kuber take against DDoS attacks?
@@ -262,7 +275,6 @@ const QA = () => {
                   ? "/1920_desktop/minus.svg"
                   : "/1920_desktop/plus.svg"
               }
-              onClick={toggleContent6}
             />
           </div>
 

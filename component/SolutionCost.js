@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../pages/1920_desktop/styles.module.css";
 
 const SolutionCost = () => {
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-  const [isHovered3, setIsHovered3] = useState(false);
-  const [isHovered4, setIsHovered4] = useState(false);
-  const [isHovered5, setIsHovered5] = useState(false);
+  // const [isHovered1, setIsHovered1] = useState(false);
+  // const [isHovered2, setIsHovered2] = useState(false);
+  // const [isHovered3, setIsHovered3] = useState(false);
+  // const [isHovered4, setIsHovered4] = useState(false);
+  // const [isHovered5, setIsHovered5] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(2);
 
   return (
     <div className={styles.frameWrapper4}>
       <div
-        className={isHovered1 ? styles.frameParent28 : styles.frameParent26}
-        onMouseEnter={() => setIsHovered1(true)}
-        onMouseLeave={() => setIsHovered1(false)}
+        className={
+          selectedItem == 0 ? styles.frameParent28 : styles.frameParent26
+        }
+        onClick={() => setSelectedItem(0)}
       >
         <div className={styles.freeParent}>
           <div className={styles.pricing}>Free</div>
@@ -65,9 +67,10 @@ const SolutionCost = () => {
         </div>
       </div>
       <div
-        className={isHovered2 ? styles.frameParent28 : styles.frameParent26}
-        onMouseEnter={() => setIsHovered2(true)}
-        onMouseLeave={() => setIsHovered2(false)}
+        className={
+          selectedItem == 1 ? styles.frameParent28 : styles.frameParent26
+        }
+        onClick={() => setSelectedItem(1)}
       >
         <div className={styles.freeParent}>
           <div className={styles.pricing}>Plus</div>
@@ -114,9 +117,10 @@ const SolutionCost = () => {
         </div>
       </div>
       <div
-        className={isHovered3 ? styles.frameParent28 : styles.frameParent26}
-        onMouseEnter={() => setIsHovered3(true)}
-        onMouseLeave={() => setIsHovered3(false)}
+        className={
+          selectedItem == 2 ? styles.frameParent28 : styles.frameParent26
+        }
+        onClick={() => setSelectedItem(2)}
       >
         <div className={styles.freeParent}>
           <div className={styles.pricing}>Pro</div>
@@ -164,9 +168,10 @@ const SolutionCost = () => {
         </div>
       </div>
       <div
-        className={isHovered4 ? styles.frameParent28 : styles.frameParent26}
-        onMouseEnter={() => setIsHovered4(true)}
-        onMouseLeave={() => setIsHovered4(false)}
+        className={
+          selectedItem == 3 ? styles.frameParent28 : styles.frameParent26
+        }
+        onClick={() => setSelectedItem(3)}
       >
         <div className={styles.freeParent}>
           <div className={styles.pricing}>Business</div>
@@ -205,9 +210,10 @@ const SolutionCost = () => {
         </div>
       </div>
       <div
-        className={isHovered5 ? styles.frameParent28 : styles.frameParent26}
-        onMouseEnter={() => setIsHovered5(true)}
-        onMouseLeave={() => setIsHovered5(false)}
+        className={
+          selectedItem == 4 ? styles.frameParent28 : styles.frameParent26
+        }
+        onClick={() => setSelectedItem(4)}
       >
         <div className={styles.enterpriseParent}>
           <div className={styles.enterprise}>Enterprise</div>

@@ -7,7 +7,7 @@ import styles from "../pages/1920_desktop/styles.module.css";
 
 const GnbContainer = styled("div")(({ theme }) => ({
   height: "60px",
-  width: "1440px",
+  width: "100%",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",

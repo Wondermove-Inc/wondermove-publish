@@ -4,8 +4,7 @@ import styles from "../pages/1920_desktop/styles.module.css";
 import styled from "@emotion/styled";
 import costData from "../asset/costData.json";
 
-import { ThemeProvider } from "@mui/material/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, useMediaQuery } from "@mui/material";
 
 const StyledSlider = styled(ReactSlider)`
   width: 100%;
@@ -18,6 +17,18 @@ const HowManyVcpus = () => {
   const [slideValue, setSlideValue] = useState(0);
   const [selectedMark, setSelectedMark] = useState(2);
   const [selectedRam, setSelectedRam] = useState({});
+
+  const isXl = useMediaQuery((theme) => theme.breakpoints.down("xl"));
+  const isLg = useMediaQuery((theme) => theme.breakpoints.down("lg"));
+  const isMd = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
+  // const getGridItemProps = () => {
+  //   if (isLg) {
+  //     return { xs: 3 };
+  //   }
+  // };
+  // key={item} {...getGridItemProps()}
 
   const handleSlideChange = (value) => {
     setSlideValue(value);
@@ -43,7 +54,7 @@ const HowManyVcpus = () => {
   return (
     <Grid container>
       <div className={styles.frameParent}>
-        <Grid item sm={12} md={12} lg={6} xl={6}>
+        <Grid item>
           <div className={styles.frameGroup}>
             <div className={styles.howManyVcpusParent}>
               <div className={styles.howManyVcpus}>How many vCPUs?</div>
@@ -74,24 +85,29 @@ const HowManyVcpus = () => {
             </div>
             <div className={styles.howManyVcpusParent}>
               <div className={styles.howManyVcpus}>How much RAM?</div>
+
               <div className={styles.component191Parent}>
-                {ramList.map((item) => (
-                  <div
-                    onClick={() => setSelectedRam(item)}
-                    className={
-                      selectedRam.RAM == item.RAM
-                        ? styles.component191
-                        : styles.component192
-                    }
-                  >
-                    <img
-                      className={styles.iconRam2}
-                      alt=""
-                      src="/1920_desktop/-icon-ram-2.svg"
-                    />
-                    <div className={styles.text}>{item.RAM} GB</div>
-                  </div>
-                ))}
+                <Grid container spacing={1}>
+                  {ramList.map((item) => (
+                    <Grid item>
+                      <div
+                        onClick={() => setSelectedRam(item)}
+                        className={
+                          selectedRam.RAM == item.RAM
+                            ? styles.component191
+                            : styles.component192
+                        }
+                      >
+                        <img
+                          className={styles.iconRam2}
+                          alt=""
+                          src="/1920_desktop/-icon-ram-2.svg"
+                        />
+                        <div className={styles.text}>{item.RAM} GB</div>
+                      </div>
+                    </Grid>
+                  ))}
+                </Grid>
               </div>
             </div>
           </div>
