@@ -29,6 +29,7 @@ import { styled } from "@mui/system";
 import { Box } from "@mui/system";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
+import { Controller, Scene } from "react-scrollmagic";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -190,10 +191,6 @@ const SKuber1920: NextPage = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
-  const parentRef = useRef<HTMLDivElement>(null);
-  const childRef = useRef<HTMLDivElement>(null);
-  const [isPageScrollDisabled, setPageScrollDisabled] = useState(false);
-  const [isChildScrollDisabled, setChildScrollDisabled] = useState(false);
 
   const toggleSendModalVisible = () => setSendModalVisible(!sendModalVisible);
   const toggleSuccessModalVisible = () =>
@@ -251,32 +248,10 @@ const SKuber1920: NextPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const parentElement = parentRef.current;
-      const childElement = childRef.current;
-
-      // 同步更新整个页面的滚动位置
-      if (!parentElement) return;
-      if (!childElement) return;
-      parentElement.scrollTop = childElement.scrollTop;
-    };
-
-    // 监听页面内滚动区域的滚动事件
-    const childElement = childRef.current;
-    if (!childElement) return;
-    childElement.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      // 清除事件监听器
-      childElement.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className={styles.sKuber1920}>
       <div className={styles.groupParent}>
-        <div className={styles.groupContainer} ref={parentRef}>
+        <div className={styles.groupContainer}>
           {/* <div className={styles.image549Parent}>
             <img
               className={styles.image549Icon}

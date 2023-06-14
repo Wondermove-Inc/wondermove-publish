@@ -50,23 +50,23 @@
 //         <RenderTextContent currentIndex={currentPageIndex} />
 //         {/* )} */}
 //         {/* Pager */}
-//         <div className={styles.ellipseParent}>
-//           {pages.map((_, index) => {
-//             const onIndicatorPress = () =>
-//               onIndicatorItemPress && onIndicatorItemPress(index);
-//             return (
-//               <div
-//                 key={index}
-//                 className={`${
-//                   index === currentPageIndex
-//                     ? styles.frameChild1
-//                     : styles.ellipseDiv
-//                 }`}
-//                 onClick={() => onIndicatorPress(index)}
-//               />
-//             );
-//           })}
-//         </div>
+// <div className={styles.ellipseParent}>
+//   {pages.map((_, index) => {
+//     const onIndicatorPress = () =>
+//       onIndicatorItemPress && onIndicatorItemPress(index);
+//     return (
+//       <div
+//         key={index}
+//         className={`${
+//           index === currentPageIndex
+//             ? styles.frameChild1
+//             : styles.ellipseDiv
+//         }`}
+//         onClick={() => onIndicatorPress(index)}
+//       />
+//     );
+//   })}
+// </div>
 //       </div>
 //     </div>
 //   );
@@ -248,6 +248,7 @@ import lottie1 from "../asset/1.json";
 import lottie2 from "../asset/2.json";
 import lottie3 from "../asset/3.json";
 import lottie4 from "../asset/4.json";
+import { Controller, Scene } from "react-scrollmagic";
 
 const LottieSliderBar = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -404,49 +405,64 @@ const LottieSliderBar = () => {
 
   return (
     <div>
-      {pages.map((item, index) => (
-        <div className={styles.pagerContainer}>
-          <div
-            className={`${styles.pagerContainerText} ${
-              index % 2 == 0 ? styles.frameParent8 : styles.frameParent10
-            }`}
-          >
-            {/* Pager */}
-            <div className={styles.ellipseParent}>
-              {pages.map((_, index) => {
-                const onIndicatorPress = () =>
-                  onIndicatorItemPress && onIndicatorItemPress(index);
-                return (
-                  <div
-                    key={index}
-                    className={`${
-                      index === currentPageIndex
-                        ? styles.frameChild1
-                        : styles.ellipseDiv
-                    }`}
-                    onClick={() => onIndicatorPress(index)}
-                  />
-                );
-              })}
+      <Controller globalSceneOptions={{ triggerHook: "onLeave" }}>
+        {pages.map((item, index) => (
+          <div className={styles.pagerContainer} key={index}>
+            <div
+              className={`${styles.pagerContainerText} ${
+                index % 2 == 0 ? styles.frameParent8 : styles.frameParent10
+              }`}
+            >
+              <Scene
+                pin={index == pages.length - 1 ? false : true}
+                key={index}
+                duration={0}
+              >
+                <div className={styles.pagerText}>
+                  <p className={styles.wonderAbout}>{item.title}</p>
+                  <p className={styles.solutionForYour}>{item.content}</p>
+                </div>
+              </Scene>
             </div>
-            <div className={styles.pagerText}>
-              <p className={styles.wonderAbout}>{item.title}</p>
-              <p className={styles.solutionForYour}>{item.content}</p>
-            </div>
-          </div>
 
-          <div
-            className={`${styles.lottieContainer} ${lottieDataArray[index].className}`}
-          >
-            <Lottie
-              animationData={lottieDataArray[index].animationData}
-              loop={true}
-              autoplay={true}
-              style={{ height: "1080px", width: "960px" }}
-            />
+            <div
+              className={`${styles.lottieContainer} ${lottieDataArray[index].className}`}
+            >
+              <Lottie
+                animationData={lottieDataArray[index].animationData}
+                loop={true}
+                autoplay={true}
+                style={{ height: "1080px", width: "960px" }}
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </Controller>
+      {/* <div
+        style={{
+          position: "absolute",
+          backgroundColor: "red",
+          zIndex: 1001,
+          top: "50%",
+          left: "50%",
+        }}
+      >
+        {pages.map((_, index) => {
+          // const onIndicatorPress = () =>
+          //   onIndicatorItemPress && onIndicatorItemPress(index);
+          return (
+            <div
+              key={index}
+              className={`${
+                index === currentPageIndex
+                  ? styles.frameChild1
+                  : styles.ellipseDiv
+              }`}
+              // onClick={() => onIndicatorPress(index)}
+            />
+          );
+        })}
+      </div> */}
     </div>
   );
 };

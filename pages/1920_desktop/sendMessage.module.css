@@ -415,7 +415,7 @@
   mask-composite: exclude;
 }
 .getInTouch {
-  position: relative;
+  position: absolute;
   width: 100%;
   /* width: 706px; */
   height: 828px;
@@ -425,4 +425,5 @@
   font-size: var(--title-h4-size);
   color: var(--grayscale-fff);
   font-family: var(--body-b3);
+  z-index: 99999;
 }

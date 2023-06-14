@@ -191,7 +191,7 @@
   color: var(--grayscale-aaa);
   top: 0;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
 }
 .solutionForYour {
   margin: 0;
@@ -811,6 +811,7 @@
     rgba(34, 34, 34, 0.57),
     rgba(34, 34, 34, 0)
   );
+  border-radius: 20px;
   width: 1440px;
   /* width: 100%; */
   height: 100%;
@@ -840,7 +841,7 @@
   width: 100%;
   height: 2967px;
   /* height: 100vh; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .bgIcon {
   position: absolute;
@@ -2165,6 +2166,7 @@
   width: 100%;
   height: 100%;
   font-size: var(--body-b1-size);
+  /* z-index: 1000; */
 }
 .groupParent {
   /* position: absolute; */
@@ -2444,14 +2446,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  justify-items: center;
+  /* z-index: 999; */
   text-align: center;
   width: 100%;
+  /* height: 100%; */
   position: sticky;
 }
 
 .pagerText {
   /* z-index: 99999; */
   width: 480px;
+  /* height: 100%; */
   text-align: start;
+  padding: 200px 0;
 }
