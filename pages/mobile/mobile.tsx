@@ -7,6 +7,7 @@ import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
 import LogoMobile from "../../component/LogoMobile";
 import MobilrSliderBar from "../../component/MobileSliderBar";
+
 const SKuber393: NextPage = () => {
   return (
     <div className={styles.sKuber393}>

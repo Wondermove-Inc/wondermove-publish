@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import NavButtom from "../component/NavButtom";
-import Link from "next/link";
 import Logo from "../component/Logo";
 import styles from "../pages/1920_desktop/styles.module.css";
 
 const GnbContainer = styled("div")(({ theme }) => ({
   height: "60px",
-  width: "100%",
+  width: "1440px",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
@@ -30,31 +29,26 @@ const GnbMenuItem = styled("li")({
 });
 
 const ResponsiveNav = styled("div")(({ theme }) => ({
-  [`@media (min-width: ${theme.breakpoints.values.md}px)`]: {
-    // 1024px
+  // 1440px
+  GnbContainer: {
+    height: "60px",
+    width: "80%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  [`@media (min-width: ${theme.breakpoints.values.lg}px)`]: {
-    // 1440px
-    GnbContainer: {
-      height: "60px",
-      width: "80%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-    },
 
-    GnbLogo: {
-      height: "20px",
-    },
+  GnbLogo: {
+    height: "20px",
+  },
 
-    GnbMenu: {
-      listStyle: "none",
-      display: "flex",
-    },
+  GnbMenu: {
+    listStyle: "none",
+    display: "flex",
+  },
 
-    GnbMenuItem: {
-      marginLeft: "15px",
-    },
+  GnbMenuItem: {
+    marginLeft: "15px",
   },
 }));
 

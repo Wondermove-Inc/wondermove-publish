@@ -4,11 +4,24 @@ import styles from "../pages/1920_desktop/sendSuccessfully.module.css";
 import Modal from "react-modal";
 
 const SentSuccessfully = ({ toggleSuccessModalVisible, isVisible }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
   const goToHomePage = () => {
     router.push("/");
     toggleSuccessModalVisible && toggleSuccessModalVisible();
   };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const getStartedClassName = isHovered
+    ? styles.getSendWrapperHover
+    : styles.getSendWrapper;
 
   return (
     <Modal
@@ -67,7 +80,12 @@ const SentSuccessfully = ({ toggleSuccessModalVisible, isVisible }) => {
             </div>
           </div>
           <div className={styles.frameContainer}>
-            <div className={styles.getSendWrapper} onClick={goToHomePage}>
+            <div
+              className={getStartedClassName}
+              onClick={goToHomePage}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <div className={styles.getStarted}>Go to home page</div>
             </div>
           </div>

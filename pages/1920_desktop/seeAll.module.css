@@ -56,8 +56,8 @@
 .seeAllFeatures {
   position: relative;
   background-color: var(--bg-1a);
-  /* width: 1440px; */
-  width: 100%;
+  width: 1440px;
+  /* width: 100%; */
   height: 100%;
   overflow: hidden;
   text-align: left;
@@ -67,8 +67,8 @@
   transition: max-height 0.3s ease-out;
 }
 .seeAllFeaturesInner {
-  /* width: 1440px; */
-  width: 100%;
+  width: 1440px;
+  /* width: 100%; */
   height: 100%;
   /* height: 2906px; */
 }

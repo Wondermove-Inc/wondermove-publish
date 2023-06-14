@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "../pages/1920_desktop/seeAll.module.css";
 
-function SiolutionMenu() {
+function SolutionMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -1045,4 +1045,4 @@ function SiolutionMenu() {
   );
 }
 
-export default SiolutionMenu;
+export default SolutionMenu;

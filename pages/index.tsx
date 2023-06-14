@@ -1,7 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Mobile from "./mobile/mobile";
 import Desktop from "./1920_desktop/desktop";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
 
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1024,
+      lg: 1440,
+      xl: 1920,
+    },
+  },
+});
 const HomePage = () => {
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -24,7 +37,12 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>{screenWidth && screenWidth >= 768 ? <Desktop /> : <Mobile />}</div>
+    // <div>{screenWidth && screenWidth >= 768 ? <Desktop /> : <Mobile />}</div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Desktop />
+      </div>
+    </ThemeProvider>
   );
 };
 
