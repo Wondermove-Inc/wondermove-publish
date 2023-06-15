@@ -37,10 +37,6 @@ const MobilrSliderBar = () => {
 
     const filterRAM = data.cost.filter((item) => item.vCPU == selectedMark);
     setRamList(filterRAM);
-    console.log(
-      "🚀 ~ file: SliderBar.js:38 ~ useEffect ~ filterRAM:",
-      filterRAM
-    );
     setSelectedRam(filterRAM[0]);
   }, [slideValue]);
 
