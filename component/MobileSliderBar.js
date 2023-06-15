@@ -15,6 +15,7 @@ const MobilrSliderBar = () => {
   const [slideValue, setSlideValue] = useState(0);
   const [selectedMark, setSelectedMark] = useState(2);
   const [selectedRam, setSelectedRam] = useState({});
+  const [filteredData, setFilteredData] = useState([]);
 
   const handleSlideChange = (value) => {
     setSlideValue(value);
@@ -30,7 +31,9 @@ const MobilrSliderBar = () => {
       (item, index) =>
         costData.cost.findIndex((_item) => _item.vCPU == item.vCPU) == index
     );
-    setVcpuList(filterVCPU);
+    const marksList = filterVCPU.map((item) => item.vCPU);
+    setFilteredData(filterVCPU);
+    setVcpuList(marksList);
 
     const filterRAM = data.cost.filter((item) => item.vCPU == selectedMark);
     setRamList(filterRAM);
@@ -76,8 +79,9 @@ const MobilrSliderBar = () => {
         <div className={styles.howManyVcpus1}>How many RAM?</div>
         <div className={styles.frameContainer}>
           <div className={styles.component196Parent}>
-            {ramList.map((item) => (
+            {ramList.map((item, index) => (
               <div
+                key={index}
                 onClick={() => setSelectedRam(item)}
                 className={
                   selectedRam.RAM == item.RAM

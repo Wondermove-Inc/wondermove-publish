@@ -75,6 +75,7 @@ const HowManyVcpus = () => {
   const [slideValue, setSlideValue] = useState(0);
   const [selectedMark, setSelectedMark] = useState(2);
   const [selectedRam, setSelectedRam] = useState({});
+  const [filteredData, setFilteredData] = useState([]);
 
   const isXl = useMediaQuery((theme) => theme.breakpoints.down("xl"));
   const isLg = useMediaQuery((theme) => theme.breakpoints.down("lg"));
@@ -90,7 +91,7 @@ const HowManyVcpus = () => {
 
   const handleSlideChange = (value) => {
     setSlideValue(value);
-    setSelectedMark(vcpuList[value].vCPU);
+    setSelectedMark(filteredData[value].vCPU);
     setSelectedRam(ramList[0]);
   };
 
@@ -102,7 +103,9 @@ const HowManyVcpus = () => {
       (item, index) =>
         costData.cost.findIndex((_item) => _item.vCPU == item.vCPU) == index
     );
-    setVcpuList(filterVCPU);
+    const marksList = filterVCPU.map((item) => item.vCPU);
+    setFilteredData(filterVCPU);
+    setVcpuList(marksList);
 
     const filterRAM = data.cost.filter((item) => item.vCPU == selectedMark);
     setRamList(filterRAM);
@@ -146,8 +149,8 @@ const HowManyVcpus = () => {
 
           <div className={styles.component191Parent}>
             <Grid container spacing={1}>
-              {ramList.map((item) => (
-                <Grid item>
+              {ramList.map((item, index) => (
+                <Grid item key={index}>
                   <div
                     onClick={() => setSelectedRam(item)}
                     className={
