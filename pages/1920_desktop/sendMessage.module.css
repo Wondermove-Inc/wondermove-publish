@@ -83,11 +83,103 @@
 .pleaseInputCompany {
   flex: 1;
 }
-.pleaseInputCompanyNameWrapper {
+
+.border-box {
+  border: 4px solid transparent;
+  border-radius: 16px;
+  position: relative;
+  background-color: #222;
+  background-clip: padding-box; /*important*/
+}
+
+.border-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+  margin: -4px;
+  border-radius: inherit; /*important*/
+  background: linear-gradient(to right, #8f41e9, #578aef);
+}
+
+.pleaseInputCompanyNameWrapper1 {
   position: relative;
   align-self: stretch;
   border-radius: var(--br-3xs);
-  border: #ccc 0 solid;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--grayscale-888);
+}
+
+.pleaseInputCompanyNameWrapper1::before {
+  content: "";
+  position: absolute;
+  /* z-index: 99999; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-3xs);
+  padding: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  color: var(--grayscale-888);
+}
+
+.pleaseInputCompanyNameWrapper2 {
+  position: relative;
+  align-self: stretch;
+  border-radius: var(--br-3xs);
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--grayscale-888);
+}
+
+.pleaseInputCompanyNameWrapper2::before {
+  content: "";
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1px;
+  border-radius: var(--br-3xs);
+  background: linear-gradient(
+    95.34deg,
+    #eb4e87 0%,
+    #9463ff 60.42%,
+    #125aed 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  color: var(--grayscale-888);
+}
+
+.pleaseInputCompanyNameWrapper {
+  width: 100%;
+  border: none;
+  position: relative;
+  align-self: stretch;
+  border-radius: var(--br-3xs);
+
+  outline: none;
   background: linear-gradient(
     100.46deg,
     rgba(255, 255, 255, 0.14) 31.25%,
@@ -99,33 +191,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   color: var(--grayscale-888);
-}
-
-.pleaseInputCompanyNameWrapper::before {
-  content: "";
-  position: absolute;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: var(--br-3xs);
-  padding: 10px;
-  background: linear-gradient(
-    103.01deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.2) 98.57%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  color: var(--grayscale-888);
+  z-index: 5;
 }
 
 .pleaseInputCompanyNameWrapperInput {
   position: relative;
   align-self: stretch;
-  border: #ccc 0 solid;
+  width: 100%;
+  /* border: #ccc 0 solid; */
+  border: none;
+  outline: none;
   border-radius: var(--br-3xs);
   background: linear-gradient(
       108.84deg,
@@ -139,28 +214,6 @@
   padding: 16px var(--padding-xl);
   align-items: flex-start;
   justify-content: flex-start;
-  color: var(--grayscale-888);
-}
-
-.pleaseInputCompanyNameWrapperInput::before {
-  content: "";
-  position: absolute;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px;
-  border-radius: var(--br-3xs);
-  background: linear-gradient(
-    95.34deg,
-    #eb4e87 0%,
-    #9463ff 60.42%,
-    #125aed 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
   color: var(--grayscale-888);
 }
 
@@ -289,20 +342,44 @@
   line-height: 32px;
   font-weight: 500;
 }
-/* .getSendWrapper {
-    border-radius: var(--br-3xs);
-    background-color: var(--grayscale-222);
-    width: 586px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    padding: 16px var(--padding-41xl);
-    box-sizing: border-box;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 16px;
-    color: var(--grayscale-fff);
-  } */
+
+.inputCheckBox {
+  appearance: none;
+  -webkit-appearance: none;
+  display: none;
+}
+
+.labelCheckBox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.labelCheckBox::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/1920_desktop/check-off-hover-off.png");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.inputCheckBox:checked + .labelCheckBox::after {
+  background-image: url("/1920_desktop/check-on-hover-off.png");
+}
+
+.inputCheckBox:hover + .labelCheckBox::after {
+  background-image: url("/1920_desktop/check-off-hover-on.png");
+}
+
+.inputCheckBox:checked:hover + .labelCheckBox::after {
+  background-image: url("/1920_desktop/check-on-hover-on.png");
+}
 
 .getSendWrapper {
   position: relative;
@@ -321,9 +398,10 @@
   color: var(--grayscale-fff);
   z-index: 1;
 }
+
 .getSendWrapper::before {
-  content: "";
   position: absolute;
+  content: "";
   z-index: -1;
   top: 0;
   left: 0;

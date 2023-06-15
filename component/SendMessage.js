@@ -20,6 +20,10 @@ const SendMessage = ({
   const [userNameError, setUserNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [buttonDisable, setBottonDisable] = useState(false);
+  const [isFocused1, setIsFocused1] = useState(false);
+  const [isFocused2, setIsFocused2] = useState(false);
+  const [isFocused3, setIsFocused3] = useState(false);
+  const [isFocused4, setIsFocused4] = useState(false);
 
   const handleInputChange = (e) => {
     if (e.target.value === "") setCompanyNameError(true);
@@ -122,14 +126,32 @@ const SendMessage = ({
                   <span className={styles.span}>*</span>
                 </div>
 
-                <input
-                  className={styles.pleaseInputCompanyNameWrapper}
-                  type="text"
-                  value={companyName}
-                  onChange={handleInputChange}
-                  placeholder="Please input company name"
-                  onBlur={onCompanyNameBlur}
-                />
+                <div
+                  className={
+                    isFocused1
+                      ? styles.pleaseInputCompanyNameWrapper2
+                      : styles.pleaseInputCompanyNameWrapper1
+                  }
+                >
+                  <input
+                    className={
+                      isFocused1
+                        ? styles.pleaseInputCompanyNameWrapperInput
+                        : styles.pleaseInputCompanyNameWrapper
+                    }
+                    // className={styles.pleaseInputCompanyNameWrapper}
+                    type="text"
+                    value={companyName}
+                    onChange={handleInputChange}
+                    placeholder="Please input company name"
+                    onBlur={() => {
+                      setIsFocused1(false);
+                      onCompanyNameBlur();
+                    }}
+                    onFocus={() => setIsFocused1(true)}
+                  />
+                </div>
+
                 {companyNameError && (
                   <div className={styles.pleaseProvideA}>
                     Please provide a valid company.
@@ -146,14 +168,31 @@ const SendMessage = ({
                     <span>*</span>
                   </span>
                 </div>
-                <input
-                  className={styles.pleaseInputCompanyNameWrapper}
-                  type="text"
-                  value={userName}
-                  onChange={handleInputNameChange}
-                  onBlur={onUserNameBlur}
-                  placeholder="Please input your name"
-                />
+                <div
+                  className={
+                    isFocused2
+                      ? styles.pleaseInputCompanyNameWrapper2
+                      : styles.pleaseInputCompanyNameWrapper1
+                  }
+                >
+                  <input
+                    // className={styles.pleaseInputCompanyNameWrapper}
+                    className={
+                      isFocused2
+                        ? styles.pleaseInputCompanyNameWrapperInput
+                        : styles.pleaseInputCompanyNameWrapper
+                    }
+                    type="text"
+                    value={userName}
+                    onChange={handleInputNameChange}
+                    onFocus={() => setIsFocused2(true)}
+                    onBlur={() => {
+                      setIsFocused2(false);
+                      onUserNameBlur();
+                    }}
+                    placeholder="Please input your name"
+                  />
+                </div>
                 {userNameError && (
                   <div className={styles.pleaseProvideA}>
                     Please provide a valid name.
@@ -171,14 +210,31 @@ const SendMessage = ({
                   <span>*</span>
                 </span>
               </div>
-              <input
-                className={styles.pleaseInputCompanyNameWrapper}
-                type="text"
-                value={email}
-                onChange={handleInputEmailChange}
-                onBlur={onEmailBlur}
-                placeholder="Please input email"
-              />
+              <div
+                className={
+                  isFocused3
+                    ? styles.pleaseInputCompanyNameWrapper2
+                    : styles.pleaseInputCompanyNameWrapper1
+                }
+              >
+                <input
+                  // className={styles.pleaseInputCompanyNameWrapper}
+                  className={
+                    isFocused3
+                      ? styles.pleaseInputCompanyNameWrapperInput
+                      : styles.pleaseInputCompanyNameWrapper
+                  }
+                  type="text"
+                  value={email}
+                  onChange={handleInputEmailChange}
+                  onFocus={() => setIsFocused3(true)}
+                  onBlur={() => {
+                    setIsFocused3(false);
+                    onEmailBlur();
+                  }}
+                  placeholder="Please input email"
+                />
+              </div>
               {emailError && (
                 <div className={styles.pleaseProvideB}>
                   Please provide a valid email.
@@ -187,21 +243,42 @@ const SendMessage = ({
             </div>
             <div className={styles.companyContainer1}>
               <div className={styles.company3}>Comments</div>
-              <textarea
-                className={styles.pleaseInputCompanyNameWrapper}
-                placeholder=" Please write your request or inquiry in as much detail as
+              <div
+                className={
+                  isFocused4
+                    ? styles.pleaseInputCompanyNameWrapper2
+                    : styles.pleaseInputCompanyNameWrapper1
+                }
+              >
+                <textarea
+                  // className={styles.pleaseInputCompanyNameWrapper}
+                  className={
+                    isFocused4
+                      ? styles.pleaseInputCompanyNameWrapperInput
+                      : styles.pleaseInputCompanyNameWrapper
+                  }
+                  placeholder=" Please write your request or inquiry in as much detail as
         possible"
-                rows={10}
-              />
+                  onFocus={() => setIsFocused4(true)}
+                  onBlur={() => setIsFocused4(false)}
+                  rows={10}
+                />
+              </div>
             </div>
           </div>
           <div className={styles.frameContainer}>
             <label className={styles.instanceGroup}>
               <input
+                className={styles.inputCheckBox}
+                id="inputCheckBox"
                 type="checkbox"
                 checked={isChecked}
-                onChange={handleCheckboxChange}
+                onClick={handleCheckboxChange}
               />
+              <label
+                for="inputCheckBox"
+                className={styles.labelCheckBox}
+              ></label>
               <div className={styles.pleaseInputCompany}>
                 By sending this message, you agree to wondermove’s Privacy
                 Policy.

@@ -235,7 +235,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 24px;
   line-height: 51px;
   white-space: pre-line;
 }
@@ -427,6 +427,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-41xl);
+  width: 560px;
 }
 .frameChild {
   align-self: stretch;
@@ -544,8 +545,8 @@
   font-size: var(--title-s1-size);
   width: 100%;
 }
-.frameContainer,
-.frameParent {
+/* .frameContainer, */
+/* .frameParent {
   align-self: stretch;
   display: flex;
   align-items: flex-start;
@@ -554,12 +555,12 @@
   flex-direction: row;
   justify-content: center;
   gap: var(--gap-61xl);
-}
-.frameContainer {
+} */
+/* .frameContainer {
   flex-direction: column;
   justify-content: center;
   font-size: var(--body-b2-size);
-}
+} */
 
 .wonderAboutCuttingYourClouParent {
   position: relative;
@@ -608,8 +609,8 @@
 }
 
 .solutionForYourCloudStrateParent {
-  /* width: 1440px; */
-  width: 100%;
+  max-width: 1440px;
+  /* width: 100%; */
   height: 100%;
   /* padding: var(--padding-221xl) var(--padding-221xl) var(--padding-101xl); */
   box-sizing: border-box;
@@ -691,7 +692,7 @@
   background-color: var(--grayscale-fff);
   border: 1px solid var(--color-gray-200);
   box-sizing: border-box;
-  /* width: 1440px; */
+  width: 1440px;
   width: 100%;
   overflow: hidden;
   /* padding: var(--padding-61xl); */
@@ -721,7 +722,7 @@
   left: 0;
   /* width: 1920px; */
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* padding: var(--padding-141xl) var(--padding-221xl); */
   box-sizing: border-box;
   align-items: flex-start;
@@ -2037,8 +2038,8 @@
 .frameWrapper5 {
   align-self: stretch;
   /* backdrop-filter: var(--effect); */
-  /* width: 100%; */
-  width: 1440px;
+  width: 100%;
+  /* width: 1440px; */
   height: 100%;
   box-sizing: border-box;
   justify-content: space-between;

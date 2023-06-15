@@ -17,9 +17,7 @@ const PricingMenu = () => {
       className={isHovered ? "module module-hovered" : "module"}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-    >
-      模块内容
-    </div>
+    ></div>
   );
 };
 

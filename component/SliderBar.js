@@ -5,6 +5,64 @@ import styled from "@emotion/styled";
 import costData from "../asset/costData.json";
 
 import { Grid, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 601,
+      md: 1025,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
+});
+
+const useStyles = (theme) => ({
+  containerNav: {
+    justifyContent: "center",
+    padding: "10px 240px",
+    [theme.breakpoints.down("xl")]: {
+      padding: "10px 240px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      padding: "10px 120px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: "10px 60px",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px 24px",
+    },
+  },
+  frameParent: {
+    alignSelf: "stretch",
+    display: "flex",
+    alignItems: "flex-start",
+    justifyContent: "center",
+    fontSize: "16px",
+    gap: "60px",
+    [theme.breakpoints.down("xl")]: {
+      display: "flex",
+      flexDirection: "row",
+      gap: "60px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
+  },
+});
+const classes = useStyles(theme);
 
 const StyledSlider = styled(ReactSlider)`
   width: 100%;
@@ -52,129 +110,124 @@ const HowManyVcpus = () => {
   }, [slideValue]);
 
   return (
-    <Grid container>
-      <div className={styles.frameParent}>
-        <Grid item>
-          <div className={styles.frameGroup}>
-            <div className={styles.howManyVcpusParent}>
-              <div className={styles.howManyVcpus}>How many vCPUs?</div>
-              <div className={styles.iconCpuParent}>
-                <img
-                  className={styles.iconCpu}
-                  alt=""
-                  src="/1920_desktop/-icon-cpu.svg"
-                />
-                {selectedMark && (
-                  <div className={styles.selectedMark}>{selectedMark} vCPU</div>
-                )}
-              </div>
+    <Grid container sx={classes.frameParent}>
+      {/* <div className={styles.frameParent}> */}
 
-              <StyledSlider
-                className={styles.customSlider}
-                thumbClassName={styles.customSlider_thumb}
-                trackClassName={styles.customSlider_track}
-                markClassName={styles.customSlider_mark}
-                step={1}
-                marks={vcpuList}
-                min={0}
-                max={vcpuList.length - 1}
-                renderMark={renderMark}
-                value={slideValue}
-                onChange={handleSlideChange}
-              />
-            </div>
-            <div className={styles.howManyVcpusParent}>
-              <div className={styles.howManyVcpus}>How much RAM?</div>
+      <div className={styles.frameGroup}>
+        <div className={styles.howManyVcpusParent}>
+          <div className={styles.howManyVcpus}>How many vCPUs?</div>
+          <div className={styles.iconCpuParent}>
+            <img
+              className={styles.iconCpu}
+              alt=""
+              src="/1920_desktop/-icon-cpu.svg"
+            />
+            {selectedMark && (
+              <div className={styles.selectedMark}>{selectedMark} vCPU</div>
+            )}
+          </div>
 
-              <div className={styles.component191Parent}>
-                <Grid container spacing={1}>
-                  {ramList.map((item) => (
-                    <Grid item>
-                      <div
-                        onClick={() => setSelectedRam(item)}
-                        className={
-                          selectedRam.RAM == item.RAM
-                            ? styles.component191
-                            : styles.component192
-                        }
-                      >
-                        <img
-                          className={styles.iconRam2}
-                          alt=""
-                          src="/1920_desktop/-icon-ram-2.svg"
-                        />
-                        <div className={styles.text}>{item.RAM} GB</div>
-                      </div>
-                    </Grid>
-                  ))}
+          <StyledSlider
+            className={styles.customSlider}
+            thumbClassName={styles.customSlider_thumb}
+            trackClassName={styles.customSlider_track}
+            markClassName={styles.customSlider_mark}
+            step={1}
+            marks={vcpuList}
+            min={0}
+            max={vcpuList.length - 1}
+            renderMark={renderMark}
+            value={slideValue}
+            onChange={handleSlideChange}
+          />
+        </div>
+        <div className={styles.howManyVcpusParent}>
+          <div className={styles.howManyVcpus}>How much RAM?</div>
+
+          <div className={styles.component191Parent}>
+            <Grid container spacing={1}>
+              {ramList.map((item) => (
+                <Grid item>
+                  <div
+                    onClick={() => setSelectedRam(item)}
+                    className={
+                      selectedRam.RAM == item.RAM
+                        ? styles.component191
+                        : styles.component192
+                    }
+                  >
+                    <img
+                      className={styles.iconRam2}
+                      alt=""
+                      src="/1920_desktop/-icon-ram-2.svg"
+                    />
+                    <div className={styles.text}>{item.RAM} GB</div>
+                  </div>
                 </Grid>
-              </div>
-            </div>
+              ))}
+            </Grid>
           </div>
-        </Grid>
-
-        <div className={styles.frameChild} />
-
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <div className={styles.frameDiv}>
-            <div className={styles.frameWrapper1}>
-              <div className={styles.frameParent1}>
-                <div className={styles.withSKuberParent}>
-                  <div className={styles.vcpuText}>with S-kuber</div>
-                  <div className={styles.kubernetesSmContainer}>
-                    <span>{` `}</span>
-                    <span className={styles.span}>(</span>
-                    <span className={styles.kubernetesSm}>
-                      Kubernetes + SM + eBPF)
-                    </span>
-                  </div>
-                </div>
-                <div className={styles.parent}>
-                  <div className={styles.vcpu}>
-                    $
-                    {parseInt(
-                      selectedRam.maxCostAfterIntroduction / 12
-                    ).toLocaleString("en-US")}
-                  </div>
-                  <div className={styles.perMonth}>per month</div>
-                </div>
-                <div className={styles.costReduction}>
-                  ${parseInt(selectedRam.savings / 12).toLocaleString("en-US")}{" "}
-                  (
-                  {parseFloat(
-                    (
-                      (selectedRam.savings * 100) /
-                      selectedRam.maxOriginalCost
-                    ).toFixed(1)
-                  )}
-                  %) cost reduction
-                </div>
-              </div>
-            </div>
-            <div className={styles.virtualMachineParent}>
-              <div className={styles.text}>Virtual machine</div>
-              <div className={styles.group}>
-                <div className={styles.vcpuVirtual}>
-                  $
-                  {parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
-                    "en-US"
-                  )}
-                </div>
-                <div className={styles.perMonth1}>per month</div>
-              </div>
-            </div>
-            <div className={styles.basedOnUsingContainer}>
-              <p className={styles.solutionForYourBase}>
-                * Based on using 100 VMs
-              </p>
-              <p className={styles.solutionForYourBase}>
-                * This is an approximate figure and may differ from the actual
-                amount
-              </p>
-            </div>
-          </div>
-        </Grid>
+        </div>
       </div>
+
+      <div className={styles.frameChild} />
+
+      <div className={styles.frameDiv}>
+        <div className={styles.frameWrapper1}>
+          <div className={styles.frameParent1}>
+            <div className={styles.withSKuberParent}>
+              <div className={styles.vcpuText}>with S-kuber</div>
+              <div className={styles.kubernetesSmContainer}>
+                <span>{` `}</span>
+                <span className={styles.span}>(</span>
+                <span className={styles.kubernetesSm}>
+                  Kubernetes + SM + eBPF)
+                </span>
+              </div>
+            </div>
+            <div className={styles.parent}>
+              <div className={styles.vcpu}>
+                $
+                {parseInt(
+                  selectedRam.maxCostAfterIntroduction / 12
+                ).toLocaleString("en-US")}
+              </div>
+              <div className={styles.perMonth}>per month</div>
+            </div>
+            <div className={styles.costReduction}>
+              ${parseInt(selectedRam.savings / 12).toLocaleString("en-US")} (
+              {parseFloat(
+                (
+                  (selectedRam.savings * 100) /
+                  selectedRam.maxOriginalCost
+                ).toFixed(1)
+              )}
+              %) cost reduction
+            </div>
+          </div>
+        </div>
+        <div className={styles.virtualMachineParent}>
+          <div className={styles.text}>Virtual machine</div>
+          <div className={styles.group}>
+            <div className={styles.vcpuVirtual}>
+              $
+              {parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
+                "en-US"
+              )}
+            </div>
+            <div className={styles.perMonth1}>per month</div>
+          </div>
+        </div>
+        <div className={styles.basedOnUsingContainer}>
+          <p className={styles.solutionForYourBase}>* Based on using 100 VMs</p>
+          <p className={styles.solutionForYourBase}>
+            * This is an approximate figure and may differ from the actual
+            amount
+          </p>
+        </div>
+      </div>
+
+      {/* </div> */}
     </Grid>
   );
 };

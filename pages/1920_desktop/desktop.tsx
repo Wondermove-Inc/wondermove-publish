@@ -142,10 +142,10 @@ const useStyles = (theme: Theme) => ({
     },
   },
   runningASuccessfulProofOfParent: {
-    padding: "80px",
+    justifyContent: "space-between",
+    padding: "0 80px",
     [theme.breakpoints.down("xl")]: {
-      padding: "80px",
-      gap: "165px",
+      padding: "0 80px",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "80px 60px",
@@ -158,7 +158,47 @@ const useStyles = (theme: Theme) => ({
       padding: " 24px",
     },
   },
+
+  frameContainerP: {
+    [theme.breakpoints.down("xl")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+    [theme.breakpoints.down("lg")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
+  },
+
+  frameContainer: {
+    alignSelf: "stretch",
+
+    alignItems: "flex-start",
+    justifyContent: "center",
+    fontSize: "16px",
+    [theme.breakpoints.down("xl")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+    [theme.breakpoints.down("lg")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
+  },
 });
+
 const classes = useStyles(theme);
 
 // Lottie array
@@ -203,6 +243,10 @@ const SKuber1920: NextPage = () => {
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
+    console.log(
+      "🚀 ~ file: desktop.tsx:207 ~ handleCheckboxChange ~ !isChecked:",
+      !isChecked
+    );
   };
 
   const handlePagerClick = (index: number) => {
@@ -290,9 +334,11 @@ const SKuber1920: NextPage = () => {
                         cutting your cloud costs?
                       </p>
                     </div>
-                    <div className={styles.frameContainer}>
+                    {/* <Grid container sx={classes.frameContainerP}> */}
+                    <Grid container sx={classes.frameContainer}>
                       <SliderBar />
-                    </div>
+                    </Grid>
+                    {/* </Grid> */}
                   </div>
                 </div>
               </div>
@@ -300,16 +346,6 @@ const SKuber1920: NextPage = () => {
 
             <Grid container sx={classes.containerGloballyValidated}>
               <div className={styles.groupDiv}>
-                {/* <img
-                className={styles.groupInner}
-                alt=""
-                src="/1920_desktop/group-3157.svg"
-              />
-              <img
-                className={styles.groupIcon}
-                alt=""
-                src="/1920_desktop/group-3158.svg"
-              /> */}
                 <div className={styles.frameWrapper2}>
                   <div className={styles.globallyValidatedSolutionsParent}>
                     <div className={styles.globallyValidatedSolutions}>
