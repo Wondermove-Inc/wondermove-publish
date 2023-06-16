@@ -1,6 +1,48 @@
 import { useState } from "react";
 import styles from "../pages/1920_desktop/styles.module.css";
 
+import { Grid, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 601,
+      md: 1025,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
+});
+
+const useStyles = (theme) => ({
+  frameParent2: {
+    borderRadius: "20px",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "row",
+    boxSizing: "border-box",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "24px",
+    fontSize: "0.24px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      boxSizing: "border-box",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  },
+});
+const classes = useStyles(theme);
+
 function AdvantageHover() {
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
@@ -31,7 +73,8 @@ function AdvantageHover() {
     setIsHovered3(false);
   };
   return (
-    <div className={styles.frameParent2}>
+    <Grid container sx={classes.frameParent2}>
+      {/* <div className={styles.frameParent2}> */}
       <div
         className={isHovered1 ? styles.frameParent3 : styles.frameParent4}
         onMouseEnter={handleMouseOver1}
@@ -99,7 +142,8 @@ function AdvantageHover() {
           <p className={styles.solutionForYour}>{` `}</p>
         </div>
       </div>
-    </div>
+      {/* </div> */}
+    </Grid>
   );
 }
 

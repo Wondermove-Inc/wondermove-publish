@@ -1,6 +1,45 @@
 import React from "react";
 import { useState } from "react";
 import styles from "../pages/1920_desktop/seeAll.module.css";
+import { Grid, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 601,
+      md: 1025,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
+});
+
+const useStyles = (theme) => ({
+  pricing: {
+    position: "relative",
+    lineHeight: "32px",
+    fontWeight: "500",
+    fontSize: "0.729167vw",
+    padding: "20px 0",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "0.729167vw",
+    },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "0.972222vw",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.367188vw",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.333333vw",
+    },
+  },
+});
+const classes = useStyles(theme);
 
 function SolutionMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,13 +100,13 @@ function SolutionMenu() {
                     <div className={styles.pricing}>vCPU</div>
                   </div>
                   <div className={styles.wrapper}>
-                    <div className={styles.unlimited}>1 - 10</div>
+                    <div className={styles.unlimited}>{"1 - 10"}</div>
                   </div>
                   <div className={styles.wrapper}>
-                    <div className={styles.unlimited}>11 - 100</div>
+                    <div className={styles.unlimited}>{"11 - 100"}</div>
                   </div>
                   <div className={styles.wrapper}>
-                    <div className={styles.unlimited}>101 - 1,000</div>
+                    <div className={styles.unlimited}>{"101 - 1,000"}</div>
                   </div>
                   <div className={styles.wrapper}>
                     <div className={styles.unlimited}>Unlimited</div>

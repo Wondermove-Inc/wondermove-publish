@@ -56,8 +56,8 @@
 .seeAllFeatures {
   position: relative;
   background-color: var(--bg-1a);
-  width: 1440px;
-  /* width: 100%; */
+  /* width: 1440px; */
+  width: 100%;
   height: 100%;
   overflow: hidden;
   text-align: left;
@@ -67,8 +67,8 @@
   transition: max-height 0.3s ease-out;
 }
 .seeAllFeaturesInner {
-  width: 1440px;
-  /* width: 100%; */
+  /* width: 1440px; */
+  width: 100%;
   height: 100%;
   /* height: 2906px; */
 }
@@ -149,6 +149,7 @@
   position: relative;
   line-height: 32px;
   font-weight: 500;
+  font-size: 0.729167vw;
   padding: 20px 0;
 }
 
@@ -184,12 +185,12 @@
 
 .rectangleDiv {
   position: relative;
-  width: 345px;
+  width: 17.96875vw;
   height: 70px;
 }
 
 .freeWrapper {
-  width: 195px;
+  width: 10.15625vw;
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
@@ -223,12 +224,12 @@
 }
 .vcpuWrapper {
   align-self: stretch;
-  width: 345px;
+  width: 17.96875vw;
   justify-content: center;
   text-align: left;
 }
 .wrapper {
-  width: 195px;
+  width: 10.15625vw;
   overflow: hidden;
   flex-shrink: 0;
   padding: var(--padding-base) var(--padding-47xl);
@@ -240,6 +241,8 @@
   position: relative;
   line-height: 16px;
   font-weight: 500;
+  font-size: 0.729167vw;
+  white-space: nowrap;
 }
 
 .frameParent9 {
@@ -253,7 +256,7 @@
 
 .realtimeDashboardWrapper {
   align-self: stretch;
-  width: 345px;
+  width: 17.96875vw;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -20,6 +20,7 @@ import GetInTouch from "../../component/GetInTouch";
 import Modal from "react-modal";
 import SendMessage from "../../component/SendMessage";
 import SentSuccessfully from "../../component/SentSuccessfully";
+import NavModal from "../../component/NavModal";
 // import { Grid } from "@mui/material";
 // import theme from "../../component/ThemeProvider";
 // import { makeStyles } from "@material-ui/core/styles";
@@ -45,8 +46,12 @@ const theme: Theme = createTheme({
 
 const useStyles = (theme: Theme) => ({
   containerNav: {
-    justifyContent: "center",
     padding: "10px 240px",
+    height: "80px",
+    maxWidth: "1920px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     [theme.breakpoints.down("xl")]: {
       padding: "10px 240px",
     },
@@ -74,14 +79,32 @@ const useStyles = (theme: Theme) => ({
       padding: "240px 60px 120px",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "",
+      padding: "240px 0px 120px",
+    },
+  },
+  solutionForYourCosts: {
+    margin: "0",
+    fontFamily: "Montserrat",
+    fontSize: "56px",
+    fontWeight: "700",
+    lineHeight: "80px",
+    letterSpacing: "0px",
+    textAlign: "left",
+    whiteSpace: "nowrap",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "32px",
+      lineHeight: "44px",
+      padding: "0  53px 0 24px ",
     },
   },
   containerGloballyValidated: {
-    padding: "160px 240px",
+    padding: "160px 12.5vw",
     justifyContent: "center",
     [theme.breakpoints.down("xl")]: {
-      padding: "160px 240px",
+      padding: "160px 12.5vw",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "160px 120px",
@@ -95,18 +118,43 @@ const useStyles = (theme: Theme) => ({
   },
   containerFrameParent25: {
     justifyContent: "center",
-    padding: "160px 240px",
+    padding: "160px 60px",
     [theme.breakpoints.down("xl")]: {
-      padding: "160px 240px",
+      padding: "160px 120px",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "160px 120px",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "",
+      padding: "160px 60px",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "",
+      padding: "160px 24px",
+    },
+  },
+  frameParent25: {
+    overflow: "hidden",
+    display: "flex",
+    boxSizing: "border-box",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: "80px",
+    [theme.breakpoints.down("xl")]: {
+      gap: "80px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      gap: "80px",
+    },
+    [theme.breakpoints.down("md")]: {
+      gap: "80px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      gap: "60px",
     },
   },
   containerQA: {
@@ -138,24 +186,122 @@ const useStyles = (theme: Theme) => ({
       padding: "80px 60px",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: " 0px 0px 80px",
+      padding: " 60px 24px 80px",
+    },
+  },
+
+  layer1Icon: {
+    position: "relative",
+    width: "200px",
+    height: "22px",
+    overflow: "hidden",
+    flexShrink: "0",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  layer1Group: {
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "flex-start",
+    alignSelf: "stretch",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      gap: "40px",
+    },
+  },
+
+  howManyVcpus: {
+    position: "relative",
+    alignSelf: "stretch",
+    lineHeight: "32px",
+    fontWeight: "500",
+    fontSize: "18px",
+    [theme.breakpoints.down("xl")]: {
+      // fontSize: "0.9375vw",
+      fontSize: "18px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      // fontSize: "1.25vw",
+      fontSize: "18px",
+    },
+    [theme.breakpoints.down("md")]: {
+      // fontSize: "1.757812vw",
+      fontSize: "18px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      // fontSize: "2.333333vw",
+      fontSize: "18px",
+    },
+  },
+
+  solutionForYourFooter: {
+    margin: "0",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "500",
+    fontSize: "14px",
+    lineHeight: "32px",
+    letterSpacing: "0px",
+    textAlign: "left",
+    color: "#ccc",
+    [theme.breakpoints.down("xl")]: {
+      // fontSize: "0.052083vw",
+      fontSize: "14px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      // fontSize: "0.972222vw",
+      fontSize: "14px",
+    },
+    [theme.breakpoints.down("md")]: {
+      // fontSize: "1.367188vw",
+      fontSize: "14px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      // fontSize: "2.333333vw",
+      fontSize: "14px",
     },
   },
   runningASuccessfulProofOfParent: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    position: "relative",
+    top: "0",
+    left: "0",
+    borderRadius: "20px",
     justifyContent: "space-between",
-    padding: "0 80px",
+    backgroundColor: "#fff",
+    border: "1px solid  rgba(255, 255, 255, 0.6)",
+    boxSizing: "border-box",
+    width: "100%",
+    overflow: "hidden",
+    padding: "80px 80px",
     [theme.breakpoints.down("xl")]: {
-      padding: "0 80px",
+      padding: "80px 80px",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "80px 60px",
       gap: "69px",
     },
     [theme.breakpoints.down("md")]: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      textAlign: "center",
       padding: " 60px 40px",
     },
     [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      textAlign: "center",
       padding: " 24px",
+      gap: "32px",
     },
   },
 
@@ -197,6 +343,179 @@ const useStyles = (theme: Theme) => ({
       flexDirection: "column",
     },
   },
+  frameWrapper5: {
+    display: "flex",
+    [theme.breakpoints.down("xl")]: {
+      display: "flex",
+    },
+    [theme.breakpoints.down("lg")]: {
+      display: "flex",
+    },
+    [theme.breakpoints.down("md")]: {
+      display: "flex",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+
+  wonderAboutCuttingYourClouParent: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    position: "relative",
+    alignSelf: "stretch",
+    gap: "80px",
+    padding: "80px 80px 120px",
+    [theme.breakpoints.down("xl")]: {
+      padding: "80px 80px 120px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      padding: "80px 60px 120px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: "80px 40px 120px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: "40px 24px 80px",
+      gap: "40px",
+    },
+  },
+  wonderAboutText: {
+    marginBlockStart: "0",
+    marginBlockEnd: "0",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "42px",
+    lineHeight: "51px",
+    whiteSpace: "pre-line",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "42px",
+      lineHeight: "51px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "42px",
+      lineHeight: "51px",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "42px",
+      lineHeight: "51px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+    },
+  },
+
+  wonderAbout: {
+    marginBlockStart: "0",
+    marginBlockEnd: "0",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "24px",
+    lineHeight: "29px",
+    whiteSpace: "pre-line",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "24px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "24px",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "24px",
+      padding: "0 20px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+      lineHeight: "24px",
+      padding: "0",
+    },
+  },
+
+  vcpuRunning: {
+    fontFamily: "Montserrat",
+    fontSize: "24px",
+    fontWeight: "600",
+    lineHeight: "35px",
+    letterSpacing: "0px",
+    textAlign: "left",
+    [theme.breakpoints.down("xl")]: {
+      textAlign: "left",
+      lineHeight: "29.26px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      textAlign: "left",
+      lineHeight: "29.26px",
+    },
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+      textAlign: "center",
+      lineHeight: "29.26px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      fontSize: "16px",
+      lineHeight: "24px",
+    },
+  },
+
+  container: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: "auto",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      flex: "1",
+      textAlign: "center",
+      justifyContent: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flex: "1",
+      textAlign: "center",
+      justifyContent: "center",
+    },
+  },
+  image646Icon: {
+    position: "relative",
+    width: "175px",
+    height: "50px",
+    objectFit: "cover",
+    backgroundImage: 'url("/1920_desktop/image-646@2x.png")',
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: { marginLeft: "100px" },
+    [theme.breakpoints.down("sm")]: {
+      width: "106px",
+      height: "29px",
+      marginLeft: "0",
+    },
+  },
+  icon: {
+    position: "relative",
+    width: "260px",
+    height: "36px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundImage: 'url("/1920_desktop/--2.svg")',
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: { marginRight: "100px" },
+    [theme.breakpoints.down("sm")]: {
+      width: "126px",
+      height: "17px",
+      marginRight: "0",
+    },
+  },
 });
 
 const classes = useStyles(theme);
@@ -226,6 +545,8 @@ const pages = ["", "", "", ""];
 const SKuber1920: NextPage = () => {
   const [sendModalVisible, setSendModalVisible] = useState(false);
   const [successModalVisible, setSuccessModalVisible] = useState(false);
+  const [navModalVisible, setNavModalVisible] = useState(false);
+
   const [isChecked, setIsChecked] = useState(false);
   const [companyName, setCompanyName] = useState("");
   const [userName, setUserName] = useState("");
@@ -238,6 +559,7 @@ const SKuber1920: NextPage = () => {
       "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
     );
   };
+  const toggleNavModalVisible = () => setNavModalVisible(!navModalVisible);
   const toggleSuccessModalVisible = () =>
     setSuccessModalVisible(!successModalVisible);
 
@@ -246,12 +568,12 @@ const SKuber1920: NextPage = () => {
     toggleSuccessModalVisible();
   };
 
+  const onNavBTMPress = () => {
+    toggleNavModalVisible;
+  };
+
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-    console.log(
-      "🚀 ~ file: desktop.tsx:207 ~ handleCheckboxChange ~ !isChecked:",
-      !isChecked
-    );
   };
 
   const handlePagerClick = (index: number) => {
@@ -317,34 +639,39 @@ const SKuber1920: NextPage = () => {
           <VideoBackground />
           <div className={styles.gnb}>
             <Grid container sx={classes.containerNav}>
-              <Nav />
+              {/* <div className={styles.gnb}> */}
+              <Nav onClick={toggleNavModalVisible} />
+              {/* </div> */}
             </Grid>
           </div>
           <div className={styles.gnbParent}>
             <Grid container sx={classes.containerSolutionForYourCloud}>
               <div className={styles.solutionForYourCloudStrateParent}>
-                <b className={styles.solutionForYourContainer}>
-                  <p className={styles.solutionForYourCosts}>
-                    Solution for Your
-                  </p>
-                  <p className={styles.solutionForYourCosts}>
-                    Cloud Strategy and Costs
-                  </p>
-                </b>
+                <div className={styles.solutionForYourContainer}>
+                  <Grid container sx={classes.solutionForYourCosts}>
+                    <div>{`Solution for Your Cloud Strategy and Costs`}</div>
+                  </Grid>
+                  {/* <Grid container sx={classes.solutionForYourCosts}>
+                    <div>Cloud Strategy and Costs</div>
+                  </Grid> */}
+                </div>
                 <div className={styles.frameWrapper}>
-                  <div className={styles.wonderAboutCuttingYourClouParent}>
+                  <Grid container sx={classes.wonderAboutCuttingYourClouParent}>
+                    {/* <div className={styles.wonderAboutCuttingYourClouParent}> */}
                     <div className={styles.wonderAboutCuttingContainer}>
-                      <p className={styles.wonderAbout}>Wonder about</p>
-                      <p className={styles.wonderAbout}>
+                      <Grid container sx={classes.wonderAboutText}>
+                        Wonder about <br />
                         cutting your cloud costs?
-                      </p>
+                      </Grid>
                     </div>
+
                     {/* <Grid container sx={classes.frameContainerP}> */}
                     <Grid container sx={classes.frameContainer}>
                       <SliderBar />
                     </Grid>
                     {/* </Grid> */}
-                  </div>
+                    {/* </div> */}
+                  </Grid>
                 </div>
               </div>
             </Grid>
@@ -359,32 +686,41 @@ const SKuber1920: NextPage = () => {
                     <div className={styles.rectangleGroup}>
                       <div className={styles.rectangleDiv} />
 
-                      <div className={styles.runningASuccessfulProofOfParent}>
+                      <div>
                         <Grid
                           container
                           sx={classes.runningASuccessfulProofOfParent}
                         >
                           <div className={styles.vcpuRunning}>
-                            <p className={styles.wonderAbout}>
-                              Running a successful proof of concept in
-                            </p>
-                            <p
-                              className={styles.wonderAbout}
-                            >{`4 European counteris with `}</p>
-                          </div>
-                          <div className={styles.container}>
-                            <img
-                              className={styles.icon}
-                              alt=""
-                              src="/1920_desktop/--2.svg"
-                            />
+                            <Grid container sx={classes.wonderAbout}>
+                              <p>
+                                Running a successful proof of <br /> concept in
+                                4 European counteris with
+                              </p>
+                            </Grid>
                           </div>
                           <div>
-                            <img
-                              className={styles.image646Icon}
-                              alt=""
-                              src="/1920_desktop/image-646@2x.png"
-                            />
+                            <Grid container sx={classes.container}>
+                              <Grid container sx={classes.icon}>
+                                {/* <div className={styles.icon}></div> */}
+                                {/* <img
+                                className={styles.icon}
+                                alt=""
+                                src="/1920_desktop/--2.svg"
+                              /> */}
+                              </Grid>
+                            </Grid>
+                          </div>
+                          <div>
+                            <Grid container sx={classes.container}>
+                              <Grid container sx={classes.image646Icon}></Grid>
+                              {/* <div className={styles.image646Icon}></div> */}
+                              {/* <img
+                                className={styles.image646Icon}
+                                alt=""
+                                src="/1920_desktop/image-646@2x.png"
+                              /> */}
+                            </Grid>
                           </div>
                         </Grid>
                       </div>
@@ -466,7 +802,8 @@ const SKuber1920: NextPage = () => {
           </div>
 
           <Grid container sx={classes.containerFrameParent25}>
-            <div className={styles.frameParent25}>
+            <Grid container sx={classes.frameParent25}>
+              {/* <div className={styles.frameParent25}> */}
               <div className={styles.pricingParent}>
                 <div className={styles.pricing}>Pricing</div>
                 <div className={styles.experienceTheNextGenerationContainer}>
@@ -477,20 +814,22 @@ const SKuber1920: NextPage = () => {
                 </div>
               </div>
               <div className={styles.groupParent3}>
-                <div className={styles.rectangleParent2}>
-                  {/* <div className={styles.groupChild5} />
+                {/* <div className={styles.rectangleParent2}> */}
+                {/* <div className={styles.groupChild5} />
                 <div className={styles.rectangleParent3}>
                   <div className={styles.groupChild6} />
                   <div className={styles.maskGroup}>
                     <div className={styles.maskGroupChild} />
                   </div>
                 </div> */}
-                  <SolutionCost />
-                </div>
+                <SolutionCost />
+                {/* </div> */}
 
-                <div className={styles.frameWrapper5}>
-                  <SolutionMenu />
-                </div>
+                <Grid container sx={classes.frameWrapper5}>
+                  <div className={styles.frameWrapper5}>
+                    <SolutionMenu />
+                  </div>
+                </Grid>
               </div>
               <GetInTouch
                 sendModalVisible={sendModalVisible}
@@ -502,38 +841,58 @@ const SKuber1920: NextPage = () => {
               {/* <div className={styles.getStartedWrapper}>
               <div className={styles.pricing}>Get in touch</div>
             </div> */}
-            </div>
+              {/* </div> */}
+            </Grid>
           </Grid>
           <Grid container sx={classes.containerQA}>
             <QA />
           </Grid>
           <Grid container sx={classes.containerFooter}>
             <div className={styles.footer}>
-              <div className={styles.layer1Group}>
-                <div className={styles.layer1Icon}>
+              <Grid container sx={classes.layer1Group}>
+                <Grid container sx={classes.layer1Icon}>
+                  {/* <div className={styles.layer1Icon}> */}
                   <Logo />
-                </div>
+                  {/* </div> */}
+                </Grid>
 
                 <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                  <div className={styles.howManyVcpus}>
+                  <Grid container sx={classes.howManyVcpus}>
+                    {/* <div className={styles.howManyVcpus}> */}
                     wondermove Spin-off of Hyundai Motor Company
-                  </div>
+                    {/* </div> */}
+                  </Grid>
                   <div className={styles.wondermoveIncContainer}>
-                    <p
-                      className={styles.solutionForYour}
-                    >{`wondermove Inc. `}</p>
-                    <p
-                      className={styles.solutionForYour}
-                    >{` Business Registration Number: 518-81-01644`}</p>
-                    <p
-                      className={styles.solutionForYour}
-                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea`}</p>
-                    <p className={styles.solutionForYour}>
+                    <Grid
+                      container
+                      sx={classes.solutionForYourFooter}
+                    >{`wondermove Inc. `}</Grid>
+                    {/* <p
+                      className={styles.solutionForYourFooter}
+                    >{`wondermove Inc. `}</p> */}
+                    <Grid
+                      container
+                      sx={classes.solutionForYourFooter}
+                    >{` Business Registration Number: 518-81-01644`}</Grid>
+                    {/* <p
+                      className={styles.solutionForYourFooter}
+                    >{` Business Registration Number: 518-81-01644`}</p> */}
+                    <Grid
+                      container
+                      sx={classes.solutionForYourFooter}
+                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
+                    {/* <p
+                      className={styles.solutionForYourFooter}
+                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</p> */}
+                    <Grid container sx={classes.solutionForYourFooter}>
                       South Korea Use Inquiries: hawkeye@wondermove.net
-                    </p>
+                    </Grid>
+                    {/* <p className={styles.solutionForYourFooter}>
+                      South Korea Use Inquiries: hawkeye@wondermove.net
+                    </p> */}
                   </div>
                 </div>
-              </div>
+              </Grid>
             </div>
           </Grid>
         </div>
@@ -554,6 +913,11 @@ const SKuber1920: NextPage = () => {
       <SentSuccessfully
         isVisible={successModalVisible}
         toggleSuccessModalVisible={toggleSuccessModalVisible}
+      />
+      <NavModal
+        toggleNavModalVisible={toggleNavModalVisible}
+        isVisible={navModalVisible}
+        onNavBTMPress={onNavBTMPress}
       />
     </div>
   );

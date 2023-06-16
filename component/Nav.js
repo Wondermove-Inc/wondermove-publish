@@ -52,7 +52,7 @@ const ResponsiveNav = styled("div")(({ theme }) => ({
   },
 }));
 
-const Nav = () => {
+const Nav = ({ onClick }) => {
   const theme = useTheme();
 
   return (
@@ -60,7 +60,7 @@ const Nav = () => {
       <Logo />
       <GnbMenu>
         <GnbMenuItem>
-          <NavButtom />
+          <NavButtom onClick={onClick} />
         </GnbMenuItem>
       </GnbMenu>
     </GnbContainer>
