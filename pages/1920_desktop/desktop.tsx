@@ -25,7 +25,7 @@ import NavModal from "../../component/NavModal";
 // import theme from "../../component/ThemeProvider";
 // import { makeStyles } from "@material-ui/core/styles";
 
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { Box } from "@mui/system";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -95,6 +95,32 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
+      fontSize: "32px",
+      lineHeight: "44px",
+      padding: "0  53px 0 24px ",
+    },
+  },
+
+  textContainer: {
+    whiteSpace: "pre-line",
+    // 设置默认的行数
+    lineClamp: 1,
+    // 设置文本溢出时的省略号
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    margin: "0",
+    fontFamily: "Montserrat",
+    fontSize: "56px",
+    fontWeight: "700",
+    lineHeight: "80px",
+    letterSpacing: "0px",
+    textAlign: "left",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      // 设置响应式的行数
+      lineClamp: 2,
       fontSize: "32px",
       lineHeight: "44px",
       padding: "0  53px 0 24px ",
@@ -516,6 +542,33 @@ const useStyles = (theme: Theme) => ({
       marginRight: "0",
     },
   },
+  howManyVcpus1: {
+    position: "relative",
+    alignSelf: "stretch",
+    lineHeight: "32px",
+    fontWeight: "500",
+    fontSize: "16px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "24px",
+      fontSize: "14px",
+    },
+  },
+  globallyValidatedSolutions: {
+    lineHeight: "51px",
+    fontSize: "42px",
+    fontWeight: "600",
+    textAlign: "center",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+    },
+  },
 });
 
 const classes = useStyles(theme);
@@ -552,6 +605,21 @@ const SKuber1920: NextPage = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsSmallScreen(window.innerWidth <= 600);
+    }
+
+    handleResize(); // Check on initial render
+
+    window.addEventListener("resize", handleResize); // Add event listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up on component unmount
+    };
+  }, []);
 
   // const toggleSendModalVisible = () => setSendModalVisible(!sendModalVisible);
   const toggleSendModalVisible = () => {
@@ -648,11 +716,33 @@ const SKuber1920: NextPage = () => {
             <Grid container sx={classes.containerSolutionForYourCloud}>
               <div className={styles.solutionForYourCloudStrateParent}>
                 <div className={styles.solutionForYourContainer}>
-                  <Grid container sx={classes.solutionForYourCosts}>
-                    <div>{`Solution for Your Cloud Strategy and Costs`}</div>
-                  </Grid>
+                  {/* <Grid container spacing={2}>
+                    <Grid item sm={12} lg={6} xl={4}> */}
+                  <Typography
+                    variant="body1"
+                    component="div"
+                    sx={classes.textContainer}
+                  >
+                    {isSmallScreen ? (
+                      <>
+                        Solution for
+                        <br />
+                        Your Cloud <br />
+                        Strategy and Costs
+                      </>
+                    ) : (
+                      <>
+                        Solution for Your
+                        <br />
+                        Cloud Strategy and Costs
+                      </>
+                    )}
+                  </Typography>
+                  {/* </Grid>
+                  </Grid> */}
+
                   {/* <Grid container sx={classes.solutionForYourCosts}>
-                    <div>Cloud Strategy and Costs</div>
+                    <div>Solution for Your Cloud Strategy and Costs</div>
                   </Grid> */}
                 </div>
                 <div className={styles.frameWrapper}>
@@ -681,7 +771,9 @@ const SKuber1920: NextPage = () => {
                 <div className={styles.frameWrapper2}>
                   <div className={styles.globallyValidatedSolutionsParent}>
                     <div className={styles.globallyValidatedSolutions}>
-                      Globally validated solutions
+                      <Grid container sx={classes.globallyValidatedSolutions}>
+                        Globally validated solutions
+                      </Grid>
                     </div>
                     <div className={styles.rectangleGroup}>
                       <div className={styles.rectangleDiv} />
