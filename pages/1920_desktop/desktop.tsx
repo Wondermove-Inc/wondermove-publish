@@ -47,7 +47,7 @@ const theme: Theme = createTheme({
 const useStyles = (theme: Theme) => ({
   containerNav: {
     padding: "10px 240px",
-    height: "80px",
+
     maxWidth: "1920px",
     display: "flex",
     justifyContent: "center",
@@ -63,23 +63,23 @@ const useStyles = (theme: Theme) => ({
     },
 
     [theme.breakpoints.down("sm")]: {
-      padding: "10px 24px",
+      padding: "12px 24px",
     },
   },
   containerSolutionForYourCloud: {
-    padding: "240px 240px 120px",
+    padding: "320px 240px 120px",
     justifyContent: "center",
     [theme.breakpoints.down("xl")]: {
-      padding: "240px 240px 120px",
+      padding: "320px 240px 120px",
     },
     [theme.breakpoints.down("lg")]: {
-      padding: "240px 120px 120px",
+      padding: "320px 120px 120px",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "240px 60px 120px",
+      padding: "320px 60px 120px",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "240px 0px 120px",
+      padding: "284px 0px 0",
     },
   },
   solutionForYourCosts: {
@@ -144,18 +144,18 @@ const useStyles = (theme: Theme) => ({
   },
   containerFrameParent25: {
     justifyContent: "center",
-    padding: "160px 60px",
+    padding: "160px 240px",
     [theme.breakpoints.down("xl")]: {
-      padding: "160px 120px",
+      padding: "160px 240px",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "160px 120px",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "160px 60px",
+      padding: "120px 60px",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "160px 24px",
+      padding: "80px 24px",
     },
   },
   frameParent25: {
@@ -261,7 +261,8 @@ const useStyles = (theme: Theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       // fontSize: "2.333333vw",
-      fontSize: "18px",
+      fontSize: "14px",
+      lineHeight: "24px",
     },
   },
 
@@ -290,6 +291,7 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("sm")]: {
       // fontSize: "2.333333vw",
       fontSize: "14px",
+      lineHeight: "24px",
     },
   },
   runningASuccessfulProofOfParent: {
@@ -401,7 +403,7 @@ const useStyles = (theme: Theme) => ({
       padding: "80px 60px 120px",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "80px 40px 120px",
+      padding: "80px 40px 56px",
     },
     [theme.breakpoints.down("sm")]: {
       padding: "40px 24px 80px",
@@ -561,6 +563,30 @@ const useStyles = (theme: Theme) => ({
     fontSize: "42px",
     fontWeight: "600",
     textAlign: "center",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+    },
+  },
+  pricing: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+      lineHeight: "24px",
+    },
+  },
+  experienceTheNextGenerationContainer: {
+    fontSize: "42px",
+    lineHeight: "51px",
+    fontWeight: "600",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -897,12 +923,29 @@ const SKuber1920: NextPage = () => {
             <Grid container sx={classes.frameParent25}>
               {/* <div className={styles.frameParent25}> */}
               <div className={styles.pricingParent}>
-                <div className={styles.pricing}>Pricing</div>
+                <div className={styles.pricing}>
+                  <Grid container sx={classes.pricing}>
+                    Pricing
+                  </Grid>
+                </div>
                 <div className={styles.experienceTheNextGenerationContainer}>
-                  <p className={styles.wonderAbout}>
-                    Experience the Next-Generation
-                  </p>
-                  <p className={styles.wonderAbout}>Cloud Solution?</p>
+                  <Grid
+                    container
+                    sx={classes.experienceTheNextGenerationContainer}
+                  >
+                    {isSmallScreen ? (
+                      <div className={styles.wonderAbout}>
+                        Experience <br />
+                        the Next-Generation <br />
+                        Cloud Solution?
+                      </div>
+                    ) : (
+                      <div className={styles.wonderAbout}>
+                        Experience the Next-Generation <br />
+                        Cloud Solution?
+                      </div>
+                    )}
+                  </Grid>
                 </div>
               </div>
               <div className={styles.groupParent3}>
@@ -949,11 +992,13 @@ const SKuber1920: NextPage = () => {
                 </Grid>
 
                 <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                  <Grid container sx={classes.howManyVcpus}>
-                    {/* <div className={styles.howManyVcpus}> */}
-                    wondermove Spin-off of Hyundai Motor Company
-                    {/* </div> */}
-                  </Grid>
+                  <div>
+                    <Grid container sx={classes.howManyVcpus}>
+                      {/* <div className={styles.howManyVcpus}> */}
+                      wondermove Spin-off of Hyundai Motor Company
+                      {/* </div> */}
+                    </Grid>
+                  </div>
                   <div className={styles.wondermoveIncContainer}>
                     <Grid
                       container
