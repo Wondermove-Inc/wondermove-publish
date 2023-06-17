@@ -2,6 +2,40 @@ import React, { useState } from "react";
 import SendMessage from "./SendMessage";
 import styles from "../pages/1920_desktop/styles.module.css";
 
+import { Grid, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 601,
+      md: 1025,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
+});
+
+const useStyles = (theme) => ({
+  getInTouch: {
+    fontSize: "16px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    padding: "16px 106px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+      lineHeight: "24px",
+      padding: "16px 128.5px",
+    },
+  },
+});
+const classes = useStyles(theme);
+
 const GetInTouch = ({
   onClick,
   sendModalVisible,
@@ -36,7 +70,11 @@ const GetInTouch = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className={styles.pricing}>Get in touch</div>
+        <div className={styles.pricing}>
+          <Grid container sx={classes.getInTouch}>
+            Get in touch
+          </Grid>
+        </div>
       </div>
 
       {/* {sendModalVisible && (
