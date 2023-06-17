@@ -153,6 +153,12 @@
   padding: 20px 0;
 }
 
+.pricingSee {
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 .iconNavArrowDown {
   position: relative;
   width: 16px;
