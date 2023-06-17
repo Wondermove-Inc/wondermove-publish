@@ -2,6 +2,72 @@ import React, { useState } from "react";
 //import { FaPlus, FaMinus } from "react-icons/fa";
 import styles from "../pages/1920_desktop/styles.module.css";
 
+import { Grid, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 601,
+      md: 1025,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
+});
+
+const useStyles = (theme) => ({
+  globallyValidatedSolutions: {
+    lineHeight: "51px",
+    fontSize: "42px",
+    fontWeight: "600",
+    textAlign: "center",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+    },
+  },
+  paymentOptions: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+      lineHeight: "28px",
+    },
+  },
+  solutionForYour: {
+    fontSize: "16px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+      lineHeight: "24px",
+    },
+  },
+  frequentlyAskedQuestionsParent: {
+    gap: "80px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      gap: "60px",
+    },
+  },
+});
+const classes = useStyles(theme);
+
 const QA = () => {
   const [isContentVisible1, setIsContentVisible1] = useState(false);
   const [isContentVisible2, setIsContentVisible2] = useState(false);
@@ -31,273 +97,305 @@ const QA = () => {
 
   return (
     <div className={styles.frequentlyAskedQuestionsParent}>
-      <div className={styles.globallyValidatedSolutions}>
-        Frequently Asked Questions
-      </div>
-      <div className={styles.frameParent17}>
-        <div
-          className={styles.allBusinessFeaturesPlusParent}
-          onClick={toggleContent1}
-        >
-          <div className={styles.paymentOptionsParent}>
-            <div className={styles.paymentOptions}>
-              What is S-Kuber and how can it benefit my organization?
+      <Grid container sx={classes.frequentlyAskedQuestionsParent}>
+        <div className={styles.globallyValidatedSolutions}>
+          <Grid container sx={classes.globallyValidatedSolutions}>
+            Frequently Asked Questions
+          </Grid>
+        </div>
+        <div className={styles.frameParent17}>
+          <div
+            className={styles.allBusinessFeaturesPlusParent}
+            onClick={toggleContent1}
+          >
+            <div className={styles.paymentOptionsParent}>
+              <div className={styles.paymentOptions}>
+                <Grid container sx={classes.paymentOptions}>
+                  What is S-Kuber and how can it benefit my organization?
+                </Grid>
+              </div>
+              <img
+                className={styles.frameChild20}
+                alt=""
+                src={
+                  isContentVisible1
+                    ? "/1920_desktop/minus.svg"
+                    : "/1920_desktop/plus.svg"
+                }
+              />
             </div>
-            <img
-              className={styles.frameChild20}
-              alt=""
-              src={
-                isContentVisible1
-                  ? "/1920_desktop/minus.svg"
-                  : "/1920_desktop/plus.svg"
-              }
-            />
-          </div>
 
-          {isContentVisible1 && (
-            <div className={styles.preventResourceWasteOnOutWrapper}>
-              {/* content */}
-              <div className={styles.solutionForYour}>
-                <p className={styles.solutionForYour}>
-                  {`S-Kuber is a cloud management service that helps you optimize
+            {isContentVisible1 && (
+              <div className={styles.preventResourceWasteOnOutWrapper}>
+                {/* content */}
+                <div className={styles.solutionForYour}>
+                  <Grid container sx={classes.solutionForYour}>
+                    <p className={styles.solutionForYour}>
+                      {`S-Kuber is a cloud management service that helps you optimize
                 your resource costs and cloud technology`}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`reducing additional costs. Moreover, it facilitates the
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`reducing additional costs. Moreover, it facilitates the
                 transition from traditional virtual machines to Kubernetes,`}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`enabling you to decrease your cloud costs by over 40% while
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`enabling you to decrease your cloud costs by over 40% while
                 enhancing efficiency.`}
-                </p>
+                    </p>
+                  </Grid>
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          <div className={styles.lineDiv} />
-        </div>
-
-        <div
-          className={styles.allBusinessFeaturesPlusParent}
-          onClick={toggleContent2}
-        >
-          <div className={styles.paymentOptionsParent}>
-            <div className={styles.paymentOptions}>
-              Does S-Kuber require specialized knowledge to operate?
-            </div>
-            <img
-              className={styles.frameChild20}
-              alt=""
-              src={
-                isContentVisible2
-                  ? "/1920_desktop/minus.svg"
-                  : "/1920_desktop/plus.svg"
-              }
-            />
+            <div className={styles.lineDiv} />
           </div>
 
-          {isContentVisible2 && (
-            <div className={styles.preventResourceWasteOnOutWrapper}>
-              {/* content */}
-              <div className={styles.solutionForYour}>
-                <p className={styles.solutionForYour}>
-                  {`No, S-Kuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`and respond to service failures in real-time.`}
-                </p>
+          <div
+            className={styles.allBusinessFeaturesPlusParent}
+            onClick={toggleContent2}
+          >
+            <div className={styles.paymentOptionsParent}>
+              <div className={styles.paymentOptions}>
+                <Grid container sx={classes.paymentOptions}>
+                  Does S-Kuber require specialized knowledge to operate?
+                </Grid>
               </div>
+              <img
+                className={styles.frameChild20}
+                alt=""
+                src={
+                  isContentVisible2
+                    ? "/1920_desktop/minus.svg"
+                    : "/1920_desktop/plus.svg"
+                }
+              />
             </div>
-          )}
 
-          <div className={styles.lineDiv} />
-        </div>
+            {isContentVisible2 && (
+              <div className={styles.preventResourceWasteOnOutWrapper}>
+                {/* content */}
+                <div className={styles.solutionForYour}>
+                  <Grid container sx={classes.solutionForYour}>
+                    <p className={styles.solutionForYour}>
+                      {`No, S-Kuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`and respond to service failures in real-time.`}
+                    </p>
+                  </Grid>
+                </div>
+              </div>
+            )}
 
-        <div
-          className={styles.allBusinessFeaturesPlusParent}
-          onClick={toggleContent3}
-        >
-          <div className={styles.paymentOptionsParent}>
-            <div className={styles.paymentOptions}>
-              How does S-Kuber ensure cost reduction?
-            </div>
-            <img
-              className={styles.frameChild20}
-              alt=""
-              src={
-                isContentVisible3
-                  ? "/1920_desktop/minus.svg"
-                  : "/1920_desktop/plus.svg"
-              }
-            />
+            <div className={styles.lineDiv} />
           </div>
 
-          {isContentVisible3 && (
-            <div className={styles.preventResourceWasteOnOutWrapper}>
-              {/* content */}
-              <div className={styles.solutionForYour}>
-                <p className={styles.solutionForYour}>
-                  {`S-Kuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time  `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative  `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale- `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`down, and preventing service failure during emergencies with self-validation services. `}
-                </p>
+          <div
+            className={styles.allBusinessFeaturesPlusParent}
+            onClick={toggleContent3}
+          >
+            <div className={styles.paymentOptionsParent}>
+              <div className={styles.paymentOptions}>
+                <Grid container sx={classes.paymentOptions}>
+                  How does S-Kuber ensure cost reduction?
+                </Grid>
               </div>
+              <img
+                className={styles.frameChild20}
+                alt=""
+                src={
+                  isContentVisible3
+                    ? "/1920_desktop/minus.svg"
+                    : "/1920_desktop/plus.svg"
+                }
+              />
             </div>
-          )}
 
-          <div className={styles.lineDiv} />
-        </div>
-        <div
-          className={styles.allBusinessFeaturesPlusParent}
-          onClick={toggleContent4}
-        >
-          <div className={styles.paymentOptionsParent}>
-            <div className={styles.paymentOptions}>
-              {`What are the key features of S-Kuber's service management?`}
-            </div>
-            <img
-              className={styles.frameChild20}
-              alt=""
-              src={
-                isContentVisible4
-                  ? "/1920_desktop/minus.svg"
-                  : "/1920_desktop/plus.svg"
-              }
-            />
+            {isContentVisible3 && (
+              <div className={styles.preventResourceWasteOnOutWrapper}>
+                {/* content */}
+                <div className={styles.solutionForYour}>
+                  <Grid container sx={classes.solutionForYour}>
+                    <p className={styles.solutionForYour}>
+                      {`S-Kuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time  `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative  `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale- `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`down, and preventing service failure during emergencies with self-validation services. `}
+                    </p>
+                  </Grid>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.lineDiv} />
           </div>
-
-          {isContentVisible4 && (
-            <div className={styles.preventResourceWasteOnOutWrapper}>
-              {/* content */}
-              <div className={styles.solutionForYour}>
-                <p className={styles.solutionForYour}>
-                  {`S-Kuber optimizes large-scale service management by enabling you to take control of your services with `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`aArchitectures) and ensures reliable management of large-scale services.`}
-                </p>
+          <div
+            className={styles.allBusinessFeaturesPlusParent}
+            onClick={toggleContent4}
+          >
+            <div className={styles.paymentOptionsParent}>
+              <div className={styles.paymentOptions}>
+                <Grid
+                  container
+                  sx={classes.globallyValidatedpaymentOptionsSolutions}
+                >
+                  {`What are the key features of S-Kuber's service management?`}
+                </Grid>
               </div>
+              <img
+                className={styles.frameChild20}
+                alt=""
+                src={
+                  isContentVisible4
+                    ? "/1920_desktop/minus.svg"
+                    : "/1920_desktop/plus.svg"
+                }
+              />
             </div>
-          )}
 
-          <div className={styles.lineDiv} />
-        </div>
-        <div
-          className={styles.allBusinessFeaturesPlusParent}
-          onClick={toggleContent5}
-        >
-          <div className={styles.paymentOptionsParent}>
-            <div className={styles.paymentOptions}>
-              What pricing plans does S-Kuber offer and what are their features?
-            </div>
-            <img
-              className={styles.frameChild20}
-              alt=""
-              src={
-                isContentVisible5
-                  ? "/1920_desktop/minus.svg"
-                  : "/1920_desktop/plus.svg"
-              }
-            />
+            {isContentVisible4 && (
+              <div className={styles.preventResourceWasteOnOutWrapper}>
+                {/* content */}
+                <div className={styles.solutionForYour}>
+                  <Grid container sx={classes.solutionForYour}>
+                    <p className={styles.solutionForYour}>
+                      {`S-Kuber optimizes large-scale service management by enabling you to take control of your services with `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`aArchitectures) and ensures reliable management of large-scale services.`}
+                    </p>
+                  </Grid>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.lineDiv} />
           </div>
-
-          {isContentVisible5 && (
-            <div className={styles.preventResourceWasteOnOutWrapper}>
-              {/* content */}
-              <div className={styles.solutionForYour}>
-                <p className={styles.solutionForYour}>
-                  {`S-Kuber offers several pricing tiers, each with its own set of features : `}
-                </p>
-                <br />
-                <p className={styles.solutionForYour}>
-                  {`- Free : Includes up to 10 vCPU, one cluster, real-time monitoring, a legacy migration tool, real-time log viewer, `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`service flow management, service mesh management, and config-map/secret management.`}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`- Plus ($1,500/month) : Includes all Free features, plus 11-100 vCPU, unlimited clusters, cost tracing, account`}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`management, service log viewer, and unlimited members.`}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`- Pro ($1,500 + $12 x vCPU/month) : Includes all Plus features, plus 101-1,000 vCPU.`}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`- Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue  `}
-                </p>
-                <p className={styles.solutionForYour}>{`support.`}</p>
-                <p className={styles.solutionForYour}>
-                  {`- Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`custom dashboard, cloud strategy consulting. `}
-                </p>
+          <div
+            className={styles.allBusinessFeaturesPlusParent}
+            onClick={toggleContent5}
+          >
+            <div className={styles.paymentOptionsParent}>
+              <div className={styles.paymentOptions}>
+                <Grid container sx={classes.paymentOptions}>
+                  What pricing plans does S-Kuber offer and what are their
+                  features?
+                </Grid>
               </div>
+              <img
+                className={styles.frameChild20}
+                alt=""
+                src={
+                  isContentVisible5
+                    ? "/1920_desktop/minus.svg"
+                    : "/1920_desktop/plus.svg"
+                }
+              />
             </div>
-          )}
 
-          <div className={styles.lineDiv} />
-        </div>
-        <div
-          className={styles.allBusinessFeaturesPlusParent}
-          onClick={toggleContent6}
-        >
-          <div className={styles.paymentOptionsParent}>
-            <div className={styles.paymentOptions}>
-              What measures does S-Kuber take against DDoS attacks?
-            </div>
-            <img
-              className={styles.frameChild20}
-              alt=""
-              src={
-                isContentVisible6
-                  ? "/1920_desktop/minus.svg"
-                  : "/1920_desktop/plus.svg"
-              }
-            />
+            {isContentVisible5 && (
+              <div className={styles.preventResourceWasteOnOutWrapper}>
+                {/* content */}
+                <div className={styles.solutionForYour}>
+                  <Grid container sx={classes.solutionForYour}>
+                    <p className={styles.solutionForYour}>
+                      {`S-Kuber offers several pricing tiers, each with its own set of features : `}
+                    </p>
+                    <br />
+                    <p className={styles.solutionForYour}>
+                      {`- Free : Includes up to 10 vCPU, one cluster, real-time monitoring, a legacy migration tool, real-time log viewer, `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`service flow management, service mesh management, and config-map/secret management.`}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`- Plus ($1,500/month) : Includes all Free features, plus 11-100 vCPU, unlimited clusters, cost tracing, account`}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`management, service log viewer, and unlimited members.`}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`- Pro ($1,500 + $12 x vCPU/month) : Includes all Plus features, plus 101-1,000 vCPU.`}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`- Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue  `}
+                    </p>
+                    <p className={styles.solutionForYour}>{`support.`}</p>
+                    <p className={styles.solutionForYour}>
+                      {`- Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`custom dashboard, cloud strategy consulting. `}
+                    </p>
+                  </Grid>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.lineDiv} />
           </div>
-
-          {isContentVisible6 && (
-            <div className={styles.preventResourceWasteOnOutWrapper}>
-              {/* content */}
-              <div className={styles.solutionForYour}>
-                <p className={styles.solutionForYour}>
-                  {`No, S-Kuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor `}
-                </p>
-                <p className={styles.solutionForYour}>
-                  {`and respond to service failures in real-time.`}
-                </p>
+          <div
+            className={styles.allBusinessFeaturesPlusParent}
+            onClick={toggleContent6}
+          >
+            <div className={styles.paymentOptionsParent}>
+              <div className={styles.paymentOptions}>
+                <Grid container sx={classes.paymentOptions}>
+                  What measures does S-Kuber take against DDoS attacks?
+                </Grid>
               </div>
+              <img
+                className={styles.frameChild20}
+                alt=""
+                src={
+                  isContentVisible6
+                    ? "/1920_desktop/minus.svg"
+                    : "/1920_desktop/plus.svg"
+                }
+              />
             </div>
-          )}
 
-          <div className={styles.lineDiv} />
+            {isContentVisible6 && (
+              <div className={styles.preventResourceWasteOnOutWrapper}>
+                {/* content */}
+                <div className={styles.solutionForYour}>
+                  <Grid container sx={classes.solutionForYour}>
+                    <p className={styles.solutionForYour}>
+                      {`No, S-Kuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor `}
+                    </p>
+                    <p className={styles.solutionForYour}>
+                      {`and respond to service failures in real-time.`}
+                    </p>
+                  </Grid>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.lineDiv} />
+          </div>
         </div>
-      </div>
+      </Grid>
     </div>
   );
 };
