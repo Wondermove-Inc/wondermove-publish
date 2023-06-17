@@ -102,15 +102,18 @@ const LottieSliderBar = () => {
     };
   }, []);
 
-  const handlePagerClick = (index) => {
-    setCurrentPageIndex(index);
-    scrollToPage(index);
-  };
+  //캐러셀 onScroll에 따른 indicator 변경. 결과값은 index 0 1 2 3
+  const onScroll = (e) => {
+    const scrollWidth = e.target.scrollWidth;
+    const scrollLeft = e.target.scrollLeft;
+    const clientWidth = e.target.clientWidth;
+    const scrollPercentage = (scrollLeft / (scrollWidth - clientWidth)) * 100;
+    const index = Math.min(
+      Math.floor((scrollPercentage / 100) * 4),
+      pages.length - 1
+    );
 
-  const scrollToPage = (index) => {
-    const textContainer = document.getElementById("textContainer");
-    const pageHeight = textContainer.clientHeight;
-    textContainer.scrollTop = index * pageHeight;
+    setCurrentPageIndex(index);
   };
 
   // Lottie array
@@ -132,8 +135,6 @@ const LottieSliderBar = () => {
       className: styles.lottie4Cintainer,
     },
   ];
-
-  const hasContent = Boolean(lottieDataArray[currentLottieIndex]);
 
   // ];
   const pages = [
@@ -164,7 +165,7 @@ const LottieSliderBar = () => {
     <div>
       {isMdallScreen ? (
         <div>
-          <div className={styles.container}>
+          <div className={styles.container} onScroll={onScroll}>
             <div className={styles.item}>
               <Grid container sx={classes.item}>
                 <div className={styles.lottieText}>
@@ -284,36 +285,37 @@ const LottieSliderBar = () => {
                 </div>
               </div>
             </div>
-            <div
-              style={{
-                position: "absolute",
-                flexDirection: "row",
-                display: "flex",
-                alignSelf: "flex-end",
-                left: 0,
-                right: 0,
-                justifyContent: "center",
-                marginBottom: 120,
-              }}
-            >
-              {pages.map((_, index) => {
-                return (
-                  <div
-                    key={index}
-                    style={{
-                      width: index === currentPageIndex ? 58 : 16,
-                      height: 16,
-                      marginLeft: index === 0 ? 0 : 12,
-                      backgroundColor:
-                        index === currentPageIndex
-                          ? "rgba(204, 204, 204, 1)"
-                          : "rgba(68, 68, 68, 1)",
-                      borderRadius: 16,
-                    }}
-                  />
-                );
-              })}
-            </div>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              flexDirection: "row",
+              display: "flex",
+              alignSelf: "flex-end",
+              left: 0,
+              right: 0,
+              justifyContent: "center",
+              marginBottom: 120,
+              zIndex: 100000,
+            }}
+          >
+            {pages.map((_, index) => {
+              return (
+                <div
+                  key={index}
+                  style={{
+                    width: index === currentPageIndex ? 58 : 16,
+                    height: 16,
+                    marginLeft: index === 0 ? 0 : 12,
+                    backgroundColor:
+                      index === currentPageIndex
+                        ? "rgba(204, 204, 204, 1)"
+                        : "rgba(68, 68, 68, 1)",
+                    borderRadius: 16,
+                  }}
+                />
+              );
+            })}
           </div>
         </div>
       ) : (
