@@ -40,6 +40,7 @@ const ResponsiveNav = styled("div")(({ theme }) => ({
 
   GnbLogo: {
     height: "20px",
+    ursor: "pointer",
   },
 
   GnbMenu: {
@@ -60,7 +61,7 @@ const Nav = ({ onClick }) => {
       <Logo />
       <GnbMenu>
         <GnbMenuItem>
-          <NavButtom onClick={onClick} />
+          <NavButtom onClick={onClick} style={{ cursor: "pointer" }} />
         </GnbMenuItem>
       </GnbMenu>
     </GnbContainer>

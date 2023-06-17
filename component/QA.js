@@ -379,13 +379,13 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`No, S-Kuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be `}
+                      {`S-Kuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as `}
                     </p>
                     <p className={styles.solutionForYour}>
-                      {`managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor `}
+                      {`DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of  `}
                     </p>
                     <p className={styles.solutionForYour}>
-                      {`and respond to service failures in real-time.`}
+                      {`requests you receive from a specific IP address.and respond to service failures in real-time.`}
                     </p>
                   </Grid>
                 </div>

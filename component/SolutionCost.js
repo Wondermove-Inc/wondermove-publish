@@ -245,6 +245,25 @@ const useStyles = (theme) => ({
       lineHeight: "15px",
     },
   },
+  noMonthlyFeesOne: {
+    fontSize: "14px",
+    lineHeight: "17px",
+    fontWeight: "500",
+    [theme.breakpoints.down("xl")]: {
+      paddingBottom: "60px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      paddingBottom: "60px",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "12px",
+      lineHeight: "15px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12px",
+      lineHeight: "15px",
+    },
+  },
   billedAnnuallyOrContainer1: {
     fontSize: "14px",
     lineHeight: "20px",
@@ -272,58 +291,46 @@ const SolutionCost = () => {
   const [isHovered3, setIsHovered3] = useState(false);
   const [isHovered4, setIsHovered4] = useState(false);
   const [isHovered5, setIsHovered5] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(2);
+  // const [selectedItem, setSelectedItem] = useState(2);
+  const [selectedItem, setSelectedItem] = useState(0);
 
-  const handleClick1 = () => {
-    if (!isHovered1) {
-      setSelectedItem(0);
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      const isLargeScreen = window.innerWidth > 1024;
+      if (isLargeScreen) {
+        setSelectedItem(2);
+      } else {
+        setSelectedItem(null);
+      }
+    };
 
-  const handleClick2 = () => {
-    if (!isHovered2) {
-      setSelectedItem(0);
-    }
-  };
+    handleResize();
 
-  const handleClick3 = () => {
-    if (!isHovered3) {
-      setSelectedItem(0);
-    }
-  };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-  const handleClick4 = () => {
-    if (!isHovered4) {
-      setSelectedItem(0);
-    }
-  };
-
-  const handleClick5 = () => {
-    if (!isHovered5) {
-      setSelectedItem(0);
-    }
-  };
+  const onClickItem = (index) => setSelectedItem(index);
 
   return (
     <div>
       <Grid container sx={classes.frameWrapper4}>
         {/* <div className={styles.frameWrapper4}> */}
+
         <div
           className={`${
-            isHovered1 ? styles.frameParent28 : styles.frameParent26
-          } ${
-            selectedItem === 0 ? styles.frameParent28 : styles.frameParent26
+            selectedItem === 0 || isHovered1
+              ? styles.frameParent28
+              : styles.frameParent26
           }`}
           onMouseEnter={() => {
             setIsHovered1(true);
-            setSelectedItem(0);
+            setSelectedItem(null);
           }}
-          onMouseLeave={() => {
-            setIsHovered1(false);
-          }}
-          onClick={() => {
-            setSelectedItem(0), handleClick1;
-          }}
+          onMouseLeave={() => setIsHovered1(false)}
+          onClick={() => onClickItem(0)}
         >
           <Grid container sx={classes.freeParent}>
             {/* <div className={styles.freeParent}> */}
@@ -341,8 +348,10 @@ const SolutionCost = () => {
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFees}>
-                    No monthly fees
+                  <Grid container sx={classes.noMonthlyFeesOne}>
+                    <Grid container sx={classes.noMonthlyFees}>
+                      No monthly fees
+                    </Grid>
                   </Grid>
                 </div>
               </Grid>
@@ -414,24 +423,18 @@ const SolutionCost = () => {
         </div>
         <div
           className={`${
-            isHovered2 ? styles.frameParent28 : styles.frameParent26
-          } ${
-            selectedItem === 1 ? styles.frameParent28 : styles.frameParent26
+            selectedItem == 1 || isHovered2
+              ? styles.frameParent28
+              : styles.frameParent26
           }`}
           // onMouseEnter={() => setIsHovered2(true)}
           onMouseEnter={() => {
             setIsHovered2(true);
-            setSelectedItem(1);
+            setSelectedItem(null);
           }}
+          // onMouseLeave={() => setIsHovered2(false)}
           onMouseLeave={() => setIsHovered2(false)}
-          // onMouseLeave={() => {
-          //   setIsHovered2(false);
-          //   setSelectedItem(1);
-          // }}
-          // onClick={() => setSelectedItem(1)}
-          onClick={() => {
-            setSelectedItem(1), handleClick2;
-          }}
+          onClick={() => onClickItem(1)}
         >
           <Grid container sx={classes.freeParent}>
             {/* <div className={styles.freeParent}> */}
@@ -521,24 +524,17 @@ const SolutionCost = () => {
         </div>
         <div
           className={`${
-            isHovered3 ? styles.frameParent28 : styles.frameParent26
-          } ${
-            selectedItem === 2 ? styles.frameParent28 : styles.frameParent26
+            selectedItem === 2 || isHovered3
+              ? styles.frameParent28
+              : styles.frameParent26
           }`}
           // onMouseEnter={() => setIsHovered3(true)}
           onMouseEnter={() => {
             setIsHovered3(true);
-            setSelectedItem(2);
+            setSelectedItem(null);
           }}
           onMouseLeave={() => setIsHovered3(false)}
-          // onMouseLeave={() => {
-          //   setIsHovered3(false);
-          //   setSelectedItem(2);
-          // }}
-          // onClick={() => setSelectedItem(2)}
-          onClick={() => {
-            setSelectedItem(2), handleClick3;
-          }}
+          onClick={() => onClickItem(2)}
         >
           <Grid container sx={classes.freeParent}>
             {/* <div className={styles.freeParent}> */}
@@ -617,24 +613,18 @@ const SolutionCost = () => {
         </div>
         <div
           className={`${
-            isHovered4 ? styles.frameParent28 : styles.frameParent26
-          } ${
-            selectedItem === 3 ? styles.frameParent28 : styles.frameParent26
+            selectedItem === 3 || isHovered4
+              ? styles.frameParent28
+              : styles.frameParent26
           }`}
           // onMouseEnter={() => setIsHovered4(true)}
+
           onMouseEnter={() => {
             setIsHovered4(true);
-            setSelectedItem(3);
+            setSelectedItem(null);
           }}
           onMouseLeave={() => setIsHovered4(false)}
-          // onMouseLeave={() => {
-          //   setIsHovered4(false);
-          //   setSelectedItem(3);
-          // }}
-          // onClick={() => setSelectedItem(3)}
-          onClick={() => {
-            setSelectedItem(3), handleClick4;
-          }}
+          onClick={() => onClickItem(3)}
         >
           <Grid container sx={classes.freeParent}>
             {/* <div className={styles.freeParent}> */}
@@ -701,24 +691,17 @@ const SolutionCost = () => {
         </div>
         <div
           className={`${
-            isHovered5 ? styles.frameParent28 : styles.frameParent26
-          } ${
-            selectedItem === 4 ? styles.frameParent28 : styles.frameParent26
+            selectedItem === 4 || isHovered5
+              ? styles.frameParent28
+              : styles.frameParent26
           }`}
           // onMouseEnter={() => setIsHovered5(true)}
           onMouseEnter={() => {
             setIsHovered5(true);
-            setSelectedItem(4);
+            setSelectedItem(null);
           }}
           onMouseLeave={() => setIsHovered5(false)}
-          // onMouseLeave={() => {
-          //   setIsHovered5(false);
-          //   setSelectedItem(4);
-          // }}
-          // onClick={() => setSelectedItem(4)}
-          onClick={() => {
-            setSelectedItem(4), handleClick5;
-          }}
+          onClick={() => onClickItem(4)}
         >
           <Grid container sx={classes.freeParent}>
             {/* <div className={styles.enterpriseParent}> */}

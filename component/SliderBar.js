@@ -214,7 +214,7 @@ const useStyles = (theme) => ({
     fontSize: "14px",
     lineHeight: "24px",
     fontWeight: "500",
-    width: "100%",
+    width: "120%",
     textAlign: "right",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
@@ -235,6 +235,7 @@ const useStyles = (theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "104px",
+
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
       width: "102px",

@@ -41,12 +41,14 @@ const useStyles = (theme) => ({
     fontSize: "18px",
     lineHeight: "32px",
     fontWeight: "500",
+    paddingBottom: "80px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       lineHeight: "28px",
+      paddingBottom: "32px",
     },
   },
   pagerText: {
@@ -74,6 +76,23 @@ const useStyles = (theme) => ({
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       gap: "32px",
+    },
+  },
+  indecater: {
+    position: "absolute",
+    flexDirection: "row",
+    display: "flex",
+    alignSelf: "flex-end",
+    left: 0,
+    right: 0,
+    justifyContent: "center",
+
+    bottom: "120px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      bottom: "80px",
     },
   },
 });
@@ -190,7 +209,7 @@ const LottieSliderBar = () => {
                             animationData={lottieDataArray[0].animationData}
                             loop={true}
                             autoplay={true}
-                            style={{ height: "1017px", width: "100%" }}
+                            style={{ height: "99.317vw", width: "100%" }}
                           />
                         </div>
                         <div className={styles.titleContent}>
@@ -212,121 +231,130 @@ const LottieSliderBar = () => {
               </Grid>
             </div>
             <div className={styles.item}>
-              <div className={styles.lottieText}>
+              <Grid container sx={classes.item}>
                 <div className={styles.lottieText}>
-                  <div
-                    className={`${styles.lottieContainer} ${lottieDataArray[0].className}`}
-                  >
-                    <Lottie
-                      animationData={lottieDataArray[0].animationData}
-                      loop={true}
-                      autoplay={true}
-                      style={{ height: "1017px", width: "100%" }}
-                    />
-                  </div>
-                  <div className={styles.titleContent}>
-                    <div>
-                      <Grid container sx={classes.title}>
-                        {pages[0].title}
-                      </Grid>{" "}
-                    </div>
-                    <div>
-                      <Grid container sx={classes.content}>
-                        {pages[0].content}
+                  <Grid container sx={classes.lottieText}>
+                    <div className={styles.lottieText}>
+                      <Grid container sx={classes.lottieText}>
+                        <div
+                          className={`${styles.lottieContainer} ${lottieDataArray[1].className}`}
+                        >
+                          <Lottie
+                            animationData={lottieDataArray[1].animationData}
+                            loop={true}
+                            autoplay={true}
+                            style={{ height: "99.317vw", width: "100%" }}
+                          />
+                        </div>
+                        <div className={styles.titleContent}>
+                          <div>
+                            <Grid container sx={classes.title}>
+                              {pages[1].title}
+                            </Grid>{" "}
+                          </div>
+                          <div>
+                            <Grid container sx={classes.content}>
+                              {pages[1].content}
+                            </Grid>
+                          </div>
+                        </div>
                       </Grid>
                     </div>
-                  </div>
+                    <div className={styles.ellipseParent}></div>
+                  </Grid>
                 </div>
-                <div className={styles.ellipseParent}></div>
-              </div>
+              </Grid>
             </div>
             <div className={styles.item}>
-              <div className={styles.lottieText}>
+              <Grid container sx={classes.item}>
                 <div className={styles.lottieText}>
-                  <div
-                    className={`${styles.lottieContainer} ${lottieDataArray[0].className}`}
-                  >
-                    <Lottie
-                      animationData={lottieDataArray[0].animationData}
-                      loop={true}
-                      autoplay={true}
-                      style={{ height: "1017px", width: "100%" }}
-                    />
-                  </div>
-                  <div className={styles.titleContent}>
-                    <div>
-                      <Grid container sx={classes.title}>
-                        {pages[0].title}
-                      </Grid>{" "}
-                    </div>
-                    <div>
-                      <Grid container sx={classes.content}>
-                        {pages[0].content}
+                  <Grid container sx={classes.lottieText}>
+                    <div className={styles.lottieText}>
+                      <Grid container sx={classes.lottieText}>
+                        <div
+                          className={`${styles.lottieContainer} ${lottieDataArray[2].className}`}
+                        >
+                          <Lottie
+                            animationData={lottieDataArray[2].animationData}
+                            loop={true}
+                            autoplay={true}
+                            style={{ height: "99.317vw", width: "100%" }}
+                          />
+                        </div>
+                        <div className={styles.titleContent}>
+                          <div>
+                            <Grid container sx={classes.title}>
+                              {pages[2].title}
+                            </Grid>{" "}
+                          </div>
+                          <div>
+                            <Grid container sx={classes.content}>
+                              {pages[2].content}
+                            </Grid>
+                          </div>
+                        </div>
                       </Grid>
                     </div>
-                  </div>
+                  </Grid>
                 </div>
-              </div>
+              </Grid>
             </div>
             <div className={styles.item}>
-              <div className={styles.lottieText}>
+              <Grid container sx={classes.item}>
                 <div className={styles.lottieText}>
-                  <div
-                    className={`${styles.lottieContainer} ${lottieDataArray[0].className}`}
-                  >
-                    <Lottie
-                      animationData={lottieDataArray[0].animationData}
-                      loop={true}
-                      autoplay={true}
-                      style={{ height: "1017px", width: "100%" }}
-                    />
-                  </div>
-                  <div className={styles.titleContent}>
-                    <div>
-                      <Grid container sx={classes.title}>
-                        {pages[0].title}
-                      </Grid>{" "}
-                    </div>
-                    <div>
-                      <Grid container sx={classes.content}>
-                        {pages[0].content}
+                  <Grid container sx={classes.lottieText}>
+                    <div className={styles.lottieText}>
+                      <Grid container sx={classes.lottieText}>
+                        <div
+                          className={`${styles.lottieContainer} ${lottieDataArray[3].className}`}
+                        >
+                          <Lottie
+                            animationData={lottieDataArray[3].animationData}
+                            loop={true}
+                            autoplay={true}
+                            style={{ height: "99.317vw", width: "100%" }}
+                          />
+                        </div>
+                        <div className={styles.titleContent}>
+                          <div>
+                            <Grid container sx={classes.title}>
+                              {pages[3].title}
+                            </Grid>{" "}
+                          </div>
+                          <div>
+                            <Grid container sx={classes.content}>
+                              {pages[3].content}
+                            </Grid>
+                          </div>
+                        </div>
                       </Grid>
                     </div>
-                  </div>
+                  </Grid>
                 </div>
-              </div>
+              </Grid>
             </div>
           </div>
-          <div
-            style={{
-              position: "absolute",
-              flexDirection: "row",
-              display: "flex",
-              alignSelf: "flex-end",
-              left: 0,
-              right: 0,
-              justifyContent: "center",
-              bottom: 120,
-            }}
-          >
-            {pages.map((_, index) => {
-              return (
-                <div
-                  key={index}
-                  style={{
-                    width: index === currentPageIndex ? 58 : 16,
-                    height: 16,
-                    marginLeft: index === 0 ? 0 : 12,
-                    backgroundColor:
-                      index === currentPageIndex
-                        ? "rgba(204, 204, 204, 1)"
-                        : "rgba(68, 68, 68, 1)",
-                    borderRadius: 16,
-                  }}
-                  onClick={() => onIndicatorClick(index)}
-                />
-              );
-            })}
+          <div className={styles.indecater}>
+            <Grid container sx={classes.indecater}>
+              {pages.map((_, index) => {
+                return (
+                  <div
+                    key={index}
+                    style={{
+                      width: index === currentPageIndex ? 58 : 16,
+                      height: 16,
+                      marginLeft: index === 0 ? 0 : 12,
+                      backgroundColor:
+                        index === currentPageIndex
+                          ? "rgba(204, 204, 204, 1)"
+                          : "rgba(68, 68, 68, 1)",
+                      borderRadius: 16,
+                    }}
+                    onClick={() => onIndicatorClick(index)}
+                  />
+                );
+              })}
+            </Grid>
           </div>
         </div>
       ) : (
