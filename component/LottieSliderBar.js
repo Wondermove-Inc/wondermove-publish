@@ -85,8 +85,7 @@ const LottieSliderBar = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [isMdallScreen, setIsMdallScreen] = useState(false);
-  const [itemWidth, setItemWidth] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef(null);
 
   useEffect(() => {
     function handleResize() {
@@ -114,6 +113,14 @@ const LottieSliderBar = () => {
     );
 
     setCurrentPageIndex(index);
+  };
+
+  //캐러셀 indicator 클릭시 해당 페이지로 부드럽게 이동
+  const onIndicatorClick = (index) => {
+    const scrollWidth = carouselRef.current.scrollWidth;
+    const scrollLeft = (scrollWidth / 100) * (index * 25);
+    setCurrentPageIndex(index);
+    carouselRef.current.scrollLeft = scrollLeft;
   };
 
   // Lottie array
@@ -165,7 +172,11 @@ const LottieSliderBar = () => {
     <div>
       {isMdallScreen ? (
         <div>
-          <div className={styles.container} onScroll={onScroll}>
+          <div
+            className={styles.container}
+            onScroll={onScroll}
+            ref={carouselRef}
+          >
             <div className={styles.item}>
               <Grid container sx={classes.item}>
                 <div className={styles.lottieText}>
@@ -312,6 +323,7 @@ const LottieSliderBar = () => {
                         : "rgba(68, 68, 68, 1)",
                     borderRadius: 16,
                   }}
+                  onClick={() => onIndicatorClick(index)}
                 />
               );
             })}
