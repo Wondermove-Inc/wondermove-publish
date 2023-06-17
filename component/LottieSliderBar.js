@@ -295,8 +295,7 @@ const LottieSliderBar = () => {
               left: 0,
               right: 0,
               justifyContent: "center",
-              marginBottom: 120,
-              zIndex: 100000,
+              bottom: 120,
             }}
           >
             {pages.map((_, index) => {
