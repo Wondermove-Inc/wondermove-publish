@@ -201,7 +201,9 @@ const useStyles = (theme) => ({
     textAlign: "right",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      textAlign: "left",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
       lineHeight: "24px",
@@ -212,12 +214,63 @@ const useStyles = (theme) => ({
     fontSize: "14px",
     lineHeight: "24px",
     fontWeight: "500",
+    width: "100%",
+    textAlign: "right",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      width: "120%",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+      lineHeight: "17px",
+      width: "100%",
+      textAlign: "left",
+    },
+  },
+  component191: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "104px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      width: "102px",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "140px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "104px",
+    },
+  },
+  text: {
+    fontSize: "18px",
+    lineHeight: "22px",
+    fontWeight: "500",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
-      fontSize: "14px",
-      lineHeight: "17px",
+      fontSize: "16px",
+      lineHeight: "22px",
+    },
+  },
+  component191Parent: {
+    gap: "16px",
+    [theme.breakpoints.down("xl")]: {
+      gap: "12px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      gap: "23px",
+    },
+    [theme.breakpoints.down("md")]: {
+      gap: "30px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      gap: "16px",
     },
   },
 });
@@ -272,167 +325,176 @@ const HowManyVcpus = () => {
   }, [slideValue]);
 
   return (
-    <Grid container sx={classes.frameParent}>
-      {/* <div className={styles.frameParent}> */}
+    <div className={styles.frameParent}>
+      <Grid container sx={classes.frameParent}>
+        {/* <div className={styles.frameParent}> */}
 
-      <div>
-        <Grid container sx={classes.frameGroup}>
-          <div className={styles.howManyVcpusParent}>
-            <div>
-              <Grid container sx={classes.howManyVcpus1}>
-                How many vCPUs?
-              </Grid>
-            </div>
-            <div>
-              <Grid container sx={classes.iconCpuParent}>
-                <img
-                  className={styles.iconCpu}
-                  alt=""
-                  src="/1920_desktop/-icon-cpu.svg"
-                />
-                {selectedMark && (
-                  <div className={styles.selectedMark}>{selectedMark} vCPU</div>
-                )}
-              </Grid>
-            </div>
-
-            <StyledSlider
-              className={styles.customSlider}
-              thumbClassName={styles.customSlider_thumb}
-              trackClassName={styles.customSlider_track}
-              markClassName={styles.customSlider_mark}
-              step={1}
-              marks={vcpuList}
-              min={0}
-              max={vcpuList.length - 1}
-              renderMark={renderMark}
-              value={slideValue}
-              onChange={handleSlideChange}
-            />
-          </div>
-          <div className={styles.howManyVcpusParent}>
-            <div>
-              <Grid container sx={classes.howManyVcpus1}>
-                How much RAM?
-              </Grid>
-            </div>
-
-            <div className={styles.component191Parent}>
-              <Grid container spacing={1}>
-                {ramList.map((item, index) => (
-                  <Grid item key={index}>
-                    <div
-                      onClick={() => setSelectedRam(item)}
-                      className={
-                        selectedRam.RAM == item.RAM
-                          ? styles.component191
-                          : styles.component192
-                      }
-                    >
-                      <img
-                        className={styles.iconRam2}
-                        alt=""
-                        src="/1920_desktop/-icon-ram-2.svg"
-                      />
-                      <div className={styles.text}>{item.RAM} GB</div>
+        <div className={styles.frameGroup}>
+          <Grid container sx={classes.frameGroup}>
+            <div className={styles.howManyVcpusParent}>
+              <div>
+                <Grid container sx={classes.howManyVcpus1}>
+                  How many vCPUs?
+                </Grid>
+              </div>
+              <div>
+                <Grid container sx={classes.iconCpuParent}>
+                  <img
+                    className={styles.iconCpu}
+                    alt=""
+                    src="/1920_desktop/-icon-cpu.svg"
+                  />
+                  {selectedMark && (
+                    <div className={styles.selectedMark}>
+                      {selectedMark} vCPU
                     </div>
-                  </Grid>
-                ))}
-              </Grid>
-            </div>
-          </div>
-        </Grid>
-      </div>
-
-      <div className={styles.frameChild} />
-
-      <div className={styles.frameDiv}>
-        <div className={styles.frameWrapper1}>
-          <Grid container sx={classes.frameWrapper1}>
-            <div className={styles.frameParent1}>
-              <div className={styles.withSKuberParent}>
-                <div>
-                  <Grid container sx={classes.vcpuText}>
-                    with S-kuber
-                  </Grid>
-                </div>
-                <div>
-                  <Grid container sx={classes.kubernetesSmContainer}>
-                    <span>{` `}</span>
-                    <span className={styles.span}>(</span>
-                    <span className={styles.kubernetesSm}>
-                      Kubernetes + SM + eBPF)
-                    </span>
-                  </Grid>
-                </div>
-              </div>
-              <div className={styles.parent}>
-                <div className={styles.vcpu}>
-                  <Grid container sx={classes.vcpu}>
-                    $
-                    {parseInt(
-                      selectedRam.maxCostAfterIntroduction / 12
-                    ).toLocaleString("en-US")}
-                  </Grid>
-                </div>
-                <div className={styles.perMonth}>
-                  <Grid container sx={classes.perMonth}>
-                    per month
-                  </Grid>
-                </div>
-              </div>
-              <div className={styles.costReduction}>
-                <Grid container sx={classes.costReduction}>
-                  ${parseInt(selectedRam.savings / 12).toLocaleString("en-US")}{" "}
-                  (
-                  {parseFloat(
-                    (
-                      (selectedRam.savings * 100) /
-                      selectedRam.maxOriginalCost
-                    ).toFixed(1)
                   )}
-                  %) cost reduction
+                </Grid>
+              </div>
+
+              <StyledSlider
+                className={styles.customSlider}
+                thumbClassName={styles.customSlider_thumb}
+                trackClassName={styles.customSlider_track}
+                markClassName={styles.customSlider_mark}
+                step={1}
+                marks={vcpuList}
+                min={0}
+                max={vcpuList.length - 1}
+                renderMark={renderMark}
+                value={slideValue}
+                onChange={handleSlideChange}
+              />
+            </div>
+            <div className={styles.howManyVcpusParent}>
+              <div>
+                <Grid container sx={classes.howManyVcpus1}>
+                  How much RAM?
+                </Grid>
+              </div>
+
+              <div className={styles.component191Parent}>
+                <Grid container sx={classes.component191Parent}>
+                  {ramList.map((item, index) => (
+                    <Grid item key={index}>
+                      <div
+                        onClick={() => setSelectedRam(item)}
+                        className={
+                          selectedRam.RAM == item.RAM
+                            ? styles.component191
+                            : styles.component192
+                        }
+                      >
+                        <Grid container sx={classes.component191}>
+                          <img
+                            className={styles.iconRam2}
+                            alt=""
+                            src="/1920_desktop/-icon-ram-2.svg"
+                          />{" "}
+                          <div className={styles.text}>
+                            <Grid container sx={classes.text}>
+                              {item.RAM} GB{" "}
+                            </Grid>{" "}
+                          </div>
+                        </Grid>
+                      </div>
+                    </Grid>
+                  ))}
                 </Grid>
               </div>
             </div>
           </Grid>
         </div>
-        <div className={styles.virtualMachineParent}>
-          <div className={styles.textV}>
-            <Grid container sx={classes.textV}>
-              Virtual machine
+
+        <div className={styles.frameChild} />
+
+        <div className={styles.frameDiv}>
+          <div className={styles.frameWrapper1}>
+            <Grid container sx={classes.frameWrapper1}>
+              <div className={styles.frameParent1}>
+                <div className={styles.withSKuberParent}>
+                  <div>
+                    <Grid container sx={classes.vcpuText}>
+                      with S-kuber
+                    </Grid>
+                  </div>
+                  <div>
+                    <Grid container sx={classes.kubernetesSmContainer}>
+                      <span>{` `}</span>
+                      <span className={styles.span}>(</span>
+                      <span className={styles.kubernetesSm}>
+                        Kubernetes + SM + eBPF)
+                      </span>
+                    </Grid>
+                  </div>
+                </div>
+                <div className={styles.parent}>
+                  <div className={styles.vcpu}>
+                    <Grid container sx={classes.vcpu}>
+                      $
+                      {parseInt(
+                        selectedRam.maxCostAfterIntroduction / 12
+                      ).toLocaleString("en-US")}
+                    </Grid>
+                  </div>
+                  <div className={styles.perMonth}>
+                    <Grid container sx={classes.perMonth}>
+                      per month
+                    </Grid>
+                  </div>
+                </div>
+                <div className={styles.costReduction}>
+                  <Grid container sx={classes.costReduction}>
+                    $
+                    {parseInt(selectedRam.savings / 12).toLocaleString("en-US")}{" "}
+                    (
+                    {parseFloat(
+                      (
+                        (selectedRam.savings * 100) /
+                        selectedRam.maxOriginalCost
+                      ).toFixed(1)
+                    )}
+                    %) cost reduction
+                  </Grid>
+                </div>
+              </div>
             </Grid>
           </div>
-          <div className={styles.group}>
-            <div className={styles.vcpuVirtual}>
-              <Grid container sx={classes.vcpuVirtual}>
-                $
-                {parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
-                  "en-US"
-                )}
+          <div className={styles.virtualMachineParent}>
+            <div className={styles.textV}>
+              <Grid container sx={classes.textV}>
+                Virtual machine
               </Grid>
             </div>
-            <div className={styles.perMonth1}>
-              <Grid container sx={classes.perMonth1}>
-                per month
-              </Grid>
+            <div className={styles.group}>
+              <div className={styles.vcpuVirtual}>
+                <Grid container sx={classes.vcpuVirtual}>
+                  $
+                  {parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
+                    "en-US"
+                  )}
+                </Grid>
+              </div>
+              <div className={styles.perMonth1}>
+                <Grid container sx={classes.perMonth1}>
+                  per month
+                </Grid>
+              </div>
             </div>
           </div>
+          <div className={styles.basedOnUsingContainer}>
+            <Grid container sx={classes.basedOnUsingContainer}>
+              <div>
+                * Based on using 100 VMs <br /> * This is an approximate figure
+                and may differ from the actual amount
+              </div>
+            </Grid>
+          </div>
         </div>
-        <div className={styles.basedOnUsingContainer}>
-          <Grid container sx={classes.basedOnUsingContainer}>
-            <div className={styles.based}>* Based on using 100 VMs</div>
-            <br />
-            <div>
-              * This is an approximate figure and may differ from the actual
-              amount
-            </div>
-          </Grid>
-        </div>
-      </div>
 
-      {/* </div> */}
-    </Grid>
+        {/* </div> */}
+      </Grid>
+    </div>
   );
 };
 
