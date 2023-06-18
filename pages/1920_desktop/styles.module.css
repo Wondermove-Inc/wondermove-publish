@@ -2280,7 +2280,7 @@
   );
   border-radius: 10px;
   flex-direction: row;
-  padding: 16px 100px;
+  /* padding: 16px 100px; */
   align-items: flex-start;
   justify-content: space-between;
   font-size: var(--body-b2-size);
