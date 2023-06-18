@@ -294,23 +294,17 @@ const useStyles = (theme: Theme) => ({
       lineHeight: "24px",
     },
   },
-  runningASuccessfulProofOfParent: {
+  wonderAbout1: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     position: "relative",
-    top: "0",
-    left: "0",
-    borderRadius: "20px",
     justifyContent: "space-between",
-    backgroundColor: "#fff",
-    border: "1px solid  rgba(255, 255, 255, 0.6)",
-    boxSizing: "border-box",
-    width: "100%",
-    overflow: "hidden",
     padding: "80px 80px",
+    gap: "69px",
     [theme.breakpoints.down("xl")]: {
       padding: "80px 80px",
+      gap: "0",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "80px 60px",
@@ -322,6 +316,7 @@ const useStyles = (theme: Theme) => ({
       justifyContent: "center",
       textAlign: "center",
       padding: " 60px 40px",
+      gap: "74px",
     },
     [theme.breakpoints.down("sm")]: {
       display: "flex",
@@ -597,8 +592,6 @@ const useStyles = (theme: Theme) => ({
   },
 });
 
-const classes = useStyles(theme);
-
 // Lottie array
 const lottieDataArray = [
   {
@@ -622,6 +615,7 @@ const lottieDataArray = [
 const pages = ["", "", "", ""];
 
 const SKuber1920: NextPage = () => {
+  const classes = useStyles(theme);
   const [sendModalVisible, setSendModalVisible] = useState(false);
   const [successModalVisible, setSuccessModalVisible] = useState(false);
   const [navModalVisible, setNavModalVisible] = useState(false);
@@ -804,11 +798,8 @@ const SKuber1920: NextPage = () => {
                     <div className={styles.rectangleGroup}>
                       <div className={styles.rectangleDiv} />
 
-                      <div>
-                        <Grid
-                          container
-                          sx={classes.runningASuccessfulProofOfParent}
-                        >
+                      <div className={styles.runningASuccessfulProofOfParent}>
+                        <Grid container sx={classes.wonderAbout1}>
                           <div className={styles.vcpuRunning}>
                             <Grid container sx={classes.wonderAbout}>
                               <p>
