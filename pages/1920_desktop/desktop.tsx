@@ -25,7 +25,7 @@ import NavModal from "../../component/NavModal";
 // import theme from "../../component/ThemeProvider";
 // import { makeStyles } from "@material-ui/core/styles";
 
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/system";
 import { Box } from "@mui/system";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -708,10 +708,11 @@ const SKuber1920: NextPage = () => {
   }, []);
 
   return (
-    <div className={styles.sKuber1920}>
-      <div className={styles.groupParent}>
-        <div className={styles.groupContainer}>
-          {/* <div className={styles.image549Parent}>
+    <ThemeProvider theme={theme}>
+      <div className={styles.sKuber1920}>
+        <div className={styles.groupParent}>
+          <div className={styles.groupContainer}>
+            {/* <div className={styles.image549Parent}>
             <img
               className={styles.image549Icon}
               alt=""
@@ -724,134 +725,140 @@ const SKuber1920: NextPage = () => {
             />
           </div> */}
 
-          <VideoBackground />
-          <div className={styles.gnb}>
-            <Grid container sx={classes.containerNav}>
-              {/* <div className={styles.gnb}> */}
-              <Nav onClick={toggleNavModalVisible} />
-              {/* </div> */}
-            </Grid>
-          </div>
-          <div className={styles.gnbParent}>
-            <Grid container sx={classes.containerSolutionForYourCloud}>
-              <div className={styles.solutionForYourCloudStrateParent}>
-                <div className={styles.solutionForYourContainer}>
-                  {/* <Grid container spacing={2}>
+            <VideoBackground />
+            <div className={styles.gnb}>
+              <Grid container sx={classes.containerNav}>
+                {/* <div className={styles.gnb}> */}
+                <Nav onClick={toggleNavModalVisible} />
+                {/* </div> */}
+              </Grid>
+            </div>
+            <div className={styles.gnbParent}>
+              <Grid container sx={classes.containerSolutionForYourCloud}>
+                <div className={styles.solutionForYourCloudStrateParent}>
+                  <div className={styles.solutionForYourContainer}>
+                    {/* <Grid container spacing={2}>
                     <Grid item sm={12} lg={6} xl={4}> */}
-                  <Typography
-                    variant="body1"
-                    component="div"
-                    sx={classes.textContainer}
-                  >
-                    {isSmallScreen ? (
-                      <>
-                        Solution for
-                        <br />
-                        Your Cloud <br />
-                        Strategy and Costs
-                      </>
-                    ) : (
-                      <>
-                        Solution for Your
-                        <br />
-                        Cloud Strategy and Costs
-                      </>
-                    )}
-                  </Typography>
-                  {/* </Grid>
+                    <Typography
+                      variant="body1"
+                      component="div"
+                      sx={classes.textContainer}
+                    >
+                      {isSmallScreen ? (
+                        <>
+                          Solution for
+                          <br />
+                          Your Cloud <br />
+                          Strategy and Costs
+                        </>
+                      ) : (
+                        <>
+                          Solution for Your
+                          <br />
+                          Cloud Strategy and Costs
+                        </>
+                      )}
+                    </Typography>
+                    {/* </Grid>
                   </Grid> */}
 
-                  {/* <Grid container sx={classes.solutionForYourCosts}>
+                    {/* <Grid container sx={classes.solutionForYourCosts}>
                     <div>Solution for Your Cloud Strategy and Costs</div>
                   </Grid> */}
-                </div>
-                <div className={styles.frameWrapper}>
-                  <Grid container sx={classes.wonderAboutCuttingYourClouParent}>
-                    {/* <div className={styles.wonderAboutCuttingYourClouParent}> */}
-                    <div className={styles.wonderAboutCuttingContainer}>
-                      <Grid container sx={classes.wonderAboutText}>
-                        Wonder about <br />
-                        cutting your cloud costs?
-                      </Grid>
-                    </div>
+                  </div>
+                  <div className={styles.frameWrapper}>
+                    <Grid
+                      container
+                      sx={classes.wonderAboutCuttingYourClouParent}
+                    >
+                      {/* <div className={styles.wonderAboutCuttingYourClouParent}> */}
+                      <div className={styles.wonderAboutCuttingContainer}>
+                        <Grid container sx={classes.wonderAboutText}>
+                          Wonder about <br />
+                          cutting your cloud costs?
+                        </Grid>
+                      </div>
 
-                    {/* <Grid container sx={classes.frameContainerP}> */}
-                    <Grid container sx={classes.frameContainer}>
-                      <SliderBar />
+                      {/* <Grid container sx={classes.frameContainerP}> */}
+                      <Grid container sx={classes.frameContainer}>
+                        <SliderBar />
+                      </Grid>
+                      {/* </Grid> */}
+                      {/* </div> */}
                     </Grid>
-                    {/* </Grid> */}
-                    {/* </div> */}
-                  </Grid>
+                  </div>
                 </div>
-              </div>
-            </Grid>
+              </Grid>
 
-            <Grid container sx={classes.containerGloballyValidated}>
-              <div className={styles.groupDiv}>
-                <div className={styles.frameWrapper2}>
-                  <div className={styles.globallyValidatedSolutionsParent}>
-                    <div className={styles.globallyValidatedSolutions}>
-                      <Grid container sx={classes.globallyValidatedSolutions}>
-                        Globally validated solutions
-                      </Grid>
-                    </div>
-                    <div className={styles.rectangleGroup}>
-                      <div className={styles.rectangleDiv} />
+              <Grid container sx={classes.containerGloballyValidated}>
+                <div className={styles.groupDiv}>
+                  <div className={styles.frameWrapper2}>
+                    <div className={styles.globallyValidatedSolutionsParent}>
+                      <div className={styles.globallyValidatedSolutions}>
+                        <Grid container sx={classes.globallyValidatedSolutions}>
+                          Globally validated solutions
+                        </Grid>
+                      </div>
+                      <div className={styles.rectangleGroup}>
+                        <div className={styles.rectangleDiv} />
 
-                      <div className={styles.runningASuccessfulProofOfParent}>
-                        <Grid container sx={classes.wonderAbout1}>
-                          <div className={styles.vcpuRunning}>
-                            <Grid container sx={classes.wonderAbout}>
-                              <p>
-                                Running a successful proof of <br /> concept in
-                                4 European counteris with
-                              </p>
-                            </Grid>
-                          </div>
-                          <div>
-                            <Grid container sx={classes.container}>
-                              <Grid container sx={classes.icon}>
-                                {/* <div className={styles.icon}></div> */}
-                                {/* <img
+                        <div className={styles.runningASuccessfulProofOfParent}>
+                          <Grid container sx={classes.wonderAbout1}>
+                            <div className={styles.vcpuRunning}>
+                              <Grid container sx={classes.wonderAbout}>
+                                <p>
+                                  Running a successful proof of <br /> concept
+                                  in 4 European counteris with
+                                </p>
+                              </Grid>
+                            </div>
+                            <div>
+                              <Grid container sx={classes.container}>
+                                <Grid container sx={classes.icon}>
+                                  {/* <div className={styles.icon}></div> */}
+                                  {/* <img
                                 className={styles.icon}
                                 alt=""
                                 src="/1920_desktop/--2.svg"
                               /> */}
+                                </Grid>
                               </Grid>
-                            </Grid>
-                          </div>
-                          <div>
-                            <Grid container sx={classes.container}>
-                              <Grid container sx={classes.image646Icon}></Grid>
-                              {/* <div className={styles.image646Icon}></div> */}
-                              {/* <img
+                            </div>
+                            <div>
+                              <Grid container sx={classes.container}>
+                                <Grid
+                                  container
+                                  sx={classes.image646Icon}
+                                ></Grid>
+                                {/* <div className={styles.image646Icon}></div> */}
+                                {/* <img
                                 className={styles.image646Icon}
                                 alt=""
                                 src="/1920_desktop/image-646@2x.png"
                               /> */}
-                            </Grid>
-                          </div>
-                        </Grid>
+                              </Grid>
+                            </div>
+                          </Grid>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Grid>
-            <Grid container sx={classes.containerGloballyValidated}>
-              <AdvantageHover />
-            </Grid>
+              </Grid>
+              <Grid container sx={classes.containerGloballyValidated}>
+                <AdvantageHover />
+              </Grid>
+            </div>
           </div>
-        </div>
-        {/* <img className={styles.bgIcon} alt="" src="/1920_desktop/bg.svg" /> */}
-        <div className={styles.scrollableContainer}>
-          <LottieSliderBar />
-          {/* <LottieSliderBar
+          {/* <img className={styles.bgIcon} alt="" src="/1920_desktop/bg.svg" /> */}
+          <div className={styles.scrollableContainer}>
+            <LottieSliderBar />
+            {/* <LottieSliderBar
             currentPageIndex={currentPageIndex}
             onIndicatorItemPress={handlePagerClick}
           /> */}
-          {/* Lottie */}
-          {/* <div className={styles.frameParentContainer}>
+            {/* Lottie */}
+            {/* <div className={styles.frameParentContainer}>
             <div
               ref={childRef}
               className={styles.rightContent}
@@ -899,155 +906,156 @@ const SKuber1920: NextPage = () => {
               </div>
             </div>
           </div> */}
-        </div>
-        <div className={styles.groupParent2}>
-          <div className={styles.frameParent16}>
-            <img
-              className={styles.groupChild3}
-              alt=""
-              src="/1920_desktop/rectangle-23839.png"
-            />
-            {/* <div className={styles.groupChild4} /> */}
           </div>
+          <div className={styles.groupParent2}>
+            <div className={styles.frameParent16}>
+              <img
+                className={styles.groupChild3}
+                alt=""
+                src="/1920_desktop/rectangle-23839.png"
+              />
+              {/* <div className={styles.groupChild4} /> */}
+            </div>
 
-          <Grid container sx={classes.containerFrameParent25}>
-            <Grid container sx={classes.frameParent25}>
-              {/* <div className={styles.frameParent25}> */}
-              <div className={styles.pricingParent}>
-                <div className={styles.pricing}>
-                  <Grid container sx={classes.pricing}>
-                    Pricing
-                  </Grid>
+            <Grid container sx={classes.containerFrameParent25}>
+              <Grid container sx={classes.frameParent25}>
+                {/* <div className={styles.frameParent25}> */}
+                <div className={styles.pricingParent}>
+                  <div className={styles.pricing}>
+                    <Grid container sx={classes.pricing}>
+                      Pricing
+                    </Grid>
+                  </div>
+                  <div className={styles.experienceTheNextGenerationContainer}>
+                    <Grid
+                      container
+                      sx={classes.experienceTheNextGenerationContainer}
+                    >
+                      {isSmallScreen ? (
+                        <div className={styles.wonderAbout}>
+                          Experience <br />
+                          the Next-Generation <br />
+                          Cloud Solution?
+                        </div>
+                      ) : (
+                        <div className={styles.wonderAbout}>
+                          Experience the Next-Generation <br />
+                          Cloud Solution?
+                        </div>
+                      )}
+                    </Grid>
+                  </div>
                 </div>
-                <div className={styles.experienceTheNextGenerationContainer}>
-                  <Grid
-                    container
-                    sx={classes.experienceTheNextGenerationContainer}
-                  >
-                    {isSmallScreen ? (
-                      <div className={styles.wonderAbout}>
-                        Experience <br />
-                        the Next-Generation <br />
-                        Cloud Solution?
-                      </div>
-                    ) : (
-                      <div className={styles.wonderAbout}>
-                        Experience the Next-Generation <br />
-                        Cloud Solution?
-                      </div>
-                    )}
-                  </Grid>
-                </div>
-              </div>
-              <div className={styles.groupParent3}>
-                {/* <div className={styles.rectangleParent2}> */}
-                {/* <div className={styles.groupChild5} />
+                <div className={styles.groupParent3}>
+                  {/* <div className={styles.rectangleParent2}> */}
+                  {/* <div className={styles.groupChild5} />
                 <div className={styles.rectangleParent3}>
                   <div className={styles.groupChild6} />
                   <div className={styles.maskGroup}>
                     <div className={styles.maskGroupChild} />
                   </div>
                 </div> */}
-                <SolutionCost />
-                {/* </div> */}
+                  <SolutionCost />
+                  {/* </div> */}
 
-                <Grid container sx={classes.frameWrapper5}>
-                  <div className={styles.frameWrapper5}>
-                    <SolutionMenu />
+                  <Grid container sx={classes.frameWrapper5}>
+                    <div className={styles.frameWrapper5}>
+                      <SolutionMenu />
+                    </div>
+                  </Grid>
+                </div>
+                <GetInTouch
+                  sendModalVisible={sendModalVisible}
+                  onClick={toggleSendModalVisible}
+                  successModalVisible={successModalVisible}
+                  toggleSendModalVisible={toggleSendModalVisible}
+                  toggleSuccessModalVisible={toggleSuccessModalVisible}
+                />
+                {/* <div className={styles.getStartedWrapper}>
+              <div className={styles.pricing}>Get in touch</div>
+            </div> */}
+                {/* </div> */}
+              </Grid>
+            </Grid>
+            <Grid container sx={classes.containerQA}>
+              <QA />
+            </Grid>
+            <Grid container sx={classes.containerFooter}>
+              <div className={styles.footer}>
+                <Grid container sx={classes.layer1Group}>
+                  <Grid container sx={classes.layer1Icon}>
+                    {/* <div className={styles.layer1Icon}> */}
+                    <Logo />
+                    {/* </div> */}
+                  </Grid>
+
+                  <div className={styles.wondermoveSpinOffOfHyundaiParent}>
+                    <div>
+                      <Grid container sx={classes.howManyVcpus}>
+                        {/* <div className={styles.howManyVcpus}> */}
+                        wondermove Spin-off of Hyundai Motor Company
+                        {/* </div> */}
+                      </Grid>
+                    </div>
+                    <div className={styles.wondermoveIncContainer}>
+                      <Grid
+                        container
+                        sx={classes.solutionForYourFooter}
+                      >{`wondermove Inc. `}</Grid>
+                      {/* <p
+                      className={styles.solutionForYourFooter}
+                    >{`wondermove Inc. `}</p> */}
+                      <Grid
+                        container
+                        sx={classes.solutionForYourFooter}
+                      >{` Business Registration Number: 518-81-01644`}</Grid>
+                      {/* <p
+                      className={styles.solutionForYourFooter}
+                    >{` Business Registration Number: 518-81-01644`}</p> */}
+                      <Grid
+                        container
+                        sx={classes.solutionForYourFooter}
+                      >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
+                      {/* <p
+                      className={styles.solutionForYourFooter}
+                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</p> */}
+                      <Grid container sx={classes.solutionForYourFooter}>
+                        South Korea Use Inquiries: hawkeye@wondermove.net
+                      </Grid>
+                      {/* <p className={styles.solutionForYourFooter}>
+                      South Korea Use Inquiries: hawkeye@wondermove.net
+                    </p> */}
+                    </div>
                   </div>
                 </Grid>
               </div>
-              <GetInTouch
-                sendModalVisible={sendModalVisible}
-                onClick={toggleSendModalVisible}
-                successModalVisible={successModalVisible}
-                toggleSendModalVisible={toggleSendModalVisible}
-                toggleSuccessModalVisible={toggleSuccessModalVisible}
-              />
-              {/* <div className={styles.getStartedWrapper}>
-              <div className={styles.pricing}>Get in touch</div>
-            </div> */}
-              {/* </div> */}
             </Grid>
-          </Grid>
-          <Grid container sx={classes.containerQA}>
-            <QA />
-          </Grid>
-          <Grid container sx={classes.containerFooter}>
-            <div className={styles.footer}>
-              <Grid container sx={classes.layer1Group}>
-                <Grid container sx={classes.layer1Icon}>
-                  {/* <div className={styles.layer1Icon}> */}
-                  <Logo />
-                  {/* </div> */}
-                </Grid>
-
-                <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                  <div>
-                    <Grid container sx={classes.howManyVcpus}>
-                      {/* <div className={styles.howManyVcpus}> */}
-                      wondermove Spin-off of Hyundai Motor Company
-                      {/* </div> */}
-                    </Grid>
-                  </div>
-                  <div className={styles.wondermoveIncContainer}>
-                    <Grid
-                      container
-                      sx={classes.solutionForYourFooter}
-                    >{`wondermove Inc. `}</Grid>
-                    {/* <p
-                      className={styles.solutionForYourFooter}
-                    >{`wondermove Inc. `}</p> */}
-                    <Grid
-                      container
-                      sx={classes.solutionForYourFooter}
-                    >{` Business Registration Number: 518-81-01644`}</Grid>
-                    {/* <p
-                      className={styles.solutionForYourFooter}
-                    >{` Business Registration Number: 518-81-01644`}</p> */}
-                    <Grid
-                      container
-                      sx={classes.solutionForYourFooter}
-                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
-                    {/* <p
-                      className={styles.solutionForYourFooter}
-                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</p> */}
-                    <Grid container sx={classes.solutionForYourFooter}>
-                      South Korea Use Inquiries: hawkeye@wondermove.net
-                    </Grid>
-                    {/* <p className={styles.solutionForYourFooter}>
-                      South Korea Use Inquiries: hawkeye@wondermove.net
-                    </p> */}
-                  </div>
-                </div>
-              </Grid>
-            </div>
-          </Grid>
+          </div>
         </div>
+        <SendMessage
+          isVisible={sendModalVisible}
+          toggleVisible={toggleSendModalVisible}
+          onSendMessagePress={onSendMessagePress}
+          isChecked={isChecked}
+          handleCheckboxChange={handleCheckboxChange}
+          companyName={companyName}
+          userName={userName}
+          email={email}
+          setCompanyName={setCompanyName}
+          setUserName={setUserName}
+          setEmail={setEmail}
+        />
+        <SentSuccessfully
+          isVisible={successModalVisible}
+          toggleSuccessModalVisible={toggleSuccessModalVisible}
+        />
+        <NavModal
+          toggleNavModalVisible={toggleNavModalVisible}
+          isVisible={navModalVisible}
+          onNavBTMPress={onNavBTMPress}
+        />
       </div>
-      <SendMessage
-        isVisible={sendModalVisible}
-        toggleVisible={toggleSendModalVisible}
-        onSendMessagePress={onSendMessagePress}
-        isChecked={isChecked}
-        handleCheckboxChange={handleCheckboxChange}
-        companyName={companyName}
-        userName={userName}
-        email={email}
-        setCompanyName={setCompanyName}
-        setUserName={setUserName}
-        setEmail={setEmail}
-      />
-      <SentSuccessfully
-        isVisible={successModalVisible}
-        toggleSuccessModalVisible={toggleSuccessModalVisible}
-      />
-      <NavModal
-        toggleNavModalVisible={toggleNavModalVisible}
-        isVisible={navModalVisible}
-        onNavBTMPress={onNavBTMPress}
-      />
-    </div>
+    </ThemeProvider>
   );
 };
 

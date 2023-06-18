@@ -48,10 +48,10 @@
   --effect: blur(30px);
 }
 
-.seeAll {
-  width: 100%;
-  height: 1005;
-}
+/* .seeAll {
+  width: 1440px;
+  height: 100%;
+} */
 
 .seeAllFeatures {
   position: relative;
