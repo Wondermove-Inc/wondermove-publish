@@ -258,10 +258,12 @@ const useStyles = (theme) => ({
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
       lineHeight: "15px",
+      paddingBottom: "0",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "12px",
       lineHeight: "15px",
+      paddingBottom: "0",
     },
   },
   billedAnnuallyOrContainer1: {
