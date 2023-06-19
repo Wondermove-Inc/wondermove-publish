@@ -49,6 +49,7 @@ const useStyles = (theme) => ({
     lineHeight: "29px",
     fontWeight: "600",
     height: "70px",
+    whiteSpace: "per-line",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
@@ -66,12 +67,16 @@ const useStyles = (theme) => ({
     fontSize: "16px",
     lineHeight: "32px",
     fontWeight: "500",
+    height: "160px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      height: "224px",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
       lineHeight: "24px",
+      height: "0",
     },
   },
   frameParent3: {
@@ -148,18 +153,25 @@ function AdvantageHover() {
             onMouseLeave={handleMouseOut1}
           >
             <Grid container sx={classes.frameParent3}>
-              {isHovered1 ? (
-                <img src="/1920_desktop/hover-on-1-100.png" alt="Hover Image" />
-              ) : (
-                <img
-                  src="/1920_desktop/hover-off-1-100.png"
-                  alt="Default Image"
-                />
-              )}
+              <div className={styles.advantageImage}>
+                {isHovered1 ? (
+                  <img
+                    src="/1920_desktop/hover-on-1-100.png"
+                    alt="Hover Image"
+                  />
+                ) : (
+                  <img
+                    src="/1920_desktop/hover-off-1-100.png"
+                    alt="Default Image"
+                  />
+                )}
+              </div>
               <div className={styles.wonderAboutCuttingContainer}>
                 <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.reduction}>Reduction in </div>
-                  <div> resource costs</div>
+                  <div className={styles.wonderAbout}>
+                    Reduction in <br />
+                    resource costs
+                  </div>
                 </Grid>
               </div>
               <div className={styles.byTransitioningFromContainer}>
@@ -177,18 +189,25 @@ function AdvantageHover() {
             onMouseLeave={handleMouseOut1}
           >
             <Grid container sx={classes.frameParent3}>
-              {isHovered1 ? (
-                <img src="/1920_desktop/hover-on-1-100.png" alt="Hover Image" />
-              ) : (
-                <img
-                  src="/1920_desktop/hover-off-1-100.png"
-                  alt="Default Image"
-                />
-              )}
+              <div className={styles.advantageImage}>
+                {isHovered1 ? (
+                  <img
+                    src="/1920_desktop/hover-on-1-100.png"
+                    alt="Hover Image"
+                  />
+                ) : (
+                  <img
+                    src="/1920_desktop/hover-off-1-100.png"
+                    alt="Default Image"
+                  />
+                )}
+              </div>
               <div className={styles.wonderAboutCuttingContainer}>
                 <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.reduction}>Reduction in </div>
-                  <div> resource costs</div>
+                  <div className={styles.wonderAbout}>
+                    Reduction in <br />
+                    resource costs
+                  </div>
                 </Grid>
               </div>
               <div className={styles.byTransitioningFromContainer}>
@@ -208,20 +227,23 @@ function AdvantageHover() {
             onMouseOut={handleMouseOut2}
           >
             <Grid container sx={classes.frameParent3}>
-              {isHovered2 ? (
-                <img src="/1920_desktop/hover-on-2-100.png" alt="Hover Image" />
-              ) : (
-                <img
-                  src="/1920_desktop/hover-off-2-100.svg"
-                  alt="Default Image"
-                />
-              )}
+              <div className={styles.advantageImage}>
+                {isHovered2 ? (
+                  <img
+                    src="/1920_desktop/hover-on-2-100.png"
+                    alt="Hover Image"
+                  />
+                ) : (
+                  <img
+                    src="/1920_desktop/hover-off-2-100.svg"
+                    alt="Default Image"
+                  />
+                )}
+              </div>
               <div className={styles.wonderAboutCuttingContainer}>
                 <Grid container sx={classes.wonderAboutCuttingContainer}>
                   <div className={styles.wonderAbout}>
-                    Accessible management
-                  </div>
-                  <div className={styles.wonderAbout}>
+                    Accessible management <br />
                     for all technology levels
                   </div>
                 </Grid>
@@ -244,20 +266,23 @@ function AdvantageHover() {
             onMouseOut={handleMouseOut2}
           >
             <Grid container sx={classes.frameParent3}>
-              {isHovered2 ? (
-                <img src="/1920_desktop/hover-on-2-100.png" alt="Hover Image" />
-              ) : (
-                <img
-                  src="/1920_desktop/hover-off-2-100.svg"
-                  alt="Default Image"
-                />
-              )}
+              <div className={styles.advantageImage}>
+                {isHovered2 ? (
+                  <img
+                    src="/1920_desktop/hover-on-2-100.png"
+                    alt="Hover Image"
+                  />
+                ) : (
+                  <img
+                    src="/1920_desktop/hover-off-2-100.svg"
+                    alt="Default Image"
+                  />
+                )}
+              </div>
               <div className={styles.wonderAboutCuttingContainer}>
                 <Grid container sx={classes.wonderAboutCuttingContainer}>
                   <div className={styles.wonderAbout}>
-                    Accessible management
-                  </div>
-                  <div className={styles.wonderAbout}>
+                    Accessible management <br />
                     for all technology levels
                   </div>
                 </Grid>
@@ -282,20 +307,25 @@ function AdvantageHover() {
             onMouseOut={handleMouseOut3}
           >
             <Grid container sx={classes.frameParent3}>
-              {isHovered3 ? (
-                <img src="/1920_desktop/hover-on-3-100.png" alt="Hover Image" />
-              ) : (
-                <img
-                  src="/1920_desktop/hover-off-3-100.png"
-                  alt="Default Image"
-                />
-              )}
+              <div className={styles.advantageImage}>
+                {isHovered3 ? (
+                  <img
+                    src="/1920_desktop/hover-on-3-100.png"
+                    alt="Hover Image"
+                  />
+                ) : (
+                  <img
+                    src="/1920_desktop/hover-off-3-100.png"
+                    alt="Default Image"
+                  />
+                )}
+              </div>
               <div className={styles.wonderAboutCuttingContainer}>
                 <Grid container sx={classes.wonderAboutCuttingContainer}>
                   <div className={styles.wonderAbout}>
-                    Transition to the latest
+                    Transition to the latest <br />
+                    cloud technology
                   </div>
-                  <div className={styles.wonderAbout}>cloud technology</div>
                 </Grid>
               </div>
               <div className={styles.byTransitioningFromContainer}>
@@ -314,20 +344,25 @@ function AdvantageHover() {
             onMouseOut={handleMouseOut3}
           >
             <Grid container sx={classes.frameParent3}>
-              {isHovered3 ? (
-                <img src="/1920_desktop/hover-on-3-100.png" alt="Hover Image" />
-              ) : (
-                <img
-                  src="/1920_desktop/hover-off-3-100.png"
-                  alt="Default Image"
-                />
-              )}
+              <div className={styles.advantageImage}>
+                {isHovered3 ? (
+                  <img
+                    src="/1920_desktop/hover-on-3-100.png"
+                    alt="Hover Image"
+                  />
+                ) : (
+                  <img
+                    src="/1920_desktop/hover-off-3-100.png"
+                    alt="Default Image"
+                  />
+                )}
+              </div>
               <div className={styles.wonderAboutCuttingContainer}>
                 <Grid container sx={classes.wonderAboutCuttingContainer}>
                   <div className={styles.wonderAbout}>
-                    Transition to the latest
+                    Transition to the latest <br />
+                    cloud technology
                   </div>
-                  <div className={styles.wonderAbout}>cloud technology</div>
                 </Grid>
               </div>
               <div className={styles.byTransitioningFromContainer}>

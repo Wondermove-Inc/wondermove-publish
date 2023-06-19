@@ -21,6 +21,7 @@ import Modal from "react-modal";
 import SendMessage from "../../component/SendMessage";
 import SentSuccessfully from "../../component/SentSuccessfully";
 import NavModal from "../../component/NavModal";
+import GloballyValidated from "../../component/GloballyValidated";
 // import { Grid } from "@mui/material";
 // import theme from "../../component/ThemeProvider";
 // import { makeStyles } from "@material-ui/core/styles";
@@ -789,8 +790,8 @@ const SKuber1920: NextPage = () => {
                   </div>
                 </div>
               </Grid>
-
-              <Grid container sx={classes.containerGloballyValidated}>
+              <GloballyValidated />
+              {/* <Grid container sx={classes.containerGloballyValidated}>
                 <div className={styles.groupDiv}>
                   <div className={styles.frameWrapper2}>
                     <div className={styles.globallyValidatedSolutionsParent}>
@@ -814,14 +815,7 @@ const SKuber1920: NextPage = () => {
                             </div>
                             <div>
                               <Grid container sx={classes.container}>
-                                <Grid container sx={classes.icon}>
-                                  {/* <div className={styles.icon}></div> */}
-                                  {/* <img
-                                className={styles.icon}
-                                alt=""
-                                src="/1920_desktop/--2.svg"
-                              /> */}
-                                </Grid>
+                                <Grid container sx={classes.icon}></Grid>
                               </Grid>
                             </div>
                             <div>
@@ -830,12 +824,6 @@ const SKuber1920: NextPage = () => {
                                   container
                                   sx={classes.image646Icon}
                                 ></Grid>
-                                {/* <div className={styles.image646Icon}></div> */}
-                                {/* <img
-                                className={styles.image646Icon}
-                                alt=""
-                                src="/1920_desktop/image-646@2x.png"
-                              /> */}
                               </Grid>
                             </div>
                           </Grid>
@@ -844,7 +832,7 @@ const SKuber1920: NextPage = () => {
                     </div>
                   </div>
                 </div>
-              </Grid>
+              </Grid> */}
               <Grid container sx={classes.containerGloballyValidated}>
                 <AdvantageHover />
               </Grid>

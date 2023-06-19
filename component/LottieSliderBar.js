@@ -11,6 +11,7 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
+import { isAbsolute } from "path";
 
 const theme = createTheme({
   breakpoints: {
@@ -25,30 +26,56 @@ const theme = createTheme({
 });
 
 const useStyles = (theme) => ({
+  titleContent: {
+    // height: "300px",
+    // gap: "40px",
+    // whiteSpace: "pre-line",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      // height: "250px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      // height: "300px",
+    },
+  },
   title: {
     fontSize: "42px",
     lineHeight: "52px",
     fontWeight: "600",
+    paddingBottom: "40px",
+    whiteSpace: "pre-line",
+
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      whiteSpace: "normal",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "24px",
       lineHeight: "36px",
+      paddingBottom: "24px",
+      whiteSpace: "pre-line",
     },
   },
   content: {
     fontSize: "18px",
     lineHeight: "32px",
     fontWeight: "500",
-    paddingBottom: "80px",
+    height: "100%",
+    whiteSpace: "pre-line",
+    paddingBottom: "96px",
+    height: "100%",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       lineHeight: "28px",
-      paddingBottom: "32px",
+      paddingBottom: "42px",
+      // height: "200px",
+      // height: "200px",
+      height: "100%",
     },
   },
   pagerText: {
@@ -79,6 +106,7 @@ const useStyles = (theme) => ({
     },
   },
   indecater: {
+    // position: "relative",
     position: "absolute",
     flexDirection: "row",
     display: "flex",
@@ -86,13 +114,31 @@ const useStyles = (theme) => ({
     left: 0,
     right: 0,
     justifyContent: "center",
-
     bottom: "120px",
+    // zIndex:"100",
+    paddingBottom: "20px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      paddingBottom: "0px",
+    },
     [theme.breakpoints.down("sm")]: {
-      bottom: "80px",
+      bottom: "60px",
+      paddingBottom: "20px",
+    },
+  },
+  indecaterWH: {
+    width: "58px",
+    height: "16px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      width: "58px",
+      height: "16px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "36px",
+      height: "10px",
     },
   },
 });
@@ -104,11 +150,26 @@ const LottieSliderBar = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [isMdallScreen, setIsMdallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const carouselRef = useRef(null);
 
   useEffect(() => {
     function handleResize() {
       setIsMdallScreen(window.innerWidth <= 1024);
+    }
+
+    handleResize(); // Check on initial render
+
+    window.addEventListener("resize", handleResize); // Add event listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up on component unmount
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsSmallScreen(window.innerWidth <= 600);
     }
 
     handleResize(); // Check on initial render
@@ -213,16 +274,18 @@ const LottieSliderBar = () => {
                           />
                         </div>
                         <div className={styles.titleContent}>
-                          <div>
-                            <Grid container sx={classes.title}>
-                              {pages[0].title}
-                            </Grid>{" "}
-                          </div>
-                          <div>
-                            <Grid container sx={classes.content}>
-                              {pages[0].content}
-                            </Grid>
-                          </div>
+                          <Grid container sx={classes.titleContent}>
+                            <div>
+                              <Grid container sx={classes.title}>
+                                {pages[0].title}
+                              </Grid>{" "}
+                            </div>
+                            <div>
+                              <Grid container sx={classes.content}>
+                                {pages[0].content}
+                              </Grid>
+                            </div>
+                          </Grid>
                         </div>
                       </Grid>
                     </div>
@@ -247,20 +310,21 @@ const LottieSliderBar = () => {
                           />
                         </div>
                         <div className={styles.titleContent}>
-                          <div>
-                            <Grid container sx={classes.title}>
-                              {pages[1].title}
-                            </Grid>{" "}
-                          </div>
-                          <div>
-                            <Grid container sx={classes.content}>
-                              {pages[1].content}
-                            </Grid>
-                          </div>
+                          <Grid container sx={classes.titleContent}>
+                            <div>
+                              <Grid container sx={classes.title}>
+                                {pages[1].title}
+                              </Grid>
+                            </div>
+                            <div>
+                              <Grid container sx={classes.content}>
+                                {pages[1].content}
+                              </Grid>
+                            </div>
+                          </Grid>
                         </div>
                       </Grid>
                     </div>
-                    <div className={styles.ellipseParent}></div>
                   </Grid>
                 </div>
               </Grid>
@@ -282,16 +346,18 @@ const LottieSliderBar = () => {
                           />
                         </div>
                         <div className={styles.titleContent}>
-                          <div>
-                            <Grid container sx={classes.title}>
-                              {pages[2].title}
-                            </Grid>{" "}
-                          </div>
-                          <div>
-                            <Grid container sx={classes.content}>
-                              {pages[2].content}
-                            </Grid>
-                          </div>
+                          <Grid container sx={classes.titleContent}>
+                            <div>
+                              <Grid container sx={classes.title}>
+                                {pages[2].title}
+                              </Grid>{" "}
+                            </div>
+                            <div>
+                              <Grid container sx={classes.content}>
+                                {pages[2].content}
+                              </Grid>
+                            </div>
+                          </Grid>
                         </div>
                       </Grid>
                     </div>
@@ -316,16 +382,18 @@ const LottieSliderBar = () => {
                           />
                         </div>
                         <div className={styles.titleContent}>
-                          <div>
-                            <Grid container sx={classes.title}>
-                              {pages[3].title}
-                            </Grid>{" "}
-                          </div>
-                          <div>
-                            <Grid container sx={classes.content}>
-                              {pages[3].content}
-                            </Grid>
-                          </div>
+                          <Grid container sx={classes.titleContent}>
+                            <div>
+                              <Grid container sx={classes.title}>
+                                {pages[3].title}
+                              </Grid>{" "}
+                            </div>
+                            <div>
+                              <Grid container sx={classes.content}>
+                                {pages[3].content}
+                              </Grid>
+                            </div>
+                          </Grid>
                         </div>
                       </Grid>
                     </div>
@@ -334,28 +402,53 @@ const LottieSliderBar = () => {
               </Grid>
             </div>
           </div>
-          <div className={styles.indecater}>
-            <Grid container sx={classes.indecater}>
-              {pages.map((_, index) => {
-                return (
-                  <div
-                    key={index}
-                    style={{
-                      width: index === currentPageIndex ? 58 : 16,
-                      height: 16,
-                      marginLeft: index === 0 ? 0 : 12,
-                      backgroundColor:
-                        index === currentPageIndex
-                          ? "rgba(204, 204, 204, 1)"
-                          : "rgba(68, 68, 68, 1)",
-                      borderRadius: 16,
-                    }}
-                    onClick={() => onIndicatorClick(index)}
-                  />
-                );
-              })}
-            </Grid>
-          </div>
+          {isSmallScreen ? (
+            <div className={styles.indecater}>
+              <Grid container sx={classes.indecater}>
+                {pages.map((_, index) => {
+                  return (
+                    <div
+                      key={index}
+                      style={{
+                        width: index === currentPageIndex ? 36 : 10,
+                        height: 10,
+                        marginLeft: index === 0 ? 0 : 12,
+                        backgroundColor:
+                          index === currentPageIndex
+                            ? "rgba(204, 204, 204, 1)"
+                            : "rgba(68, 68, 68, 1)",
+                        borderRadius: 16,
+                      }}
+                      onClick={() => onIndicatorClick(index)}
+                    />
+                  );
+                })}
+              </Grid>
+            </div>
+          ) : (
+            <div className={styles.indecater}>
+              <Grid container sx={classes.indecater}>
+                {pages.map((_, index) => {
+                  return (
+                    <div
+                      key={index}
+                      style={{
+                        width: index === currentPageIndex ? 58 : 16,
+                        height: 16,
+                        marginLeft: index === 0 ? 0 : 12,
+                        backgroundColor:
+                          index === currentPageIndex
+                            ? "rgba(204, 204, 204, 1)"
+                            : "rgba(68, 68, 68, 1)",
+                        borderRadius: 16,
+                      }}
+                      onClick={() => onIndicatorClick(index)}
+                    />
+                  );
+                })}
+              </Grid>
+            </div>
+          )}
         </div>
       ) : (
         <div>

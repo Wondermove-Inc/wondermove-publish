@@ -260,7 +260,7 @@ const useStyles = (theme) => ({
     },
   },
   component191Parent: {
-    gap: "16px",
+    gap: "14cpx",
     [theme.breakpoints.down("xl")]: {
       gap: "12px",
     },

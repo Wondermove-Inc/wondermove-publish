@@ -98,6 +98,11 @@ const NavButtom = ({ onClick }) => {
     window.open(
       "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
     );
+  const onPlugClick = () =>
+    (window.location.href = "https://wondermove.net/2232-2/");
+
+  const onVivaClick = () =>
+    (window.location.href = "https://wondermove.net/viva-ui/");
 
   return (
     <div>
@@ -118,13 +123,10 @@ const NavButtom = ({ onClick }) => {
         >
           S-kuber
         </div>
-        <div className={styles.pLug} onClick={() => handleButtonClick("P-LUG")}>
+        <div className={styles.pLug} onClick={onPlugClick}>
           P-LUG
         </div>
-        <div
-          className={styles.pLug}
-          onClick={() => handleButtonClick("VIVA UI")}
-        >
+        <div className={styles.pLug} onClick={onVivaClick}>
           VIVA UI
         </div>
         <div className={styles.pLug} onClick={onContactClick}>

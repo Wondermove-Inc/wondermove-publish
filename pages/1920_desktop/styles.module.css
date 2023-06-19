@@ -85,8 +85,19 @@
 .videoContainer {
   /* position: relative; */
   /* width: 1920px; */
+  /* width: 100%;
+  height: 100%; */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContainerMoreThen1920 {
+  /* position: relative; */
+  /* width: 1920px; */
   width: 100vw;
-  /* height: 100vw; */
+  height: 100vw;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -94,8 +105,11 @@
 }
 
 .videoPlay {
-  width: 100%;
+  /* width: 100%; */
   object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 100%;
 }
 
 .overlay {
@@ -262,16 +276,18 @@
   text-align: right;
 }
 
-/* .wonderAbout {
-  margin-block-start: 0;
+.wonderAbout {
+  /* margin-block-start: 0;
   margin-block-end: 0;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 51px;
-  white-space: pre-line;
-} */
+  white-space: pre-line; */
+  width: 100%;
+  height: 100%;
+}
 
 .wonderAboutText {
   margin-block-start: 0;
@@ -282,6 +298,10 @@
   font-size: 42px;
   line-height: 51px;
   white-space: pre-line;
+}
+
+.advantageImage {
+  width: 100%;
 }
 
 .wonderAboutCuttingContainer {
@@ -296,9 +316,9 @@
   line-height: 51px; */
   white-space: pre-line;
 }
-.reduction {
+/* .reduction {
   width: 100%;
-}
+} */
 .howManyVcpus {
   position: relative;
   align-self: stretch;
@@ -2334,7 +2354,7 @@
   align-items: center;
   position: relative;
 
-  background-color: var(--bg-1a);
+  background-color: #000;
   /* background-color: #9463ff; */
   /* width: 100%; */
   width: 100vw;
@@ -2588,6 +2608,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  aspect-ratio: 16/9;
 }
 
 .pagerContainerText {
@@ -2634,7 +2655,7 @@
   scroll-behavior: smooth;
   scroll-snap-align: center;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   /* padding: 120px 60px; */
 }
 /* .item:first-child {
@@ -2648,9 +2669,9 @@
   flex-direction: column;
   /* border: 1px solid red; */
   border-radius: 10px;
-  justify-content: center;
+  justify-content: flex-end;
   /* align-items: center; */
-  white-space: normal;
+  /* white-space: normal; */
 }
 
 .lottieText {
@@ -2659,11 +2680,12 @@
 
 .titleContent {
   width: 88.28vw;
-  gap: 40px;
+  /* gap: 40px; */
 }
 
 .indecater {
-  /* position: absolute;
+  /* position: absolute; */
+  /* 
   flex-direction: row;
   display: flex;
   align-self: flex-end;
@@ -2671,4 +2693,26 @@
   right: 0;
   justify-content: center;
   bottom: 120px; */
+}
+
+/*  */
+.containerGloballyValidated {
+  width: 100%;
+}
+
+.companyContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 200px;
+}
+
+.companyContainerMoreThenLg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 200px;
 }
