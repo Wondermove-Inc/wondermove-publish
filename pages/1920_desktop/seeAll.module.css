@@ -107,6 +107,7 @@
   justify-content: center;
   font-size: var(--body-b2-size);
   z-index: 0;
+  cursor: pointer;
 }
 
 .frameWrapper5 {
@@ -127,6 +128,7 @@
   justify-content: center;
   font-size: var(--body-b2-size);
   z-index: 0;
+  cursor: pointer;
 }
 
 .frameWrapper5::before {

@@ -75,8 +75,9 @@ function SolutionMenu() {
                 className={
                   isMenuOpen ? styles.hideParent : styles.frameWrapper5
                 }
+                onClick={toggleMenu}
               >
-                <div className={styles.pricingSee} onClick={toggleMenu}>
+                <div className={styles.pricingSee}>
                   {isMenuOpen ? "Hide" : "See all features"}
                 </div>
                 {isMenuOpen ? (
