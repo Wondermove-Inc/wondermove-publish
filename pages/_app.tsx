@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:description"
           content="S-kuber for your cloud management service"
         />
-        <meta property="og:image" content="/1920_desktop/mateImage.png" />
+        <meta property="og:image" content="/1920_desktop/KuberOgImage.png" />
 
         <link rel="icon" href="/1920_desktop/favicon.ico" type="image/x-icon" />
       </Head>

@@ -58,6 +58,7 @@ const useStyles = (theme) => ({
   },
   frequentlyAskedQuestionsParent: {
     gap: "80px",
+    justifyContent: "center",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
