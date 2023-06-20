@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Mobile from "./mobile/mobile";
-import Desktop from "./1920_desktop/desktop";
+// import Desktop from "./1920_desktop/desktop";
+import SKuber from "./skuber/index";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 
@@ -40,7 +40,7 @@ const HomePage = () => {
     // <div>{screenWidth && screenWidth >= 768 ? <Desktop /> : <Mobile />}</div>
     <ThemeProvider theme={theme}>
       <div>
-        <Desktop />
+        <SKuber />
       </div>
     </ThemeProvider>
   );

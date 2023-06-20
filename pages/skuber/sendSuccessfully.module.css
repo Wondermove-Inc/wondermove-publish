@@ -1,0 +1,309 @@
+.getInTouch {
+  margin: 0;
+  line-height: normal;
+}
+.getInTouch {
+  /* fonts */
+  --body-b3: Montserrat;
+
+  /* font sizes */
+  --font-size-xs: 12px;
+  --body-b3-size: 14px;
+  --title-h4-size: 28px;
+
+  /* Colors */
+  --grayscale-888: #888;
+  --grayscale-222: #222;
+  --grayscale-fff: #fff;
+  --grayscale-aaa: #aaa;
+  --grayscale-ccc: #ccc;
+  --color-tomato: #ff4c41;
+
+  /* Gaps */
+  --gap-5xl: 24px;
+  --gap-9xs: 4px;
+
+  /* Paddings */
+  --padding-41xl: 60px;
+  --padding-4xs: 9px;
+  --padding-xl: 20px;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+}
+
+.getInTouchBP {
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 99999;
+}
+
+.frameChild {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.getInTouchParent {
+  /* width: 586px; */
+  width: 100%;
+  height: 34px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px 0 0;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.getInTouchParent1 {
+  z-index: 999999;
+}
+
+.getStarted {
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.getSendWrapper {
+  position: relative;
+  border-radius: var(--br-3xs);
+  /* border: red 1px solid; */
+  background-color: var(--grayscale-222);
+  width: 586px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 16px var(--padding-41xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--grayscale-fff);
+  z-index: 1;
+}
+.getSendWrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1px;
+  border-radius: 10px;
+  background: linear-gradient(
+    95.34deg,
+    #eb4e87 0%,
+    #9463ff 60.42%,
+    #125aed 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.getSendWrapperHover {
+  position: relative;
+  border-radius: 10px;
+  background: linear-gradient(
+    95.34deg,
+    #eb4e87 0%,
+    #9463ff 60.42%,
+    #125aed 100%
+  );
+  border-radius: var(--br-3xs);
+  background-color: var(--grayscale-222);
+  width: 586px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 16px var(--padding-41xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--grayscale-fff);
+  z-index: 1;
+}
+
+.frameContainer {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  font-size: var(--font-size-xs);
+  color: var(--grayscale-aaa);
+}
+.frameContainer,
+.frameParent,
+.getInTouch {
+  display: flex;
+  flex-direction: column;
+}
+.frameParent {
+  position: absolute;
+  height: 828px;
+  border-radius: 20px;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  box-shadow: -21px 18px 41px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  padding: 0 var(--padding-41xl);
+  align-items: flex-end;
+  justify-content: center;
+  gap: 40px;
+  z-index: 0;
+}
+
+.frameParent::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1px;
+  border-radius: 20px;
+  background: linear-gradient(
+    169.67deg,
+    rgba(255, 255, 255, 0.2) 0.34%,
+    rgba(22, 91, 231, 0.2) 101.92%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.getInTouch {
+  position: relative;
+  width: 100%;
+  /* width: 706px; */
+  height: 828px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: var(--title-h4-size);
+  color: var(--grayscale-fff);
+  font-family: var(--body-b3);
+}
+
+.frameChild1 {
+  width: 120px;
+  height: 120px;
+  padding-bottom: 60px;
+}
+
+.frameGroup1 {
+  width: 586px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.childThank {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.childP {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.getInTouchMobileParent {
+  margin: 0;
+  line-height: normal;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  box-shadow: -21px 18px 41px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  padding: 0 var(--padding-41xl);
+
+  justify-content: center;
+  gap: 40px;
+  z-index: 99998;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.getInTouchMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 100px 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.navS1,
+.navS2,
+.navS3,
+.navS4 {
+  position: relative;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  list-style: none;
+}
+
+.navS1 {
+  padding: 0 0 20px;
+}
+
+.navS2 {
+  padding: 20px 0;
+}
+
+.navS3 {
+  padding: 20px 0;
+}
+
+.navS4 {
+  padding: 20px 0 0;
+}
+
+.frameChildOff {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 24px 40px;
+}
+
+.frameChildOffParent {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

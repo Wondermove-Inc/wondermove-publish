@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "../pages/1920_desktop/sendSuccessfully.module.css";
+import styles from "../pages/skuber/sendSuccessfully.module.css";
 import Modal from "react-modal";
 
 const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {

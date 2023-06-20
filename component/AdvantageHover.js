@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../pages/1920_desktop/styles.module.css";
+import styles from "../pages/skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";

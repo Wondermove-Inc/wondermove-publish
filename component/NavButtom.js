@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import styles from "../pages/1920_desktop/styles.module.css";
+import styles from "../pages/skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 import { width } from "@mui/system";
+import Link from "next/link";
 
 const theme = createTheme({
   breakpoints: {
@@ -88,11 +89,11 @@ const NavButtom = ({ onClick }) => {
     setIsHovered(false);
   };
 
-  const handleButtonClick = (buttonName) => {
-    if (buttonName !== "S-kuber") {
-      alert("coming soon!!!");
-    }
-  };
+  // const handleButtonClick = (buttonName) => {
+  //   if (buttonName !== "S-kuber") {
+  //     alert("coming soon!!!");
+  //   }
+  // };
 
   const onContactClick = () =>
     window.open(
@@ -105,6 +106,7 @@ const NavButtom = ({ onClick }) => {
     (window.location.href = "https://wondermove.net/viva-ui/");
 
   return (
+    // <BrowserRouter>
     <div>
       <Grid container sx={classes.sKuberParentHidden}>
         <div
@@ -117,14 +119,11 @@ const NavButtom = ({ onClick }) => {
         ></div>
       </Grid>
       <Grid container sx={classes.sKuberParent}>
-        <div
-          className={styles.sKuber}
-          onClick={() => handleButtonClick("S-kuber")}
-        >
-          S-kuber
+        <div className={styles.sKuber}>
+          <Link href="/skuber">S-kuber</Link>
         </div>
-        <div className={styles.pLug} onClick={onPlugClick}>
-          P-LUG
+        <div className={styles.pLug}>
+          <Link href="/p_lug">P-LUG</Link>
         </div>
         <div className={styles.pLug} onClick={onVivaClick}>
           VIVA UI
@@ -134,6 +133,7 @@ const NavButtom = ({ onClick }) => {
         </div>
       </Grid>
     </div>
+    // </BrowserRouter>
   );
 };
 

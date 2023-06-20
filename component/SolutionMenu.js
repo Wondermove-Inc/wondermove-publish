@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import styles from "../pages/1920_desktop/seeAll.module.css";
+import styles from "../pages/skuber/seeAll.module.css";
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";

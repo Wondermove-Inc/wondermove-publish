@@ -3,7 +3,8 @@ import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import NavButtom from "../component/NavButtom";
 import Logo from "../component/Logo";
-import styles from "../pages/1920_desktop/styles.module.css";
+import styles from "../pages/skuber/styles.module.css";
+import NavModal from "./NavModal";
 
 const GnbContainer = styled("div")(({ theme }) => ({
   height: "60px",
@@ -53,17 +54,28 @@ const ResponsiveNav = styled("div")(({ theme }) => ({
   },
 }));
 
-const Nav = ({ onClick }) => {
+const Nav = () => {
   const theme = useTheme();
+  const [navModalVisible, setNavModalVisible] = useState(false);
+
+  const toggleNavModalVisible = () => setNavModalVisible(!navModalVisible);
 
   return (
     <GnbContainer>
       <Logo />
       <GnbMenu>
         <GnbMenuItem>
-          <NavButtom onClick={onClick} style={{ cursor: "pointer" }} />
+          <NavButtom
+            onClick={toggleNavModalVisible}
+            style={{ cursor: "pointer" }}
+          />
         </GnbMenuItem>
       </GnbMenu>
+      <NavModal
+        toggleNavModalVisible={toggleNavModalVisible}
+        isVisible={navModalVisible}
+        onNavBTMPress={toggleNavModalVisible}
+      />
     </GnbContainer>
   );
 };

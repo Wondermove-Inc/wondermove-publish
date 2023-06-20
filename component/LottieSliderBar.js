@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import styles from "../pages/1920_desktop/styles.module.css";
+import styles from "../pages/skuber/styles.module.css";
 import Lottie from "lottie-react";
 import lottie1 from "../asset/1.json";
 import lottie2 from "../asset/2.json";

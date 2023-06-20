@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../pages/1920_desktop/styles.module.css";
+import styles from "../pages/skuber/styles.module.css";
 
 const PricingMenu = () => {
   const [isHovered, setIsHovered] = useState(false);

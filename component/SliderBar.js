@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactSlider from "react-slider";
-import styles from "../pages/1920_desktop/styles.module.css";
+import styles from "../pages/skuber/styles.module.css";
 import styled from "@emotion/styled";
 import costData from "../asset/costData.json";
 
@@ -260,7 +260,7 @@ const useStyles = (theme) => ({
     },
   },
   component191Parent: {
-    gap: "14cpx",
+    gap: "14px",
     [theme.breakpoints.down("xl")]: {
       gap: "12px",
     },
