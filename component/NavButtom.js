@@ -120,10 +120,15 @@ const NavButtom = ({ onClick }) => {
       </Grid>
       <Grid container sx={classes.sKuberParent}>
         <div className={styles.sKuber}>
-          <Link href="/skuber">S-kuber</Link>
+          <Link className={styles.Link1} href="/skuber">
+            S-kuber
+          </Link>
         </div>
-        <div className={styles.pLug}>
+        {/* <div className={styles.pLug}>
           <Link href="/p_lug">P-LUG</Link>
+        </div> */}
+        <div className={styles.pLug} onClick={onPlugClick}>
+          P-LUG
         </div>
         <div className={styles.pLug} onClick={onVivaClick}>
           VIVA UI

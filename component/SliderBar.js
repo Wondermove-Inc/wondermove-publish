@@ -392,7 +392,10 @@ const HowManyVcpus = () => {
                             alt=""
                             src="/1920_desktop/-icon-ram-2.svg"
                           />{" "}
-                          <div className={styles.text}>
+                          <div
+                            className={styles.text}
+                            style={{ cursor: "pointer" }}
+                          >
                             <Grid container sx={classes.text}>
                               {item.RAM} GB{" "}
                             </Grid>{" "}

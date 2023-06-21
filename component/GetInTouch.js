@@ -70,7 +70,7 @@ const GetInTouch = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className={styles.pricing}>
+        <div className={styles.pricing} style={{ cursor: "pointer" }}>
           <Grid container sx={classes.getInTouch}>
             Get in touch
           </Grid>

@@ -149,10 +149,11 @@
 
 .pricing {
   position: relative;
-  line-height: 32px;
+  /* line-height: 32px;
   font-weight: 500;
   font-size: 0.729167vw;
-  padding: 20px 0;
+  padding: 20px 0; */
+  word-break: keep-all;
 }
 
 .pricingSee {
@@ -250,7 +251,7 @@
   position: relative;
   line-height: 16px;
   font-weight: 500;
-  font-size: 0.729167vw;
+  /* font-size: 0.729167vw; */
   white-space: nowrap;
 }
 

@@ -187,6 +187,7 @@ const useStyles = (theme: Theme) => ({
     },
   },
   containerQA: {
+    position: "relative",
     justifyContent: "center",
     padding: "160px 486px",
     [theme.breakpoints.down("xl")]: {
@@ -205,6 +206,7 @@ const useStyles = (theme: Theme) => ({
   containerFooter: {
     justifyContent: "center",
     padding: "80px 240px",
+    borderTop: "1px solid  rgba(255, 255, 255, 0.2)",
     [theme.breakpoints.down("xl")]: {
       padding: "80px 240px",
     },
@@ -726,19 +728,6 @@ const SKuber1920: NextPage = () => {
         <div className={styles.sKuber1920}>
           <div className={styles.groupParent}>
             <div className={styles.groupContainer}>
-              {/* <div className={styles.image549Parent}>
-            <img
-              className={styles.image549Icon}
-              alt=""
-              src="/1920_desktop/image-549@2x.png"
-            />
-            <img
-              className={styles.image647Icon}
-              alt=""
-              src="/1920_desktop/image-647@2x.png"
-            />
-           </div> */}
-
               <VideoBackground />
               <div className={styles.gnb}>
                 <Grid container sx={classes.containerNav}>
@@ -775,10 +764,6 @@ const SKuber1920: NextPage = () => {
                       </Typography>
                       {/* </Grid>
                   </Grid> */}
-
-                      {/* <Grid container sx={classes.solutionForYourCosts}>
-                    <div>Solution for Your Cloud Strategy and Costs</div>
-                  </Grid> */}
                     </div>
                     <div className={styles.frameWrapper}>
                       <Grid
@@ -804,48 +789,7 @@ const SKuber1920: NextPage = () => {
                   </div>
                 </Grid>
                 <GloballyValidated />
-                {/* <Grid container sx={classes.containerGloballyValidated}>
-                <div className={styles.groupDiv}>
-                  <div className={styles.frameWrapper2}>
-                    <div className={styles.globallyValidatedSolutionsParent}>
-                      <div className={styles.globallyValidatedSolutions}>
-                        <Grid container sx={classes.globallyValidatedSolutions}>
-                          Globally validated solutions
-                        </Grid>
-                      </div>
-                      <div className={styles.rectangleGroup}>
-                        <div className={styles.rectangleDiv} />
 
-                        <div className={styles.runningASuccessfulProofOfParent}>
-                          <Grid container sx={classes.wonderAbout1}>
-                            <div className={styles.vcpuRunning}>
-                              <Grid container sx={classes.wonderAbout}>
-                                <p>
-                                  Running a successful proof of <br /> concept
-                                  in 4 European counteris with
-                                </p>
-                              </Grid>
-                            </div>
-                            <div>
-                              <Grid container sx={classes.container}>
-                                <Grid container sx={classes.icon}></Grid>
-                              </Grid>
-                            </div>
-                            <div>
-                              <Grid container sx={classes.container}>
-                                <Grid
-                                  container
-                                  sx={classes.image646Icon}
-                                ></Grid>
-                              </Grid>
-                            </div>
-                          </Grid>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Grid> */}
                 <Grid container sx={classes.containerGloballyValidated}>
                   <AdvantageHover />
                 </Grid>
@@ -909,15 +853,6 @@ const SKuber1920: NextPage = () => {
           </div> */}
             </div>
             <div className={styles.groupParent2}>
-              <div className={styles.frameParent16}>
-                <img
-                  className={styles.groupChild3}
-                  alt=""
-                  src="/1920_desktop/rectangle-23839.png"
-                />
-                {/* <div className={styles.groupChild4} /> */}
-              </div>
-
               <Grid container sx={classes.containerFrameParent25}>
                 <Grid container sx={classes.frameParent25}>
                   {/* <div className={styles.frameParent25}> */}
@@ -974,65 +909,65 @@ const SKuber1920: NextPage = () => {
                     toggleSendModalVisible={toggleSendModalVisible}
                     toggleSuccessModalVisible={toggleSuccessModalVisible}
                   />
-                  {/* <div className={styles.getStartedWrapper}>
-              <div className={styles.pricing}>Get in touch</div>
-            </div> */}
+
                   {/* </div> */}
                 </Grid>
               </Grid>
-              <Grid container sx={classes.containerQA}>
-                <QA />
-              </Grid>
-              <Grid container sx={classes.containerFooter}>
-                <div className={styles.footer}>
-                  <Grid container sx={classes.layer1Group}>
-                    <Grid container sx={classes.layer1Icon}>
-                      {/* <div className={styles.layer1Icon}> */}
-                      <Logo />
-                      {/* </div> */}
-                    </Grid>
+              <div className={styles.footer111}>
+                <Grid container sx={classes.containerQA}>
+                  <QA />
+                </Grid>
+                <Grid container sx={classes.containerFooter}>
+                  <div className={styles.footer}>
+                    <Grid container sx={classes.layer1Group}>
+                      <Grid container sx={classes.layer1Icon}>
+                        {/* <div className={styles.layer1Icon}> */}
+                        <Logo />
+                        {/* </div> */}
+                      </Grid>
 
-                    <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                      <div>
-                        <Grid container sx={classes.howManyVcpus}>
-                          {/* <div className={styles.howManyVcpus}> */}
-                          wondermove Spin-off of Hyundai Motor Company
-                          {/* </div> */}
-                        </Grid>
-                      </div>
-                      <div className={styles.wondermoveIncContainer}>
-                        <Grid
-                          container
-                          sx={classes.solutionForYourFooter}
-                        >{`wondermove Inc. `}</Grid>
-                        {/* <p
+                      <div className={styles.wondermoveSpinOffOfHyundaiParent}>
+                        <div>
+                          <Grid container sx={classes.howManyVcpus}>
+                            {/* <div className={styles.howManyVcpus}> */}
+                            wondermove Spin-off of Hyundai Motor Company
+                            {/* </div> */}
+                          </Grid>
+                        </div>
+                        <div className={styles.wondermoveIncContainer}>
+                          <Grid
+                            container
+                            sx={classes.solutionForYourFooter}
+                          >{`wondermove Inc. `}</Grid>
+                          {/* <p
                       className={styles.solutionForYourFooter}
                     >{`wondermove Inc. `}</p> */}
-                        <Grid
-                          container
-                          sx={classes.solutionForYourFooter}
-                        >{` Business Registration Number: 518-81-01644`}</Grid>
-                        {/* <p
+                          <Grid
+                            container
+                            sx={classes.solutionForYourFooter}
+                          >{` Business Registration Number: 518-81-01644`}</Grid>
+                          {/* <p
                       className={styles.solutionForYourFooter}
                     >{` Business Registration Number: 518-81-01644`}</p> */}
-                        <Grid
-                          container
-                          sx={classes.solutionForYourFooter}
-                        >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
-                        {/* <p
+                          <Grid
+                            container
+                            sx={classes.solutionForYourFooter}
+                          >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
+                          {/* <p
                       className={styles.solutionForYourFooter}
                     >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</p> */}
-                        <Grid container sx={classes.solutionForYourFooter}>
-                          South Korea Use Inquiries: hawkeye@wondermove.net
-                        </Grid>
-                        {/* <p className={styles.solutionForYourFooter}>
+                          <Grid container sx={classes.solutionForYourFooter}>
+                            South Korea Use Inquiries: hawkeye@wondermove.net
+                          </Grid>
+                          {/* <p className={styles.solutionForYourFooter}>
                       South Korea Use Inquiries: hawkeye@wondermove.net
                     </p> */}
+                        </div>
                       </div>
-                    </div>
-                  </Grid>
-                </div>
-              </Grid>
+                    </Grid>
+                  </div>
+                </Grid>
+              </div>
             </div>
           </div>
           <SendMessage

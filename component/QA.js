@@ -128,7 +128,6 @@ const QA = () => {
 
             {isContentVisible1 && (
               <div className={styles.preventResourceWasteOnOutWrapper}>
-                {/* content */}
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
@@ -150,7 +149,6 @@ const QA = () => {
                 </div>
               </div>
             )}
-
             <div className={styles.lineDiv} />
           </div>
 

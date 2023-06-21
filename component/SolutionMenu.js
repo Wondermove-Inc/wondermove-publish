@@ -20,22 +20,30 @@ const theme = createTheme({
 const useStyles = (theme) => ({
   pricing: {
     position: "relative",
-    lineHeight: "32px",
-    fontWeight: "500",
+    lineHeight: "20px",
+    fontWeight: "400",
     fontSize: "0.729167vw",
     padding: "20px 0",
     [theme.breakpoints.down("xl")]: {
       fontSize: "0.729167vw",
+      lineHeight: "32px",
+      fontWeight: "500",
     },
     [theme.breakpoints.down("lg")]: {
       fontSize: "0.972222vw",
+      lineHeight: "32px",
+      fontWeight: "500",
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "1.367188vw",
+      lineHeight: "32px",
+      fontWeight: "500",
     },
 
     [theme.breakpoints.down("sm")]: {
       fontSize: "2.333333vw",
+      lineHeight: "32px",
+      fontWeight: "500",
     },
   },
   seeAll: {
@@ -43,6 +51,7 @@ const useStyles = (theme) => ({
     height: "100%",
     [theme.breakpoints.down("xl")]: {
       width: "75vw",
+      // width: "1440px",
     },
     [theme.breakpoints.down("lg")]: {
       width: "83.333333vw",

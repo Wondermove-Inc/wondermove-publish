@@ -20,8 +20,8 @@ const theme = createTheme({
 
 const useStyles = (theme) => ({
   companyContainer: {
-    justifyContent: "space-around",
-    gap: "200px",
+    justifyContent: "space-between",
+    gap: "500px",
     width: "100%",
     [theme.breakpoints.down("xl")]: {
       gap: "5vw",
@@ -32,7 +32,7 @@ const useStyles = (theme) => ({
     [theme.breakpoints.down("md")]: {
       //   gap: "9.570312vw",
       justifyContent: "center",
-      gap: "100px",
+      gap: "50px",
       width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
@@ -77,7 +77,7 @@ const useStyles = (theme) => ({
   },
   wonderAbout1: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     position: "relative",
     justifyContent: "space-between",
@@ -85,11 +85,11 @@ const useStyles = (theme) => ({
     gap: "70px",
     [theme.breakpoints.down("xl")]: {
       padding: "80px 80px",
-      gap: "0",
+      gap: "70px",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "80px 60px",
-      gap: "0px",
+      gap: "50px",
     },
     [theme.breakpoints.down("md")]: {
       display: "flex",
@@ -97,7 +97,7 @@ const useStyles = (theme) => ({
       justifyContent: "center",
       textAlign: "center",
       padding: " 60px 40px",
-      gap: "74px",
+      gap: "40px",
     },
     [theme.breakpoints.down("sm")]: {
       display: "flex",
@@ -116,7 +116,7 @@ const useStyles = (theme) => ({
     fontWeight: "600",
     fontSize: "24px",
     lineHeight: "29px",
-    whiteSpace: "pre-line",
+    textAlign: "center",
     [theme.breakpoints.down("xl")]: {
       fontSize: "24px",
     },
@@ -153,52 +153,36 @@ const useStyles = (theme) => ({
   },
   image646Icon: {
     position: "relative",
+    // width: "9.114583vw",
+    // height: "2.604167vw",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     width: "175px",
     height: "50px",
-    objectFit: "cover",
-    backgroundImage: 'url("/1920_desktop/image-646@2x.png")',
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    [theme.breakpoints.down("xl")]: {
-      width: "12.152778vw",
-    },
-    [theme.breakpoints.down("lg")]: {
-      width: "14.607679vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      //   marginRight: "79.5px",
-      width: "25.166297vw",
-      height: "64px",
-    },
+
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       width: "106px",
-      height: "29px",
+      // height: "29px",
       marginRight: "0",
     },
   },
   icon: {
     position: "relative",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     width: "260px",
     height: "36px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundImage: 'url("/1920_desktop/--2.svg")',
-    [theme.breakpoints.down("xl")]: {
-      width: "18.055556vw",
-    },
-    [theme.breakpoints.down("lg")]: {
-      width: "21.702838vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      //   marginLeft: "79.5px",
-      width: "37.472284vw",
-      height: "47px",
-    },
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
-      width: "126px",
-      height: "17px",
+      width: "106px",
+      height: "29px",
       marginLeft: "0",
     },
   },
@@ -255,17 +239,10 @@ function GloballyValidated() {
                   <Grid container sx={classes.wonderAbout1}>
                     <div className={styles.vcpuRunning}>
                       <Grid container sx={classes.wonderAbout}>
-                        {isXlallScreen ? (
-                          <div>
-                            Running a successful proof of concept in <br /> 4
-                            European counteris with
-                          </div>
-                        ) : (
-                          <div>
-                            Running a successful proof of <br /> concept in 4
-                            European counteris with
-                          </div>
-                        )}
+                        <div>
+                          Running a successful proof of concept in 4 European
+                          counteris with
+                        </div>
                       </Grid>
                     </div>
                     <div
@@ -276,14 +253,26 @@ function GloballyValidated() {
                       }
                     >
                       <Grid container sx={classes.companyContainer}>
-                        <div>
+                        <div className={styles.icon}>
                           <Grid container sx={classes.container}>
-                            <Grid container sx={classes.icon}></Grid>
+                            <Grid container sx={classes.icon}>
+                              <img
+                                className={styles.iconC}
+                                alt=""
+                                src="/1920_desktop/--2.svg"
+                              />
+                            </Grid>
                           </Grid>
                         </div>
-                        <div>
+                        <div className={styles.image646Icon}>
                           <Grid container sx={classes.container}>
-                            <Grid container sx={classes.image646Icon}></Grid>
+                            <Grid container sx={classes.image646Icon}>
+                              <img
+                                className={styles.image646IconC}
+                                alt=""
+                                src="/1920_desktop/auto.png"
+                              />
+                            </Grid>
                           </Grid>
                         </div>
                       </Grid>

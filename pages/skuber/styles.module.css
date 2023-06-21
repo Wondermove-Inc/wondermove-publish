@@ -240,6 +240,7 @@
   color: #ccc;
 }
 .solutionForYour {
+  position: relative;
   margin: 0;
   font-family: "Montserrat";
   font-style: normal;
@@ -379,7 +380,7 @@
   height: 100%;
   /* width: 88px; */
   top: 0px;
-  float: left;
+  /* float: left; */
 }
 .iconCpuParent {
   align-self: stretch;
@@ -753,24 +754,29 @@
 }
 .icon {
   position: relative;
-  width: 260px;
-  height: 36px;
-  overflow: hidden;
-  flex-shrink: 0;
-  background-image: url("/1920_desktop/--2.svg");
-  background-size: cover;
-  /* padding-right: 100px; */
-  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .image646Icon {
   position: relative;
-  width: 175px;
-  height: 50px;
-  object-fit: cover;
-  background-image: url("/1920_desktop/image-646@2x.png");
-  background-size: cover;
-  /* padding-left: 100px; */
-  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image646IconC {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.iconC {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* .container1 {
@@ -1607,13 +1613,21 @@
   height: 866px;
   overflow: hidden;
 }
-.frameParent16,
+
 .groupChild3,
 .groupChild4 {
   position: absolute;
   /* width: 1920px; */
   width: 100%;
 }
+
+.footer111 {
+  background-image: url("/1920_desktop/rectangle-23839.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .groupChild4 {
   top: 0;
   left: calc(50% - 960px);
@@ -1659,6 +1673,7 @@
   /* top: 2653px; */
   /* width: 1440px; */
   /* border-top: 1px solid var(--color-gray-300); */
+  position: relative;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
@@ -1682,9 +1697,9 @@
   width: 27px;
   height: 1px;
 }
-.paymentOptionsParent,
-.preventResourceWasteOnOutWrapper {
+.paymentOptionsParent {
   /* width: 952px; */
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1693,6 +1708,32 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.preventResourceWasteOnOutWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  animation-fill-mode: forwards;
+  animation: pushDown 1s ease-out;
+}
+
+@keyframes pushDown {
+  0% {
+    max-height: 0;
+  }
+
+  100% {
+    max-height: 500px;
+  }
 }
 
 .paymentOptionsParent {
@@ -1713,6 +1754,7 @@
 }
 .frameParent17,
 .frameParent19 {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1729,7 +1771,7 @@
   font-size: var(--body-b1-size);
 }
 .frequentlyAskedQuestionsParent {
-  position: inherit;
+  position: relative;
   /* top: 350px; */
   left: 0;
   width: 948px;
@@ -2022,21 +2064,21 @@
   color: var(--grayscale-888);
 }
 .allBusinessFeaturesPlusParent {
-  flex-direction: column;
+  position: relative;
   gap: var(--gap-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: hidden;
 }
-.allBusinessFeaturesPlusParent,
+
 .enterpriseParent,
 .frameParent26 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-}
-
-.allBusinessFeaturesPlusParent {
-  width: 100%;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
 }
 
 .enterpriseParent {
@@ -2327,6 +2369,7 @@
   gap: 80px;
 }
 .groupParent2 {
+  background-color: #1c1c1c;
   position: relative;
   /* width: 1920px; */
   /* width: 70%; */
@@ -2337,7 +2380,7 @@
   /* z-index: 1000; */
 }
 .groupParent {
-  /* position: absolute; */
+  position: relative;
   top: 0;
   left: 0;
   /* width: 1920px; */
@@ -2713,7 +2756,30 @@
 .companyContainerMoreThenLg {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 200px;
+  /* width: 41.666667vw; */
+}
+
+.Link1 {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+  color: #888;
+}
+
+.content {
+  /* 内容样式 */
+  max-height: 0;
+  overflow: hidden;
+  transition: all 350ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+.contentExpanded {
+  /* 内容在展开状态下的样式 */
+  max-height: 2000px; /* 根据实际内容高度进行调整 */
 }

@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useState, useEffect, useRef } from "react";
 import styles from "./p_log_desktop.module.css";
 import Head from "next/head";
 import Lottie from "lottie-react";
@@ -8,6 +9,7 @@ import lottie7 from "../../asset/plug/Comp 3.json";
 import lottie8 from "../../asset/plug/Comp 4.json";
 import lottie9 from "../../asset/plug/Comp 5.json";
 import Nav from "../../component/Nav";
+import buyAcar from "../../component/plug/buyAcar";
 
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/system";
@@ -65,7 +67,7 @@ const useStyles = (theme: Theme) => ({
   },
   frameWrapper: {
     top: "2.135417vw",
-    padding: "12.447917vw 0 0 18.85167vw",
+    padding: "12.447917vw 0 150px 18.85167vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
       padding: "150px 0 60px 200px",
@@ -154,6 +156,7 @@ const useStyles = (theme: Theme) => ({
   vectorParent: {
     position: "absolute",
     top: "10.364583vw",
+    right: "50px",
     width: "49.721354vw",
     height: "47.007292vw",
     [theme.breakpoints.down("xl")]: {
@@ -180,12 +183,22 @@ const useStyles = (theme: Theme) => ({
   image820Icon: {
     width: "49.721354vw",
     height: "47.007292vw",
+    display: "flex",
+    flexWrap: "wrap",
+    // flexDirection: "row",
+    // alignItems: "center",
+    // justifyContent: "center",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       width: "100vw",
       height: "149.872774vw",
+      display: "flex",
+      flexWrap: "inherit",
+      // flexDirection: "row",
+      // alignItems: "center",
+      // justifyContent: "center",
     },
   },
 
@@ -193,16 +206,309 @@ const useStyles = (theme: Theme) => ({
   frameParent: {
     position: "relative",
     top: "0",
+    padding: "240px 0",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "240px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
-      top: "1200px",
+      // top: "1200px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "1400px",
+      // top: "1400px",
+      gap: "120px",
+      padding: "80px 0",
     },
   },
   frameGroup: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0 12.5vw",
+    gap: "24px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "80px",
+      padding: "0 6.10687vw",
+    },
+  },
+  groupParent: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "60px 24px",
+    gap: "60px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+
+    [theme.breakpoints.down("sm")]: {
+      // padding: "",
+      gap: "24px",
+      padding: "0",
+    },
+  },
+  quickEstablishmentAndPersonParent: {
+    width: "21.666667vw",
+    height: "13.802083vw",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+
+    [theme.breakpoints.down("sm")]: {
+      width: "87.7862621vw",
+      height: "100%",
+      gap: "24px",
+    },
+  },
+
+  groupIcon: {
+    width: "21.666667vw",
+    height: "13.802083vw",
+    padding: "0",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+
+    [theme.breakpoints.down("sm")]: {
+      width: "80.25641vw",
+      height: "50.890585vw",
+      padding: "0 24px",
+    },
+  },
+
+  weLaunchedOurContainer: {
+    lineHeight: "59px",
+    fontWeight: "700",
+    fontSize: "48px",
+    width: "690px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "40px",
+      fontWeight: "700",
+      fontSize: "28px",
+      width: "345px",
+    },
+  },
+  frameParent1: {
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    gap: "80px",
+    left: "12.5vw",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      justifyContent: "flex-start",
+      gap: "60px",
+      position: "relative",
+      left: "24px",
+    },
+  },
+
+  weLaunchedOurServiceIn10Parent: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    gap: "40px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      gap: "24px",
+    },
+  },
+
+  configureAPortfolioContainer: {
+    lineHeight: "32px",
+    fontWeight: "500",
+    fontSize: "16px",
+    width: "690px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "24px",
+      fontWeight: "400",
+      fontSize: "14px",
+      width: "345px",
+    },
+  },
+  frameParent2: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "center",
+    gap: "120px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      justifyContent: "center",
+      gap: "40px",
+      paddingTop: "60px",
+    },
+  },
+
+  k: {
+    lineHeight: "73px",
+    fontWeight: "700",
+    fontSize: "36px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "44px",
+      fontWeight: "700",
+      fontSize: "36px",
+    },
+  },
+  se: {
+    lineHeight: "59px",
+    fontWeight: "700",
+    fontSize: "48px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "40px",
+      fontWeight: "700",
+      fontSize: "28px",
+      width: "200px",
+      textAlign: "center",
+    },
+  },
+  frameIcon1: {
+    width: "44.0625vw",
+    height: "44.010417vw",
+    position: "relative",
+    overflow: "hidden",
+    right: "0",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      width: "102.035623vw",
+      height: "102.035623vw",
+      right: "40vw",
+      top: "115vw",
+    },
+  },
+
+  weProvideFragmentedContainer: {
+    lineHeight: "32px",
+    fontWeight: "500",
+    fontSize: "18px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "28px",
+      fontWeight: "500",
+      fontSize: "16px",
+      textAlign: "center",
+    },
+  },
+
+  frameParent3: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "80px",
+    padding: "0 12.5vw",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      gap: "40px",
+      padding: "0",
+    },
+  },
+
+  plugV: {
+    width: "75vw",
+    height: "41.666667vw",
+    position: "relative",
+    overflow: "hidden",
+    borderRadius: "40px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      width: "87.78626vw",
+      height: "48.854962vw",
+      borderRadius: "20px",
+      // width: "353px",
+      // height: "192px",
+    },
+  },
+
+  buyingACar: {
+    fontSize: "48px",
+    lineHeight: "59px",
+    fontWeight: "700",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+      fontWeight: "700",
+    },
+  },
+  onlineVehiclePurchase: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "600",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+      lineHeight: "28px",
+      fontWeight: "600",
+    },
+  },
+  customersCanQuickly: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+      lineHeight: "24px",
+      fontWeight: "400",
+    },
+  },
+
+  footer: {
+    position: "relative",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -217,10 +523,81 @@ const useStyles = (theme: Theme) => ({
       justifyContent: "center",
     },
   },
+  layer1Parent: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "80px 240px",
+    gap: "40px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      justifyContent: "flex-start",
+      padding: "80px 24px",
+    },
+  },
+  manageEntireVehicleContainerText: {
+    paddingTop: "350px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "200px",
+    },
+  },
+  wondermoveSpinOffOfHyundaiParent: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: "24px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "20px",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-start",
+    },
+  },
+  manageEntireVehicleContainer: {
+    fontSize: "42px",
+    lineHeight: "40px",
+    fontWeight: "600",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+      fontWeight: "600",
+    },
+  },
 });
 
 const PLUG: NextPage = () => {
   const classes = useStyles(theme);
+  const [isMdallScreen, setIsMdallScreen] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      setIsMdallScreen(window.innerWidth <= 1024);
+    }
+
+    handleResize(); // Check on initial render
+
+    window.addEventListener("resize", handleResize); // Add event listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up on component unmount
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -229,6 +606,7 @@ const PLUG: NextPage = () => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <link rel="icon" href="/plug/plug_favicon.ico" type="image/x-icon" />
       </Head>
       <div className={styles.pLug}>
         <div className={styles.rectangleGroup}>
@@ -313,11 +691,7 @@ const PLUG: NextPage = () => {
               <Grid container sx={classes.vectorParent}>
                 <div className={styles.image820Icon}>
                   <Grid container sx={classes.image820Icon}>
-                    <img
-                      className={styles.image820Icon}
-                      alt=""
-                      src="/plug/image-820@2x.png"
-                    />
+                    <img alt="" src="/plug/phone.png" />
                   </Grid>
                 </div>
               </Grid>
@@ -325,206 +699,537 @@ const PLUG: NextPage = () => {
           </Grid>
         </div>
         <>
-          <Grid container sx={classes.frameParent}>
-            <div className={styles.frameParent}>
+          <div className={styles.frameParent}>
+            <Grid container sx={classes.frameParent}>
               <div className={styles.frameGroup}>
                 <Grid container sx={classes.frameGroup}>
                   <div className={styles.groupParent}>
-                    <img
-                      className={styles.groupIcon}
-                      alt=""
-                      src="/plug/group-3177.svg"
-                    />
-                    <div className={styles.quickEstablishmentAndPersonParent}>
-                      <div className={styles.quickEstablishmentAndContainer}>
-                        <p
-                          className={styles.manageEntireVehicle}
-                        >{`Quick establishment and `}</p>
-                        <p className={styles.wondermoveInc}>personalization</p>
+                    <Grid container sx={classes.groupParent}>
+                      <div className={styles.groupIcon}>
+                        <Grid container sx={classes.groupIcon}>
+                          <img
+                            className={styles.groupImage}
+                            alt=""
+                            src="/plug/group-3177.svg"
+                          />
+                        </Grid>
                       </div>
-                      <div className={styles.configureAPortfolioContainer}>
-                        <p className={styles.wondermoveInc}>
-                          Configure a portfolio with the services your company
-                          needs, with modularized service units.
-                        </p>
+
+                      <div className={styles.quickEstablishmentAndPersonParent}>
+                        <Grid
+                          container
+                          sx={classes.quickEstablishmentAndPersonParent}
+                        >
+                          <div
+                            className={styles.quickEstablishmentAndContainer}
+                          >
+                            <p
+                              className={styles.manageEntireVehicle}
+                            >{`Quick establishment and `}</p>
+                            <p className={styles.wondermoveInc}>
+                              personalization
+                            </p>
+                          </div>
+                          <div className={styles.configureAPortfolioContainer}>
+                            <Grid
+                              container
+                              sx={classes.configureAPortfolioContainer}
+                            >
+                              <div className={styles.wondermoveInc}>
+                                Configure a portfolio with the services your{" "}
+                                company needs, with modularized service units.
+                              </div>
+                            </Grid>
+                          </div>
+                        </Grid>
                       </div>
-                    </div>
-                  </div>
-                  <div className={styles.groupContainer}>
-                    <div className={styles.groupIcon}>
-                      <img
-                        className={styles.groupChild}
-                        alt=""
-                        src="/plug/crmdmspms.png"
-                      />
-                    </div>
-                    <div className={styles.easyIntegrationWithLegacySParent}>
-                      <div className={styles.quickEstablishmentAndContainer}>
-                        <p className={styles.manageEntireVehicle}>
-                          Easy integration
-                        </p>
-                        <p className={styles.wondermoveInc}>
-                          with Legacy system
-                        </p>
-                      </div>
-                      <div className={styles.configureAPortfolioContainer}>
-                        <p className={styles.wondermoveInc}>
-                          Easy to intergrate and manage legacy systems such as
-                          CRM, DMS, and PMS.
-                        </p>
-                      </div>
-                    </div>
+                    </Grid>
                   </div>
                   <div className={styles.groupParent}>
-                    <img
-                      className={styles.frameIcon}
-                      alt=""
-                      src="/plug/frame-3177.svg"
-                    />
-                    <div className={styles.quickEstablishmentAndPersonParent}>
-                      <div className={styles.quickEstablishmentAndContainer}>
-                        <p className={styles.manageEntireVehicle}>
-                          An integrated solution
-                        </p>
-                        <p className={styles.wondermoveInc}>for all users</p>
+                    <Grid container sx={classes.groupParent}>
+                      <div className={styles.groupIcon}>
+                        <Grid container sx={classes.groupIcon}>
+                          <img
+                            className={styles.groupImage}
+                            alt=""
+                            src="/plug/crmdmspms.png"
+                          />
+                        </Grid>
                       </div>
-                      <div className={styles.configureAPortfolioContainer}>
-                        P-LUG provides an integrated system for customers,
-                        dealers, and OEMs who use and provide services.
+
+                      <div className={styles.quickEstablishmentAndPersonParent}>
+                        <Grid
+                          container
+                          sx={classes.quickEstablishmentAndPersonParent}
+                        >
+                          <div
+                            className={styles.quickEstablishmentAndContainer}
+                          >
+                            <p className={styles.manageEntireVehicle}>
+                              Easy integration
+                            </p>
+                            <p className={styles.wondermoveInc}>
+                              with Legacy system
+                            </p>
+                          </div>
+                          <div className={styles.configureAPortfolioContainer}>
+                            <div className={styles.wondermoveInc}>
+                              Easy to intergrate and manage legacy systems{" "}
+                              <br /> such as CRM, DMS, and PMS.
+                            </div>
+                          </div>
+                        </Grid>
                       </div>
-                    </div>
+                    </Grid>
+                  </div>
+                  <div className={styles.groupParent}>
+                    <Grid container sx={classes.groupParent}>
+                      <div className={styles.groupIcon}>
+                        <Grid container sx={classes.groupIcon}>
+                          <img
+                            className={styles.groupImage}
+                            alt=""
+                            src="/plug/frame-3177.svg"
+                          />
+                        </Grid>
+                      </div>
+                      {/* <img
+                        className={styles.frameIcon}
+                        alt=""
+                        src="/plug/frame-3177.svg"
+                      /> */}
+                      <div className={styles.quickEstablishmentAndPersonParent}>
+                        <Grid
+                          container
+                          sx={classes.quickEstablishmentAndPersonParent}
+                        >
+                          <div
+                            className={styles.quickEstablishmentAndContainer}
+                          >
+                            <p className={styles.manageEntireVehicle}>
+                              An integrated solution
+                            </p>
+                            <p className={styles.wondermoveInc}>
+                              for all users
+                            </p>
+                          </div>
+                          <div className={styles.configureAPortfolioContainer}>
+                            P-LUG provides an integrated system for <br />{" "}
+                            customers, dealers, and OEMs who use and <br />
+                            provide services.
+                          </div>
+                        </Grid>
+                      </div>
+                    </Grid>
                   </div>
                 </Grid>
               </div>
               <div className={styles.frameDiv}>
                 <div className={styles.frameParent1}>
-                  <div className={styles.weLaunchedOurServiceIn10Parent}>
-                    <b className={styles.weLaunchedOurContainer}>
-                      <p className={styles.manageEntireVehicle}>
-                        We launched our service in
-                      </p>
-                      <p className={styles.wondermoveInc}>
-                        10 European countries
-                      </p>
-                    </b>
-                    <div className={styles.configureAPortfolioContainer}>
-                      <p className={styles.wondermoveInc}>
-                        In collaboration with P-LUG and Hyundai Europe, we
-                        created a platform called myHyundai.
-                      </p>
-                      <p className={styles.wondermoveInc}>
-                        The platform will be launched in 10 European countries
-                        by 2023.
-                      </p>
+                  <Grid container sx={classes.frameParent1}>
+                    <div className={styles.weLaunchedOurServiceIn10Parent}>
+                      <Grid
+                        container
+                        sx={classes.weLaunchedOurServiceIn10Parent}
+                      >
+                        <div className={styles.weLaunchedOurContainer}>
+                          <Grid container sx={classes.weLaunchedOurContainer}>
+                            <div className={styles.manageEntireVehicle}>
+                              We launched our service in 10 European countries
+                            </div>
+                          </Grid>
+                        </div>
+                        <div className={styles.configureAPortfolioContainer}>
+                          <Grid
+                            container
+                            sx={classes.configureAPortfolioContainer}
+                          >
+                            <div className={styles.wondermoveInc}>
+                              In collaboration with P-LUG and Hyundai Europe, we
+                              created a platform called myHyundai.
+                            </div>
+                            <div className={styles.wondermoveInc}>
+                              The platform will be launched in 10 European
+                              countries by 2023.
+                            </div>
+                          </Grid>
+                        </div>
+                      </Grid>
+                    </div>{" "}
+                    <div className={styles.frameParent2}>
+                      <Grid container sx={classes.frameParent2}>
+                        <div className={styles.kParent}>
+                          <div className={styles.k}>
+                            <Grid container sx={classes.k}>
+                              860K+
+                            </Grid>
+                          </div>
+                          <div className={styles.users}>Users</div>
+                        </div>
+                        <div className={styles.kParent}>
+                          <div className={styles.k}>
+                            <Grid container sx={classes.k}>
+                              10
+                            </Grid>
+                          </div>
+                          <div className={styles.users}>Countries</div>
+                        </div>
+                        <div className={styles.kParent}>
+                          <div className={styles.k}>
+                            <Grid container sx={classes.k}>
+                              1,500+
+                            </Grid>
+                          </div>
+                          <div className={styles.users}>Dealership</div>
+                        </div>
+                      </Grid>
                     </div>
-                  </div>
-                  <div className={styles.frameParent2}>
-                    <div className={styles.kParent}>
-                      <b className={styles.k}>860K+</b>
-                      <div className={styles.users}>Users</div>
-                    </div>
-                    <div className={styles.kParent}>
-                      <b className={styles.k}>10</b>
-                      <div className={styles.users}>Countries</div>
-                    </div>
-                    <div className={styles.kParent}>
-                      <b className={styles.k}>1,500+</b>
-                      <div className={styles.users}>Dealership</div>
-                    </div>
-                  </div>
+                  </Grid>
                 </div>
-                <img
-                  className={styles.frameIcon1}
-                  alt=""
-                  src="/plug/frame.svg"
-                />
+                <div className={styles.frameIcon1}>
+                  <Grid container sx={classes.frameIcon1}>
+                    <img
+                      className={styles.frameImage}
+                      alt=""
+                      src="/plug/frame.svg"
+                    />
+                  </Grid>
+                </div>
               </div>
               <div className={styles.frameParent3}>
-                <div className={styles.seamlessIntegrationParent}>
-                  <b className={styles.k}>Seamless Integration</b>
-                  <div className={styles.weProvideFragmentedContainer}>
-                    <p className={styles.wondermoveInc}>
-                      We provide fragmented services into a single platform to
-                      deliver
-                    </p>
-                    <p className={styles.wondermoveInc}>
-                      an intergrated, dynamic customer experience.
-                    </p>
+                <Grid container sx={classes.frameParent3}>
+                  <div className={styles.seamlessIntegrationParent}>
+                    <div className={styles.se}>
+                      <Grid container sx={classes.se}>
+                        <div>Seamless Integration</div>
+                      </Grid>
+                    </div>
+                    <div className={styles.weProvideFragmentedContainer}>
+                      <Grid container sx={classes.weProvideFragmentedContainer}>
+                        {isMdallScreen ? (
+                          <div className={styles.wondermoveInc}>
+                            We provide fragmented services into a <br />
+                            single platform to deliver an intergrated, <br />
+                            dynamic customer experience.
+                          </div>
+                        ) : (
+                          <div className={styles.wondermoveInc}>
+                            We provide fragmented services into a single
+                            platform to deliver <br /> an intergrated, dynamic
+                            customer experience.
+                          </div>
+                        )}
+                      </Grid>
+                    </div>
                   </div>
-                </div>
-                <img
-                  className={styles.frameChild1}
-                  alt=""
-                  src="/plug/group-4400.svg"
-                />
+                  <div className={styles.plugV}>
+                    <Grid container sx={classes.plugV}>
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className={styles.videoPlay}
+                      >
+                        <source src="/plug/plugV.mp4" type="video/mp4" />
+                      </video>
+                    </Grid>
+                  </div>
+                  {/* <img
+                    className={styles.frameChild1}
+                    alt=""
+                    src="/plug/group-4400.svg"
+                  /> */}
+                </Grid>
               </div>
-              <div className={styles.frameParent4}>
-                <div className={styles.frameParent5}>
-                  <div className={styles.component224Parent}>
-                    <img
-                      className={styles.component224Icon}
-                      alt=""
-                      src="/plug/component-224.svg"
-                    />
-                    <b className={styles.buyingACar}>Buying a car</b>
-                    <div className={styles.onlineVehiclePurchase}>
-                      Online vehicle purchase and vehicle configuration
+              {isMdallScreen ? (
+                <div className={styles.frameParent41}>
+                  <div className={styles.frameParent6}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                        background: "#F1F3F9",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie5}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild21}
+                      />
                     </div>
-                    <div className={styles.customersCanQuickly}>
-                      Customers can quickly lookup and purchase a vehicle based
-                      on the inventory data of dealerships, and preview
-                      quotations by configuring interior, exterior colors and
-                      specs. Based on the configuration, customers can receive
-                      live consultation on purchases or be connected with online
-                      sales channels.
+                    <div className={styles.component224Parent2}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-224.svg"
+                      />
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Buying a car
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Online vehicle purchase and vehicle configuration
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can quickly lookup and purchase a vehicle
+                          based on the inventory data of dealerships, and
+                          preview quotations by configuring interior, exterior
+                          colors and specs. Based on the configuration,
+                          customers can receive live consultation on purchases
+                          or be connected with online sales channels.
+                        </Grid>
+                      </div>
                     </div>
                   </div>
-                  <div
-                    style={{
-                      borderRadius: "40px",
-                      overflow: "hidden",
-                      background: "#F1F3F9",
-                    }}
-                  >
-                    <Lottie
-                      animationData={lottie5}
-                      loop={true}
-                      autoplay={true}
-                      className={styles.frameChild2}
-                    />
+                  <div className={styles.frameParent6}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie6}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild21}
+                      />
+                    </div>
+
+                    <div className={styles.component224Parent2}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-2241.svg"
+                      />
+
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Roadside assistance
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Swift and reliable assistance for safe recovery
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can request a roadside assistant in the case
+                          of an emergency. We provide a swift assistance based
+                          on customer's location, and customers can check
+                          real-time progress status of the assistance.
+                        </Grid>
+                      </div>
+                    </div>
                   </div>
-                  {/* <img
-                className={styles.frameChild2}
-                alt=""
-                src="/plug/group-4411@2x.png"
-              /> */}
+                  <div className={styles.frameParent6}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie7}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild21}
+                      />
+                    </div>
+                    <div className={styles.component224Parent2}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-2242.svg"
+                      />
+
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Sell used car
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Get estimates from dealers by simply taking a photo
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          To sell a used car, customers can share the specs,
+                          option and condition of their vehicle with a dealer.
+                          Dealers can provide a quotation based on the
+                          information. A deal takes place upon the agreed
+                          quotation and schedule.
+                        </Grid>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.frameParent6}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie8}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild21}
+                      />
+                    </div>
+
+                    <div className={styles.component224Parent2}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-225.svg"
+                      />
+
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Live consult
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Direct communication between customer and dealers
+                          through Live Consultation and Chat functions
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can request a live or scheduled consultation
+                          to a dealer by selecting the type of service they
+                          want. Dealers can conduct a consultation with the
+                          customer via mobile/PC application. Screen sharing and
+                          device switching features for the dealer allow a
+                          seamless consultation in a non-face-to-face
+                          environment.
+                        </Grid>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.frameParent6}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie9}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild21}
+                      />
+                    </div>
+                    <div className={styles.component224Parent2}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-2251.svg"
+                      />
+
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          {`Exterior repair & Service booking`}
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Receive reminders and schedule vehicle maintenance
+                          appointments online
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can get assistance with scheduled or
+                          occasional maintenance services after purchasing a
+                          vehicle. They can make a request by selecting the type
+                          of service and desired schedule, then consult with a
+                          dealer for a quotation. Reminders for next service
+                          appointments are provided based on their service
+                          history.
+                        </Grid>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className={styles.frameParent5}>
-                  <div
-                    style={{
-                      borderRadius: "40px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Lottie
-                      animationData={lottie6}
-                      loop={true}
-                      autoplay={true}
-                      className={styles.frameChild2}
-                    />
+              ) : (
+                <div className={styles.frameParent4}>
+                  <div className={styles.frameParent5}>
+                    <div className={styles.component224Parent}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-224.svg"
+                      />
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Buying a car
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Online vehicle purchase and vehicle configuration
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can quickly lookup and purchase a vehicle
+                          based on the inventory data of dealerships, and
+                          preview quotations by configuring interior, exterior
+                          colors and specs. Based on the configuration,
+                          customers can receive live consultation on purchases
+                          or be connected with online sales channels.
+                        </Grid>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                        background: "#F1F3F9",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie5}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild2}
+                      />
+                    </div>
                   </div>
-                  {/* <img
-                className={styles.frameChild2}
-                alt=""
-                src="/plug/group-4412@2x.png"
-              /> */}
-                  <div className={styles.component224Parent}>
-                    <img
-                      className={styles.component224Icon}
-                      alt=""
-                      src="/plug/component-2241.svg"
-                    />
-                    <b className={styles.buyingACar}>Roadside assistance</b>
+                  <div className={styles.frameParent5}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie6}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild2}
+                      />
+                    </div>
+
+                    <div className={styles.component224Parent}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-2241.svg"
+                      />
+                      {/* <b className={styles.buyingACar}>Roadside assistance</b>
                     <div className={styles.swiftAndReliable}>
                       Swift and reliable assistance for safe recovery
                     </div>
@@ -533,17 +1238,35 @@ const PLUG: NextPage = () => {
                       an emergency. We provide a swift assistance based on
                       customer's location, and customers can check real-time
                       progress status of the assistance.
+                    </div> */}
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Roadside assistance
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Swift and reliable assistance for safe recovery
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can request a roadside assistant in the case
+                          of an emergency. We provide a swift assistance based
+                          on customer's location, and customers can check
+                          real-time progress status of the assistance.
+                        </Grid>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className={styles.frameParent5}>
-                  <div className={styles.component224Parent}>
-                    <img
-                      className={styles.component224Icon}
-                      alt=""
-                      src="/plug/component-2242.svg"
-                    />
-                    <b className={styles.buyingACar}>Sell used car</b>
+                  <div className={styles.frameParent5}>
+                    <div className={styles.component224Parent}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-2242.svg"
+                      />
+                      {/* <b className={styles.buyingACar}>Sell used car</b>
                     <div className={styles.onlineVehiclePurchase}>
                       Get estimates from dealers by simply taking a photo
                     </div>
@@ -552,53 +1275,63 @@ const PLUG: NextPage = () => {
                       and condition of their vehicle with a dealer. Dealers can
                       provide a quotation based on the information. A deal takes
                       place upon the agreed quotation and schedule.
+                    </div> */}
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Sell used car
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Get estimates from dealers by simply taking a photo
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          To sell a used car, customers can share the specs,
+                          option and condition of their vehicle with a dealer.
+                          Dealers can provide a quotation based on the
+                          information. A deal takes place upon the agreed
+                          quotation and schedule.
+                        </Grid>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie7}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild2}
+                      />
                     </div>
                   </div>
-                  <div
-                    style={{
-                      borderRadius: "40px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Lottie
-                      animationData={lottie7}
-                      loop={true}
-                      autoplay={true}
-                      className={styles.frameChild2}
-                    />
-                  </div>
-                  {/* <img
-                className={styles.frameChild2}
-                alt=""
-                src="/plug/group-4414@2x.png"
-              /> */}
-                </div>
-                <div className={styles.frameParent5}>
-                  <div
-                    style={{
-                      borderRadius: "40px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Lottie
-                      animationData={lottie8}
-                      loop={true}
-                      autoplay={true}
-                      className={styles.frameChild2}
-                    />
-                  </div>
-                  {/* <img
-                className={styles.frameChild2}
-                alt=""
-                src="/plug/group-4427@2x.png"
-              /> */}
-                  <div className={styles.component225Parent}>
-                    <img
-                      className={styles.component224Icon}
-                      alt=""
-                      src="/plug/component-225.svg"
-                    />
-                    <b className={styles.buyingACar}>Live consult</b>
+                  <div className={styles.frameParent5}>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie8}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild2}
+                      />
+                    </div>
+
+                    <div className={styles.component225Parent}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-225.svg"
+                      />
+                      {/* <b className={styles.buyingACar}>Live consult</b>
                     <div className={styles.onlineVehiclePurchase}>
                       Direct communication between customer and dealers through
                       Live Consultation and Chat functions
@@ -610,17 +1343,39 @@ const PLUG: NextPage = () => {
                       mobile/PC application. Screen sharing and device switching
                       features for the dealer allow a seamless consultation in a
                       non-face-to-face environment.
+                    </div> */}
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          Live consult
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Direct communication between customer and dealers
+                          through Live Consultation and Chat functions
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can request a live or scheduled consultation
+                          to a dealer by selecting the type of service they
+                          want. Dealers can conduct a consultation with the
+                          customer via mobile/PC application. Screen sharing and
+                          device switching features for the dealer allow a
+                          seamless consultation in a non-face-to-face
+                          environment.
+                        </Grid>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className={styles.frameParent7}>
-                  <div className={styles.component224Parent}>
-                    <img
-                      className={styles.component224Icon}
-                      alt=""
-                      src="/plug/component-2251.svg"
-                    />
-                    <b className={styles.buyingACar}>
+                  <div className={styles.frameParent5}>
+                    <div className={styles.component224Parent}>
+                      <img
+                        className={styles.component224Icon}
+                        alt=""
+                        src="/plug/component-2251.svg"
+                      />
+                      {/* <b className={styles.buyingACar}>
                       <p
                         className={styles.manageEntireVehicle}
                       >{`Exterior repair &`}</p>
@@ -637,40 +1392,60 @@ const PLUG: NextPage = () => {
                       desired schedule, then consult with a dealer for a
                       quotation. Reminders for next service appointments are
                       provided based on their service history.
+                    </div> */}
+                      <div className={styles.buyingACar}>
+                        <Grid container sx={classes.buyingACar}>
+                          {`Exterior repair & Service booking`}
+                        </Grid>
+                      </div>
+                      <div className={styles.onlineVehiclePurchase}>
+                        <Grid container sx={classes.onlineVehiclePurchase}>
+                          Receive reminders and schedule vehicle maintenance
+                          appointments online
+                        </Grid>
+                      </div>
+                      <div className={styles.customersCanQuickly}>
+                        <Grid container sx={classes.customersCanQuickly}>
+                          Customers can get assistance with scheduled or
+                          occasional maintenance services after purchasing a
+                          vehicle. They can make a request by selecting the type
+                          of service and desired schedule, then consult with a
+                          dealer for a quotation. Reminders for next service
+                          appointments are provided based on their service
+                          history.
+                        </Grid>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Lottie
+                        animationData={lottie9}
+                        loop={true}
+                        autoplay={true}
+                        className={styles.frameChild2}
+                      />
                     </div>
                   </div>
-                  <div
-                    style={{
-                      borderRadius: "40px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Lottie
-                      animationData={lottie9}
-                      loop={true}
-                      autoplay={true}
-                      className={styles.frameChild2}
-                    />
-                  </div>
-                  {/* <img
-                className={styles.frameChild2}
-                alt=""
-                src="/plug/group-4434@2x.png"
-              /> */}
                 </div>
-              </div>
-            </div>{" "}
-          </Grid>
+              )}
+            </Grid>
+          </div>
         </>
 
         <div className={styles.footerContianer}>
           <div className={styles.manageEntireVehicleLifecyclParent}>
             <div className={styles.manageEntireVehicleContainerText}>
               <div className={styles.manageEntireVehicleContainer}>
-                <p className={styles.manageEntireVehicle}>
-                  Manage entire vehicle lifecycle
-                </p>
-                <p className={styles.wondermoveInc}>with P-LUG</p>
+                <Grid container sx={classes.manageEntireVehicleContainer}>
+                  <div className={styles.manageEntireVehicle}>
+                    Manage entire vehicle lifecycle <br />
+                    with P-LUG
+                  </div>
+                </Grid>
               </div>
               <div className={styles.getInTouchWrapper}>
                 <b className={styles.getInTouch}>Get in touch</b>
@@ -688,31 +1463,40 @@ const PLUG: NextPage = () => {
           <div className={styles.frameItem} />
           </div> */}
           <div className={styles.footer}>
-            <div className={styles.layer1Parent}>
-              <img
-                className={styles.layer1Icon}
-                alt=""
-                src="/plug/layer-1.svg"
-              />
-              <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                <div className={styles.wondermoveSpinOffOf}>
-                  wondermove Spin-off of Hyundai Motor Company
-                </div>
-                <div className={styles.wondermoveIncBusinessContainer}>
-                  <p className={styles.wondermoveInc}>wondermove Inc.</p>
-                  <p className={styles.wondermoveInc}>
-                    Business Registration Number: 518-81-01644
-                  </p>
-                  <p className={styles.wondermoveInc}>
-                    Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul,
-                    Republic of Korea
-                  </p>
-                  <p className={styles.wondermoveInc}>
-                    Use Inquiries: hawkeye@wondermove.net
-                  </p>
-                </div>
+            <Grid container sx={classes.footer}>
+              <div className={styles.layer1Parent}>
+                <Grid container sx={classes.layer1Parent}>
+                  <img
+                    className={styles.layer1Icon}
+                    alt=""
+                    src="/plug/layer-1.svg"
+                  />
+                  <div className={styles.wondermoveSpinOffOfHyundaiParent}>
+                    <Grid
+                      container
+                      sx={classes.wondermoveSpinOffOfHyundaiParent}
+                    >
+                      <div className={styles.wondermoveSpinOffOf}>
+                        wondermove Spin-off of Hyundai Motor Company
+                      </div>
+                      <div className={styles.wondermoveIncBusinessContainer}>
+                        <p className={styles.wondermoveInc}>wondermove Inc.</p>
+                        <p className={styles.wondermoveInc}>
+                          Business Registration Number: 518-81-01644
+                        </p>
+                        <p className={styles.wondermoveInc}>
+                          Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu,
+                          Seoul, Republic of Korea
+                        </p>
+                        <p className={styles.wondermoveInc}>
+                          Use Inquiries: hawkeye@wondermove.net
+                        </p>
+                      </div>
+                    </Grid>
+                  </div>
+                </Grid>
               </div>
-            </div>
+            </Grid>
           </div>
         </div>
       </div>
