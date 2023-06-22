@@ -411,7 +411,7 @@ const Collapse = ({ children, isOpen }) => {
     const childHeight = `${childHeightRaw / 16}rem`;
 
     setChildHeight(childHeight);
-  }, []);
+  }, [isOpen]);
 
   return (
     <div
