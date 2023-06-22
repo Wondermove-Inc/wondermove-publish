@@ -208,7 +208,7 @@
   /* color: var(--grayscale-aaa); */
   top: 0;
   position: fixed;
-  z-index: 1001;
+  z-index: 9999999;
 }
 /* .gnb {
   overflow: hidden;

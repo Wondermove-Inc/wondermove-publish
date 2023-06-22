@@ -59,7 +59,7 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
           width: "100%",
           height: "100%",
           backgroundColor: "rgba(0, 0, 0, 0.1)",
-          // zIndex: 10000,
+          zIndex: 999999,
         },
         content: {
           position: "absolute",
