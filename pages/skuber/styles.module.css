@@ -1722,8 +1722,16 @@
   justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
-  animation-fill-mode: forwards;
-  animation: pushDown 1s ease-out;
+  /* animation-fill-mode: forwards;
+  animation: pushDown 1s ease-out; */
+}
+.collapse {
+  overflow: hidden;
+  transition: 0.4s max-height;
+}
+
+.collapse > div {
+  overflow: auto;
 }
 
 @keyframes pushDown {

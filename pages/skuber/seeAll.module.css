@@ -98,18 +98,6 @@
   font-size: var(--body-b2-size);
 }
 
-.hideParent {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  height: 100%;
-  box-sizing: border-box;
-  justify-content: center;
-  font-size: var(--body-b2-size);
-  z-index: 0;
-  cursor: pointer;
-}
-
 .frameWrapper5 {
   display: flex;
   /* flex-direction: column; */
@@ -163,6 +151,19 @@
   cursor: pointer;
 }
 
+.hideParent {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  font-size: var(--body-b2-size);
+  z-index: 0;
+  cursor: pointer;
+  bottom: 0;
+}
+
 .iconNavArrowDown {
   position: relative;
   width: 16px;
@@ -180,6 +181,18 @@
   justify-content: center;
   gap: 16px;
   font-size: var(--body-b3-size);
+  animation-fill-mode: forwards;
+}
+@keyframes collapse {
+  from {
+    transform: scaleY(1);
+    transform-origin: center bottom;
+  }
+
+  to {
+    transform: scaleY(0);
+    transform-origin: center bottom;
+  }
 }
 
 .rectangleContainer {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 //import { FaPlus, FaMinus } from "react-icons/fa";
 import styles from "../pages/skuber/styles.module.css";
 
@@ -126,7 +126,7 @@ const QA = () => {
               />
             </div>
 
-            {isContentVisible1 && (
+            <Collapse isOpen={isContentVisible1}>
               <div className={styles.preventResourceWasteOnOutWrapper}>
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
@@ -148,7 +148,7 @@ const QA = () => {
                   </Grid>
                 </div>
               </div>
-            )}
+            </Collapse>
             <div className={styles.lineDiv} />
           </div>
 
@@ -173,7 +173,7 @@ const QA = () => {
               />
             </div>
 
-            {isContentVisible2 && (
+            <Collapse isOpen={isContentVisible2}>
               <div className={styles.preventResourceWasteOnOutWrapper}>
                 {/* content */}
                 <div className={styles.solutionForYour}>
@@ -190,7 +190,7 @@ const QA = () => {
                   </Grid>
                 </div>
               </div>
-            )}
+            </Collapse>
 
             <div className={styles.lineDiv} />
           </div>
@@ -216,7 +216,7 @@ const QA = () => {
               />
             </div>
 
-            {isContentVisible3 && (
+            <Collapse isOpen={isContentVisible3}>
               <div className={styles.preventResourceWasteOnOutWrapper}>
                 {/* content */}
                 <div className={styles.solutionForYour}>
@@ -239,7 +239,7 @@ const QA = () => {
                   </Grid>
                 </div>
               </div>
-            )}
+            </Collapse>
 
             <div className={styles.lineDiv} />
           </div>
@@ -267,7 +267,7 @@ const QA = () => {
               />
             </div>
 
-            {isContentVisible4 && (
+            <Collapse isOpen={isContentVisible4}>
               <div className={styles.preventResourceWasteOnOutWrapper}>
                 {/* content */}
                 <div className={styles.solutionForYour}>
@@ -284,7 +284,7 @@ const QA = () => {
                   </Grid>
                 </div>
               </div>
-            )}
+            </Collapse>
 
             <div className={styles.lineDiv} />
           </div>
@@ -310,7 +310,7 @@ const QA = () => {
               />
             </div>
 
-            {isContentVisible5 && (
+            <Collapse isOpen={isContentVisible5}>
               <div className={styles.preventResourceWasteOnOutWrapper}>
                 {/* content */}
                 <div className={styles.solutionForYour}>
@@ -349,7 +349,7 @@ const QA = () => {
                   </Grid>
                 </div>
               </div>
-            )}
+            </Collapse>
 
             <div className={styles.lineDiv} />
           </div>
@@ -374,7 +374,7 @@ const QA = () => {
               />
             </div>
 
-            {isContentVisible6 && (
+            <Collapse isOpen={isContentVisible6}>
               <div className={styles.preventResourceWasteOnOutWrapper}>
                 {/* content */}
                 <div className={styles.solutionForYour}>
@@ -391,12 +391,36 @@ const QA = () => {
                   </Grid>
                 </div>
               </div>
-            )}
+            </Collapse>
 
             <div className={styles.lineDiv} />
           </div>
         </div>
       </Grid>
+    </div>
+  );
+};
+
+const Collapse = ({ children, isOpen }) => {
+  const ref = useRef(null);
+  const [childHeight, setChildHeight] = useState(0);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const childHeightRaw = ref.current.clientHeight;
+    const childHeight = `${childHeightRaw / 16}rem`;
+
+    setChildHeight(childHeight);
+  }, []);
+
+  return (
+    <div
+      className={styles.collapse}
+      style={{
+        maxHeight: isOpen ? childHeight : 0,
+      }}
+    >
+      <div ref={ref}>{children}</div>
     </div>
   );
 };
