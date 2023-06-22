@@ -85,7 +85,7 @@ const Nav = () => {
     };
   }, []);
 
-  const containerClass = classNames(styles.container, {
+  const containerClass = classNames(styles.container10, {
     [styles.change]: toggleNavModalVisible,
   });
 
@@ -95,7 +95,7 @@ const Nav = () => {
 
       {isSmallScreen ? (
         <div
-          className={navModalVisible ? containerClass : styles.container}
+          className={navModalVisible ? containerClass : styles.container10}
           onClick={toggleNavModalVisible}
         >
           <div className={styles.bar1}></div>
