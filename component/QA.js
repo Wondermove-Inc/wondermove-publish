@@ -386,7 +386,7 @@ const QA = () => {
                       {`DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of  `}
                     </p>
                     <p className={styles.solutionForYour}>
-                      {`requests you receive from a specific IP address.and respond to service failures in real-time.`}
+                      {`requests you receive from a specific IP address.`}
                     </p>
                   </Grid>
                 </div>

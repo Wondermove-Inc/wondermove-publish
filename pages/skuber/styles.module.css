@@ -2791,3 +2791,35 @@
   /* 内容在展开状态下的样式 */
   max-height: 2000px; /* 根据实际内容高度进行调整 */
 }
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  background: none;
+  z-index: 100000;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  border-radius: 2px;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}

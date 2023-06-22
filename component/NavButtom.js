@@ -36,7 +36,7 @@ const useStyles = (theme) => ({
 
     [theme.breakpoints.down("sm")]: {
       display: "none",
-      backgroundImage: 'url("/1920_desktop/nav.png")',
+      // backgroundImage: 'url("/1920_desktop/nav.png")',
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
@@ -62,7 +62,7 @@ const useStyles = (theme) => ({
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
-      backgroundImage: 'url("/1920_desktop/nav.png")',
+      // backgroundImage: 'url("/1920_desktop/nav.png")',
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
@@ -106,39 +106,39 @@ const NavButtom = ({ onClick }) => {
     (window.location.href = "https://wondermove.net/viva-ui/");
 
   return (
-    // <BrowserRouter>
-    <div style={{ cursor: "pointer" }}>
-      <Grid container sx={classes.sKuberParentHidden}>
-        <div
-          style={{ width: "60px", height: "60px", zIndex: 2000 }}
-          onClick={onClick}
-          navModalVisible={navModalVisible}
-          toggleNavModalVisible={toggleNavModalVisible}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        ></div>
-      </Grid>
-      <Grid container sx={classes.sKuberParent}>
-        <div className={styles.sKuber}>
-          <Link className={styles.Link1} href="/skuber">
-            S-kuber
-          </Link>
-        </div>
-        {/* <div className={styles.pLug}>
+    <>
+      <div style={{ cursor: "pointer" }}>
+        <Grid container sx={classes.sKuberParentHidden}>
+          <div
+            style={{ width: "60px", height: "60px", zIndex: 2000 }}
+            onClick={onClick}
+            navModalVisible={navModalVisible}
+            toggleNavModalVisible={toggleNavModalVisible}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          ></div>
+        </Grid>
+        <Grid container sx={classes.sKuberParent}>
+          <div className={styles.sKuber}>
+            <Link className={styles.Link1} href="/skuber">
+              S-kuber
+            </Link>
+          </div>
+          {/* <div className={styles.pLug}>
           <Link href="/p_lug">P-LUG</Link>
         </div> */}
-        <div className={styles.pLug} onClick={onPlugClick}>
-          P-LUG
-        </div>
-        <div className={styles.pLug} onClick={onVivaClick}>
-          VIVA UI
-        </div>
-        <div className={styles.pLug} onClick={onContactClick}>
-          Contact
-        </div>
-      </Grid>
-    </div>
-    // </BrowserRouter>
+          <div className={styles.pLug} onClick={onPlugClick}>
+            P-LUG
+          </div>
+          <div className={styles.pLug} onClick={onVivaClick}>
+            VIVA UI
+          </div>
+          <div className={styles.pLug} onClick={onContactClick}>
+            Contact
+          </div>
+        </Grid>
+      </div>
+    </>
   );
 };
 

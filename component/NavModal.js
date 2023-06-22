@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../pages/skuber/sendSuccessfully.module.css";
 import Modal from "react-modal";
+import classNames from "classnames";
 
 const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
   const [isHovered, setIsHovered] = useState(false);
+
   const router = useRouter();
   const goToHomePage = () => {
     router.push("/");
@@ -42,6 +44,10 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
   const onVivaClick = () =>
     (window.location.href = "https://wondermove.net/viva-ui/");
 
+  const containerClass = classNames(styles.container, {
+    [styles.change]: toggleNavModalVisible,
+  });
+
   return (
     <Modal
       isOpen={isVisible}
@@ -52,8 +58,8 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
           position: "fixed",
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-          zIndex: 10000,
+          backgroundColor: "rgba(0, 0, 0, 0.1)",
+          // zIndex: 10000,
         },
         content: {
           position: "absolute",
@@ -74,14 +80,19 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
       }}
     >
       <div className={styles.getInTouchMobileParent}>
-        <div className={styles.frameChildOffParent}>
+        {/* <div className={styles.frameChildOffParent}>
           <img
             className={styles.frameChildOff}
             alt=""
             src="/1920_desktop/off.svg"
             onClick={toggleNavModalVisible}
           />
-        </div>
+        </div> */}
+        {/* <div className={containerClass} onClick={toggleNavModalVisible}>
+          <div className={styles.bar1}></div>
+          <div className={styles.bar2}></div>
+          <div className={styles.bar3}></div>
+        </div> */}
         <ul className={styles.getInTouchMobile}>
           <li className={styles.navS1}>
             <a onClick={() => handleButtonClick("S-kuber")}>

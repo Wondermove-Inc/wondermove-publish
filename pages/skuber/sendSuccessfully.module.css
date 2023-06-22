@@ -307,3 +307,37 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+.container {
+  display: block;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  background: none;
+  float: right;
+  padding: 27px 24px;
+  z-index: 999999;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  border-radius: 2px;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
