@@ -1097,10 +1097,8 @@ function SolutionMenu() {
                       />
                     </div>
                   </div>
-                  <div className={styles.hideParent}>
-                    <div className={styles.pricing} onClick={toggleMenu}>
-                      Hide
-                    </div>
+                  <div className={styles.hideParent} onClick={toggleMenu}>
+                    <div className={styles.pricingSee}>Hide</div>
                     <img
                       className={styles.iconNavArrowDown}
                       alt=""

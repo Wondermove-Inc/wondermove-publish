@@ -78,6 +78,10 @@ const useStyles = (theme) => ({
     },
   },
   iconCpuParent: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "16px",
     fontSize: "24px",
     lineHeight: "29px",
     [theme.breakpoints.down("xl")]: {},
@@ -86,6 +90,7 @@ const useStyles = (theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "20px",
       lineHeight: "24px",
+      gap: "8px",
     },
   },
   frameGroup: {

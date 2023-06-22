@@ -315,7 +315,10 @@ const QA = () => {
                 {/* content */}
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
-                    <p className={styles.solutionForYour}>
+                    <p
+                      className={styles.solutionForYour}
+                      style={{ paddingBottom: "20px" }}
+                    >
                       {`S-Kuber offers several pricing tiers, each with its own set of features : `}
                     </p>
                     <br />
@@ -335,9 +338,8 @@ const QA = () => {
                       {`- Pro ($1,500 + $12 x vCPU/month) : Includes all Plus features, plus 101-1,000 vCPU.`}
                     </p>
                     <p className={styles.solutionForYour}>
-                      {`- Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue  `}
+                      {`- Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue support.`}
                     </p>
-                    <p className={styles.solutionForYour}>{`support.`}</p>
                     <p className={styles.solutionForYour}>
                       {`- Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, `}
                     </p>

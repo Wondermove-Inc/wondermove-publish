@@ -107,7 +107,7 @@ const NavButtom = ({ onClick }) => {
 
   return (
     // <BrowserRouter>
-    <div>
+    <div style={{ cursor: "pointer" }}>
       <Grid container sx={classes.sKuberParentHidden}>
         <div
           style={{ width: "60px", height: "60px", zIndex: 2000 }}

@@ -32,6 +32,16 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
     }
   };
 
+  const onContactClick = () =>
+    window.open(
+      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+    );
+  const onPlugClick = () =>
+    (window.location.href = "https://wondermove.net/2232-2/");
+
+  const onVivaClick = () =>
+    (window.location.href = "https://wondermove.net/viva-ui/");
+
   return (
     <Modal
       isOpen={isVisible}
@@ -79,17 +89,17 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
             </a>
           </li>
           <li className={styles.navS2}>
-            <a onClick={() => handleButtonClick("P-LUG")}>
+            <a onClick={onPlugClick}>
               <span className={styles.navText}>P-LUG</span>
             </a>
           </li>
           <li className={styles.navS3}>
-            <a onClick={() => handleButtonClick("VIVA UI")}>
+            <a onClick={onVivaClick}>
               <span className={styles.navText}>VIVA UI</span>
             </a>
           </li>
           <li className={styles.navS4}>
-            <a onClick={() => handleButtonClick("Contact")}>
+            <a onClick={onContactClick}>
               <span className={styles.navText}>Contact</span>
             </a>
           </li>

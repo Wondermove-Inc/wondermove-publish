@@ -1021,10 +1021,10 @@ const PLUG: NextPage = () => {
                       </div>
                       <div className={styles.customersCanQuickly}>
                         <Grid container sx={classes.customersCanQuickly}>
-                          Customers can request a roadside assistant in the case
+                          {`Customers can request a roadside assistant in the case
                           of an emergency. We provide a swift assistance based
                           on customer's location, and customers can check
-                          real-time progress status of the assistance.
+                          real-time progress status of the assistance.`}
                         </Grid>
                       </div>
                     </div>
@@ -1251,10 +1251,10 @@ const PLUG: NextPage = () => {
                       </div>
                       <div className={styles.customersCanQuickly}>
                         <Grid container sx={classes.customersCanQuickly}>
-                          Customers can request a roadside assistant in the case
+                          {`Customers can request a roadside assistant in the case
                           of an emergency. We provide a swift assistance based
                           on customer's location, and customers can check
-                          real-time progress status of the assistance.
+                          real-time progress status of the assistance.`}
                         </Grid>
                       </div>
                     </div>
