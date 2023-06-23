@@ -124,15 +124,22 @@ const NavButtom = ({ onClick }) => {
               S-kuber
             </Link>
           </div>
-          {/* <div className={styles.pLug}>
-          <Link href="/p_lug">P-LUG</Link>
-        </div> */}
-          <div className={styles.pLug} onClick={onPlugClick}>
+          <div className={styles.pLug}>
+            <Link href="/p_lug" className={styles.Link1}>
+              P-LUG
+            </Link>
+          </div>
+          {/* <div className={styles.pLug} onClick={onPlugClick}>
             P-LUG
+          </div> */}
+          <div className={styles.pLug}>
+            <Link href="/vivaui" className={styles.Link1}>
+              VIVA UI
+            </Link>
           </div>
-          <div className={styles.pLug} onClick={onVivaClick}>
+          {/* <div className={styles.pLug} onClick={onVivaClick}>
             VIVA UI
-          </div>
+          </div> */}
           <div className={styles.pLug} onClick={onContactClick}>
             Contact
           </div>
