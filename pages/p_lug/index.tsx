@@ -65,10 +65,10 @@ const useStyles = (theme: Theme) => ({
   },
   frameWrapper: {
     top: "2.135417vw",
-    padding: "12.447917vw 0 150px 18.85167vw",
+    padding: "12.447917vw 46.875vw 150px 18.85167vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
-      padding: "150px 0 100px 200px",
+      padding: "150px 41.666667vw 100px 200px",
     },
     [theme.breakpoints.down("md")]: {
       padding: "184px 11.376953vw 80px",
@@ -79,11 +79,16 @@ const useStyles = (theme: Theme) => ({
   },
 
   frameParent9: {
+    width: "100%",
+    height: "100%",
     gap: "60px",
     flexDirection: "column",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      width: "70%",
+      height: "100%",
+    },
     [theme.breakpoints.down("sm")]: {
       gap: "48px",
       flexDirection: "column",
@@ -885,8 +890,8 @@ const PLUG: NextPage = () => {
                           <div className={styles.weProvideFragmented1}>
                             <Grid container sx={classes.weProvideFragmented1}>
                               We provide fragmented services into a single
-                              platform to deliver an <br />
-                              integrated, dynamic customer experience.
+                              platform to deliver an integrated, dynamic
+                              customer experience.
                             </Grid>
                           </div>
                         </div>
