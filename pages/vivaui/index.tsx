@@ -4,7 +4,49 @@ import styles from "./viva.module.css";
 import Nav from "../../component/Nav";
 import Head from "next/head";
 
+import { Grid, Typography, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Theme } from "@mui/material/styles";
+import { Controller, Scene } from "react-scrollmagic";
+
+const theme: Theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 601,
+      md: 1025,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
+});
+
+const useStyles = (theme: Theme) => ({
+  containerNav: {
+    padding: "10px 240px",
+    fontSize: "16px",
+    maxWidth: "1920px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    [theme.breakpoints.down("xl")]: {
+      padding: "10px 240px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      padding: "10px 120px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: "10px 60px",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      padding: "12px 24px",
+    },
+  },
+});
+
 const VIVAUI: NextPage = () => {
+  const classes = useStyles(theme);
   const [navModalVisible, setNavModalVisible] = useState(false);
   return (
     <>
@@ -24,6 +66,11 @@ const VIVAUI: NextPage = () => {
       </Head>
       <div className={styles.vivaUi}>
         <img className={styles.vivaUiChild} alt="" src="/viva/frame-4362.svg" />
+        <div className={styles.gnb}>
+          <Grid container sx={classes.containerNav}>
+            <Nav />
+          </Grid>
+        </div>
         <div className={styles.groupParent}>
           <div className={styles.rectangleParent}>
             <div className={styles.groupChild} />
@@ -50,149 +97,6 @@ const VIVAUI: NextPage = () => {
           </div>
           <div className={styles.getInTouchWrapper}>
             <b className={styles.getInTouch}>Get in touch</b>
-          </div>
-        </div>
-        <div className={styles.image785} />
-        <div className={styles.groupContainer}>
-          <div className={styles.groupDiv}>
-            <img
-              className={styles.groupIcon}
-              alt=""
-              src="/viva/group-4358@2x.png"
-            />
-            <div className={styles.allTheServiceModulesForYoParent}>
-              <div className={styles.allTheServiceContainer}>
-                <b>{`All the service modules for your business are ready `}</b>
-                <i className={styles.i}>!</i>
-              </div>
-              <div className={styles.bringYourEnvisioned}>
-                Bring your envisioned business to life by combining service
-                modules.
-              </div>
-            </div>
-          </div>
-          <div className={styles.vectorParent}>
-            <img
-              className={styles.rectangleIcon}
-              alt=""
-              src="/viva/rectangle-24106.svg"
-            />
-            <div className={styles.maskGroup}>
-              <div className={styles.frameContainer}>
-                <div className={styles.lineParent}>
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                </div>
-                <div className={styles.lineGroup}>
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                  <div className={styles.frameChild} />
-                </div>
-              </div>
-            </div>
-            <img
-              className={styles.maskGroupIcon}
-              alt=""
-              src="/viva/mask-group.svg"
-            />
-            <div className={styles.wellStructuredDesignSysteParent}>
-              <b className={styles.wellStructuredDesignContainer}>
-                <p className={styles.wellStructured}>{`Well-structured `}</p>
-                <p className={styles.reactNative}> design system</p>
-              </b>
-              <div className={styles.designSystemBasedModulesContainer}>
-                <p
-                  className={styles.reactNative}
-                >{`Design system-based modules `}</p>
-                <p
-                  className={styles.reactNative}
-                >{`    make customization easy to match `}</p>
-                <p className={styles.reactNative}> your brand style.</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.rectangleContainer}>
-            <div className={styles.groupChild1} />
-            <div className={styles.buildFasterWithContainer}>
-              <p className={styles.reactNative}>Build faster</p>
-              <p className={styles.reactNative}>with VIVA UI</p>
-            </div>
-          </div>
-          <div className={styles.rectangleParent1}>
-            <div className={styles.groupChild2} />
-            <img
-              className={styles.maskGroupIcon1}
-              alt=""
-              src="/viva/mask-group1.svg"
-            />
-            <div className={styles.eastToImplementParent}>
-              <b className={styles.eastToImplement}>East to implement</b>
-              <div className={styles.theFrameworkIs}>
-                The framework is delivered on a component-by-component basis,
-                allowing you to quickly build services by mixing and matching
-                the features you want.
-              </div>
-            </div>
-          </div>
-          <img
-            className={styles.groupChild3}
-            alt=""
-            src="/viva/group-4364.svg"
-          />
-          <div className={styles.vectorGroup}>
-            <img
-              className={styles.groupChild4}
-              alt=""
-              src="/viva/rectangle-24105.svg"
-            />
-            <div className={styles.frameWrapper}>
-              <div className={styles.multiOsSupportParent}>
-                <b className={styles.multiOsSupport}>Multi-OS support</b>
-                <div className={styles.oneSourceTo}>
-                  One source to support iOS, AOS. Easily deploy services up to
-                  date, reducing resources for operations.
-                </div>
-              </div>
-            </div>
-            <img
-              className={styles.frameIcon}
-              alt=""
-              src="/viva/frame-4365.svg"
-            />
-          </div>
-        </div>
-        <div className={styles.vivaUiInner}>
-          <div className={styles.quicklyTurnYourDreamServicParent}>
-            <div className={styles.reactNativeUiContainer}>
-              <p className={styles.quicklyTurnYour}>
-                Quickly turn your dream service
-              </p>
-              <p className={styles.reactNative}>into a reality with VIVA UI</p>
-            </div>
-            <div className={styles.getInTouchContainer}>
-              <div className={styles.getInTouch1}>Get in touch</div>
-            </div>
           </div>
         </div>
         <div className={styles.frameDiv}>
@@ -461,6 +365,150 @@ const VIVAUI: NextPage = () => {
           <div className={styles.frameChild24} />
           <div className={styles.frameChild25} />
         </div>
+        <div className={styles.image785} />
+        <div className={styles.groupContainer}>
+          <div className={styles.groupDiv}>
+            <img
+              className={styles.groupIcon}
+              alt=""
+              src="/viva/group-4358@2x.png"
+            />
+            <div className={styles.allTheServiceModulesForYoParent}>
+              <div className={styles.allTheServiceContainer}>
+                <b>{`All the service modules for your business are ready `}</b>
+                <i className={styles.i}>!</i>
+              </div>
+              <div className={styles.bringYourEnvisioned}>
+                Bring your envisioned business to life by combining service
+                modules.
+              </div>
+            </div>
+          </div>
+          <div className={styles.vectorParent}>
+            <img
+              className={styles.rectangleIcon}
+              alt=""
+              src="/viva/rectangle-24106.svg"
+            />
+            <div className={styles.maskGroup}>
+              <div className={styles.frameContainer}>
+                <div className={styles.lineParent}>
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                </div>
+                <div className={styles.lineGroup}>
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                  <div className={styles.frameChild} />
+                </div>
+              </div>
+            </div>
+            <img
+              className={styles.maskGroupIcon}
+              alt=""
+              src="/viva/mask-group.svg"
+            />
+            <div className={styles.wellStructuredDesignSysteParent}>
+              <b className={styles.wellStructuredDesignContainer}>
+                <p className={styles.wellStructured}>{`Well-structured `}</p>
+                <p className={styles.reactNative}> design system</p>
+              </b>
+              <div className={styles.designSystemBasedModulesContainer}>
+                <p
+                  className={styles.reactNative}
+                >{`Design system-based modules `}</p>
+                <p
+                  className={styles.reactNative}
+                >{`    make customization easy to match `}</p>
+                <p className={styles.reactNative}> your brand style.</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.rectangleContainer}>
+            <div className={styles.groupChild1} />
+            <div className={styles.buildFasterWithContainer}>
+              <p className={styles.reactNative}>Build faster</p>
+              <p className={styles.reactNative}>with VIVA UI</p>
+            </div>
+          </div>
+          <div className={styles.rectangleParent1}>
+            <div className={styles.groupChild2} />
+            <img
+              className={styles.maskGroupIcon1}
+              alt=""
+              src="/viva/mask-group1.svg"
+            />
+            <div className={styles.eastToImplementParent}>
+              <b className={styles.eastToImplement}>East to implement</b>
+              <div className={styles.theFrameworkIs}>
+                The framework is delivered on a component-by-component basis,
+                allowing you to quickly build services by mixing and matching
+                the features you want.
+              </div>
+            </div>
+          </div>
+          <img
+            className={styles.groupChild3}
+            alt=""
+            src="/viva/group-4364.svg"
+          />
+          <div className={styles.vectorGroup}>
+            <img
+              className={styles.groupChild4}
+              alt=""
+              src="/viva/rectangle-24105.svg"
+            />
+            <div className={styles.frameWrapper}>
+              <div className={styles.multiOsSupportParent}>
+                <b className={styles.multiOsSupport}>Multi-OS support</b>
+                <div className={styles.oneSourceTo}>
+                  One source to support iOS, AOS. Easily deploy services up to
+                  date, reducing resources for operations.
+                </div>
+              </div>
+            </div>
+            <img
+              className={styles.frameIcon}
+              alt=""
+              src="/viva/frame-4365.svg"
+            />
+          </div>
+        </div>
+        <div className={styles.vivaUiInner}>
+          <div className={styles.quicklyTurnYourDreamServicParent}>
+            <div className={styles.reactNativeUiContainer}>
+              <p className={styles.quicklyTurnYour}>
+                Quickly turn your dream service
+              </p>
+              <p className={styles.reactNative}>into a reality with VIVA UI</p>
+            </div>
+            <div className={styles.getInTouchContainer}>
+              <div className={styles.getInTouch1}>Get in touch</div>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.footer}>
           <div className={styles.layer1Parent}>
             <img className={styles.layer1Icon} alt="" src="/viva/layer-1.svg" />
@@ -483,9 +531,6 @@ const VIVAUI: NextPage = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.gnb}>
-          <Nav />
         </div>
       </div>
     </>

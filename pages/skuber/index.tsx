@@ -29,8 +29,6 @@ import GloballyValidated from "../../component/GloballyValidated";
 // import { makeStyles } from "@material-ui/core/styles";
 
 import { Grid, Typography, useMediaQuery } from "@mui/material";
-import { styled } from "@mui/system";
-import { Box } from "@mui/system";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 import { Controller, Scene } from "react-scrollmagic";
