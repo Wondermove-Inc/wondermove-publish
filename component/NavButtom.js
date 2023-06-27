@@ -29,6 +29,7 @@ const useStyles = (theme) => ({
     alignItems: "center",
     padding: "0px",
     gap: "80px",
+    fontSize: "16px",
     justifyContent: "space-between",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
@@ -129,9 +130,6 @@ const NavButtom = ({ onClick }) => {
               P-LUG
             </Link>
           </div>
-          {/* <div className={styles.pLug} onClick={onPlugClick}>
-            P-LUG
-          </div> */}
           <div className={styles.pLug}>
             <Link href="/vivaui" className={styles.Link1}>
               VIVA UI
