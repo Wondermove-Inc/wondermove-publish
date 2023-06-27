@@ -8,6 +8,7 @@ import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 import { Controller, Scene } from "react-scrollmagic";
+import InnerContainer from "../../component/vivaui/innerContainer";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -97,7 +98,10 @@ const useStyles = (theme: Theme) => ({
     lineHeight: "68px",
     fontWeight: "600",
     textAlign: "start",
-    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "44px",
+      lineHeight: "58px",
+    },
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
@@ -107,6 +111,34 @@ const useStyles = (theme: Theme) => ({
       textAlign: "center",
     },
   },
+  reactNativeUiContainer2: {
+    fontSize: "42px",
+    lineHeight: "51px",
+    fontWeight: "600",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    width: "694px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      fontSize: "32px",
+      lineHeight: "44px",
+      fontWeight: "600",
+      textAlign: "center",
+      width: "67.773438vw",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
+      fontWeight: "600",
+      textAlign: "center",
+      // width: "345px",
+      width: "87.78626vw",
+    },
+  },
 
   vivaUi16: {
     fontSize: "88px",
@@ -114,7 +146,10 @@ const useStyles = (theme: Theme) => ({
     fontWeight: "700",
     textAlign: "start",
     [theme.breakpoints.down("xl")]: {},
-    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "78px",
+      lineHeight: "70px",
+    },
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       fontSize: "44px",
@@ -128,22 +163,24 @@ const useStyles = (theme: Theme) => ({
     fontSize: "20px",
     lineHeight: "32px",
     fontWeight: "400",
-    width: "655px",
+    width: "700px",
     textAlign: "start",
     [theme.breakpoints.down("xl")]: {},
-    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("lg")]: {
+      width: "34.722222vw",
+    },
     [theme.breakpoints.down("md")]: {
       fontSize: "20px",
       lineHeight: "32px",
       fontWeight: "400",
-      width: "655px",
+      width: "63.964844vw",
       textAlign: "center",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
       lineHeight: "24px",
       fontWeight: "400",
-      width: "320px",
+      width: "81.424936vw",
       textAlign: "center",
     },
   },
@@ -177,6 +214,7 @@ const useStyles = (theme: Theme) => ({
 
   frameParent: {
     position: "absolute",
+    maxWidth: "1920px",
     gap: "80px",
     padding: "284px 240px",
     display: "flex",
@@ -186,19 +224,21 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
       padding: "240px 120px",
+      // width: "100vw",
     },
     [theme.breakpoints.down("md")]: {
       position: "absolute",
       gap: "40px",
-      padding: "300px 60px",
+      padding: "300px 60px 180px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      // width: "100vw",
     },
     [theme.breakpoints.down("sm")]: {
       position: "absolute",
       gap: "40px",
-      padding: "285px 24px",
+      padding: "285px 24px 120px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -207,16 +247,16 @@ const useStyles = (theme: Theme) => ({
 
   frameDiv: {
     position: "relative",
-    width: "35.9375vw",
-    height: "1080px",
-    left: "370px",
+    width: "30vw",
+    height: "1000px",
+    left: "340px",
     opacity: "1",
     padding: "0",
     top: "0",
     [theme.breakpoints.down("xl")]: {
       position: "relative",
       width: "35.9375vw",
-      height: "1080px",
+      height: "100%",
       left: "370px",
       opacity: "1",
       padding: "0",
@@ -225,16 +265,16 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       position: "relative",
       width: "45vw",
-      height: "992px",
+      height: "880px",
       opacity: "1",
-      left: "270px",
       padding: "0",
+      left: "270px",
       top: "0",
     },
     [theme.breakpoints.down("md")]: {
       position: "relative",
       width: "100vw",
-      height: "1028px",
+      height: "880px",
       left: "0",
       opacity: "0.3",
       padding: "0 10px",
@@ -243,8 +283,8 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("sm")]: {
       position: "relative",
       width: "100vw",
+      height: "730px",
       opacity: "0.3",
-      height: "1000px",
       left: "0",
       padding: "0 10px",
       top: "0",
@@ -264,12 +304,16 @@ const useStyles = (theme: Theme) => ({
   },
 
   groupContainer: {
-    // width: "75vw",
+    width: "auto",
+    height: "100%",
     padding: "0 240px",
     gap: "16px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
-      // width: "83.333333vw",
       padding: "0 120px",
     },
     [theme.breakpoints.down("md")]: {
@@ -281,7 +325,11 @@ const useStyles = (theme: Theme) => ({
   },
 
   vivaUiInner: {
-    padding: "0 240px",
+    padding: "0 240px 0 206.75px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
       padding: "0 120px",
@@ -295,19 +343,190 @@ const useStyles = (theme: Theme) => ({
   },
 
   quicklyTurnYourDreamServicParent: {
-    padding: "180px 373px",
+    padding: "180px 0",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "60px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
-      padding: "180px 250px",
+      padding: "180px 0",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "180px 80px",
+      padding: "180px 0",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "0 24px",
+      // padding: "0 24px",
     },
   },
 
+  getInTouchContainer: {
+    width: "207px",
+    height: "62px",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      width: "209px",
+      height: "48px",
+      fontSize: "14px",
+      lineHeight: "24px",
+      fontWeight: "600",
+    },
+  },
+
+  vectorGroupParent: {
+    width: "75vw",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      width: "83.333333vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  groupDiv: {
+    width: "75vw",
+    height: "708px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      width: "83.333333vw",
+      height: "40.972222vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  vectorGroup: {
+    width: "41.25vw",
+    // height: "24.583333vw",
+    [theme.breakpoints.down("xl")]: {
+      width: "41.25vw",
+      height: "24.583333vw",
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: "45.138889vw",
+      height: "27.777778vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  vectorParent: {
+    width: "41.25vw",
+    // height: "24.583333vw",
+    [theme.breakpoints.down("xl")]: {
+      width: "41.25vw",
+      height: "24.583333vw",
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: "45.138889vw",
+      height: "27.777778vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  rectangleParent1: {
+    position: "relative",
+    width: "48.75vw",
+    height: "23.697917vw",
+    // top: "-25px",
+    [theme.breakpoints.down("xl")]: {
+      width: "48.75vw",
+      height: "23.697917vw",
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: "55vw",
+      height: "23.697917vw",
+      // top: "-18px",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  groupChild3: {
+    width: "25.416667vw",
+    // height: "6.927083vw",
+    [theme.breakpoints.down("xl")]: {
+      width: "25.416667vw",
+      height: "6.927083vw",
+    },
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  groupChild1: {
+    // width: "27.408854vw",
+    // height: "19.359896vw",
+    [theme.breakpoints.down("xl")]: {
+      // width: "27.408854vw",
+      // height: "19.359896vw",
+    },
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  rectangleContainer: {
+    width: "27.408854vw",
+    height: "17vw",
+    backgroundColor: "#ff6b00",
+    transform: "rotate(8.1deg)",
+    borderRadius: "60px",
+    position: "relative",
+    left: "10px",
+    top: "40px",
+    maxWidth: "526.25px",
+    maxHeight: "327px",
+    [theme.breakpoints.down("xl")]: {
+      width: "27.408854vw",
+      height: "17vw",
+    },
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  buildFasterWithContainer: {
+    position: "relative",
+    // fontSize: "2.8125vw",
+    lineHeight: "66px",
+    fontWeight: "900",
+    top: "91px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.638889vw",
+      lineHeight: "54px",
+      fontWeight: "700",
+      position: "relative",
+      top: "65px",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  maskGroupIcon1: {
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.638889vw",
+      lineHeight: "54px",
+      fontWeight: "700",
+      position: "relative",
+      top: "65px",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
   footer: {
     position: "relative",
     display: "flex",
@@ -369,6 +588,21 @@ const useStyles = (theme: Theme) => ({
 const VIVAUI: NextPage = () => {
   const classes = useStyles(theme);
   const [navModalVisible, setNavModalVisible] = useState(false);
+  const [isMdallScreen, setIsMdallScreen] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMdallScreen(window.innerWidth <= 1024);
+    }
+
+    handleResize(); // Check on initial render
+
+    window.addEventListener("resize", handleResize); // Add event listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up on component unmount
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -386,7 +620,6 @@ const VIVAUI: NextPage = () => {
         {/* <link rel="icon" href="/plug/plug_favicon.ico" type="image/x-icon" /> */}
       </Head>
       <div className={styles.vivaUi}>
-        {/* <img className={styles.vivaUiChild} alt="" src="/viva/frame-4362.svg" /> */}
         <div className={styles.gnb}>
           <Grid container sx={classes.containerNav}>
             <Nav />
@@ -442,445 +675,194 @@ const VIVAUI: NextPage = () => {
               src="/viva/bigMainImage.png"
             />
           </Grid>
-          {/* <Grid container sx={classes.frameDiv}>
-                <div className={styles.frameParent1}>
-                  <Grid container sx={classes.frameParent1}>
-                    <div className={styles.frameParent2}>
-                      <div className={styles.frameWrapper1}>
-                        <div className={styles.ioniq5Parent}>
-                          <div className={styles.ioniq5}>IONIQ 5</div>
-                          <div className={styles.experienceTheIoniq}>
-                            Experience the IONIQ 5—a world where anything is
-                            possible.
+        </div>
+
+        {isMdallScreen ? (
+          <InnerContainer />
+        ) : (
+          <div className={styles.groupContainer}>
+            <Grid container sx={classes.groupContainer}>
+              <div className={styles.groupDiv}>
+                <Grid container sx={classes.groupDiv}>
+                  <img
+                    className={styles.groupIcon}
+                    alt=""
+                    src="/viva/group-4358@2x.png"
+                  />
+                  <div className={styles.allTheServiceModulesForYoParent}>
+                    <div className={styles.allTheServiceContainer}>
+                      <b>{`All the service modules for your business are ready `}</b>
+                      <i className={styles.i}>!</i>
+                    </div>
+                    <div className={styles.bringYourEnvisioned}>
+                      Bring your envisioned business to life by combining
+                      service modules.
+                    </div>
+                  </div>
+                </Grid>
+              </div>
+
+              <div className={styles.vectorGroupParent}>
+                <Grid container sx={classes.vectorGroupParent}>
+                  <div className={styles.vectorGroup}>
+                    <Grid container sx={classes.vectorGroup}>
+                      <img
+                        className={styles.groupChild4}
+                        alt=""
+                        src="/viva/appleA.png"
+                      />
+                      <div className={styles.frameWrapper}>
+                        <div className={styles.multiOsSupportParent}>
+                          <b className={styles.multiOsSupport}>
+                            Multi-OS support
+                          </b>
+                          <div className={styles.oneSourceTo}>
+                            One source to support iOS, AOS. Easily deploy
+                            services up to date, reducing resources for
+                            operations.
                           </div>
                         </div>
                       </div>
+                    </Grid>
+                  </div>
+                  <div className={styles.vectorParent}>
+                    <Grid container sx={classes.vectorParent}>
                       <img
-                        className={styles.screenChangeMe}
+                        className={styles.rectangleIcon}
                         alt=""
-                        src="/viva/screen-change-me@2x.png"
+                        src="/viva/A.png"
                       />
-                    </div>
-                    <div className={styles.groupParent1}>
-                      <div className={styles.pmParent}>
-                        <div className={styles.pm}>12:30 PM</div>
-                        <div className={styles.component47}>
-                          <img
-                            className={styles.component47Child}
-                            alt=""
-                            src="/viva/rectangle-324.svg"
-                          />
-                          <div className={styles.helloNiceTo}>
-                            Hello! Nice to meet you :)
+                      <div className={styles.maskGroup}>
+                        <div className={styles.frameContainer}>
+                          <div className={styles.lineParent}>
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                          </div>
+                          <div className={styles.lineGroup}>
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
+                            <div className={styles.frameChild} />
                           </div>
                         </div>
                       </div>
-                      <div className={styles.component50Wrapper}>
-                        <div className={styles.component50}>
-                          <div className={styles.component50Inner}>
-                            <div className={styles.component50Inner}>
-                              <div className={styles.component50Inner}>
-                                <img
-                                  className={styles.groupChild5}
-                                  alt=""
-                                  src="/viva/rectangle-325.svg"
-                                />
-                                <div className={styles.helloNiceTo}>
-                                  Do you want to see IONIQ 5?
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+
+                      <div className={styles.wellStructuredDesignSysteParent}>
+                        <b className={styles.wellStructuredDesignContainer}>
+                          <p
+                            className={styles.wellStructured}
+                          >{`Well-structured `}</p>
+                          <p className={styles.reactNative}> design system</p>
+                        </b>
+                        <div
+                          className={styles.designSystemBasedModulesContainer}
+                        >
+                          <p
+                            className={styles.reactNative}
+                          >{`Design system-based modules `}</p>
+                          <p
+                            className={styles.reactNative}
+                          >{`    make customization easy to match`}</p>
+                          <p className={styles.reactNative}>
+                            {" "}
+                            {`      your brand style.`}
+                          </p>
                         </div>
                       </div>
-                      <div className={styles.pm1}>12:30 PM</div>
-                    </div>
-                    <div className={styles.component233}>
-                      <div className={styles.component233Child} />
-                      <div className={styles.jeny}>Jeny</div>
-                      <div className={styles.hmuk3142832I20}>
-                        HMUK3142832 / i20
-                      </div>
-                      <div className={styles.moreLead3}>More lead +3</div>
-                      <div className={styles.wed0941Am}>
-                        10/09/2021 Wed・09:41 AM
-                      </div>
-                      <img
-                        className={styles.component233Item}
-                        alt=""
-                        src="/viva/vector-155.svg"
-                      />
-                      <img
-                        className={styles.vehicleIcon}
-                        alt=""
-                        src="/viva/vehicle.svg"
-                      />
-                      <img
-                        className={styles.calendarIcon}
-                        alt=""
-                        src="/viva/calendar.svg"
-                      />
-                      <img
-                        className={styles.northEastIcon}
-                        alt=""
-                        src="/viva/north-east.svg"
-                      />
-                      <div className={styles.component108}>
-                        <div className={styles.button}>OUTCOME UPDATE</div>
-                      </div>
-                      <div className={styles.tagRed}>
-                        <div className={styles.button}>Configurator Quote</div>
-                      </div>
-                    </div>
-                    <div className={styles.component60}>
-                      <div className={styles.component60Child} />
-                      <img
-                        className={styles.iconCalendarEmpty}
-                        alt=""
-                        src="/viva/icon-calendar-empty.svg"
-                      />
-                      <img
-                        className={styles.component60Item}
-                        alt=""
-                        src="/viva/vector-90.svg"
-                      />
-                      <div className={styles.sales}>Sales</div>
-                      <div className={styles.component60Inner} />
-                      <div className={styles.component60Child1} />
-                      <div className={styles.component60Child2} />
-                      <div className={styles.component60Child3} />
-                      <div className={styles.component60Child4} />
-                      <div className={styles.component60Child5} />
-                      <div className={styles.component60Child6} />
-                      <div className={styles.mon}>Mon</div>
-                      <div className={styles.div}>100</div>
-                      <div className={styles.div1}>60</div>
-                      <div className={styles.div2}>80</div>
-                      <div className={styles.div3}>0</div>
-                      <div className={styles.div4}>20</div>
-                      <div className={styles.div5}>40</div>
-                      <div className={styles.tue}>Tue</div>
-                      <div className={styles.wed}>Wed</div>
-                      <div className={styles.thu}>Thu</div>
-                      <div className={styles.fri}>Fri</div>
-                      <div className={styles.sat}>Sat</div>
-                      <div className={styles.sun}>Sun</div>
-                    </div>
-                    <div className={styles.instanceParent}>
-                      <div className={styles.rectangleParent2}>
-                        <div className={styles.component233Child} />
-                        <div className={styles.ioniq5Group}>
-                          <div className={styles.tag}>IONIQ 5</div>
-                          <div className={styles.parent}>
-                            <div className={styles.div6}>$44,500</div>
-                            <div className={styles.price}>Price</div>
-                            <div className={styles.component1081}>
-                              <div className={styles.button}>BUY</div>
-                            </div>
-                          </div>
-                          <img
-                            className={styles.vectorIcon}
-                            alt=""
-                            src="/viva/vector-6.svg"
-                          />
-                          <div className={styles.tag}>Tag</div>
-                        </div>
-                        <div className={styles.instanceGroup}>
-                          <div className={styles.ioniq5Wrapper}>
-                            <div className={styles.ioniq52}>IONIQ5</div>
-                          </div>
-                          <div className={styles.ioniq5Container}>
-                            <div className={styles.ioniq52}>Electric</div>
-                          </div>
-                          <div className={styles.ioniq5Frame}>
-                            <div className={styles.ioniq52}>Sliver</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.ioniq55}>IONIQ5</div>
-                      <div className={styles.electric}>Electric</div>
-                      <div className={styles.sliver}>Sliver</div>
-                    </div>
-                    <div className={styles.component113}>
-                      <div className={styles.component113Child} />
-                      <img
-                        className={styles.image1Icon}
-                        alt=""
-                        src="/viva/image-1@2x.png"
-                      />
-                      <img
-                        className={styles.iconMore}
-                        alt=""
-                        src="/viva/icon-more.svg"
-                      />
-                      <div className={styles.div7}>1234 5678 9010 1256</div>
-                      <div className={styles.cardholderName}>
-                        Cardholder name
-                      </div>
-                      <div className={styles.emilyClarck}>Emily Clarck</div>
-                      <div className={styles.div8}>18/10/2026</div>
-                      <div className={styles.expireDate}>Expire Date</div>
-                    </div>
+                    </Grid>
+                  </div>
+                </Grid>
+              </div>
+
+              <div className={styles.rectangleParentDiv}>
+                <div className={styles.rectangleParent1}>
+                  <Grid container sx={classes.rectangleParent1}>
+                    {/* <Grid container sx={classes.maskGroupIcon1}> */}
                     <img
-                      className={styles.groupChild6}
+                      className={styles.maskGroupIcon1}
                       alt=""
-                      src="/viva/group-946.svg"
+                      src="/viva/mask-group1.svg"
                     />
-                    <div className={styles.component59}>
-                      <div className={styles.div9}>156</div>
-                      <div className={styles.label}>Label</div>
-                      <div className={styles.rectangleParent3}>
-                        <div className={styles.instanceItem} />
-                        <div className={styles.new}>NEW</div>
+                    {/* </Grid> */}
+                    <div className={styles.eastToImplementParent}>
+                      <b className={styles.eastToImplement}>
+                        East to implement
+                      </b>
+                      <div className={styles.theFrameworkIs}>
+                        The framework is delivered on a component-by-component
+                        basis, allowing you to quickly build services by mixing
+                        and matching the features you want.
                       </div>
                     </div>
-                    <div className={styles.component234}>
-                      <div className={styles.component50Inner}>
-                        <div className={styles.component233Child} />
-                        <div className={styles.startTime}>Start time</div>
-                        <div className={styles.div10}>09:30</div>
-                        <div className={styles.div11}>18:30</div>
-                        <div className={styles.div12}>~</div>
-                        <div className={styles.endTime}>End time</div>
-                        <img
-                          className={styles.groupChild8}
-                          alt=""
-                          src="/viva/vector-154.svg"
-                        />
-                        <div className={styles.notificationTime}>
-                          Notification time
-                        </div>
-                        <img
-                          className={styles.iconEdit}
-                          alt=""
-                          src="/viva/icon-edit.svg"
-                        />
-                      </div>
-                      <div className={styles.toogleDefaultChecked}>
-                        <div className={styles.toogleDefaultCheckedChild} />
-                        <div className={styles.toogleDefaultCheckedItem} />
-                      </div>
-                    </div>
-                    <div className={styles.frameParent3}>
-                      <div className={styles.frameWrapper2}>
-                        <div className={styles.groupParent2}>
-                          <div className={styles.dennisGreenParent}>
-                            <div className={styles.dennisGreen}>
-                              Dennis Green
-                            </div>
-                            <div className={styles.today1235Pm}>
-                              Today 12:35 pm
-                            </div>
-                            <img
-                              className={styles.avatarRoundIcon}
-                              alt=""
-                              src="/viva/avatar-round.svg"
-                            />
-                          </div>
-                          <img
-                            className={styles.iconMore1}
-                            alt=""
-                            src="/viva/icon-more1.svg"
-                          />
-                        </div>
-                      </div>
-                      <img
-                        className={styles.frameChild23}
-                        alt=""
-                        src="/viva/vector-7.svg"
-                      />
-                      <div className={styles.theCarHasGoodQualityParent}>
-                        <div className={styles.theCarHas}>
-                          The car has good quality!
-                        </div>
-                        <div className={styles.groupParent3}>
-                          <div className={styles.chatParent}>
-                            <img
-                              className={styles.chatIcon}
-                              alt=""
-                              src="/viva/chat.svg"
-                            />
-                            <div className={styles.div13}>1</div>
-                          </div>
-                          <div className={styles.heartEmptyParent}>
-                            <img
-                              className={styles.chatIcon}
-                              alt=""
-                              src="/viva/heart-empty.svg"
-                            />
-                            <div className={styles.div13}>1</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <img
-                      className={styles.groupChild9}
-                      alt=""
-                      src="/viva/group-4374.svg"
-                    />
                   </Grid>
                 </div>
-                <div className={styles.frameChild24} />
-                <div className={styles.frameChild25} />
-              </Grid> */}
-        </div>
+                <div className={styles.rectangleContainerDiv}>
+                  <div className={styles.groupChild3}>
+                    <Grid container sx={classes.groupChild3}>
+                      <img
+                        className={styles.groupChild31}
+                        alt=""
+                        src="/viva/group-4364.svg"
+                      />
+                    </Grid>
+                  </div>
+                  <div className={styles.rectangleContainer}>
+                    <Grid container sx={classes.rectangleContainer}>
+                      <Grid container sx={classes.groupChild1}>
+                        <div className={styles.groupChild1} />
+                      </Grid>
+                      <div className={styles.buildFasterWithContainer}>
+                        <Grid container sx={classes.buildFasterWithContainer}>
+                          <p className={styles.reactNative}>Build faster</p>
+                          <p className={styles.reactNative}>with VIVA UI</p>
+                        </Grid>
+                      </div>
+                    </Grid>
+                  </div>
+                </div>
+              </div>
+            </Grid>
+          </div>
+        )}
+        {/*  */}
 
-        {/* <div className={styles.image785} /> */}
-        <div className={styles.groupContainer}>
-          <Grid container sx={classes.groupContainer}>
-            <div className={styles.groupDiv}>
-              <img
-                className={styles.groupIcon}
-                alt=""
-                src="/viva/group-4358@2x.png"
-              />
-              <div className={styles.allTheServiceModulesForYoParent}>
-                <div className={styles.allTheServiceContainer}>
-                  <b>{`All the service modules for your business are ready `}</b>
-                  <i className={styles.i}>!</i>
-                </div>
-                <div className={styles.bringYourEnvisioned}>
-                  Bring your envisioned business to life by combining service
-                  modules.
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.vectorGroupParent}>
-              <div className={styles.vectorGroup}>
-                <img
-                  className={styles.groupChild4}
-                  alt=""
-                  src="/viva/rectangle-24105.svg"
-                />
-                <div className={styles.frameWrapper}>
-                  <div className={styles.multiOsSupportParent}>
-                    <b className={styles.multiOsSupport}>Multi-OS support</b>
-                    <div className={styles.oneSourceTo}>
-                      One source to support iOS, AOS. Easily deploy services up
-                      to date, reducing resources for operations.
-                    </div>
-                  </div>
-                </div>
-                <img
-                  className={styles.frameIcon}
-                  alt=""
-                  src="/viva/frame-4365.svg"
-                />
-              </div>
-              <div className={styles.vectorParent}>
-                <img
-                  className={styles.rectangleIcon}
-                  alt=""
-                  src="/viva/rectangle-24106.svg"
-                />
-                <div className={styles.maskGroup}>
-                  <div className={styles.frameContainer}>
-                    <div className={styles.lineParent}>
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                    </div>
-                    <div className={styles.lineGroup}>
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                      <div className={styles.frameChild} />
-                    </div>
-                  </div>
-                </div>
-                <img
-                  className={styles.maskGroupIcon}
-                  alt=""
-                  src="/viva/mask-group.svg"
-                />
-                <div className={styles.wellStructuredDesignSysteParent}>
-                  <b className={styles.wellStructuredDesignContainer}>
-                    <p
-                      className={styles.wellStructured}
-                    >{`Well-structured `}</p>
-                    <p className={styles.reactNative}> design system</p>
-                  </b>
-                  <div className={styles.designSystemBasedModulesContainer}>
-                    <p
-                      className={styles.reactNative}
-                    >{`Design system-based modules `}</p>
-                    <p
-                      className={styles.reactNative}
-                    >{`    make customization easy to match `}</p>
-                    <p className={styles.reactNative}> your brand style.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.rectangleParentDiv}>
-              <div className={styles.rectangleParent1}>
-                <div className={styles.groupChild2} />
-                <img
-                  className={styles.maskGroupIcon1}
-                  alt=""
-                  src="/viva/mask-group1.svg"
-                />
-                <div className={styles.eastToImplementParent}>
-                  <b className={styles.eastToImplement}>East to implement</b>
-                  <div className={styles.theFrameworkIs}>
-                    The framework is delivered on a component-by-component
-                    basis, allowing you to quickly build services by mixing and
-                    matching the features you want.
-                  </div>
-                </div>
-              </div>
-              <div className={styles.rectangleContainerDiv}>
-                <img
-                  className={styles.groupChild3}
-                  alt=""
-                  src="/viva/group-4364.svg"
-                />
-                <div className={styles.rectangleContainer}>
-                  <div className={styles.groupChild1} />
-                  <div className={styles.buildFasterWithContainer}>
-                    <p className={styles.reactNative}>Build faster</p>
-                    <p className={styles.reactNative}>with VIVA UI</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Grid>
-        </div>
+        {/*  */}
         <div className={styles.vivaUiInner}>
           <Grid container sx={classes.vivaUiInner}>
             <div className={styles.quicklyTurnYourDreamServicParent}>
               <Grid container sx={classes.quicklyTurnYourDreamServicParent}>
                 <div className={styles.reactNativeUiContainer}>
-                  <p className={styles.quicklyTurnYour}>
-                    Quickly turn your dream service
-                  </p>
-                  <p className={styles.reactNative}>
-                    into a reality with VIVA UI
-                  </p>
+                  <Grid container sx={classes.reactNativeUiContainer2}>
+                    <p className={styles.quicklyTurnYour}>
+                      Quickly turn your dream service into a reality with VIVA
+                      UI
+                    </p>
+                  </Grid>
                 </div>
                 <div className={styles.getInTouchContainer}>
-                  <div className={styles.getInTouch1}>Get in touch</div>
+                  <Grid container sx={classes.getInTouchContainer}>
+                    <div className={styles.getInTouch1}>Get in touch</div>
+                  </Grid>
                 </div>
               </Grid>
             </div>

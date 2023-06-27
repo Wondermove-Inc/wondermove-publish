@@ -863,19 +863,8 @@ const PLUG: NextPage = () => {
         </div>
 
         <div className={styles.gnb}>
-          {/* <div className={styles.layer1Group}>
-            <img className={styles.layer1Icon} alt="" src="/plug/layer-1.svg" />
-            <div className={styles.sKuberParent}>
-              <div className={styles.sKuber}>S-kuber</div>
-              <div className={styles.pLug1}>P-LUG</div>
-              <div className={styles.sKuber}>VIVA UI</div>
-              <div className={styles.sKuber}>Contact</div>
-            </div>
-          </div> */}
           <Grid container sx={classes.containerNav}>
-            {/* <div className={styles.gnb}> */}
             <Nav />
-            {/* </div> */}
           </Grid>
         </div>
 
