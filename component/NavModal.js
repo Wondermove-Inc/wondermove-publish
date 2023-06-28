@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "../pages/skuber/sendSuccessfully.module.css";
+import styles from "../pages/S-kuber/sendSuccessfully.module.css";
 import Modal from "react-modal";
 import classNames from "classnames";
 import Link from "next/link";
@@ -99,7 +99,7 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
             {/* <a onClick={() => handleButtonClick("S-kuber")}>
               <span className={styles.navText}>S-kuber</span>
             </a> */}
-            <Link className={styles.Link1} href="/skuber">
+            <Link className={styles.Link1} href="/S-kuber">
               S-kuber
             </Link>
           </li>
@@ -107,7 +107,7 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
             {/* <a onClick={onPlugClick}>
               <span className={styles.navText}>P-LUG</span>
             </a> */}
-            <Link href="/p_lug" className={styles.Link1}>
+            <Link href="/P-LUG" className={styles.Link1}>
               P-LUG
             </Link>
           </li>
@@ -115,7 +115,7 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
             {/* <a onClick={onVivaClick}>
               <span className={styles.navText}>VIVA UI</span>
             </a> */}
-            <Link href="/vivaui" className={styles.Link1}>
+            <Link href="/VIVAUI" className={styles.Link1}>
               VIVA UI
             </Link>
           </li>

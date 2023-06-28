@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../pages/skuber/styles.module.css";
+import styles from "../pages/S-kuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -121,17 +121,17 @@ const NavButtom = ({ onClick }) => {
         </Grid>
         <Grid container sx={classes.sKuberParent}>
           <div className={styles.sKuber}>
-            <Link className={styles.Link1} href="/skuber">
+            <Link className={styles.Link1} href="/S-kuber">
               S-kuber
             </Link>
           </div>
           <div className={styles.pLug}>
-            <Link href="/p_lug" className={styles.Link1}>
+            <Link href="/P-LUG" className={styles.Link1}>
               P-LUG
             </Link>
           </div>
           <div className={styles.pLug}>
-            <Link href="/vivaui" className={styles.Link1}>
+            <Link href="/VIVAUI" className={styles.Link1}>
               VIVA UI
             </Link>
           </div>

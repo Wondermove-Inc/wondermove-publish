@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import styles from "../pages/skuber/styles.module.css";
+import styles from "../pages/S-kuber/styles.module.css";
 
 import { Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";

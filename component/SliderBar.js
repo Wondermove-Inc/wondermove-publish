@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactSlider from "react-slider";
-import styles from "../pages/skuber/styles.module.css";
+import styles from "../pages/S-kuber/styles.module.css";
 import styled from "@emotion/styled";
 import costData from "../asset/costData.json";
 
