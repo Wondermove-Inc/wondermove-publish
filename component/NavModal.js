@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../pages/skuber/sendSuccessfully.module.css";
 import Modal from "react-modal";
 import classNames from "classnames";
+import Link from "next/link";
 
 const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -95,19 +96,28 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
         </div> */}
         <ul className={styles.getInTouchMobile}>
           <li className={styles.navS1}>
-            <a onClick={() => handleButtonClick("S-kuber")}>
+            {/* <a onClick={() => handleButtonClick("S-kuber")}>
               <span className={styles.navText}>S-kuber</span>
-            </a>
+            </a> */}
+            <Link className={styles.Link1} href="/skuber">
+              S-kuber
+            </Link>
           </li>
           <li className={styles.navS2}>
-            <a onClick={onPlugClick}>
+            {/* <a onClick={onPlugClick}>
               <span className={styles.navText}>P-LUG</span>
-            </a>
+            </a> */}
+            <Link href="/p_lug" className={styles.Link1}>
+              P-LUG
+            </Link>
           </li>
           <li className={styles.navS3}>
-            <a onClick={onVivaClick}>
+            {/* <a onClick={onVivaClick}>
               <span className={styles.navText}>VIVA UI</span>
-            </a>
+            </a> */}
+            <Link href="/vivaui" className={styles.Link1}>
+              VIVA UI
+            </Link>
           </li>
           <li className={styles.navS4}>
             <a onClick={onContactClick}>
