@@ -18,7 +18,7 @@ const theme = createTheme({
 
 const useStyles = (theme) => ({
   getInTouch: {
-    fontSize: "16px",
+    fontSize: "20px",
     lineHeight: "32px",
     fontWeight: "500",
     padding: "16px 106px",
@@ -51,7 +51,7 @@ const useStyles = (theme) => ({
     },
   },
   maskGroupIcon2: {
-    height: "900px",
+    height: "100%",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -61,7 +61,7 @@ const useStyles = (theme) => ({
   },
 
   rectangleGroup: {
-    height: "1200px",
+    height: "146.484375vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -71,7 +71,7 @@ const useStyles = (theme) => ({
   },
   rectangleContainer: {
     position: "relative",
-    top: "920px",
+    top: "148.4375vw",
     left: "4.882812vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
@@ -95,18 +95,20 @@ const useStyles = (theme) => ({
     },
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
-      fontSize: "28px",
-      lineHeight: "40px",
+      fontSize: "44px",
+      lineHeight: "50px",
       fontWeight: "600",
     },
     [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      lineHeight: "40px",
       width: "76.335878vw",
     },
   },
 
   oneSourceTo: {
-    fontSize: "16px",
-    lineHeight: "20px",
+    fontSize: "20px",
+    lineHeight: "32px",
     fontWeight: "500",
     width: "58.59375vw",
     [theme.breakpoints.down("xl")]: {},
@@ -159,7 +161,7 @@ const useStyles = (theme) => ({
     },
   },
   multiOsSupportParent: {
-    gap: "32px",
+    gap: "40px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
@@ -176,7 +178,7 @@ const useStyles = (theme) => ({
     position: "relative",
     bottom: "300px",
     left: "28px",
-    gap: "32px",
+    gap: "40px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
@@ -192,7 +194,7 @@ const useStyles = (theme) => ({
 
   vectorGroup: {
     width: "88.28125vw",
-    height: "97.65625vw",
+    height: "100%",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -205,8 +207,8 @@ const useStyles = (theme) => ({
   vectorParent: {
     position: "relative",
     width: "88.28125vw",
-    height: "97.65625vw",
-    top: "-14.648438vw",
+    height: "134.765625vw",
+    top: "-20.5vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -218,12 +220,48 @@ const useStyles = (theme) => ({
   },
   vectorParentChild: {
     position: "relative",
-    top: "-14.648438vw",
+    top: "-20.5vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       top: "-20.356234vw",
+    },
+  },
+
+  rectangleParent: {
+    width: "88.28125vw",
+    height: "158.59375vw",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      width: "87.78626vw",
+      height: "157.760814vw",
+    },
+  },
+
+  maskGroupIcon1: {
+    height: "158.59375vw",
+    background: "#1975ff",
+    borderRadius: "80px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      height: "157.760814vw",
+
+      borderRadius: "40px",
+    },
+  },
+
+  groupChild1: {
+    borderRadius: "80px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      borderRadius: "30px",
     },
   },
 });
@@ -245,11 +283,8 @@ const InnerContainer = () => {
       window.removeEventListener("resize", handleResize); // Clean up on component unmount
     };
   }, []);
-  return (
-    <div className={styles.groupContainer}>
-      <div className={styles.rectangleParent}>
-        <div className={styles.groupChild1} />
-        {isSmallScreen ? (
+  {
+    /* {isSmallScreen ? (
           <img
             className={styles.maskGroupIcon1}
             alt=""
@@ -261,26 +296,45 @@ const InnerContainer = () => {
             alt=""
             src="/viva/group-4358@2x.png"
           />
-        )}
+        )} */
+  }
+  return (
+    <div className={styles.groupContainer}>
+      <div className={styles.rectangleParent}>
+        <Grid container sx={classes.rectangleParent}>
+          {/* <Grid container sx={classes.groupChild1}>
+            <div className={styles.groupChild1} />
+          </Grid> */}
 
-        <div className={styles.multiOsSupportParent}>
-          <Grid container sx={classes.multiOsSupportParent}>
-            <div className={styles.allTheServiceContainer}>
-              <Grid container sx={classes.wellStructuredDesignSystemContainer}>
-                <b>
-                  {`All the service modules for your business are ready `}{" "}
-                  <i className={styles.i}>!</i>
-                </b>
-              </Grid>
-            </div>
-            <div className={styles.oneSourceTo}>
-              <Grid container sx={classes.oneSourceTo}>
-                Bring your envisioned business to life by combining service
-                modules.
-              </Grid>
-            </div>
+          <Grid container sx={classes.maskGroupIcon1}>
+            <img
+              className={styles.maskGroupIcon1}
+              alt=""
+              src="/viva/vivaMobile/mask-group1@2x.png"
+            />
           </Grid>
-        </div>
+          <div className={styles.multiOsSupportParent}>
+            <Grid container sx={classes.multiOsSupportParent}>
+              <div className={styles.allTheServiceContainer}>
+                <Grid
+                  container
+                  sx={classes.wellStructuredDesignSystemContainer}
+                >
+                  <b>
+                    {`All the service modules for your business are ready `}{" "}
+                    <i className={styles.i}>!</i>
+                  </b>
+                </Grid>
+              </div>
+              <div className={styles.oneSourceTo}>
+                <Grid container sx={classes.oneSourceTo}>
+                  Bring your envisioned business to life by combining service
+                  modules.
+                </Grid>
+              </div>
+            </Grid>
+          </div>
+        </Grid>
       </div>
 
       <div className={styles.vectorGroup}>
@@ -288,7 +342,7 @@ const InnerContainer = () => {
           <img
             className={styles.groupItem}
             alt=""
-            src="/viva/vivaMobile/appleA.png"
+            src="/viva/vivaMobile/appleAn.png"
           />
           <div className={styles.multiOsSupportParent}>
             <Grid container sx={classes.multiOsSupportParent}>
@@ -315,7 +369,7 @@ const InnerContainer = () => {
           <img
             className={styles.groupChild}
             alt=""
-            src="/viva/vivaMobile/A.png"
+            src="/viva/vivaMobile/An.png"
           />
 
           <div className={styles.wellStructuredDesignSystemParent}>
@@ -360,7 +414,7 @@ const InnerContainer = () => {
               <img
                 className={styles.maskGroupIcon2}
                 alt=""
-                src="/viva/vivaMobile/east.png"
+                src="/viva/vivaMobile/end.png"
               />
             </Grid>
             <div className={styles.eastToImplementParent}>
