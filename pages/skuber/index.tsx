@@ -883,16 +883,7 @@ const SKuber1920: NextPage = () => {
                     </div>
                   </div>
                   <div className={styles.groupParent3}>
-                    {/* <div className={styles.rectangleParent2}> */}
-                    {/* <div className={styles.groupChild5} />
-                <div className={styles.rectangleParent3}>
-                  <div className={styles.groupChild6} />
-                  <div className={styles.maskGroup}>
-                    <div className={styles.maskGroupChild} />
-                  </div>
-                </div> */}
                     <SolutionCost />
-                    {/* </div> */}
 
                     <Grid container sx={classes.frameWrapper5}>
                       <div className={styles.frameWrapper5}>
@@ -907,8 +898,6 @@ const SKuber1920: NextPage = () => {
                     toggleSendModalVisible={toggleSendModalVisible}
                     toggleSuccessModalVisible={toggleSuccessModalVisible}
                   />
-
-                  {/* </div> */}
                 </Grid>
               </Grid>
               <div className={styles.footer111}>
@@ -919,17 +908,12 @@ const SKuber1920: NextPage = () => {
                   <div className={styles.footer}>
                     <Grid container sx={classes.layer1Group}>
                       <Grid container sx={classes.layer1Icon}>
-                        {/* <div className={styles.layer1Icon}> */}
                         <Logo />
-                        {/* </div> */}
                       </Grid>
-
                       <div className={styles.wondermoveSpinOffOfHyundaiParent}>
                         <div>
                           <Grid container sx={classes.howManyVcpus}>
-                            {/* <div className={styles.howManyVcpus}> */}
                             wondermove Spin-off of Hyundai Motor Company
-                            {/* </div> */}
                           </Grid>
                         </div>
                         <div className={styles.wondermoveIncContainer}>
@@ -937,29 +921,20 @@ const SKuber1920: NextPage = () => {
                             container
                             sx={classes.solutionForYourFooter}
                           >{`wondermove Inc. `}</Grid>
-                          {/* <p
-                      className={styles.solutionForYourFooter}
-                    >{`wondermove Inc. `}</p> */}
+
                           <Grid
                             container
                             sx={classes.solutionForYourFooter}
                           >{` Business Registration Number: 518-81-01644`}</Grid>
-                          {/* <p
-                      className={styles.solutionForYourFooter}
-                    >{` Business Registration Number: 518-81-01644`}</p> */}
+
                           <Grid
                             container
                             sx={classes.solutionForYourFooter}
                           >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
-                          {/* <p
-                      className={styles.solutionForYourFooter}
-                    >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</p> */}
+
                           <Grid container sx={classes.solutionForYourFooter}>
                             South Korea Use Inquiries: hawkeye@wondermove.net
                           </Grid>
-                          {/* <p className={styles.solutionForYourFooter}>
-                      South Korea Use Inquiries: hawkeye@wondermove.net
-                    </p> */}
                         </div>
                       </div>
                     </Grid>

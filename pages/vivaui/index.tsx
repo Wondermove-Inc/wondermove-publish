@@ -101,9 +101,16 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("xl")]: {
       fontSize: "44px",
       lineHeight: "58px",
+      fontWeight: "600",
+      textAlign: "start",
     },
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      fontSize: "44px",
+      lineHeight: "58px",
+      fontWeight: "600",
+      textAlign: "center",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "28px",
       lineHeight: "40px",
@@ -499,17 +506,23 @@ const useStyles = (theme: Theme) => ({
 
   buildFasterWithContainer: {
     position: "relative",
-    // fontSize: "2.8125vw",
+    fontSize: "54px",
     lineHeight: "66px",
     fontWeight: "900",
     top: "91px",
-    [theme.breakpoints.down("xl")]: {},
+    left: "64px",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "2.8125vw",
+      top: "4.739583vw",
+      left: "3.333333vw",
+    },
     [theme.breakpoints.down("lg")]: {
       fontSize: "2.638889vw",
       lineHeight: "54px",
       fontWeight: "700",
       position: "relative",
-      top: "65px",
+      top: "4.513889vw",
+      left: "4.444444vw",
     },
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {},
@@ -527,6 +540,148 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {},
   },
+
+  allTheServiceContainer: {
+    fontSize: "42px",
+    fontWeight: "700",
+    width: "606px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.5vw",
+      fontWeight: "700",
+      width: "42.083333vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  bringYourEnvisioned: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    width: "439px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.25vw",
+      fontWeight: "500",
+      width: "30.486111vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  multiOsSupport: {
+    fontSize: "42px",
+    fontWeight: "700",
+    width: "418.7px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.5vw",
+      fontWeight: "700",
+      width: "29.076389vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  oneSourceTo: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    width: "493px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.25vw",
+      fontWeight: "500",
+      width: "34.236111vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  wellStructuredDesignContainer: {
+    fontSize: "42px",
+    fontWeight: "700",
+    width: "418.7px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.5vw",
+      fontWeight: "700",
+      width: "29.076389vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  designSystemBasedModulesContainer: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    width: "438px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.25vw",
+      fontWeight: "500",
+      width: "30.416667vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  eastToImplementParent: {
+    position: "absolute",
+    gap: "40px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      gap: "1.944444vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  multiOsSupportParent: {
+    position: "absolute",
+    gap: "40px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      gap: "1.944444vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  eastToImplement: {
+    fontSize: "42px",
+    fontWeight: "700",
+    width: "418.7px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.5vw",
+      fontWeight: "700",
+      width: "29.076389vw",
+      gap: "1.944444vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
+  theFrameworkIs: {
+    fontSize: "18px",
+    lineHeight: "32px",
+    fontWeight: "500",
+    width: "438px",
+    [theme.breakpoints.down("xl")]: {
+      width: "22.8125vw",
+    },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.25vw",
+      fontWeight: "500",
+      width: "27.777778vw",
+    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+  },
+
   footer: {
     position: "relative",
     display: "flex",
@@ -603,6 +758,12 @@ const VIVAUI: NextPage = () => {
       window.removeEventListener("resize", handleResize); // Clean up on component unmount
     };
   }, []);
+
+  const onGetInTouchClick = () =>
+    window.open(
+      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+    );
+
   return (
     <>
       <Head>
@@ -616,8 +777,8 @@ const VIVAUI: NextPage = () => {
           property="og:description"
           content="VIVA UI React Native UI Framework | wondermove"
         ></meta> */}
-        {/* <meta property="og:image" content="/plug/plugOgimage.png"></meta> */}
-        {/* <link rel="icon" href="/plug/plug_favicon.ico" type="image/x-icon" /> */}
+        <meta property="og:image" content="/viva/vivaOgimage.png"></meta>
+        <link rel="icon" href="/viva/viva_favicon.ico" type="image/x-icon" />
       </Head>
       <div className={styles.vivaUi}>
         <div className={styles.gnb}>
@@ -656,7 +817,11 @@ const VIVAUI: NextPage = () => {
                 </div>
               </Grid>
             </div>
-            <div className={styles.getInTouchWrapper}>
+            <div
+              className={styles.getInTouchWrapper}
+              onClick={onGetInTouchClick}
+              style={{ cursor: "pointer" }}
+            >
               <b className={styles.getInTouch}>
                 <Grid container sx={classes.getInTouch}>
                   Get in touch
@@ -691,12 +856,18 @@ const VIVAUI: NextPage = () => {
                   />
                   <div className={styles.allTheServiceModulesForYoParent}>
                     <div className={styles.allTheServiceContainer}>
-                      <b>{`All the service modules for your business are ready `}</b>
-                      <i className={styles.i}>!</i>
+                      <Grid container sx={classes.allTheServiceContainer}>
+                        <b>
+                          {`All the service modules for your business are ready `}{" "}
+                          <i className={styles.i}>!</i>
+                        </b>
+                      </Grid>
                     </div>
                     <div className={styles.bringYourEnvisioned}>
-                      Bring your envisioned business to life by combining
-                      service modules.
+                      <Grid container sx={classes.bringYourEnvisioned}>
+                        Bring your envisioned business to life by combining
+                        service modules.
+                      </Grid>
                     </div>
                   </div>
                 </Grid>
@@ -713,14 +884,20 @@ const VIVAUI: NextPage = () => {
                       />
                       <div className={styles.frameWrapper}>
                         <div className={styles.multiOsSupportParent}>
-                          <b className={styles.multiOsSupport}>
-                            Multi-OS support
-                          </b>
-                          <div className={styles.oneSourceTo}>
-                            One source to support iOS, AOS. Easily deploy
-                            services up to date, reducing resources for
-                            operations.
-                          </div>
+                          <Grid container sx={classes.multiOsSupportParent}>
+                            <b className={styles.multiOsSupport}>
+                              <Grid container sx={classes.multiOsSupport}>
+                                Multi-OS support
+                              </Grid>
+                            </b>
+                            <div className={styles.oneSourceTo}>
+                              <Grid container sx={classes.oneSourceTo}>
+                                One source to support iOS, AOS. Easily deploy
+                                services up to date, reducing resources for
+                                operations.
+                              </Grid>
+                            </div>
+                          </Grid>
                         </div>
                       </div>
                     </Grid>
@@ -768,25 +945,43 @@ const VIVAUI: NextPage = () => {
                       </div>
 
                       <div className={styles.wellStructuredDesignSysteParent}>
-                        <b className={styles.wellStructuredDesignContainer}>
-                          <p
-                            className={styles.wellStructured}
-                          >{`Well-structured `}</p>
-                          <p className={styles.reactNative}> design system</p>
-                        </b>
-                        <div
-                          className={styles.designSystemBasedModulesContainer}
-                        >
-                          <p
-                            className={styles.reactNative}
-                          >{`Design system-based modules `}</p>
-                          <p
-                            className={styles.reactNative}
-                          >{`    make customization easy to match`}</p>
-                          <p className={styles.reactNative}>
-                            {" "}
-                            {`      your brand style.`}
-                          </p>
+                        <div className={styles.multiOsSupportParent}>
+                          <Grid container sx={classes.multiOsSupportParent}>
+                            <b className={styles.wellStructuredDesignContainer}>
+                              <Grid
+                                container
+                                sx={classes.wellStructuredDesignContainer}
+                              >
+                                <p
+                                  className={styles.wellStructured}
+                                >{`Well-structured `}</p>
+                                <p
+                                  className={styles.reactNative}
+                                >{`  design system`}</p>
+                              </Grid>
+                            </b>
+                            <div
+                              className={
+                                styles.designSystemBasedModulesContainer
+                              }
+                            >
+                              <Grid
+                                container
+                                sx={classes.designSystemBasedModulesContainer}
+                              >
+                                <p
+                                  className={styles.reactNative}
+                                >{`Design system-based modules `}</p>
+                                <p
+                                  className={styles.reactNative}
+                                >{`    make customization easy to match`}</p>
+                                <p className={styles.reactNative}>
+                                  {" "}
+                                  {`      your brand style.`}
+                                </p>
+                              </Grid>
+                            </div>
+                          </Grid>
                         </div>
                       </div>
                     </Grid>
@@ -805,14 +1000,21 @@ const VIVAUI: NextPage = () => {
                     />
                     {/* </Grid> */}
                     <div className={styles.eastToImplementParent}>
-                      <b className={styles.eastToImplement}>
-                        East to implement
-                      </b>
-                      <div className={styles.theFrameworkIs}>
-                        The framework is delivered on a component-by-component
-                        basis, allowing you to quickly build services by mixing
-                        and matching the features you want.
-                      </div>
+                      <Grid container sx={classes.eastToImplement}>
+                        <b className={styles.eastToImplement}>
+                          <Grid container sx={classes.eastToImplement}>
+                            East to implement
+                          </Grid>
+                        </b>
+                        <div className={styles.theFrameworkIs}>
+                          <Grid container sx={classes.theFrameworkIs}>
+                            The framework is delivered on a
+                            component-by-component basis, allowing you to
+                            quickly build services by mixing and matching the
+                            features you want.
+                          </Grid>
+                        </div>
+                      </Grid>
                     </div>
                   </Grid>
                 </div>
@@ -859,7 +1061,11 @@ const VIVAUI: NextPage = () => {
                     </p>
                   </Grid>
                 </div>
-                <div className={styles.getInTouchContainer}>
+                <div
+                  className={styles.getInTouchContainer}
+                  onClick={onGetInTouchClick}
+                  style={{ cursor: "pointer" }}
+                >
                   <Grid container sx={classes.getInTouchContainer}>
                     <div className={styles.getInTouch1}>Get in touch</div>
                   </Grid>

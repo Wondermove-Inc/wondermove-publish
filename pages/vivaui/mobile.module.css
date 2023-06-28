@@ -368,10 +368,10 @@
 }
 
 .eastToImplementParent {
-  position: absolute;
+  /* position: absolute;
   top: 408px;
-  left: 36.46px;
-  width: 289px;
+  left: 36.46px; */
+  /* width: 289px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -620,11 +620,11 @@
 }
 
 .buildFasterWithContainer {
-  top: 40px;
+  top: 45px;
   /* left: 300px; */
   /* left: 29.296875vw; */
   text-transform: uppercase;
-  font-weight: 900;
+  /* font-weight: 900; */
   display: inline-block;
   width: 289px;
 }

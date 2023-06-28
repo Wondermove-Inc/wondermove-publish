@@ -204,17 +204,18 @@
 .i {
   font-weight: 700;
 }
-.allTheServiceContainer,
-.bringYourEnvisioned {
+.allTheServiceContainer {
   position: relative;
   display: inline-block;
   width: 606px;
 }
 .bringYourEnvisioned {
-  font-size: var(--body-b1-size);
+  position: relative;
+  display: inline-block;
+  /* font-size: var(--body-b1-size);
   line-height: 32px;
   font-weight: 500;
-  width: 439px;
+  width: 439px; */
 }
 .allTheServiceModulesForYoParent {
   position: absolute;
@@ -274,21 +275,24 @@
   margin-block-start: 0;
   margin-block-end: 8px;
 }
-.designSystemBasedModulesContainer,
+
 .wellStructuredDesignContainer {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: inline-block;
   white-space: pre-wrap;
   width: 517px;
 }
+
 .designSystemBasedModulesContainer {
-  top: 129px;
-  left: 56px;
+  position: relative;
+  display: inline-block;
+  white-space: pre-wrap;
   font-size: var(--body-b1-size);
   line-height: 32px;
   font-weight: 500;
+  left: 50px;
   width: 438px;
 }
 
@@ -323,7 +327,7 @@
 
 .buildFasterWithContainer {
   /* top: 91px; */
-  left: 64px;
+  /* left: 64px; */
   text-transform: uppercase;
   /* font-weight: 900; */
 }
@@ -351,17 +355,23 @@
   background-color: var(--primary-color-primary-blue);
   border-radius: var(--br-41xl);
 }
-.eastToImplement,
+
 .theFrameworkIs {
   position: relative;
   display: inline-block;
   width: 420px;
 }
+
+.eastToImplement {
+  position: relative;
+  display: inline-block;
+  width: 420px;
+}
 .theFrameworkIs {
-  font-size: var(--body-b1-size);
+  /* font-size: var(--body-b1-size);
   line-height: 32px;
   font-weight: 500;
-  width: 438px;
+  width: 438px; */
 }
 .eastToImplementParent {
   position: absolute;
@@ -371,20 +381,21 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-21xl);
+  /* gap: 40px; */
 }
 
-.multiOsSupport,
+.multiOsSupport {
+  position: relative;
+  display: inline-block;
+  /* width: 418.7px; */
+}
 .oneSourceTo {
   position: relative;
   display: inline-block;
-  width: 418.7px;
-}
-.oneSourceTo {
-  font-size: var(--body-b1-size);
+  /* font-size: var(--body-b1-size);
   line-height: 32px;
   font-weight: 500;
-  width: 493px;
+  width: 493px; */
 }
 .multiOsSupportParent {
   position: absolute;
@@ -394,7 +405,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-21xl);
+  /* gap: 40px; */
 }
 .frameIcon,
 .frameWrapper {
