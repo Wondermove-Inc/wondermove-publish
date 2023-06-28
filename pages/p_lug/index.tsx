@@ -147,7 +147,7 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
       padding: "12px 60px",
-      width: "209px",
+      // width: "209px",
     },
   },
   getInTouch: {
@@ -836,6 +836,12 @@ const PLUG: NextPage = () => {
       window.removeEventListener("resize", handleResize); // Clean up on component unmount
     };
   }, []);
+
+  const onGetInTouchClick = () =>
+    window.open(
+      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+    );
+
   return (
     <>
       <Head>
@@ -908,7 +914,11 @@ const PLUG: NextPage = () => {
                         </div>
                       </Grid>
                     </div>
-                    <div className={styles.getInTouchContainer}>
+                    <div
+                      className={styles.getInTouchContainer}
+                      onClick={onGetInTouchClick}
+                      style={{ cursor: "pointer" }}
+                    >
                       <Grid container sx={classes.getInTouchContainer}>
                         <Grid container sx={classes.getInTouch}>
                           <div className={styles.getInTouch}>Get in touch</div>
@@ -1743,7 +1753,11 @@ const PLUG: NextPage = () => {
                     </div>
                   </Grid>
                 </div>
-                <div className={styles.getInTouchWrapper}>
+                <div
+                  className={styles.getInTouchWrapper}
+                  onClick={onGetInTouchClick}
+                  style={{ cursor: "pointer" }}
+                >
                   <b className={styles.getInTouch}>Get in touch</b>
                 </div>
               </Grid>
