@@ -35,12 +35,19 @@ const useStyles = (theme) => ({
   buildFasterWithContainer: {
     position: "relative",
     left: "29.296875vw",
+    fontSize: "3.515625vw",
+    fontWeight: "900",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+      fontSize: "3.515625vw",
+      fontWeight: "900",
+    },
     [theme.breakpoints.down("sm")]: {
       position: "relative",
       left: "7.63358vw",
+      fontSize: "36px",
+      fontWeight: "900",
     },
   },
   maskGroupIcon2: {
@@ -81,7 +88,7 @@ const useStyles = (theme) => ({
     lineHeight: "68px",
     fontWeight: "600",
     textAlign: "start",
-    width: "600px",
+    width: "58.59375vw",
     [theme.breakpoints.down("xl")]: {
       fontSize: "44px",
       lineHeight: "58px",
@@ -93,7 +100,7 @@ const useStyles = (theme) => ({
       fontWeight: "600",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "300px",
+      width: "76.335878vw",
     },
   },
 
@@ -101,7 +108,7 @@ const useStyles = (theme) => ({
     fontSize: "16px",
     lineHeight: "20px",
     fontWeight: "500",
-    width: "400px",
+    width: "58.59375vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -109,7 +116,7 @@ const useStyles = (theme) => ({
       fontSize: "14px",
       lineHeight: "24px",
       fontWeight: "400",
-      width: "300px",
+      width: "76.335878vw",
     },
   },
 
@@ -118,7 +125,7 @@ const useStyles = (theme) => ({
     lineHeight: "68px",
     fontWeight: "600",
     textAlign: "start",
-    width: "600px",
+    width: "58.59375vw",
     [theme.breakpoints.down("xl")]: {
       fontSize: "44px",
       lineHeight: "58px",
@@ -132,7 +139,7 @@ const useStyles = (theme) => ({
       fontSize: "28px",
       lineHeight: "40px",
       fontWeight: "600",
-      width: "300px",
+      width: "76.335878vw",
     },
   },
 
@@ -140,7 +147,7 @@ const useStyles = (theme) => ({
     fontSize: "18px",
     lineHeight: "32px",
     fontWeight: "500",
-    width: "400px",
+    width: "58.59375vw",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -148,7 +155,7 @@ const useStyles = (theme) => ({
       fontSize: "14px",
       lineHeight: "24px",
       fontWeight: "400",
-      width: "300px",
+      width: "76.335878vw",
     },
   },
   multiOsSupportParent: {
@@ -162,6 +169,24 @@ const useStyles = (theme) => ({
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       gap: "24px",
+    },
+  },
+
+  eastToImplementParent: {
+    position: "relative",
+    bottom: "300px",
+    left: "28px",
+    gap: "32px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      gap: "24px",
+      bottom: "240px",
     },
   },
 
@@ -308,10 +333,9 @@ const InnerContainer = () => {
                 <p className={styles.reactNative}>
                   <Grid container sx={classes.oneSourceTo1}>
                     Design system-based modules make customization easy to match
-                    your
+                    your brand style.
                   </Grid>
                 </p>
-                <p className={styles.reactNative}>brand style.</p>
               </div>
             </Grid>
           </div>
@@ -340,7 +364,7 @@ const InnerContainer = () => {
               />
             </Grid>
             <div className={styles.eastToImplementParent}>
-              <Grid container sx={classes.multiOsSupportParent}>
+              <Grid container sx={classes.eastToImplementParent}>
                 <b className={styles.wellStructuredDesignSystemContainer}>
                   <Grid
                     container
@@ -350,11 +374,13 @@ const InnerContainer = () => {
                   </Grid>
                 </b>
                 <div className={styles.oneSourceTo}>
-                  <Grid container sx={classes.oneSourceTo1}>
-                    The framework is delivered on a component-by-component
-                    basis, allowing you to quickly build services by mixing and
-                    matching the features you want.
-                  </Grid>
+                  <p className={styles.reactNative}>
+                    <Grid container sx={classes.oneSourceTo1}>
+                      The framework is delivered on a component-by-component
+                      basis, allowing you to quickly build services by mixing
+                      and matching the features you want.
+                    </Grid>
+                  </p>
                 </div>
               </Grid>
             </div>
