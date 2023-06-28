@@ -738,6 +738,19 @@ const useStyles = (theme: Theme) => ({
       justifyContent: "flex-start",
     },
   },
+  footerC: {
+    position: "relative",
+    top: "120px",
+    marginBottom: "120px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      top: "0",
+      marginBottom: "0",
+    },
+  },
 });
 
 const VIVAUI: NextPage = () => {
@@ -761,7 +774,7 @@ const VIVAUI: NextPage = () => {
 
   const onGetInTouchClick = () =>
     window.open(
-      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+      "mailto:wondermove@wondermove.net?subject=Quickly%20turn%20your%20dream%20service%20into%20a%20reality%20with%20VIVA%20UI&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
     );
 
   return (
@@ -773,10 +786,10 @@ const VIVAUI: NextPage = () => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <meta property="og:title" content="VIVA UI" />
-        {/* <meta
+        <meta
           property="og:description"
-          content="VIVA UI React Native UI Framework | wondermove"
-        ></meta> */}
+          content="VIVA UI React Native UI Framework"
+        ></meta>
         <meta property="og:image" content="/viva/vivaOgimage.png"></meta>
         <link rel="icon" href="/viva/viva_favicon.ico" type="image/x-icon" />
       </Head>
@@ -1049,65 +1062,70 @@ const VIVAUI: NextPage = () => {
         {/*  */}
 
         {/*  */}
-        <div className={styles.vivaUiInner}>
-          <Grid container sx={classes.vivaUiInner}>
-            <div className={styles.quicklyTurnYourDreamServicParent}>
-              <Grid container sx={classes.quicklyTurnYourDreamServicParent}>
-                <div className={styles.reactNativeUiContainer}>
-                  <Grid container sx={classes.reactNativeUiContainer2}>
-                    <p className={styles.quicklyTurnYour}>
-                      Quickly turn your dream service into a reality with VIVA
-                      UI
-                    </p>
-                  </Grid>
-                </div>
-                <div
-                  className={styles.getInTouchContainer}
-                  onClick={onGetInTouchClick}
-                  style={{ cursor: "pointer" }}
-                >
-                  <Grid container sx={classes.getInTouchContainer}>
-                    <div className={styles.getInTouch1}>Get in touch</div>
-                  </Grid>
-                </div>
-              </Grid>
-            </div>
-          </Grid>
-        </div>
+        <Grid container sx={classes.footerC}>
+          <div className={styles.vivaUiInner}>
+            <Grid container sx={classes.vivaUiInner}>
+              <div className={styles.quicklyTurnYourDreamServicParent}>
+                <Grid container sx={classes.quicklyTurnYourDreamServicParent}>
+                  <div className={styles.reactNativeUiContainer}>
+                    <Grid container sx={classes.reactNativeUiContainer2}>
+                      <p className={styles.quicklyTurnYour}>
+                        Quickly turn your dream service into a reality with VIVA
+                        UI
+                      </p>
+                    </Grid>
+                  </div>
+                  <div
+                    className={styles.getInTouchContainer}
+                    onClick={onGetInTouchClick}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <Grid container sx={classes.getInTouchContainer}>
+                      <div className={styles.getInTouch1}>Get in touch</div>
+                    </Grid>
+                  </div>
+                </Grid>
+              </div>
+            </Grid>
+          </div>
 
-        <div className={styles.footer}>
-          <Grid container sx={classes.footer}>
-            <div className={styles.layer1Parent}>
-              <Grid container sx={classes.layer1Parent}>
-                <img
-                  className={styles.layer1Icon}
-                  alt=""
-                  src="/viva/layer-1.svg"
-                />
-                <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                  <Grid container sx={classes.wondermoveSpinOffOfHyundaiParent}>
-                    <div className={styles.wondermoveSpinOffOf}>
-                      wondermove Spin-off of Hyundai Motor Company
-                    </div>
-                    <div className={styles.wondermoveIncBusinessContainer}>
-                      <p className={styles.reactNative}>wondermove Inc.</p>
-                      <p className={styles.reactNative}>
-                        Business Registration Number: 518-81-01644
-                      </p>
-                      <p className={styles.reactNative}>
-                        Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul,
-                        Republic of Korea
-                      </p>
-                      <p className={styles.reactNative}>
-                        Use Inquiries: hawkeye@wondermove.net
-                      </p>
-                    </div>
-                  </Grid>
-                </div>
-              </Grid>
-            </div>
-          </Grid>
-        </div>
+          <div className={styles.footer}>
+            <Grid container sx={classes.footer}>
+              <div className={styles.layer1Parent}>
+                <Grid container sx={classes.layer1Parent}>
+                  <img
+                    className={styles.layer1Icon}
+                    alt=""
+                    src="/viva/layer-1.svg"
+                  />
+                  <div className={styles.wondermoveSpinOffOfHyundaiParent}>
+                    <Grid
+                      container
+                      sx={classes.wondermoveSpinOffOfHyundaiParent}
+                    >
+                      <div className={styles.wondermoveSpinOffOf}>
+                        wondermove Spin-off of Hyundai Motor Company
+                      </div>
+                      <div className={styles.wondermoveIncBusinessContainer}>
+                        <p className={styles.reactNative}>wondermove Inc.</p>
+                        <p className={styles.reactNative}>
+                          Business Registration Number: 518-81-01644
+                        </p>
+                        <p className={styles.reactNative}>
+                          Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu,
+                          Seoul, Republic of Korea
+                        </p>
+                        <p className={styles.reactNative}>
+                          Use Inquiries: hawkeye@wondermove.net
+                        </p>
+                      </div>
+                    </Grid>
+                  </div>
+                </Grid>
+              </div>
+            </Grid>
+          </div>
+        </Grid>
       </div>
     </>
   );

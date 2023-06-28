@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import Desktop from "./1920_desktop/desktop";
-import SKuber from "./skuber/index";
+import SKuber from "./S-kuber/index";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 
