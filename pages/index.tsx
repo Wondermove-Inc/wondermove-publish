@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Desktop from "./1920_desktop/desktop";
-import SKuber from "./S-kuber/index";
-import PLUG from "./P-LUG/index";
-import VIVAUI from "./VIVAUI/index";
-import App from "./_app";
-import Link from "next/link";
+// import SKuber from "./S-kuber/index";
+// import PLUG from "./P-LUG/index";
+// import VIVAUI from "./VIVAUI/index";
+// import App from "./_app";
+// import Link from "next/link";
 
 import type { ReactElement } from "react";
 import Layout from "./layout";
