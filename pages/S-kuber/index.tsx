@@ -24,9 +24,6 @@ import SendMessage from "../../component/SendMessage";
 import SentSuccessfully from "../../component/SentSuccessfully";
 import NavModal from "../../component/NavModal";
 import GloballyValidated from "../../component/GloballyValidated";
-// import { Grid } from "@mui/material";
-// import theme from "../../component/ThemeProvider";
-// import { makeStyles } from "@material-ui/core/styles";
 
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -104,9 +101,7 @@ const useStyles = (theme: Theme) => ({
 
   textContainer: {
     whiteSpace: "pre-line",
-    // 设置默认的行数
     lineClamp: 1,
-    // 设置文本溢出时的省略号
     overflow: "hidden",
     textOverflow: "ellipsis",
     margin: "0",
@@ -120,7 +115,6 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
-      // 设置响应式的行数
       lineClamp: 2,
       fontSize: "32px",
       lineHeight: "44px",
@@ -729,17 +723,13 @@ const SKuber1920: NextPage = () => {
               <VideoBackground />
               <div className={styles.gnb}>
                 <Grid container sx={classes.containerNav}>
-                  {/* <div className={styles.gnb}> */}
                   <Nav />
-                  {/* </div> */}
                 </Grid>
               </div>
               <div className={styles.gnbParent}>
                 <Grid container sx={classes.containerSolutionForYourCloud}>
                   <div className={styles.solutionForYourCloudStrateParent}>
                     <div className={styles.solutionForYourContainer}>
-                      {/* <Grid container spacing={2}>
-                    <Grid item sm={12} lg={6} xl={4}> */}
                       <Typography
                         variant="body1"
                         component="div"
@@ -760,15 +750,12 @@ const SKuber1920: NextPage = () => {
                           </>
                         )}
                       </Typography>
-                      {/* </Grid>
-                  </Grid> */}
                     </div>
                     <div className={styles.frameWrapper}>
                       <Grid
                         container
                         sx={classes.wonderAboutCuttingYourClouParent}
                       >
-                        {/* <div className={styles.wonderAboutCuttingYourClouParent}> */}
                         <div className={styles.wonderAboutCuttingContainer}>
                           <Grid container sx={classes.wonderAboutText}>
                             Wonder about <br />
@@ -776,12 +763,9 @@ const SKuber1920: NextPage = () => {
                           </Grid>
                         </div>
 
-                        {/* <Grid container sx={classes.frameContainerP}> */}
                         <Grid container sx={classes.frameContainer}>
                           <SliderBar />
                         </Grid>
-                        {/* </Grid> */}
-                        {/* </div> */}
                       </Grid>
                     </div>
                   </div>
@@ -793,67 +777,12 @@ const SKuber1920: NextPage = () => {
                 </Grid>
               </div>
             </div>
-            {/* <img className={styles.bgIcon} alt="" src="/1920_desktop/bg.svg" /> */}
             <div className={styles.scrollableContainer}>
               <LottieSliderBar />
-              {/* <LottieSliderBar
-            currentPageIndex={currentPageIndex}
-            onIndicatorItemPress={handlePagerClick}
-          /> */}
-              {/* Lottie */}
-              {/* <div className={styles.frameParentContainer}>
-            <div
-              ref={childRef}
-              className={styles.rightContent}
-              id="textContainer"
-            >
-              <div
-                className={`${styles.lottieContainer} ${styles.lottie1Cintainer}`}
-              >
-                <Lottie
-                  animationData={lottie1}
-                  loop={true}
-                  autoplay={true}
-                  style={{ height: "1080px", width: "100%" }}
-                />
-              </div>
-              <div
-                className={`${styles.lottieContainer} ${styles.lottie2Cintainer}`}
-              >
-                <Lottie
-                  animationData={lottie2}
-                  loop={true}
-                  autoplay={true}
-                  style={{ height: "1080px", width: "100%" }}
-                />
-              </div>
-              <div
-                className={`${styles.lottieContainer} ${styles.lottie3Cintainer}`}
-              >
-                <Lottie
-                  animationData={lottie3}
-                  loop={true}
-                  autoplay={true}
-                  style={{ height: "1080px", width: "100%" }}
-                />
-              </div>
-              <div
-                className={`${styles.lottieContainer} ${styles.lottie4Cintainer}`}
-              >
-                <Lottie
-                  animationData={lottie4}
-                  loop={true}
-                  autoplay={true}
-                  style={{ height: "1080px", width: "100%" }}
-                />
-              </div>
-            </div>
-          </div> */}
             </div>
             <div className={styles.groupParent2}>
               <Grid container sx={classes.containerFrameParent25}>
                 <Grid container sx={classes.frameParent25}>
-                  {/* <div className={styles.frameParent25}> */}
                   <div className={styles.pricingParent}>
                     <div className={styles.pricing}>
                       <Grid container sx={classes.pricing}>
