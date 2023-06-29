@@ -3,12 +3,14 @@ import type { NextPage } from "next";
 import styles from "./viva.module.css";
 import Nav from "../../component/Nav";
 import Head from "next/head";
+import Image from "next/image";
 
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 import { Controller, Scene } from "react-scrollmagic";
 import InnerContainer from "../../component/vivaui/innerContainer";
+import { style } from "@mui/system";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -849,11 +851,18 @@ const VIVAUI: NextPage = () => {
         </div> */}
         <div className={styles.frameDiv}>
           <Grid container sx={classes.frameDiv}>
-            <img
+            <Image
               className={styles.groupChild5}
               alt=""
               src="/viva/bigMainImage.png"
+              width={800}
+              height={100}
             />
+            {/* <img
+              className={styles.groupChild5}
+              alt=""
+              src="/viva/bigMainImage.png"
+            /> */}
           </Grid>
         </div>
 
@@ -864,11 +873,18 @@ const VIVAUI: NextPage = () => {
             <Grid container sx={classes.groupContainer}>
               <div className={styles.groupDiv}>
                 <Grid container sx={classes.groupDiv}>
-                  <img
+                  <Image
                     className={styles.groupIcon}
                     alt=""
                     src="/viva/group-4358@2x.png"
+                    width={800}
+                    height={100}
                   />
+                  {/* <img
+                    className={styles.groupIcon}
+                    alt=""
+                    src="/viva/group-4358@2x.png"
+                  /> */}
                   <div className={styles.allTheServiceModulesForYoParent}>
                     <div className={styles.allTheServiceContainer}>
                       <Grid container sx={classes.allTheServiceContainer}>
@@ -892,11 +908,18 @@ const VIVAUI: NextPage = () => {
                 <Grid container sx={classes.vectorGroupParent}>
                   <div className={styles.vectorGroup}>
                     <Grid container sx={classes.vectorGroup}>
-                      <img
+                      <Image
                         className={styles.groupChild4}
                         alt=""
                         src="/viva/appleA.png"
+                        width={800}
+                        height={900}
                       />
+                      {/* <img
+                        className={styles.groupChild4}
+                        alt=""
+                        src="/viva/appleA.png"
+                      /> */}
                       <div className={styles.frameWrapper}>
                         <div className={styles.multiOsSupportParent}>
                           <Grid container sx={classes.multiOsSupportParent}>
@@ -919,11 +942,18 @@ const VIVAUI: NextPage = () => {
                   </div>
                   <div className={styles.vectorParent}>
                     <Grid container sx={classes.vectorParent}>
-                      <img
+                      <Image
                         className={styles.rectangleIcon}
                         alt=""
                         src="/viva/A.png"
+                        width={800}
+                        height={400}
                       />
+                      {/* <img
+                        className={styles.rectangleIcon}
+                        alt=""
+                        src="/viva/A.png"
+                      /> */}
                       <div className={styles.maskGroup}>
                         <div className={styles.frameContainer}>
                           <div className={styles.lineParent}>
@@ -1008,11 +1038,18 @@ const VIVAUI: NextPage = () => {
                 <div className={styles.rectangleParent1}>
                   <Grid container sx={classes.rectangleParent1}>
                     {/* <Grid container sx={classes.maskGroupIcon1}> */}
-                    <img
+                    <Image
                       className={styles.maskGroupIcon1}
                       alt=""
                       src="/viva/mask-group1.svg"
+                      width={800}
+                      height={100}
                     />
+                    {/* <img
+                      className={styles.maskGroupIcon1}
+                      alt=""
+                      src="/viva/mask-group1.svg"
+                    /> */}
                     {/* </Grid> */}
                     <div className={styles.eastToImplementParent}>
                       <Grid container sx={classes.eastToImplement}>
@@ -1036,11 +1073,18 @@ const VIVAUI: NextPage = () => {
                 <div className={styles.rectangleContainerDiv}>
                   <div className={styles.groupChild3}>
                     <Grid container sx={classes.groupChild3}>
-                      <img
+                      <Image
                         className={styles.groupChild31}
                         alt=""
                         src="/viva/group-4364.svg"
+                        width={800}
+                        height={100}
                       />
+                      {/* <img
+                        className={styles.groupChild31}
+                        alt=""
+                        src="/viva/group-4364.svg"
+                      /> */}
                     </Grid>
                   </div>
                   <div className={styles.rectangleContainer}>
@@ -1095,11 +1139,27 @@ const VIVAUI: NextPage = () => {
             <Grid container sx={classes.footer}>
               <div className={styles.layer1Parent}>
                 <Grid container sx={classes.layer1Parent}>
-                  <img
+                  <a
+                    href="https://wondermove.net/intro/"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <Image
+                      className={styles.layer1Icon}
+                      alt=""
+                      src="/viva/layer-1.svg"
+                      width={800}
+                      height={100}
+                    />
+                  </a>
+                  {/* <img
                     className={styles.layer1Icon}
                     alt=""
                     src="/viva/layer-1.svg"
-                  />
+                  /> */}
                   <div className={styles.wondermoveSpinOffOfHyundaiParent}>
                     <Grid
                       container

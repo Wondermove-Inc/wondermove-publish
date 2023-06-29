@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { useState, useEffect, useRef } from "react";
 import styles from "./p_log_desktop.module.css";
 import Head from "next/head";
@@ -9,6 +9,7 @@ import lottie7 from "../../asset/plug/Comp 3.json";
 import lottie8 from "../../asset/plug/Comp 4.json";
 import lottie9 from "../../asset/plug/Comp 5.json";
 import Nav from "../../component/Nav";
+import Image from "next/image";
 
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -860,11 +861,18 @@ const PLUG: NextPage = () => {
       <div className={styles.pLug}>
         <div className={styles.rectangleGroup}>
           <div className={styles.frameInner} />
-          <img
+          <Image
             className={styles.desertLandscapeWithPinkSkyIcon}
+            width={800}
+            height={600}
             alt=""
             src="/plug/desertlandscapewithpinkskypurplebackground-1@2x.png"
           />
+          {/* <img
+            className={styles.desertLandscapeWithPinkSkyIcon}
+            alt=""
+            src="/plug/desertlandscapewithpinkskypurplebackground-1@2x.png"
+          /> */}
         </div>
 
         <div className={styles.gnb}>
@@ -881,11 +889,18 @@ const PLUG: NextPage = () => {
                   <Grid container sx={classes.frameParent9}>
                     <div className={styles.image803Parent}>
                       <Grid container sx={classes.image803Parent}>
-                        <img
+                        <Image
                           className={styles.image803Icon}
                           alt=""
                           src="/plug/image-803@2x.png"
+                          width={800}
+                          height={600}
                         />
+                        {/* <img
+                          className={styles.image803Icon}
+                          alt=""
+                          src="/plug/image-803@2x.png"
+                        /> */}
                         <div
                           className={styles.integratedMobilitySolutionPParent}
                         >
@@ -933,11 +948,18 @@ const PLUG: NextPage = () => {
               <Grid container sx={classes.vectorParent}>
                 <div className={styles.image820Icon}>
                   <Grid container sx={classes.image820Icon}>
-                    <img
+                    <Image
                       className={styles.phoneImage}
                       alt=""
                       src="/plug/phone.png"
+                      width={800}
+                      height={600}
                     />
+                    {/* <img
+                      className={styles.phoneImage}
+                      alt=""
+                      src="/plug/phone.png"
+                    /> */}
                   </Grid>
                 </div>
               </Grid>
@@ -953,11 +975,18 @@ const PLUG: NextPage = () => {
                     <Grid container sx={classes.groupParent}>
                       <div className={styles.groupIcon}>
                         <Grid container sx={classes.groupIcon}>
-                          <img
+                          <Image
                             className={styles.groupImage}
                             alt=""
                             src="/plug/group-3177.svg"
+                            width={800}
+                            height={600}
                           />
+                          {/* <img
+                            className={styles.groupImage}
+                            alt=""
+                            src="/plug/group-3177.svg"
+                          /> */}
                         </Grid>
                       </div>
 
@@ -995,11 +1024,18 @@ const PLUG: NextPage = () => {
                     <Grid container sx={classes.groupParent}>
                       <div className={styles.groupIcon}>
                         <Grid container sx={classes.groupIcon}>
-                          <img
+                          <Image
                             className={styles.groupImage}
                             alt=""
                             src="/plug/crmdmspms.png"
+                            width={800}
+                            height={600}
                           />
+                          {/* <img
+                            className={styles.groupImage}
+                            alt=""
+                            src="/plug/crmdmspms.png"
+                          /> */}
                         </Grid>
                       </div>
 
@@ -1037,11 +1073,18 @@ const PLUG: NextPage = () => {
                     <Grid container sx={classes.groupParent}>
                       <div className={styles.groupIcon}>
                         <Grid container sx={classes.groupIcon}>
-                          <img
+                          <Image
                             className={styles.groupImage}
                             alt=""
                             src="/plug/frame-3177.svg"
+                            width={800}
+                            height={600}
                           />
+                          {/* <img
+                            className={styles.groupImage}
+                            alt=""
+                            src="/plug/frame-3177.svg"
+                          /> */}
                         </Grid>
                       </div>
                       <div className={styles.quickEstablishmentAndPersonParent}>
@@ -1138,11 +1181,18 @@ const PLUG: NextPage = () => {
                 </div>
                 <div className={styles.frameIcon1}>
                   <Grid container sx={classes.frameIcon1}>
-                    <img
+                    <Image
                       className={styles.frameImage}
                       alt=""
                       src="/plug/frame.svg"
+                      width={800}
+                      height={600}
                     />
+                    {/* <img
+                      className={styles.frameImage}
+                      alt=""
+                      src="/plug/frame.svg"
+                    /> */}
                   </Grid>
                 </div>
               </div>
@@ -1212,11 +1262,18 @@ const PLUG: NextPage = () => {
                       <div className={styles.component224Parent2}>
                         <div className={styles.component224Icon}>
                           <Grid container sx={classes.component224Icon}>
-                            <img
+                            <Image
                               className={styles.component224Icon}
                               alt=""
                               src="/plug/component-224.svg"
+                              width={800}
+                              height={80}
                             />
+                            {/* <img
+                              className={styles.component224Icon}
+                              alt=""
+                              src="/plug/component-224.svg"
+                            /> */}
                           </Grid>
                         </div>
                         <div className={styles.buyingACar}>
@@ -1263,11 +1320,18 @@ const PLUG: NextPage = () => {
                       <div className={styles.component224Parent2}>
                         <div className={styles.component224Icon}>
                           <Grid container sx={classes.component224Icon}>
-                            <img
+                            <Image
                               className={styles.component224Icon}
                               alt=""
                               src="/plug/component-2241.svg"
+                              width={800}
+                              height={80}
                             />
+                            {/* <img
+                              className={styles.component224Icon}
+                              alt=""
+                              src="/plug/component-2241.svg"
+                            /> */}
                           </Grid>
                         </div>
 
@@ -1312,11 +1376,18 @@ const PLUG: NextPage = () => {
                       <div className={styles.component224Parent2}>
                         <div className={styles.component224Icon}>
                           <Grid container sx={classes.component224Icon}>
-                            <img
+                            <Image
                               className={styles.component224Icon}
                               alt=""
                               src="/plug/component-2242.svg"
+                              width={800}
+                              height={80}
                             />
+                            {/* <img
+                              className={styles.component224Icon}
+                              alt=""
+                              src="/plug/component-2242.svg"
+                            /> */}
                           </Grid>
                         </div>
 
@@ -1363,11 +1434,18 @@ const PLUG: NextPage = () => {
                       <div className={styles.component224Parent2}>
                         <div className={styles.component224Icon}>
                           <Grid container sx={classes.component224Icon}>
-                            <img
+                            <Image
                               className={styles.component224Icon}
                               alt=""
                               src="/plug/component-225.svg"
+                              width={800}
+                              height={80}
                             />
+                            {/* <img
+                              className={styles.component224Icon}
+                              alt=""
+                              src="/plug/component-225.svg"
+                            /> */}
                           </Grid>
                         </div>
 
@@ -1416,11 +1494,18 @@ const PLUG: NextPage = () => {
                       <div className={styles.component224Parent2}>
                         <div className={styles.component224Icon}>
                           <Grid container sx={classes.component224Icon}>
-                            <img
+                            <Image
                               className={styles.component224Icon}
                               alt=""
                               src="/plug/component-2251.svg"
+                              width={800}
+                              height={80}
                             />
+                            {/* <img
+                              className={styles.component224Icon}
+                              alt=""
+                              src="/plug/component-2251.svg"
+                            /> */}
                           </Grid>
                         </div>
 
@@ -1458,11 +1543,18 @@ const PLUG: NextPage = () => {
                         <div className={styles.component224Parent}>
                           <div className={styles.component224Icon}>
                             <Grid container sx={classes.component224Icon}>
-                              <img
+                              <Image
                                 className={styles.component224Icon}
                                 alt=""
                                 src="/plug/component-224.svg"
+                                width={800}
+                                height={100}
                               />
+                              {/* <img
+                                className={styles.component224Icon}
+                                alt=""
+                                src="/plug/component-224.svg"
+                              /> */}
                             </Grid>
                           </div>
                           <div className={styles.buyingACar}>
@@ -1530,11 +1622,18 @@ const PLUG: NextPage = () => {
                         <div className={styles.component224Parent}>
                           <div className={styles.component224Icon}>
                             <Grid container sx={classes.component224Icon}>
-                              <img
+                              <Image
                                 className={styles.component224Icon}
                                 alt=""
                                 src="/plug/component-2241.svg"
+                                width={800}
+                                height={100}
                               />
+                              {/* <img
+                                className={styles.component224Icon}
+                                alt=""
+                                src="/plug/component-2241.svg"
+                              /> */}
                             </Grid>
                           </div>
 
@@ -1564,11 +1663,18 @@ const PLUG: NextPage = () => {
                         <div className={styles.component224Parent}>
                           <div className={styles.component224Icon}>
                             <Grid container sx={classes.component224Icon}>
-                              <img
+                              <Image
                                 className={styles.component224Icon}
                                 alt=""
                                 src="/plug/component-2242.svg"
+                                width={800}
+                                height={100}
                               />
+                              {/* <img
+                                className={styles.component224Icon}
+                                alt=""
+                                src="/plug/component-2242.svg"
+                              /> */}
                             </Grid>
                           </div>
 
@@ -1635,11 +1741,18 @@ const PLUG: NextPage = () => {
                         <div className={styles.component225Parent}>
                           <div className={styles.component224Icon}>
                             <Grid container sx={classes.component224Icon}>
-                              <img
+                              <Image
                                 className={styles.component224Icon}
                                 alt=""
                                 src="/plug/component-225.svg"
+                                width={800}
+                                height={100}
                               />
+                              {/* <img
+                                className={styles.component224Icon}
+                                alt=""
+                                src="/plug/component-225.svg"
+                              /> */}
                             </Grid>
                           </div>
 
@@ -1673,11 +1786,18 @@ const PLUG: NextPage = () => {
                         <div className={styles.component224Parent}>
                           <div className={styles.component224Icon}>
                             <Grid container sx={classes.component224Icon}>
-                              <img
+                              <Image
                                 className={styles.component224Icon}
                                 alt=""
                                 src="/plug/component-2251.svg"
+                                width={800}
+                                height={100}
                               />
+                              {/* <img
+                                className={styles.component224Icon}
+                                alt=""
+                                src="/plug/component-2251.svg"
+                              /> */}
                             </Grid>
                           </div>
 
@@ -1757,11 +1877,27 @@ const PLUG: NextPage = () => {
             <Grid container sx={classes.footer}>
               <div className={styles.layer1Parent}>
                 <Grid container sx={classes.layer1Parent}>
-                  <img
+                  <a
+                    href="https://wondermove.net/intro/"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <Image
+                      className={styles.layer1Icon}
+                      alt=""
+                      src="/plug/layer-1.svg"
+                      width={800}
+                      height={600}
+                    />
+                  </a>
+                  {/* <img
                     className={styles.layer1Icon}
                     alt=""
                     src="/plug/layer-1.svg"
-                  />
+                  /> */}
                   <div className={styles.wondermoveSpinOffOfHyundaiParent}>
                     <Grid
                       container

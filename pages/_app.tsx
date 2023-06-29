@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import Head from "next/head";
+import type { ReactElement, ReactNode } from "react";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { AppProps } from "next/app";
 import "./global.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import SKuberPage from "./1920_desktop/desktop";
-import Nav from "../component/Nav";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <React.Fragment>
-      <Component {...pageProps} />
-    </React.Fragment>
-  );
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page);
+
+  return getLayout(<Component {...pageProps} />);
 }
-
-export default MyApp;

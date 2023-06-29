@@ -5,58 +5,58 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SKuber from "./S-kuber/index";
 import PLUG from "./P-LUG/index";
 import VIVAUI from "./VIVAUI/index";
+import App from "./_app";
 import Link from "next/link";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Theme } from "@mui/material/styles";
+import type { ReactElement } from "react";
+import Layout from "./layout";
 
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 601,
-      md: 1025,
-      lg: 1441,
-      xl: 1921,
-    },
-  },
-});
-// { pathname }: { pathname: any }
-const HomePage = () => {
-  // const router = useRouter();
+import type { NextPageWithLayout } from "./_app";
 
-  // const renderComponent = () => {
-  //   if (pathname === "/S-kuber") {
-  //     return <SKuber />;
-  //   } else if (pathname === "/P-LUG") {
-  //     return <PLUG />;
-  //   } else if (pathname === "/VIVAUI") {
-  //     return <VIVAUI />;
-  //   } else {
-  //     return <SKuber />;
-  //   }
-  // };
-
-  return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <SKuber />
-      </div>
-      {/* <div>{renderComponent()}</div> */}
-    </ThemeProvider>
-  );
+const Page: NextPageWithLayout = () => {
+  const router = useRouter();
+  useEffect(() => {
+    if (router.pathname === "/") router.replace("/S-kuber");
+  }, [router]);
+  return <></>;
 };
 
-// export async function getServerSideProps(context: any) {
-//   const { pathname } = context.req.url;
-//   return {
-//     props: {
-//       pathname: pathname || null,
-//     },
-//   };
-// }
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
 
-export default HomePage;
+export default Page;
+
+// { pathname }: { pathname: any } // const router = useRouter();
+
+// const router = useRouter();
+// const { pathname } = router;
+// const renderComponent = () => {
+//   if (pathname === "/S-kuber") {
+//     return <SKuber />;
+//   } else if (pathname === "/P-LUG") {
+//     return <PLUG />;
+//   } else if (pathname === "/VIVAUI") {
+//     return <VIVAUI />;
+//   } else {
+//     return <SKuber />;
+//   }
+// };
+
+// const HomePage = () => {
+//   const router = useRouter();
+// };
+
+// // export async function getServerSideProps(context: any) {
+// //   const { pathname } = context.req.url;
+// //   return {
+// //     props: {
+// //       pathname: pathname || null,
+// //     },
+// //   };
+// // }
+
+// export default HomePage;
 
 {
   // <div><SKuber /></div>

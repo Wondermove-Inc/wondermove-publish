@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[482],{6275:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/S-kuber",function(){return u(8509)}])}},function(n){n.O(0,[43,191,281,260,456,509,774,888,179],function(){return n(n.s=6275)}),_N_E=n.O()}]);

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link legacyBehavior href="https://wondermove.net/">
+    <Link legacyBehavior href="https://wondermove.net/intro/">
       <img
         src="/1920_desktop/logo.svg"
         alt="Logo"
