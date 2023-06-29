@@ -37,7 +37,6 @@ const useStyles = (theme) => ({
 
     [theme.breakpoints.down("sm")]: {
       display: "none",
-      // backgroundImage: 'url("/1920_desktop/nav.png")',
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
@@ -63,7 +62,6 @@ const useStyles = (theme) => ({
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
-      // backgroundImage: 'url("/1920_desktop/nav.png")',
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
@@ -89,12 +87,6 @@ const NavButtom = ({ onClick }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
-  // const handleButtonClick = (buttonName) => {
-  //   if (buttonName !== "S-kuber") {
-  //     alert("coming soon!!!");
-  //   }
-  // };
 
   const onContactClick = () =>
     window.open(
@@ -135,9 +127,6 @@ const NavButtom = ({ onClick }) => {
               VIVA UI
             </Link>
           </div>
-          {/* <div className={styles.pLug} onClick={onVivaClick}>
-            VIVA UI
-          </div> */}
           <div className={styles.pLug} onClick={onContactClick}>
             Contact
           </div>
