@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../pages/VIVAUI/mobile.module.css";
-import { Grid, useMediaQuery } from "@mui/material";
+import { Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 
