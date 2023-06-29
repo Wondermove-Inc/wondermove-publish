@@ -403,7 +403,9 @@ const useStyles = (theme: Theme) => ({
   groupDiv: {
     width: "75vw",
     height: "708px",
-    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("xl")]: {
+      height: "36.875vw",
+    },
     [theme.breakpoints.down("lg")]: {
       width: "83.333333vw",
       height: "40.972222vw",
