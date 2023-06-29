@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Desktop from "./1920_desktop/desktop";
 import SKuber from "./S-kuber/index";
+import PLUG from "./P-LUG/index";
+import VIVAUI from "./VIVAUI/index";
+import Link from "next/link";
+
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 
@@ -15,35 +21,56 @@ const theme = createTheme({
     },
   },
 });
+// { pathname }: { pathname: any }
 const HomePage = () => {
-  const [screenWidth, setScreenWidth] = useState(0);
+  // const router = useRouter();
 
-  useEffect(() => {
-    // screenwidth
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    // 초기화 중 화면 너비를 한 번 가져옵니다.
-    handleResize();
-
-    // 화면 너비 변경 모니터링
-    window.addEventListener("resize", handleResize);
-
-    // 정리 이벤트 리스너
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // const renderComponent = () => {
+  //   if (pathname === "/S-kuber") {
+  //     return <SKuber />;
+  //   } else if (pathname === "/P-LUG") {
+  //     return <PLUG />;
+  //   } else if (pathname === "/VIVAUI") {
+  //     return <VIVAUI />;
+  //   } else {
+  //     return <SKuber />;
+  //   }
+  // };
 
   return (
-    // <div>{screenWidth && screenWidth >= 768 ? <Desktop /> : <Mobile />}</div>
     <ThemeProvider theme={theme}>
       <div>
         <SKuber />
       </div>
+      {/* <div>{renderComponent()}</div> */}
     </ThemeProvider>
   );
 };
 
+// export async function getServerSideProps(context: any) {
+//   const { pathname } = context.req.url;
+//   return {
+//     props: {
+//       pathname: pathname || null,
+//     },
+//   };
+// }
+
 export default HomePage;
+
+{
+  // <div><SKuber /></div>
+  /* <Link href="/S-kuber">
+        <SKuber />
+      </Link> */
+}
+{
+  /* <Router>
+        <Routes>
+          <Route path="/S-kuber" element={<SKuber />} />
+          <Route path="/P-LUG" element={<PLUG />} />
+          <Route path="/VIVAUI" element={<VIVAUI />} />
+          <Route path="/" element={<SKuber />} />
+        </Routes>
+      </Router> */
+}
