@@ -1044,11 +1044,6 @@ const PLUG: NextPage = () => {
                           />
                         </Grid>
                       </div>
-                      {/* <img
-                        className={styles.frameIcon}
-                        alt=""
-                        src="/plug/frame-3177.svg"
-                      /> */}
                       <div className={styles.quickEstablishmentAndPersonParent}>
                         <Grid
                           container
@@ -1190,11 +1185,6 @@ const PLUG: NextPage = () => {
                       </video>
                     </Grid>
                   </div>
-                  {/* <img
-                    className={styles.frameChild1}
-                    alt=""
-                    src="/plug/group-4400.svg"
-                  /> */}
                 </Grid>
               </div>
               {isMdallScreen ? (
@@ -1763,15 +1753,6 @@ const PLUG: NextPage = () => {
             </div>
           </div>
 
-          {/* <div className={styles.rectangleParent}>
-          <div className={styles.frameChild} />
-          <img
-            className={styles.image743Icon}
-            alt=""
-            src="/plug/image-743@2x.png"
-          />
-          <div className={styles.frameItem} />
-          </div> */}
           <div className={styles.footer}>
             <Grid container sx={classes.footer}>
               <div className={styles.layer1Parent}>
