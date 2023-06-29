@@ -2424,9 +2424,7 @@
 
 /* react slider bar */
 .customSlider {
-  /* max width of your slider */
   max-width: 100%;
-  /* Optional: Only If you want to center your slider in the page */
   margin: auto;
 }
 .customSlider_thumb {
