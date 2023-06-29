@@ -9,7 +9,7 @@ import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 import { Controller, Scene } from "react-scrollmagic";
-import InnerContainer from "../../component/vivaui/innerContainer";
+import InnerContainer from "../../component/vivaui/InnerContainer";
 import { style } from "@mui/system";
 
 const theme: Theme = createTheme({
