@@ -132,17 +132,10 @@ const QA = () => {
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
                       {`S-Kuber is a cloud management service that helps you optimize
-                your resource costs and cloud technology`}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`reducing additional costs. Moreover, it facilitates the
-                transition from traditional virtual machines to Kubernetes,`}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`enabling you to decrease your cloud costs by over 40% while
+                your resource costs and cloud technology utilization. By leveraging eBPF, 
+                it protects your systems against unnecessary traffic and DoS attacks, thereby utilization. By leveraging eBPF, 
+                it protects your systems against unnecessary traffic and DoS attacks, thereby reducing additional costs. Moreover, it facilitates the
+                transition from traditional virtual machines to Kubernetes, zenabling you to decrease your cloud costs by over 40% while
                 enhancing efficiency.`}
                     </p>
                   </Grid>
@@ -179,13 +172,8 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`No, S-Kuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`and respond to service failures in real-time.`}
+                      {`No, S-Kuber is designed to be accessible for all technology levels. 
+                      It provides a high-level control UX that can be managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor and respond to service failures in real-time.`}
                     </p>
                   </Grid>
                 </div>
@@ -222,19 +210,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time  `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative  `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale- `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`down, and preventing service failure during emergencies with self-validation services. `}
+                      {`S-Kuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services. `}
                     </p>
                   </Grid>
                 </div>
@@ -273,13 +249,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber optimizes large-scale service management by enabling you to take control of your services with `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`aArchitectures) and ensures reliable management of large-scale services.`}
+                      {`S-Kuber optimizes large-scale service management by enabling you to take control of your services with intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice aArchitectures) and ensures reliable management of large-scale services.`}
                     </p>
                   </Grid>
                 </div>
@@ -323,16 +293,10 @@ const QA = () => {
                     </p>
                     <br />
                     <p className={styles.solutionForYour}>
-                      {`- Free : Includes up to 10 vCPU, one cluster, real-time monitoring, a legacy migration tool, real-time log viewer, `}
+                      {`- Free : Includes up to 10 vCPU, one cluster, real-time monitoring, a legacy migration tool, real-time log viewer, service flow management, service mesh management, and config-map/secret management.`}
                     </p>
                     <p className={styles.solutionForYour}>
-                      {`service flow management, service mesh management, and config-map/secret management.`}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`- Plus ($1,500/month) : Includes all Free features, plus 11-100 vCPU, unlimited clusters, cost tracing, account`}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`management, service log viewer, and unlimited members.`}
+                      {`- Plus ($1,500/month) : Includes all Free features, plus 11-100 vCPU, unlimited clusters, cost tracing, account management, service log viewer, and unlimited members.`}
                     </p>
                     <p className={styles.solutionForYour}>
                       {`- Pro ($1,500 + $12 x vCPU/month) : Includes all Plus features, plus 101-1,000 vCPU.`}
@@ -341,10 +305,7 @@ const QA = () => {
                       {`- Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue support.`}
                     </p>
                     <p className={styles.solutionForYour}>
-                      {`- Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`custom dashboard, cloud strategy consulting. `}
+                      {`- Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, custom dashboard, cloud strategy consulting.`}
                     </p>
                   </Grid>
                 </div>
@@ -380,13 +341,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of  `}
-                    </p>
-                    <p className={styles.solutionForYour}>
-                      {`requests you receive from a specific IP address.`}
+                      {`S-Kuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of requests you receive from a specific IP address.`}
                     </p>
                   </Grid>
                 </div>
@@ -408,7 +363,7 @@ const Collapse = ({ children, isOpen }) => {
   useEffect(() => {
     if (!ref.current) return;
     const childHeightRaw = ref.current.clientHeight;
-    const childHeight = `${childHeightRaw / 16}rem`;
+    const childHeight = `${childHeightRaw / 8}rem`;
 
     setChildHeight(childHeight);
   }, [isOpen]);
