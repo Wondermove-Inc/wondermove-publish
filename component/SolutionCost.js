@@ -213,21 +213,31 @@ const useStyles = (theme) => ({
     },
   },
   xVcpu1: {
-    fontSize: "22px",
-    lineHeight: "27px",
+    fontSize: "32px",
     fontWeight: "600",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {
-      fontSize: "19px",
-      lineHeight: "24px",
+      fontSize: "28px",
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "24px",
-      lineHeight: "36px",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "24px",
-      lineHeight: "36px",
+    },
+  },
+  xVcpu2: {
+    fontSize: "21px",
+    fontWeight: "600",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "18px",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "24px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "24px",
     },
   },
   noMonthlyFees: {
@@ -549,7 +559,7 @@ const SolutionCost = () => {
             <div className={styles.frameParent30}>
               <Grid container sx={classes.xVcpuParent}>
                 <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu1}>
+                  <Grid container sx={classes.xVcpu2}>
                     $3,000 + $24 x vCPU
                   </Grid>
                 </div>
@@ -639,7 +649,7 @@ const SolutionCost = () => {
             <div className={styles.frameParent30}>
               <Grid container sx={classes.xVcpuParent}>
                 <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu1}>
+                  <Grid container sx={classes.xVcpu2}>
                     $27,000 + $20 x vCPU
                   </Grid>
                 </div>
