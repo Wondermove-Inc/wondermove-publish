@@ -450,7 +450,7 @@ const SolutionCost = () => {
               <Grid container sx={classes.xVcpuParent}>
                 <div className={styles.xVcpu1}>
                   <Grid container sx={classes.xVcpu1}>
-                    $1,500
+                    $3,000
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
@@ -550,7 +550,7 @@ const SolutionCost = () => {
               <Grid container sx={classes.xVcpuParent}>
                 <div className={styles.xVcpu1}>
                   <Grid container sx={classes.xVcpu1}>
-                    $1,500 + $12 x vCPU
+                    $3,000 + $24 x vCPU
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
@@ -640,7 +640,7 @@ const SolutionCost = () => {
               <Grid container sx={classes.xVcpuParent}>
                 <div className={styles.xVcpu1}>
                   <Grid container sx={classes.xVcpu1}>
-                    $13,500 + $10 x vCPU
+                    $27,000 + $20 x vCPU
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
