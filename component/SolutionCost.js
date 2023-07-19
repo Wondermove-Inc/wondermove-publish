@@ -75,6 +75,23 @@ const useStyles = (theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+    height: "68px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  },
+  xVcpuParent1: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
@@ -259,11 +276,12 @@ const useStyles = (theme) => ({
     fontSize: "14px",
     lineHeight: "17px",
     fontWeight: "500",
+    paddingBottom: "72px",
     [theme.breakpoints.down("xl")]: {
-      paddingBottom: "60px",
+      paddingBottom: "72px",
     },
     [theme.breakpoints.down("lg")]: {
-      paddingBottom: "60px",
+      paddingBottom: "77px",
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
@@ -353,7 +371,7 @@ const SolutionCost = () => {
             </div>
             <div className={styles.frameParent30}>
               {/* <div className={styles.xVcpuParent}> */}
-              <Grid container sx={classes.xVcpuParent}>
+              <Grid container sx={classes.xVcpuParent1}>
                 <div className={styles.xVcpu1}>
                   <Grid container sx={classes.xVcpu1}>
                     $0
@@ -471,7 +489,7 @@ const SolutionCost = () => {
               </Grid>
               <div className={styles.billedAnnuallyOrContainer1}>
                 <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $1,990 month-to-month
+                  Billed annually or $3,990 month-to-month
                 </Grid>
               </div>
             </div>
@@ -572,7 +590,7 @@ const SolutionCost = () => {
 
               <div className={styles.billedAnnuallyOrContainer1}>
                 <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $1,990 month-to-month
+                  Billed annually or $3,990 month-to-month
                 </Grid>
               </div>
             </div>
@@ -662,7 +680,7 @@ const SolutionCost = () => {
 
               <div className={styles.billedAnnuallyOrContainer1}>
                 <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $16,990 month-to-month
+                  Billed annually or $33,990 month-to-month
                 </Grid>
               </div>
             </div>
