@@ -75,7 +75,7 @@ const useStyles = (theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
-    height: "68px",
+    height: "60px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
@@ -299,8 +299,13 @@ const useStyles = (theme) => ({
     lineHeight: "20px",
     fontWeight: "500",
     textAlign: "left",
-    [theme.breakpoints.down("xl")]: {},
-    [theme.breakpoints.down("lg")]: {},
+    height: "50px",
+    [theme.breakpoints.down("xl")]: {
+      height: "50px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      height: "50px",
+    },
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
       lineHeight: "15px",
