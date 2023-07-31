@@ -720,7 +720,6 @@ const SKuber1920: NextPage = () => {
         <div className={styles.sKuber1920}>
           <div className={styles.groupParent}>
             <div className={styles.groupContainer}>
-              {/* 잠시 hiden */}
               {/* <VideoBackground /> */}
               <div className={styles.gnb}>
                 <Grid container sx={classes.containerNav}>
