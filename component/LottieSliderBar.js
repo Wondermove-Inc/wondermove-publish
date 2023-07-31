@@ -483,7 +483,7 @@ const LottieSliderBar = () => {
                   </Scene>
                 </div>
 
-                <div
+                {/* <div
                   className={`${styles.lottieContainer} ${lottieDataArray[index].className}`}
                 >
                   <Lottie
@@ -492,7 +492,7 @@ const LottieSliderBar = () => {
                     autoplay={true}
                     style={{ height: "1080px", width: "960px" }}
                   />
-                </div>
+                </div> */}
               </div>
             ))}
           </Controller>
