@@ -248,7 +248,8 @@ const LottieSliderBar = () => {
   return (
     <div>
       {isMdallScreen ? (
-        <div style={{ display: "none" }}>
+        <div>
+          {/* style={{ display: "none" }} */}
           <div
             className={styles.container}
             onScroll={onScroll}
@@ -264,7 +265,7 @@ const LottieSliderBar = () => {
                           className={`${styles.lottieContainer} ${lottieDataArray[0].className}`}
                         >
                           <Lottie
-                            // animationData={lottieDataArray[0].animationData}
+                            animationData={lottieDataArray[0].animationData}
                             loop={true}
                             autoplay={true}
                             style={{ height: "99.317vw", width: "100%" }}
@@ -300,7 +301,7 @@ const LottieSliderBar = () => {
                           className={`${styles.lottieContainer} ${lottieDataArray[1].className}`}
                         >
                           <Lottie
-                            // animationData={lottieDataArray[1].animationData}
+                            animationData={lottieDataArray[1].animationData}
                             loop={true}
                             autoplay={true}
                             style={{ height: "99.317vw", width: "100%" }}
@@ -336,7 +337,7 @@ const LottieSliderBar = () => {
                           className={`${styles.lottieContainer} ${lottieDataArray[2].className}`}
                         >
                           <Lottie
-                            // animationData={lottieDataArray[2].animationData}
+                            animationData={lottieDataArray[2].animationData}
                             loop={true}
                             autoplay={true}
                             style={{ height: "99.317vw", width: "100%" }}
@@ -372,7 +373,7 @@ const LottieSliderBar = () => {
                           className={`${styles.lottieContainer} ${lottieDataArray[3].className}`}
                         >
                           <Lottie
-                            // animationData={lottieDataArray[3].animationData}
+                            animationData={lottieDataArray[3].animationData}
                             loop={true}
                             autoplay={true}
                             style={{ height: "99.317vw", width: "100%" }}
@@ -480,7 +481,7 @@ const LottieSliderBar = () => {
                   </Scene>
                 </div>
 
-                {/* <div
+                <div
                   className={`${styles.lottieContainer} ${lottieDataArray[index].className}`}
                 >
                   <Lottie
@@ -489,7 +490,7 @@ const LottieSliderBar = () => {
                     autoplay={true}
                     style={{ height: "1080px", width: "960px" }}
                   />
-                </div> */}
+                </div>
               </div>
             ))}
           </Controller>
