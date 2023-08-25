@@ -249,7 +249,6 @@ const LottieSliderBar = () => {
     <div>
       {isMdallScreen ? (
         <div>
-          {/* style={{ display: "none" }} */}
           <div
             className={styles.container}
             onScroll={onScroll}

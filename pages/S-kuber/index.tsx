@@ -685,7 +685,6 @@ const SKuber1920: NextPage = () => {
         Math.floor((percentage / 100) * textCount),
         lastIndex
       );
-      // setCurrentTextIndex(index);
 
       const pageHeight = textContainer.clientHeight;
       const currentPage = Math.round(textContainer.scrollTop / pageHeight);
