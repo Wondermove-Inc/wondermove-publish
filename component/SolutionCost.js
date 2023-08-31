@@ -4,6 +4,7 @@ import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
 import { height } from "@mui/system";
+import Image from "next/image";
 
 const theme = createTheme({
   breakpoints: {
@@ -50,7 +51,7 @@ const useStyles = (theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
-    gap: "28px",
+    gap: "20px",
     height: "100%",
     padding: "32px 24px",
     [theme.breakpoints.down("xl")]: {
@@ -218,15 +219,20 @@ const useStyles = (theme) => ({
     fontSize: "18px",
     lineHeight: "32px",
     fontWeight: "500",
+    alignItems: "center",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
       fontSize: "16px",
       lineHeight: "28px",
+      alignItems: "center",
+      justifyContent: "center",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       lineHeight: "28px",
+      alignItems: "center",
+      justifyContent: "center",
     },
   },
   xVcpu1: {
@@ -276,12 +282,12 @@ const useStyles = (theme) => ({
     fontSize: "14px",
     lineHeight: "17px",
     fontWeight: "500",
-    paddingBottom: "72px",
+    paddingBottom: "67px",
     [theme.breakpoints.down("xl")]: {
-      paddingBottom: "72px",
+      paddingBottom: "67px",
     },
     [theme.breakpoints.down("lg")]: {
-      paddingBottom: "77px",
+      paddingBottom: "70px",
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
@@ -378,7 +384,7 @@ const SolutionCost = () => {
               {/* <div className={styles.xVcpuParent}> */}
               <Grid container sx={classes.xVcpuParent1}>
                 <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu1}>
+                  <Grid container sx={classes.xVcpu2}>
                     $0
                   </Grid>
                 </div>
@@ -478,24 +484,36 @@ const SolutionCost = () => {
               <Grid container sx={classes.pricingTit}>
                 Plus
               </Grid>
+              <Image
+                className={styles.image803Icon}
+                alt=""
+                src="/1920_desktop/free-trial.png"
+                width={80}
+                height={30}
+              />
             </div>
             <div className={styles.frameParent30}>
-              <Grid container sx={classes.xVcpuParent}>
-                <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu1}>
-                    $3,000
+              <Grid container sx={classes.xVcpuParent1}>
+                <div
+                  className={styles.xVcpu1}
+                  style={{ textDecoration: "line-through" }}
+                >
+                  <Grid container sx={classes.xVcpu2}>
+                    $60 x vCPU
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFees}>
-                    per month
+                  <Grid container sx={classes.noMonthlyFeesOne}>
+                    <Grid container sx={classes.noMonthlyFees}>
+                      per month
+                    </Grid>
                   </Grid>
                 </div>
               </Grid>
               <div className={styles.billedAnnuallyOrContainer1}>
-                <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $3,990 month-to-month
-                </Grid>
+                {/* <Grid container sx={classes.billedAnnuallyOrContainer1}>
+                  Billed annually or $1,990 month-to-month
+                </Grid> */}
               </div>
             </div>
             <div className={styles.frameChild32} />
@@ -580,23 +598,40 @@ const SolutionCost = () => {
               </Grid>
             </div>
             <div className={styles.frameParent30}>
-              <Grid container sx={classes.xVcpuParent}>
+              {/* <Grid container sx={classes.xVcpuParent}>
                 <div className={styles.xVcpu1}>
                   <Grid container sx={classes.xVcpu2}>
-                    $3,000 + $24 x vCPU
+                    $40 x vCPU
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFees}>
-                    per month
+                  <Grid container sx={classes.noMonthlyFeesOne}>
+                    <Grid container sx={classes.noMonthlyFees}>
+                      per month
+                    </Grid>
+                  </Grid>
+                </div>
+              </Grid> */}
+
+              <Grid container sx={classes.xVcpuParent1}>
+                <div className={styles.xVcpu1}>
+                  <Grid container sx={classes.xVcpu2}>
+                    $40 x vCPU
+                  </Grid>
+                </div>
+                <div className={styles.noMonthlyFees}>
+                  <Grid container sx={classes.noMonthlyFeesOne}>
+                    <Grid container sx={classes.noMonthlyFees}>
+                      per month
+                    </Grid>
                   </Grid>
                 </div>
               </Grid>
 
               <div className={styles.billedAnnuallyOrContainer1}>
-                <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $3,990 month-to-month
-                </Grid>
+                {/* <Grid container sx={classes.billedAnnuallyOrContainer1}>
+                  Billed annually or $1,990 month-to-month
+                </Grid> */}
               </div>
             </div>
             <div className={styles.frameChild32} />
@@ -646,84 +681,7 @@ const SolutionCost = () => {
           </Grid>
           {/* </div> */}
         </div>
-        <div
-          className={`${
-            selectedItem === 3 || isHovered4
-              ? styles.frameParent28
-              : styles.frameParent26
-          }`}
-          // onMouseEnter={() => setIsHovered4(true)}
 
-          onMouseEnter={() => {
-            setIsHovered4(true);
-            setSelectedItem(null);
-          }}
-          onMouseLeave={() => setIsHovered4(false)}
-          onClick={() => onClickItem(3)}
-        >
-          <Grid container sx={classes.freeParent}>
-            {/* <div className={styles.freeParent}> */}
-
-            <div className={styles.pricingTit}>
-              <Grid container sx={classes.pricingTit}>
-                Business
-              </Grid>
-            </div>
-            <div className={styles.frameParent30}>
-              <Grid container sx={classes.xVcpuParent}>
-                <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu2}>
-                    $27,000 + $20 x vCPU
-                  </Grid>
-                </div>
-                <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFees}>
-                    per month
-                  </Grid>
-                </div>
-              </Grid>
-
-              <div className={styles.billedAnnuallyOrContainer1}>
-                <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $33,990 month-to-month
-                </Grid>
-              </div>
-            </div>
-            <div className={styles.frameChild32} />
-            <div className={styles.whatsIncludedParent}>
-              <div className={styles.whatsIncluded}>
-                <Grid container sx={classes.whatsIncludedParent}>
-                  All Pro features, plus
-                </Grid>
-              </div>
-              <div>
-                <Grid container sx={classes.upTo10ContainerText}>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> 1,001 - Unlimited vCPU</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Unlimited Cluster</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Installation support</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Issue support</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
-                </Grid>
-              </div>
-            </div>
-            {/* </div> */}
-          </Grid>
-        </div>
         <div
           className={`${
             selectedItem === 4 || isHovered5

@@ -233,9 +233,9 @@ const LottieSliderBar = () => {
         "Save costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.",
     },
     {
-      title: `Resource\nOptimization\nduring DoS Attacks`,
+      title: `Resource\nOptimization\nduring DDoS Attacks`,
       content:
-        "Prevent resource waste on out-of-policy traffic, such as DDoS attacks, by utilizing eBPF's XDP technology for Linux Kernel control. (Limit the number of requests you receive from a specific IP address)",
+        "Prevent resource waste on non-compliant traffic, such as DDoS attacks, by utilizing eBPF's XDP technology for Linux Kernel control. (Limit the number of requests you receive from a specific IP address)",
     },
     {
       title: `Optimized\nlarge-scale service\nmanagement`,

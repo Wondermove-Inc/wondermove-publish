@@ -896,6 +896,14 @@ const PLUG: NextPage = () => {
                           width={800}
                           height={600}
                         />
+
+                        <Image
+                          className={styles.image803Icon}
+                          alt=""
+                          src="/plug/reddot.png"
+                          width={800}
+                          height={600}
+                        />
                         {/* <img
                           className={styles.image803Icon}
                           alt=""
