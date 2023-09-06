@@ -484,13 +484,13 @@ const SolutionCost = () => {
               <Grid container sx={classes.pricingTit}>
                 Plus
               </Grid>
-              <Image
+              {/* <Image
                 className={styles.image803Icon}
                 alt=""
                 src="/1920_desktop/free-trial.png"
                 width={80}
                 height={30}
-              />
+              /> */}
             </div>
             <div className={styles.frameParent30}>
               <Grid container sx={classes.xVcpuParent1}>
