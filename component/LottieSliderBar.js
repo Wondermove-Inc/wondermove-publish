@@ -487,7 +487,7 @@ const LottieSliderBar = () => {
                     animationData={lottieDataArray[index].animationData}
                     loop={true}
                     autoplay={true}
-                    style={{ height: "1080px", width: "960px" }}
+                    // style={{ height: "1080px", width: "960px" }}
                   />
                 </div>
               </div>

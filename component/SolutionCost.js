@@ -496,10 +496,10 @@ const SolutionCost = () => {
               <Grid container sx={classes.xVcpuParent1}>
                 <div
                   className={styles.xVcpu1}
-                  style={{ textDecoration: "line-through" }}
+                  // style={{ textDecoration: "line-through" }}
                 >
                   <Grid container sx={classes.xVcpu2}>
-                    $60 x vCPU
+                    $300 x vCPU
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
@@ -567,6 +567,11 @@ const SolutionCost = () => {
                     <span className={styles.span1}>✓</span>
                     <span> Unlimited members</span>
                   </Grid>
+
+                  <Grid container sx={classes.upTo10ContainerText}>
+                    <span className={styles.span1}>✓</span>
+                    <span> Free trial for 1 month</span>
+                  </Grid>
                   {/* <p className={styles.upTo10ContainerText}>
               </p> */}
                 </Grid>
@@ -616,7 +621,7 @@ const SolutionCost = () => {
               <Grid container sx={classes.xVcpuParent1}>
                 <div className={styles.xVcpu1}>
                   <Grid container sx={classes.xVcpu2}>
-                    $40 x vCPU
+                    $240 x vCPU
                   </Grid>
                 </div>
                 <div className={styles.noMonthlyFees}>
