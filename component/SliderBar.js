@@ -445,7 +445,7 @@ const HowManyVcpus = () => {
                         ? parseInt(
                             selectedRam.maxCostAfterIntroduction / 12
                           ).toLocaleString("en-US")
-                        : 0}
+                        : parseInt(2087).toLocaleString("en-US")}
                     </Grid>
                   </div>
                   <div className={styles.perMonth}>
@@ -461,7 +461,7 @@ const HowManyVcpus = () => {
                       ? parseInt(selectedRam.savings / 12).toLocaleString(
                           "en-US"
                         )
-                      : 0}
+                      : parseInt(1708).toLocaleString("en-US")}
                     (
                     {selectedRam.savings || selectedRam.maxOriginalCost
                       ? parseFloat(
@@ -470,7 +470,7 @@ const HowManyVcpus = () => {
                             selectedRam.maxOriginalCost
                           ).toFixed(1)
                         )
-                      : 0}
+                      : 45}
                     %) cost reduction
                   </Grid>
                 </div>
@@ -491,7 +491,7 @@ const HowManyVcpus = () => {
                     ? parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
                         "en-US"
                       )
-                    : 0}
+                    : parseInt(3796).toLocaleString("en-US")}
                 </Grid>
               </div>
               <div className={styles.perMonth1}>
