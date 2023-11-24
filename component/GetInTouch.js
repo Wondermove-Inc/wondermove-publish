@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SendMessage from "./SendMessage";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";

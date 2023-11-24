@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 
 import { Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -241,7 +241,7 @@ function GloballyValidated() {
                       <Grid container sx={classes.wonderAbout}>
                         <div>
                           Running a successful proof of concept in 4 European
-                          counteris with
+                          countries with
                         </div>
                       </Grid>
                     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "../pages/S-kuber/sendSuccessfully.module.css";
+import styles from "../pages/Skuber/sendSuccessfully.module.css";
 import Modal from "react-modal";
 
 const SentSuccessfully = ({ toggleSuccessModalVisible, isVisible }) => {

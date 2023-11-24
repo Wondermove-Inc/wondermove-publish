@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../pages/S-kuber/sendMessage.module.css";
+import styles from "../pages/Skuber/sendMessage.module.css";
 import SendSuccessfully from "./SentSuccessfully";
 import Modal from "react-modal";
 

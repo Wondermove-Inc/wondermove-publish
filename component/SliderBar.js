@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactSlider from "react-slider";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 import styled from "@emotion/styled";
 import costData from "../asset/costData.json";
 
@@ -424,7 +424,7 @@ const HowManyVcpus = () => {
                 <div className={styles.withSKuberParent}>
                   <div>
                     <Grid container sx={classes.vcpuText}>
-                      with S-kuber
+                      with Skuber
                     </Grid>
                   </div>
                   <div>
@@ -441,9 +441,11 @@ const HowManyVcpus = () => {
                   <div className={styles.vcpu}>
                     <Grid container sx={classes.vcpu}>
                       $
-                      {parseInt(
-                        selectedRam.maxCostAfterIntroduction / 12
-                      ).toLocaleString("en-US")}
+                      {selectedRam.maxCostAfterIntroduction
+                        ? parseInt(
+                            selectedRam.maxCostAfterIntroduction / 12
+                          ).toLocaleString("en-US")
+                        : 0}
                     </Grid>
                   </div>
                   <div className={styles.perMonth}>
@@ -455,14 +457,20 @@ const HowManyVcpus = () => {
                 <div className={styles.costReduction}>
                   <Grid container sx={classes.costReduction}>
                     $
-                    {parseInt(selectedRam.savings / 12).toLocaleString("en-US")}{" "}
+                    {selectedRam.savings
+                      ? parseInt(selectedRam.savings / 12).toLocaleString(
+                          "en-US"
+                        )
+                      : 0}
                     (
-                    {parseFloat(
-                      (
-                        (selectedRam.savings * 100) /
-                        selectedRam.maxOriginalCost
-                      ).toFixed(1)
-                    )}
+                    {selectedRam.savings || selectedRam.maxOriginalCost
+                      ? parseFloat(
+                          (
+                            (selectedRam.savings * 100) /
+                            selectedRam.maxOriginalCost
+                          ).toFixed(1)
+                        )
+                      : 0}
                     %) cost reduction
                   </Grid>
                 </div>
@@ -479,9 +487,11 @@ const HowManyVcpus = () => {
               <div className={styles.vcpuVirtual}>
                 <Grid container sx={classes.vcpuVirtual}>
                   $
-                  {parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
-                    "en-US"
-                  )}
+                  {selectedRam.maxOriginalCost
+                    ? parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
+                        "en-US"
+                      )
+                    : 0}
                 </Grid>
               </div>
               <div className={styles.perMonth1}>

@@ -839,7 +839,7 @@ const PLUG: NextPage = () => {
 
   const onGetInTouchClick = () =>
     window.open(
-      "mailto:wondermove@wondermove.net?subject=Manage%20entire%20to%20vehicle%20lifecycle%20with%20P-LUG&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+      "mailto:wondermove@wondermove.net?subject=Manage%20entire%20to%20vehicle%20lifecycle%20with%20P-LUG&body=[Your%20infomation]%0A———————————%0A>%20Country%3A%0A>%20Company%20name%3A%0A>%20Your%20Name%3A%0A———————————%0A%0AWhat%20can%20we%20help%20you%3F"
     );
 
   return (

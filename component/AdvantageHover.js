@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -176,8 +176,8 @@ function AdvantageHover() {
               </div>
               <div className={styles.byTransitioningFromContainer}>
                 <Grid container sx={classes.byTransitioningFromContainer}>
-                  S-Kuber service can leverage eBPF to protect against
-                  unnecessary traffic and DoS attacks to avoid additional costs.
+                  Skuberservice can leverage eBPF to protect against unnecessary
+                  traffic and DoS attacks to avoid additional costs.
                 </Grid>
               </div>
             </Grid>
@@ -212,8 +212,8 @@ function AdvantageHover() {
               </div>
               <div className={styles.byTransitioningFromContainer}>
                 <Grid container sx={classes.byTransitioningFromContainer}>
-                  S-Kuber service can leverage eBPF to protect against
-                  unnecessary traffic and DoS attacks to avoid additional costs.
+                  Skuberservice can leverage eBPF to protect against unnecessary
+                  traffic and DoS attacks to avoid additional costs.
                 </Grid>
               </div>
             </Grid>

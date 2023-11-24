@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -90,7 +90,7 @@ const NavButtom = ({ onClick }) => {
 
   const onContactClick = () =>
     window.open(
-      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+      "mailto:wondermove@wondermove.net?subject=Join%20Skuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=[Your%20infomation]%0A———————————%0A>%20Country%3A%0A>%20Company%20name%3A%0A>%20Your%20Name%3A%0A———————————%0A%0AWhat%20can%20we%20help%20you%3F"
     );
   const onPlugClick = () =>
     (window.location.href = "https://wondermove.net/2232-2/");
@@ -113,8 +113,8 @@ const NavButtom = ({ onClick }) => {
         </Grid>
         <Grid container sx={classes.sKuberParent}>
           <div className={styles.sKuber}>
-            <Link className={styles.Link1} href="/S-kuber">
-              S-kuber
+            <Link className={styles.Link1} href="/Skuber">
+              Skuber
             </Link>
           </div>
           <div className={styles.pLug}>

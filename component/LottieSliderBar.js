@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 import Lottie from "lottie-react";
 import lottie1 from "../asset/1.json";
 import lottie2 from "../asset/2.json";
@@ -240,7 +240,7 @@ const LottieSliderBar = () => {
     {
       title: `Optimized\nlarge-scale service\nmanagement`,
       content:
-        "Take control with S-Kuber's intelligent services monitoring. Seamlessly oversee the flow between connected services (MSAs) and ensure reliable management of large-scale services.",
+        "Take control with Skuber's intelligent services monitoring. Seamlessly oversee the flow between connected services (MSAs) and ensure reliable management of large-scale services.",
     },
   ];
   // let currentTextIndex = 0;

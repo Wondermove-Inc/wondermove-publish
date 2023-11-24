@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import NavButtom from "../component/NavButtom";
 import Logo from "../component/Logo";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 import NavModal from "./NavModal";
 import classNames from "classnames";
 // import "../pages/skuber/hanburgers.module.css";

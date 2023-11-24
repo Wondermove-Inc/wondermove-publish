@@ -640,7 +640,7 @@ const SKuber1920: NextPage = () => {
   // const toggleSendModalVisible = () => setSendModalVisible(!sendModalVisible);
   const toggleSendModalVisible = () => {
     window.open(
-      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+      "mailto:wondermove@wondermove.net?subject=Join%20Skuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=[Your%20infomation]%0A———————————%0A>%20Country%3A%0A>%20Company%20name%3A%0A>%20Your%20Name%3A%0A———————————%0A%0AWhat%20can%20we%20help%20you%3F"
     );
   };
 
@@ -701,15 +701,15 @@ const SKuber1920: NextPage = () => {
   return (
     <>
       <Head>
-        <title>S-Kuber for your cloud management service | wondermove</title>
+        <title>Skuberfor your cloud management service | wondermove</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <meta property="og:title" content="S-kuber" />
+        <meta property="og:title" content="Skuber" />
         <meta
           property="og:description"
-          content="S-kuber for your cloud management service"
+          content="Skuber for your cloud management service"
         />
         <meta property="og:image" content="/1920_desktop/KuberOgImage.png" />
 

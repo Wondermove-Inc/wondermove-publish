@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "../pages/S-kuber/sendSuccessfully.module.css";
+import styles from "../pages/Skuber/sendSuccessfully.module.css";
 import Modal from "react-modal";
 import classNames from "classnames";
 import Link from "next/link";
@@ -27,17 +27,17 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
     : styles.getSendWrapper;
 
   const handleButtonClick = (buttonName) => {
-    if (buttonName !== "S-kuber") {
+    if (buttonName !== "Skuber") {
       alert("coming soon!!!");
     }
-    if (buttonName === "S-kuber") {
+    if (buttonName === "Skuber") {
       window.location.href = "http://s-kuber.wondermove.net";
     }
   };
 
   const onContactClick = () =>
     window.open(
-      "mailto:wondermove@wondermove.net?subject=Join%20S-kuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+      "mailto:wondermove@wondermove.net?subject=Join%20Skuber%20to%20revolutionize%20your%20cloud%20and%20cut%20costs&body=[Your%20infomation]%0A———————————%0A>%20Country%3A%0A>%20Company%20name%3A%0A>%20Your%20Name%3A%0A———————————%0A%0AWhat%20can%20we%20help%20you%3F"
     );
   const onPlugClick = () =>
     (window.location.href = "https://wondermove.net/2232-2/");
@@ -96,11 +96,11 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
         </div> */}
         <ul className={styles.getInTouchMobile}>
           <li className={styles.navS1}>
-            {/* <a onClick={() => handleButtonClick("S-kuber")}>
-              <span className={styles.navText}>S-kuber</span>
+            {/* <a onClick={() => handleButtonClick("Skuber")}>
+              <span className={styles.navText}>Skuber</span>
             </a> */}
-            <Link className={styles.Link1} href="/S-kuber">
-              S-kuber
+            <Link className={styles.Link1} href="/Skuber">
+              Skuber
             </Link>
           </li>
           <li className={styles.navS2}>

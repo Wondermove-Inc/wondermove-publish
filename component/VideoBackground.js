@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 
 const VideoBackground = () => {
   const [isMoreThenXLDesktop, setIsMoreThenXLDesktop] = useState(false);

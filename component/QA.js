@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 //import { FaPlus, FaMinus } from "react-icons/fa";
-import styles from "../pages/S-kuber/styles.module.css";
+import styles from "../pages/Skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -112,7 +112,7 @@ const QA = () => {
             <div className={styles.paymentOptionsParent}>
               <div className={styles.paymentOptions}>
                 <Grid container sx={classes.paymentOptions}>
-                  What is S-Kuber and how can it benefit my organization?
+                  What is Skuber and how can it benefit my organization?
                 </Grid>
               </div>
               <img
@@ -131,7 +131,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber is a cloud management service that helps you optimize
+                      {`Skuber is a cloud management service that helps you optimize
                 your resource costs and cloud technology utilization. By leveraging eBPF, 
                 it protects your systems against unnecessary traffic and DoS attacks, thereby utilization. By leveraging eBPF, 
                 it protects your systems against unnecessary traffic and DoS attacks, thereby reducing additional costs. Moreover, it facilitates the
@@ -152,7 +152,7 @@ const QA = () => {
             <div className={styles.paymentOptionsParent}>
               <div className={styles.paymentOptions}>
                 <Grid container sx={classes.paymentOptions}>
-                  Does S-Kuber require specialized knowledge to operate?
+                  Does Skuber require specialized knowledge to operate?
                 </Grid>
               </div>
               <img
@@ -172,7 +172,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`No, S-Kuber is designed to be accessible for all technology levels. 
+                      {`No, Skuber is designed to be accessible for all technology levels. 
                       It provides a high-level control UX that can be managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor and respond to service failures in real-time.`}
                     </p>
                   </Grid>
@@ -190,7 +190,7 @@ const QA = () => {
             <div className={styles.paymentOptionsParent}>
               <div className={styles.paymentOptions}>
                 <Grid container sx={classes.paymentOptions}>
-                  How does S-Kuber ensure cost reduction?
+                  How does Skuber ensure cost reduction?
                 </Grid>
               </div>
               <img
@@ -210,7 +210,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services. `}
+                      {`Skuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services. `}
                     </p>
                   </Grid>
                 </div>
@@ -229,7 +229,7 @@ const QA = () => {
                   container
                   sx={classes.globallyValidatedpaymentOptionsSolutions}
                 >
-                  {`What are the key features of S-Kuber's service management?`}
+                  {`What are the key features of Skuber's service management?`}
                 </Grid>
               </div>
               <img
@@ -249,7 +249,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber optimizes large-scale service management by enabling you to take control of your services with intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice aArchitectures) and ensures reliable management of large-scale services.`}
+                      {`Skuber optimizes large-scale service management by enabling you to take control of your services with intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice aArchitectures) and ensures reliable management of large-scale services.`}
                     </p>
                   </Grid>
                 </div>
@@ -265,7 +265,7 @@ const QA = () => {
             <div className={styles.paymentOptionsParent}>
               <div className={styles.paymentOptions}>
                 <Grid container sx={classes.paymentOptions}>
-                  What pricing plans does S-Kuber offer and what are their
+                  What pricing plans does Skuber offer and what are their
                   features?
                 </Grid>
               </div>
@@ -289,7 +289,7 @@ const QA = () => {
                       className={styles.solutionForYour}
                       style={{ paddingBottom: "20px" }}
                     >
-                      {`S-Kuber offers several pricing tiers, each with its own set of features : `}
+                      {`Skuber offers several pricing tiers, each with its own set of features : `}
                     </p>
                     <br />
                     <p className={styles.solutionForYour}>
@@ -321,7 +321,7 @@ const QA = () => {
             <div className={styles.paymentOptionsParent}>
               <div className={styles.paymentOptions}>
                 <Grid container sx={classes.paymentOptions}>
-                  What measures does S-Kuber take against DDoS attacks?
+                  What measures does Skuber take against DDoS attacks?
                 </Grid>
               </div>
               <img
@@ -341,7 +341,7 @@ const QA = () => {
                 <div className={styles.solutionForYour}>
                   <Grid container sx={classes.solutionForYour}>
                     <p className={styles.solutionForYour}>
-                      {`S-Kuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of requests you receive from a specific IP address.`}
+                      {`Skuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of requests you receive from a specific IP address.`}
                     </p>
                   </Grid>
                 </div>

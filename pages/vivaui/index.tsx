@@ -778,7 +778,7 @@ const VIVAUI: NextPage = () => {
 
   const onGetInTouchClick = () =>
     window.open(
-      "mailto:wondermove@wondermove.net?subject=Quickly%20turn%20your%20dream%20service%20into%20a%20reality%20with%20VIVA%20UI&body=Region%3A%0ACompany%3A%0AName%3A%0APhone%20Number%3A%0A%0AWhat%20can%20we%20help%20you%3F"
+      "mailto:wondermove@wondermove.net?subject=Quickly%20turn%20your%20dream%20service%20into%20a%20reality%20with%20VIVA%20UI&body=[Your%20infomation]%0A———————————%0A>%20Country%3A%0A>%20Company%20name%3A%0A>%20Your%20Name%3A%0A———————————%0A%0AWhat%20can%20we%20help%20you%3F"
     );
 
   return (

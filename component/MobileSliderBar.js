@@ -101,7 +101,7 @@ const MobilrSliderBar = () => {
         <div className={styles.frameWrapper1}>
           <div className={styles.frameParent1}>
             <div className={styles.withSKuberParent}>
-              <div className={styles.vcpu}>with S-kuber</div>
+              <div className={styles.vcpu}>with Skuber</div>
               <div className={styles.kubernetesSmContainer}>
                 <span>{` `}</span>
                 <span className={styles.span}>(</span>
