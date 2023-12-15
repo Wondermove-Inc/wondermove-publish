@@ -433,7 +433,7 @@ const useStyles = (theme: Theme) => ({
 
   vectorParent: {
     width: "41.25vw",
-    height: "24.583333vw",
+    // height: "24.583333vw",
     [theme.breakpoints.down("xl")]: {
       width: "41.25vw",
       height: "24.583333vw",
