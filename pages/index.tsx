@@ -16,7 +16,10 @@ import type { NextPageWithLayout } from "./_app";
 const Page: NextPageWithLayout = () => {
   const router = useRouter();
   useEffect(() => {
-    if (router.pathname === "/") router.replace("/Skuber");
+    const lowercasePath = router.pathname.toLowerCase();
+    if (lowercasePath === "/" || lowercasePath === "/s-kuber") {
+      router.replace("/Skuber");
+    }
   }, [router]);
   return <></>;
 };

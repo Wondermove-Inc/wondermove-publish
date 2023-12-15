@@ -3,16 +3,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  //
-  //   redirects: async () => {
-  //     return [
-  //       {
-  //         source: "/P-LUG",
-  //         destination: "/P-LUG",
-  //         permanent: true,
-  //       },
-  //     ];
-  //   },
+  async redirects() {
+    return [
+      {
+        source: "/s-kuber",
+        destination: "/Skuber",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
