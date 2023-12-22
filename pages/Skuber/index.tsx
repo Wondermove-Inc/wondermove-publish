@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Nav from "../../component/Nav";
 import SliderBar from "../../component/SliderBar";
-import Lottie from "lottie-react";
 import lottie1 from "../../asset/1.json";
 import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
@@ -19,16 +18,15 @@ import SolutionCost from "../../component/SolutionCost";
 import AdvantageHover from "../../component/AdvantageHover";
 import QA from "../../component/QA";
 import GetInTouch from "../../component/GetInTouch";
-import Modal from "react-modal";
 import SendMessage from "../../component/SendMessage";
 import SentSuccessfully from "../../component/SentSuccessfully";
-import NavModal from "../../component/NavModal";
 import GloballyValidated from "../../component/GloballyValidated";
 
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
-import { Controller, Scene } from "react-scrollmagic";
+import Image from "next/image";
+import { Box } from "@mui/system";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -215,7 +213,8 @@ const useStyles = (theme: Theme) => ({
 
   layer1Icon: {
     position: "relative",
-    width: "200px",
+    // width: "200px",
+    marginBottom: "40px",
     height: "22px",
     overflow: "hidden",
     flexShrink: "0",
@@ -226,6 +225,7 @@ const useStyles = (theme: Theme) => ({
   },
 
   layer1Group: {
+    width: "520px",
     overflow: "hidden",
     display: "flex",
     alignItems: "flex-start",
@@ -235,6 +235,32 @@ const useStyles = (theme: Theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       gap: "40px",
+    },
+  },
+
+  footerGroup: {
+    position: "relative",
+    overflow: "hidden",
+    display: "flex",
+    height: "100%",
+    width: "100%",
+    left: "0",
+    boxSizing: "border-box",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      gap: "40px",
+    },
+  },
+
+  footerIcon: {
+    display: "flex",
+    flexDirection: "row",
+    gap: "40px",
+    alignItems: "flex-end",
+    [theme.breakpoints.down("sm")]: {
+      gap: "26.667px",
     },
   },
 
@@ -833,7 +859,8 @@ const SKuber1920: NextPage = () => {
                   <QA />
                 </Grid>
                 <Grid container sx={classes.containerFooter}>
-                  <div className={styles.footer}>
+                  {/* <div className={styles.footer}> */}
+                  <Grid container sx={classes.footerGroup}>
                     <Grid container sx={classes.layer1Group}>
                       <Grid container sx={classes.layer1Icon}>
                         <Logo />
@@ -858,15 +885,49 @@ const SKuber1920: NextPage = () => {
                           <Grid
                             container
                             sx={classes.solutionForYourFooter}
-                          >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, South Korea `}</Grid>
+                          >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, Republic of Korea `}</Grid>
 
                           <Grid container sx={classes.solutionForYourFooter}>
-                            South Korea Use Inquiries: hawkeye@wondermove.net
+                            Use Inquiries: hawkeye@wondermove.net
                           </Grid>
                         </div>
                       </div>
                     </Grid>
-                  </div>
+                    <Box sx={classes.footerIcon}>
+                      {isSmallScreen ? (
+                        <>
+                          <Image
+                            src="/1920_desktop/Nipa.png"
+                            alt=""
+                            width="80"
+                            height="80"
+                          ></Image>
+                          <Image
+                            src="/1920_desktop/Saas.png"
+                            alt=""
+                            width="83"
+                            height="80"
+                          ></Image>
+                        </>
+                      ) : (
+                        <>
+                          <Image
+                            src="/1920_desktop/Nipa.png"
+                            alt=""
+                            width="120"
+                            height="120"
+                          ></Image>
+                          <Image
+                            src="/1920_desktop/Saas.png"
+                            alt=""
+                            width="125"
+                            height="120"
+                          ></Image>
+                        </>
+                      )}
+                    </Box>
+                  </Grid>
+                  {/* </div> */}
                 </Grid>
               </div>
             </div>
