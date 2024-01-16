@@ -81,14 +81,6 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
       }}
     >
       <div className={styles.getInTouchMobileParent}>
-        {/* <div className={styles.frameChildOffParent}>
-          <img
-            className={styles.frameChildOff}
-            alt=""
-            src="/1920_desktop/off.svg"
-            onClick={toggleNavModalVisible}
-          />
-        </div> */}
         {/* <div className={containerClass} onClick={toggleNavModalVisible}>
           <div className={styles.bar1}></div>
           <div className={styles.bar2}></div>
