@@ -9,7 +9,6 @@ import lottie1 from "../../asset/1.json";
 import lottie2 from "../../asset/2.json";
 import lottie3 from "../../asset/3.json";
 import lottie4 from "../../asset/4.json";
-import Logo from "../../component/Logo";
 
 import SolutionMenu from "../../component/SolutionMenu";
 import VideoBackground from "../../component/VideoBackground";
@@ -21,12 +20,15 @@ import GetInTouch from "../../component/GetInTouch";
 import SendMessage from "../../component/SendMessage";
 import SentSuccessfully from "../../component/SentSuccessfully";
 import GloballyValidated from "../../component/GloballyValidated";
+import Footer from "../../component/Footer";
 
-import { Grid, Typography, useMediaQuery } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
-import Image from "next/image";
-import { Box } from "@mui/system";
+// import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n/index";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -193,130 +195,7 @@ const useStyles = (theme: Theme) => ({
       padding: "80px 24px 120px",
     },
   },
-  containerFooter: {
-    justifyContent: "center",
-    padding: "80px 240px",
-    borderTop: "1px solid  rgba(255, 255, 255, 0.2)",
-    [theme.breakpoints.down("xl")]: {
-      padding: "80px 240px",
-    },
-    [theme.breakpoints.down("lg")]: {
-      padding: "80px 120px",
-    },
-    [theme.breakpoints.down("md")]: {
-      padding: "80px 60px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      padding: " 60px 24px 80px",
-    },
-  },
 
-  layer1Icon: {
-    position: "relative",
-    // width: "200px",
-    marginBottom: "40px",
-    height: "22px",
-    overflow: "hidden",
-    flexShrink: "0",
-    [theme.breakpoints.down("xl")]: {},
-    [theme.breakpoints.down("lg")]: {},
-    [theme.breakpoints.down("md")]: {},
-    [theme.breakpoints.down("sm")]: {},
-  },
-
-  layer1Group: {
-    width: "520px",
-    overflow: "hidden",
-    display: "flex",
-    alignItems: "flex-start",
-    alignSelf: "stretch",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      gap: "40px",
-    },
-  },
-
-  footerGroup: {
-    position: "relative",
-    overflow: "hidden",
-    display: "flex",
-    height: "100%",
-    width: "100%",
-    left: "0",
-    boxSizing: "border-box",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      gap: "40px",
-    },
-  },
-
-  footerIcon: {
-    display: "flex",
-    flexDirection: "row",
-    gap: "40px",
-    alignItems: "flex-end",
-    [theme.breakpoints.down("sm")]: {
-      gap: "26.667px",
-    },
-  },
-
-  howManyVcpus: {
-    position: "relative",
-    alignSelf: "stretch",
-    lineHeight: "32px",
-    fontWeight: "500",
-    fontSize: "18px",
-    [theme.breakpoints.down("xl")]: {
-      // fontSize: "0.9375vw",
-      fontSize: "18px",
-    },
-    [theme.breakpoints.down("lg")]: {
-      // fontSize: "1.25vw",
-      fontSize: "18px",
-    },
-    [theme.breakpoints.down("md")]: {
-      // fontSize: "1.757812vw",
-      fontSize: "18px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      // fontSize: "2.333333vw",
-      fontSize: "14px",
-      lineHeight: "24px",
-    },
-  },
-
-  solutionForYourFooter: {
-    margin: "0",
-    fontFamily: "Montserrat",
-    fontStyle: "normal",
-    fontWeight: "500",
-    fontSize: "14px",
-    lineHeight: "32px",
-    letterSpacing: "0px",
-    textAlign: "left",
-    color: "#ccc",
-    [theme.breakpoints.down("xl")]: {
-      // fontSize: "0.052083vw",
-      fontSize: "14px",
-    },
-    [theme.breakpoints.down("lg")]: {
-      // fontSize: "0.972222vw",
-      fontSize: "14px",
-    },
-    [theme.breakpoints.down("md")]: {
-      // fontSize: "1.367188vw",
-      fontSize: "14px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      // fontSize: "2.333333vw",
-      fontSize: "14px",
-      lineHeight: "24px",
-    },
-  },
   wonderAbout1: {
     display: "flex",
     flexDirection: "row",
@@ -605,12 +484,14 @@ const useStyles = (theme: Theme) => ({
     fontSize: "42px",
     lineHeight: "51px",
     fontWeight: "600",
+    width: "700px",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       fontSize: "28px",
       lineHeight: "40px",
+      width: "295px",
     },
   },
 });
@@ -638,6 +519,7 @@ const lottieDataArray = [
 const pages = ["", "", "", ""];
 
 const SKuber1920: NextPage = () => {
+  const { t } = useTranslation();
   const classes = useStyles(theme);
   const [sendModalVisible, setSendModalVisible] = useState(false);
   const [successModalVisible, setSuccessModalVisible] = useState(false);
@@ -725,9 +607,9 @@ const SKuber1920: NextPage = () => {
   }, []);
 
   return (
-    <>
+    <I18nextProvider i18n={i18n}>
       <Head>
-        <title>Skuberfor your cloud management service | wondermove</title>
+        <title>Skuber for your cloud management service | wondermove</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -762,16 +644,19 @@ const SKuber1920: NextPage = () => {
                       >
                         {isSmallScreen ? (
                           <>
-                            Solution for
+                            {t("skuber-page.smallscreen-title.first-part")}
                             <br />
-                            Your Cloud <br />
-                            Strategy and Costs
+                            {t(
+                              "skuber-page.smallscreen-title.second-part"
+                            )}{" "}
+                            <br />
+                            {t("skuber-page.smallscreen-title.third-part")}
                           </>
                         ) : (
                           <>
-                            Solution for Your
+                            {t("skuber-page.main-title")}
                             <br />
-                            Cloud Strategy and Costs
+                            {t("skuber-page.sub-title")}
                           </>
                         )}
                       </Typography>
@@ -783,8 +668,23 @@ const SKuber1920: NextPage = () => {
                       >
                         <div className={styles.wonderAboutCuttingContainer}>
                           <Grid container sx={classes.wonderAboutText}>
-                            Wonder about <br />
-                            cutting your cloud costs?
+                            {isSmallScreen ? (
+                              <>
+                                {t(
+                                  "skuber-page.slider-bar.smallscreen-title.first-part"
+                                )}
+                                <br />
+                                {t(
+                                  "skuber-page.slider-bar.smallscreen-title.second-part"
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                {t("skuber-page.slider-bar.main-title")}
+                                <br />
+                                {t("skuber-page.slider-bar.sub-title")}
+                              </>
+                            )}
                           </Grid>
                         </div>
 
@@ -811,29 +711,37 @@ const SKuber1920: NextPage = () => {
                   <div className={styles.pricingParent}>
                     <div className={styles.pricing}>
                       <Grid container sx={classes.pricing}>
-                        Pricing
+                        {t("skuber-page.cost.main-title")}
                       </Grid>
                     </div>
                     <div
                       className={styles.experienceTheNextGenerationContainer}
                     >
-                      <Grid
-                        container
+                      <Typography
                         sx={classes.experienceTheNextGenerationContainer}
                       >
                         {isSmallScreen ? (
-                          <div className={styles.wonderAbout}>
-                            Experience <br />
-                            the Next-Generation <br />
-                            Cloud Solution?
-                          </div>
+                          <>
+                            {t(
+                              "skuber-page.cost.smallscreen-sub-title.experience"
+                            )}
+                            <br />
+                            {t(
+                              "skuber-page.cost.smallscreen-sub-title.next-generation"
+                            )}
+                            <br />
+                            {t(
+                              "skuber-page.cost.smallscreen-sub-title.cloud-solution"
+                            )}
+                          </>
                         ) : (
-                          <div className={styles.wonderAbout}>
-                            Experience the Next-Generation <br />
-                            Cloud Solution?
-                          </div>
+                          <>
+                            {t("skuber-page.cost.first-sub-title")}
+                            <br />
+                            {t("skuber-page.cost.second-sub-title")}
+                          </>
                         )}
-                      </Grid>
+                      </Typography>
                     </div>
                   </div>
                   <div className={styles.groupParent3}>
@@ -858,77 +766,7 @@ const SKuber1920: NextPage = () => {
                 <Grid container sx={classes.containerQA}>
                   <QA />
                 </Grid>
-                <Grid container sx={classes.containerFooter}>
-                  {/* <div className={styles.footer}> */}
-                  <Grid container sx={classes.footerGroup}>
-                    <Grid container sx={classes.layer1Group}>
-                      <Grid container sx={classes.layer1Icon}>
-                        <Logo />
-                      </Grid>
-                      <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                        <div>
-                          <Grid container sx={classes.howManyVcpus}>
-                            wondermove Spin-off of Hyundai Motor Company
-                          </Grid>
-                        </div>
-                        <div className={styles.wondermoveIncContainer}>
-                          <Grid
-                            container
-                            sx={classes.solutionForYourFooter}
-                          >{`wondermove Inc. `}</Grid>
-
-                          <Grid
-                            container
-                            sx={classes.solutionForYourFooter}
-                          >{` Business Registration Number: 518-81-01644`}</Grid>
-
-                          <Grid
-                            container
-                            sx={classes.solutionForYourFooter}
-                          >{` Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, Republic of Korea `}</Grid>
-
-                          <Grid container sx={classes.solutionForYourFooter}>
-                            Use Inquiries: hawkeye@wondermove.net
-                          </Grid>
-                        </div>
-                      </div>
-                    </Grid>
-                    <Box sx={classes.footerIcon}>
-                      {isSmallScreen ? (
-                        <>
-                          <Image
-                            src="/1920_desktop/Nipa.png"
-                            alt=""
-                            width="80"
-                            height="80"
-                          ></Image>
-                          <Image
-                            src="/1920_desktop/Saas.png"
-                            alt=""
-                            width="83"
-                            height="80"
-                          ></Image>
-                        </>
-                      ) : (
-                        <>
-                          <Image
-                            src="/1920_desktop/Nipa.png"
-                            alt=""
-                            width="120"
-                            height="120"
-                          ></Image>
-                          <Image
-                            src="/1920_desktop/Saas.png"
-                            alt=""
-                            width="125"
-                            height="120"
-                          ></Image>
-                        </>
-                      )}
-                    </Box>
-                  </Grid>
-                  {/* </div> */}
-                </Grid>
+                <Footer />
               </div>
             </div>
           </div>
@@ -951,7 +789,7 @@ const SKuber1920: NextPage = () => {
           />
         </div>
       </ThemeProvider>
-    </>
+    </I18nextProvider>
   );
 };
 

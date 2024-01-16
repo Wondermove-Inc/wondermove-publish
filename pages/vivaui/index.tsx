@@ -11,6 +11,11 @@ import { Theme } from "@mui/material/styles";
 import { Controller, Scene } from "react-scrollmagic";
 import InnerContainer from "../../component/vivaui/InnerContainer";
 import { style } from "@mui/system";
+import Footer from "../../component/Footer";
+
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n/index";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -100,6 +105,7 @@ const useStyles = (theme: Theme) => ({
     lineHeight: "68px",
     fontWeight: "600",
     textAlign: "start",
+    width: "340px",
     [theme.breakpoints.down("xl")]: {
       fontSize: "44px",
       lineHeight: "58px",
@@ -758,6 +764,7 @@ const useStyles = (theme: Theme) => ({
 });
 
 const VIVAUI: NextPage = () => {
+  const { t } = useTranslation();
   const classes = useStyles(theme);
   const [navModalVisible, setNavModalVisible] = useState(false);
   const [isMdallScreen, setIsMdallScreen] = useState(false);
@@ -782,7 +789,7 @@ const VIVAUI: NextPage = () => {
     );
 
   return (
-    <>
+    <I18nextProvider i18n={i18n}>
       <Head>
         <title>VIVA UI React Native UI Framework | wondermove</title>
         <meta
@@ -815,21 +822,20 @@ const VIVAUI: NextPage = () => {
                     <div className={styles.reactNativeUiContainer}>
                       <Grid container sx={classes.reactNativeUiContainer}>
                         <p className={styles.reactNative}>
-                          React Native <br /> UI Framework
+                          {t("vivaui.main-title")}
                         </p>
                       </Grid>
                     </div>
                     <b className={styles.vivaUi16}>
                       <Grid container sx={classes.vivaUi16}>
-                        VIVA UI 1.6
+                        {t("vivaui.sub-title")}
                       </Grid>
                     </b>
                   </Grid>
                 </div>
                 <div className={styles.aReactNative}>
                   <Grid container sx={classes.aReactNative}>
-                    A React Native UI framework for creating flawless
-                    cross-platform mobile applications.
+                    {t("vivaui.description")}
                   </Grid>
                 </div>
               </Grid>
@@ -841,7 +847,7 @@ const VIVAUI: NextPage = () => {
             >
               <b className={styles.getInTouch}>
                 <Grid container sx={classes.getInTouch}>
-                  Get in touch
+                  {t("common.contact.send-email-button")}
                 </Grid>
               </b>
             </div>
@@ -858,11 +864,6 @@ const VIVAUI: NextPage = () => {
               width={800}
               height={100}
             />
-            {/* <img
-              className={styles.groupChild5}
-              alt=""
-              src="/viva/bigMainImage.png"
-            /> */}
           </Grid>
         </div>
 
@@ -889,15 +890,14 @@ const VIVAUI: NextPage = () => {
                     <div className={styles.allTheServiceContainer}>
                       <Grid container sx={classes.allTheServiceContainer}>
                         <b>
-                          {`All the service modules for your business are ready `}{" "}
+                          {t("vivaui.service-slogen")}
                           <i className={styles.i}>!</i>
                         </b>
                       </Grid>
                     </div>
                     <div className={styles.bringYourEnvisioned}>
                       <Grid container sx={classes.bringYourEnvisioned}>
-                        Bring your envisioned business to life by combining
-                        service modules.
+                        {t("vivaui.service-description")}
                       </Grid>
                     </div>
                   </div>
@@ -925,14 +925,12 @@ const VIVAUI: NextPage = () => {
                           <Grid container sx={classes.multiOsSupportParent}>
                             <b className={styles.multiOsSupport}>
                               <Grid container sx={classes.multiOsSupport}>
-                                Multi-OS support
+                                {t("vivaui.support-title")}
                               </Grid>
                             </b>
                             <div className={styles.oneSourceTo}>
                               <Grid container sx={classes.oneSourceTo}>
-                                One source to support iOS, AOS. Easily deploy
-                                services up to date, reducing resources for
-                                operations.
+                                {t("vivaui.support-description")}
                               </Grid>
                             </div>
                           </Grid>
@@ -997,12 +995,12 @@ const VIVAUI: NextPage = () => {
                                 container
                                 sx={classes.wellStructuredDesignContainer}
                               >
-                                <p
-                                  className={styles.wellStructured}
-                                >{`Well-structured `}</p>
-                                <p
-                                  className={styles.reactNative}
-                                >{`  design system`}</p>
+                                <p className={styles.wellStructured}>
+                                  {t("vivaui.design-title-one")}
+                                </p>
+                                <p className={styles.reactNative}>
+                                  {t("vivaui.design-title-two")}
+                                </p>
                               </Grid>
                             </b>
                             <div
@@ -1014,15 +1012,16 @@ const VIVAUI: NextPage = () => {
                                 container
                                 sx={classes.designSystemBasedModulesContainer}
                               >
-                                <p
-                                  className={styles.reactNative}
-                                >{`Design system-based modules `}</p>
-                                <p
-                                  className={styles.reactNative}
-                                >{`    make customization easy to match`}</p>
                                 <p className={styles.reactNative}>
-                                  {" "}
-                                  {`      your brand style.`}
+                                  {t("vivaui.design-description-one")}
+                                </p>
+                                <p className={styles.reactNative}>
+                                  {`  `}
+                                  {t("vivaui.design-description-two")}
+                                </p>
+                                <p className={styles.reactNative}>
+                                  {`    `}
+                                  {t("vivaui.design-description-three")}
                                 </p>
                               </Grid>
                             </div>
@@ -1055,15 +1054,12 @@ const VIVAUI: NextPage = () => {
                       <Grid container sx={classes.eastToImplement}>
                         <b className={styles.eastToImplement}>
                           <Grid container sx={classes.eastToImplement}>
-                            East to implement
+                            {t("vivaui.implement-title")}
                           </Grid>
                         </b>
                         <div className={styles.theFrameworkIs}>
                           <Grid container sx={classes.theFrameworkIs}>
-                            The framework is delivered on a
-                            component-by-component basis, allowing you to
-                            quickly build services by mixing and matching the
-                            features you want.
+                            {t("vivaui.implement-description")}
                           </Grid>
                         </div>
                       </Grid>
@@ -1094,8 +1090,12 @@ const VIVAUI: NextPage = () => {
                       </Grid>
                       <div className={styles.buildFasterWithContainer}>
                         <Grid container sx={classes.buildFasterWithContainer}>
-                          <p className={styles.reactNative}>Build faster</p>
-                          <p className={styles.reactNative}>with VIVA UI</p>
+                          <p className={styles.reactNative}>
+                            {t("vivaui.build-faster-title")}
+                          </p>
+                          <p className={styles.reactNative}>
+                            {t("vivaui.with-vivaui")}
+                          </p>
                         </Grid>
                       </div>
                     </Grid>
@@ -1105,9 +1105,6 @@ const VIVAUI: NextPage = () => {
             </Grid>
           </div>
         )}
-        {/*  */}
-
-        {/*  */}
         <Grid container sx={classes.footerC}>
           <div className={styles.vivaUiInner}>
             <Grid container sx={classes.vivaUiInner}>
@@ -1116,8 +1113,7 @@ const VIVAUI: NextPage = () => {
                   <div className={styles.reactNativeUiContainer}>
                     <Grid container sx={classes.reactNativeUiContainer2}>
                       <p className={styles.quicklyTurnYour}>
-                        Quickly turn your dream service into a reality with VIVA
-                        UI
+                        {t("vivaui.slogen")}
                       </p>
                     </Grid>
                   </div>
@@ -1127,59 +1123,8 @@ const VIVAUI: NextPage = () => {
                     style={{ cursor: "pointer" }}
                   >
                     <Grid container sx={classes.getInTouchContainer}>
-                      <div className={styles.getInTouch1}>Get in touch</div>
-                    </Grid>
-                  </div>
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-
-          <div className={styles.footer}>
-            <Grid container sx={classes.footer}>
-              <div className={styles.layer1Parent}>
-                <Grid container sx={classes.layer1Parent}>
-                  <a
-                    href="https://wondermove.net/intro/"
-                    style={{
-                      color: "inherit",
-                      textDecoration: "none",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <Image
-                      className={styles.layer1Icon}
-                      alt=""
-                      src="/viva/layer-1.svg"
-                      width={800}
-                      height={100}
-                    />
-                  </a>
-                  {/* <img
-                    className={styles.layer1Icon}
-                    alt=""
-                    src="/viva/layer-1.svg"
-                  /> */}
-                  <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                    <Grid
-                      container
-                      sx={classes.wondermoveSpinOffOfHyundaiParent}
-                    >
-                      <div className={styles.wondermoveSpinOffOf}>
-                        wondermove Spin-off of Hyundai Motor Company
-                      </div>
-                      <div className={styles.wondermoveIncBusinessContainer}>
-                        <p className={styles.reactNative}>wondermove Inc.</p>
-                        <p className={styles.reactNative}>
-                          Business Registration Number: 518-81-01644
-                        </p>
-                        <p className={styles.reactNative}>
-                          Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu,
-                          Seoul, Republic of Korea
-                        </p>
-                        <p className={styles.reactNative}>
-                          Use Inquiries: hawkeye@wondermove.net
-                        </p>
+                      <div className={styles.getInTouch1}>
+                        {t("common.contact.send-email-button")}
                       </div>
                     </Grid>
                   </div>
@@ -1187,9 +1132,10 @@ const VIVAUI: NextPage = () => {
               </div>
             </Grid>
           </div>
+          <Footer />
         </Grid>
       </div>
-    </>
+    </I18nextProvider>
   );
 };
 
