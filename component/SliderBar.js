@@ -7,6 +7,9 @@ import costData from "../asset/costData.json";
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n/index";
 
 const theme = createTheme({
   breakpoints: {
@@ -288,6 +291,7 @@ const StyledSlider = styled(ReactSlider)`
 `;
 
 const HowManyVcpus = () => {
+  const { t } = useTranslation();
   const [vcpuList, setVcpuList] = useState([]);
   const [ramList, setRamList] = useState([]);
   const [slideValue, setSlideValue] = useState(0);
@@ -331,189 +335,191 @@ const HowManyVcpus = () => {
   }, [slideValue]);
 
   return (
-    <div className={styles.frameParent}>
-      <Grid container sx={classes.frameParent}>
-        {/* <div className={styles.frameParent}> */}
+    <I18nextProvider i18n={i18n}>
+      <div className={styles.frameParent}>
+        <Grid container sx={classes.frameParent}>
+          {/* <div className={styles.frameParent}> */}
 
-        <div className={styles.frameGroup}>
-          <Grid container sx={classes.frameGroup}>
-            <div className={styles.howManyVcpusParent}>
-              <div>
-                <Grid container sx={classes.howManyVcpus1}>
-                  How many vCPUs?
-                </Grid>
-              </div>
-              <div>
-                <Grid container sx={classes.iconCpuParent}>
-                  <img
-                    className={styles.iconCpu}
-                    alt=""
-                    src="/1920_desktop/-icon-cpu.svg"
-                  />
-                  {selectedMark && (
-                    <div className={styles.selectedMark}>
-                      {selectedMark} vCPU
-                    </div>
-                  )}
-                </Grid>
-              </div>
-
-              <StyledSlider
-                className={styles.customSlider}
-                thumbClassName={styles.customSlider_thumb}
-                trackClassName={styles.customSlider_track}
-                markClassName={styles.customSlider_mark}
-                step={1}
-                marks={vcpuList}
-                min={0}
-                max={vcpuList.length - 1}
-                renderMark={renderMark}
-                value={slideValue}
-                onChange={handleSlideChange}
-              />
-            </div>
-            <div className={styles.howManyVcpusParent}>
-              <div>
-                <Grid container sx={classes.howManyVcpus1}>
-                  How much RAM?
-                </Grid>
-              </div>
-
-              <div className={styles.component191Parent}>
-                <Grid container sx={classes.component191Parent}>
-                  {ramList.map((item, index) => (
-                    <Grid item key={index}>
-                      <div
-                        onClick={() => setSelectedRam(item)}
-                        className={
-                          selectedRam.RAM == item.RAM
-                            ? styles.component191
-                            : styles.component192
-                        }
-                      >
-                        <Grid container sx={classes.component191}>
-                          <img
-                            className={styles.iconRam2}
-                            alt=""
-                            src="/1920_desktop/-icon-ram-2.svg"
-                          />{" "}
-                          <div
-                            className={styles.text}
-                            style={{ cursor: "pointer" }}
-                          >
-                            <Grid container sx={classes.text}>
-                              {item.RAM} GB{" "}
-                            </Grid>{" "}
-                          </div>
-                        </Grid>
+          <div className={styles.frameGroup}>
+            <Grid container sx={classes.frameGroup}>
+              <div className={styles.howManyVcpusParent}>
+                <div>
+                  <Grid container sx={classes.howManyVcpus1}>
+                    {t("skuber-page.slider-bar.left-body.vcpu")}
+                  </Grid>
+                </div>
+                <div>
+                  <Grid container sx={classes.iconCpuParent}>
+                    <img
+                      className={styles.iconCpu}
+                      alt=""
+                      src="/1920_desktop/-icon-cpu.svg"
+                    />
+                    {selectedMark && (
+                      <div className={styles.selectedMark}>
+                        {selectedMark} vCPU
                       </div>
-                    </Grid>
-                  ))}
-                </Grid>
+                    )}
+                  </Grid>
+                </div>
+
+                <StyledSlider
+                  className={styles.customSlider}
+                  thumbClassName={styles.customSlider_thumb}
+                  trackClassName={styles.customSlider_track}
+                  markClassName={styles.customSlider_mark}
+                  step={1}
+                  marks={vcpuList}
+                  min={0}
+                  max={vcpuList.length - 1}
+                  renderMark={renderMark}
+                  value={slideValue}
+                  onChange={handleSlideChange}
+                />
               </div>
-            </div>
-          </Grid>
-        </div>
-
-        <div className={styles.frameChild} />
-
-        <div className={styles.frameDiv}>
-          <div className={styles.frameWrapper1}>
-            <Grid container sx={classes.frameWrapper1}>
-              <div className={styles.frameParent1}>
-                <div className={styles.withSKuberParent}>
-                  <div>
-                    <Grid container sx={classes.vcpuText}>
-                      with Skuber
-                    </Grid>
-                  </div>
-                  <div>
-                    <Grid container sx={classes.kubernetesSmContainer}>
-                      <span>{` `}</span>
-                      <span className={styles.span}>(</span>
-                      <span className={styles.kubernetesSm}>
-                        Kubernetes + SM + eBPF)
-                      </span>
-                    </Grid>
-                  </div>
+              <div className={styles.howManyVcpusParent}>
+                <div>
+                  <Grid container sx={classes.howManyVcpus1}>
+                    {t("skuber-page.slider-bar.left-body.ram")}
+                  </Grid>
                 </div>
-                <div className={styles.parent}>
-                  <div className={styles.vcpu}>
-                    <Grid container sx={classes.vcpu}>
-                      $
-                      {selectedRam.maxCostAfterIntroduction
-                        ? parseInt(
-                            selectedRam.maxCostAfterIntroduction / 12
-                          ).toLocaleString("en-US")
-                        : parseInt(2087).toLocaleString("en-US")}
-                    </Grid>
-                  </div>
-                  <div className={styles.perMonth}>
-                    <Grid container sx={classes.perMonth}>
-                      per month
-                    </Grid>
-                  </div>
-                </div>
-                <div className={styles.costReduction}>
-                  <Grid container sx={classes.costReduction}>
-                    $
-                    {selectedRam.savings
-                      ? parseInt(selectedRam.savings / 12).toLocaleString(
-                          "en-US"
-                        )
-                      : parseInt(1708).toLocaleString("en-US")}
-                    (
-                    {selectedRam.savings || selectedRam.maxOriginalCost
-                      ? parseFloat(
-                          (
-                            (selectedRam.savings * 100) /
-                            selectedRam.maxOriginalCost
-                          ).toFixed(1)
-                        )
-                      : 45}
-                    %) cost reduction
+
+                <div className={styles.component191Parent}>
+                  <Grid container sx={classes.component191Parent}>
+                    {ramList.map((item, index) => (
+                      <Grid item key={index}>
+                        <div
+                          onClick={() => setSelectedRam(item)}
+                          className={
+                            selectedRam.RAM == item.RAM
+                              ? styles.component191
+                              : styles.component192
+                          }
+                        >
+                          <Grid container sx={classes.component191}>
+                            <img
+                              className={styles.iconRam2}
+                              alt=""
+                              src="/1920_desktop/-icon-ram-2.svg"
+                            />{" "}
+                            <div
+                              className={styles.text}
+                              style={{ cursor: "pointer" }}
+                            >
+                              <Grid container sx={classes.text}>
+                                {item.RAM} GB{" "}
+                              </Grid>{" "}
+                            </div>
+                          </Grid>
+                        </div>
+                      </Grid>
+                    ))}
                   </Grid>
                 </div>
               </div>
             </Grid>
           </div>
-          <div className={styles.virtualMachineParent}>
-            <div className={styles.textV}>
-              <Grid container sx={classes.textV}>
-                Virtual machine
+
+          <div className={styles.frameChild} />
+
+          <div className={styles.frameDiv}>
+            <div className={styles.frameWrapper1}>
+              <Grid container sx={classes.frameWrapper1}>
+                <div className={styles.frameParent1}>
+                  <div className={styles.withSKuberParent}>
+                    <div>
+                      <Grid container sx={classes.vcpuText}>
+                        {t("skuber-page.slider-bar.right-body-with")}
+                      </Grid>
+                    </div>
+                    <div>
+                      <Grid container sx={classes.kubernetesSmContainer}>
+                        <span className={styles.span}>(</span>
+                        <span className={styles.kubernetesSm}>
+                          {t("skuber-page.slider-bar.right-body-kuber")} + SM +
+                          eBPF)
+                        </span>
+                      </Grid>
+                    </div>
+                  </div>
+                  <div className={styles.parent}>
+                    <div className={styles.vcpu}>
+                      <Grid container sx={classes.vcpu}>
+                        $
+                        {selectedRam.maxCostAfterIntroduction
+                          ? parseInt(
+                              selectedRam.maxCostAfterIntroduction / 12
+                            ).toLocaleString("en-US")
+                          : parseInt(2087).toLocaleString("en-US")}
+                      </Grid>
+                    </div>
+                    <div className={styles.perMonth}>
+                      <Grid container sx={classes.perMonth}>
+                        {t("common.per-month")}
+                      </Grid>
+                    </div>
+                  </div>
+                  <div className={styles.costReduction}>
+                    <Grid container sx={classes.costReduction}>
+                      $
+                      {selectedRam.savings
+                        ? parseInt(selectedRam.savings / 12).toLocaleString(
+                            "en-US"
+                          )
+                        : parseInt(1708).toLocaleString("en-US")}
+                      (
+                      {selectedRam.savings || selectedRam.maxOriginalCost
+                        ? parseFloat(
+                            (
+                              (selectedRam.savings * 100) /
+                              selectedRam.maxOriginalCost
+                            ).toFixed(1)
+                          )
+                        : 45}
+                      %) {t("skuber-page.slider-bar.right-body-cost")}
+                    </Grid>
+                  </div>
+                </div>
               </Grid>
             </div>
-            <div className={styles.group}>
-              <div className={styles.vcpuVirtual}>
-                <Grid container sx={classes.vcpuVirtual}>
-                  $
-                  {selectedRam.maxOriginalCost
-                    ? parseInt(selectedRam.maxOriginalCost / 12).toLocaleString(
-                        "en-US"
-                      )
-                    : parseInt(3796).toLocaleString("en-US")}
+            <div className={styles.virtualMachineParent}>
+              <div className={styles.textV}>
+                <Grid container sx={classes.textV}>
+                  {t("skuber-page.slider-bar.right-body-virtual")}
                 </Grid>
               </div>
-              <div className={styles.perMonth1}>
-                <Grid container sx={classes.perMonth1}>
-                  per month
-                </Grid>
+              <div className={styles.group}>
+                <div className={styles.vcpuVirtual}>
+                  <Grid container sx={classes.vcpuVirtual}>
+                    $
+                    {selectedRam.maxOriginalCost
+                      ? parseInt(
+                          selectedRam.maxOriginalCost / 12
+                        ).toLocaleString("en-US")
+                      : parseInt(3796).toLocaleString("en-US")}
+                  </Grid>
+                </div>
+                <div className={styles.perMonth1}>
+                  <Grid container sx={classes.perMonth1}>
+                    {t("common.per-month")}
+                  </Grid>
+                </div>
               </div>
             </div>
+            <div className={styles.basedOnUsingContainer}>
+              <Grid container sx={classes.basedOnUsingContainer}>
+                <div>
+                  * {t("skuber-page.slider-bar.right-footer.first-part")} <br />{" "}
+                  * {t("skuber-page.slider-bar.right-footer.second-part")}
+                </div>
+              </Grid>
+            </div>
           </div>
-          <div className={styles.basedOnUsingContainer}>
-            <Grid container sx={classes.basedOnUsingContainer}>
-              <div>
-                * Based on using 100 VMs <br /> * This is an approximate figure
-                and may differ from the actual amount
-              </div>
-            </Grid>
-          </div>
-        </div>
 
-        {/* </div> */}
-      </Grid>
-    </div>
+          {/* </div> */}
+        </Grid>
+      </div>
+    </I18nextProvider>
   );
 };
 

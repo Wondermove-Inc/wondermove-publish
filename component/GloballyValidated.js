@@ -5,6 +5,9 @@ import styles from "../pages/Skuber/styles.module.css";
 import { Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n/index";
 
 const theme = createTheme({
   breakpoints: {
@@ -190,6 +193,7 @@ const useStyles = (theme) => ({
 const classes = useStyles(theme);
 
 function GloballyValidated() {
+  const { t } = useTranslation();
   const [isXlallScreen, setIsXlallScreen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -222,69 +226,68 @@ function GloballyValidated() {
   }, []);
 
   return (
-    <div className={styles.containerGloballyValidated}>
-      <Grid container sx={classes.containerGloballyValidated}>
-        <div className={styles.groupDiv}>
-          <div className={styles.frameWrapper2}>
-            <div className={styles.globallyValidatedSolutionsParent}>
-              <div className={styles.globallyValidatedSolutions}>
-                <Grid container sx={classes.globallyValidatedSolutions}>
-                  Globally validated solutions
-                </Grid>
-              </div>
-              <div className={styles.rectangleGroup}>
-                <div className={styles.rectangleDiv} />
-
-                <div className={styles.runningASuccessfulProofOfParent}>
-                  <Grid container sx={classes.wonderAbout1}>
-                    <div className={styles.vcpuRunning}>
-                      <Grid container sx={classes.wonderAbout}>
-                        <div>
-                          Running a successful proof of concept in 4 European
-                          countries with
-                        </div>
-                      </Grid>
-                    </div>
-                    <div
-                      className={
-                        isDesktop
-                          ? styles.companyContainerMoreThenLg
-                          : styles.companyContainer
-                      }
-                    >
-                      <Grid container sx={classes.companyContainer}>
-                        <div className={styles.icon}>
-                          <Grid container sx={classes.container}>
-                            <Grid container sx={classes.icon}>
-                              <img
-                                className={styles.iconC}
-                                alt=""
-                                src="/1920_desktop/--2.svg"
-                              />
-                            </Grid>
-                          </Grid>
-                        </div>
-                        <div className={styles.image646Icon}>
-                          <Grid container sx={classes.container}>
-                            <Grid container sx={classes.image646Icon}>
-                              <img
-                                className={styles.image646IconC}
-                                alt=""
-                                src="/1920_desktop/auto.png"
-                              />
-                            </Grid>
-                          </Grid>
-                        </div>
-                      </Grid>
-                    </div>
+    <I18nextProvider i18n={i18n}>
+      <div className={styles.containerGloballyValidated}>
+        <Grid container sx={classes.containerGloballyValidated}>
+          <div className={styles.groupDiv}>
+            <div className={styles.frameWrapper2}>
+              <div className={styles.globallyValidatedSolutionsParent}>
+                <div className={styles.globallyValidatedSolutions}>
+                  <Grid container sx={classes.globallyValidatedSolutions}>
+                    {t("skuber-page.global-validated.title")}
                   </Grid>
+                </div>
+                <div className={styles.rectangleGroup}>
+                  <div className={styles.rectangleDiv} />
+
+                  <div className={styles.runningASuccessfulProofOfParent}>
+                    <Grid container sx={classes.wonderAbout1}>
+                      <div className={styles.vcpuRunning}>
+                        <Grid container sx={classes.wonderAbout}>
+                          {t("skuber-page.global-validated.description")}
+                        </Grid>
+                      </div>
+                      <div
+                        className={
+                          isDesktop
+                            ? styles.companyContainerMoreThenLg
+                            : styles.companyContainer
+                        }
+                      >
+                        <Grid container sx={classes.companyContainer}>
+                          <div className={styles.icon}>
+                            <Grid container sx={classes.container}>
+                              <Grid container sx={classes.icon}>
+                                <img
+                                  className={styles.iconC}
+                                  alt=""
+                                  src="/1920_desktop/--2.svg"
+                                />
+                              </Grid>
+                            </Grid>
+                          </div>
+                          <div className={styles.image646Icon}>
+                            <Grid container sx={classes.container}>
+                              <Grid container sx={classes.image646Icon}>
+                                <img
+                                  className={styles.image646IconC}
+                                  alt=""
+                                  src="/1920_desktop/auto.png"
+                                />
+                              </Grid>
+                            </Grid>
+                          </div>
+                        </Grid>
+                      </div>
+                    </Grid>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </Grid>
-    </div>
+        </Grid>
+      </div>
+    </I18nextProvider>
   );
 }
 

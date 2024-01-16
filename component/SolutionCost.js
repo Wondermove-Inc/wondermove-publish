@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "../pages/Skuber/styles.module.css";
-import { Grid, useMediaQuery } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Theme } from "@mui/material/styles";
-import { height } from "@mui/system";
-import Image from "next/image";
+import { Grid } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n/index";
 
 const theme = createTheme({
   breakpoints: {
@@ -327,6 +328,7 @@ const useStyles = (theme) => ({
 const classes = useStyles(theme);
 
 const SolutionCost = () => {
+  const { t } = useTranslation();
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
@@ -356,424 +358,422 @@ const SolutionCost = () => {
   const onClickItem = (index) => setSelectedItem(index);
 
   return (
-    <div>
-      <Grid container sx={classes.frameWrapper4}>
-        {/* <div className={styles.frameWrapper4}> */}
+    <I18nextProvider i18n={i18n}>
+      <div>
+        <Grid container sx={classes.frameWrapper4}>
+          {/* <div className={styles.frameWrapper4}> */}
 
-        <div
-          className={`${
-            selectedItem === 0 || isHovered1
-              ? styles.frameParent28
-              : styles.frameParent26
-          }`}
-          onMouseEnter={() => {
-            setIsHovered1(true);
-            setSelectedItem(null);
-          }}
-          onMouseLeave={() => setIsHovered1(false)}
-          onClick={() => onClickItem(0)}
-        >
-          <Grid container sx={classes.freeParent}>
-            {/* <div className={styles.freeParent}> */}
-            <div className={styles.pricingTit}>
-              <Grid container sx={classes.pricingTit}>
-                Free
-              </Grid>
-            </div>
-            <div className={styles.frameParent30}>
-              {/* <div className={styles.xVcpuParent}> */}
-              <Grid container sx={classes.xVcpuParent1}>
-                <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu2}>
-                    $0
-                  </Grid>
-                </div>
-                <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFeesOne}>
-                    <Grid container sx={classes.noMonthlyFees}>
-                      No monthly fees
+          <div
+            className={`${
+              selectedItem === 0 || isHovered1
+                ? styles.frameParent28
+                : styles.frameParent26
+            }`}
+            onMouseEnter={() => {
+              setIsHovered1(true);
+              setSelectedItem(null);
+            }}
+            onMouseLeave={() => setIsHovered1(false)}
+            onClick={() => onClickItem(0)}
+          >
+            <Grid container sx={classes.freeParent}>
+              {/* <div className={styles.freeParent}> */}
+              <div className={styles.pricingTit}>
+                <Grid container sx={classes.pricingTit}>
+                  {t("skuber-page.cost.category.free")}
+                </Grid>
+              </div>
+              <div className={styles.frameParent30}>
+                {/* <div className={styles.xVcpuParent}> */}
+                <Grid container sx={classes.xVcpuParent1}>
+                  <div className={styles.xVcpu1}>
+                    <Grid container sx={classes.xVcpu2}>
+                      $0
                     </Grid>
+                  </div>
+                  <div className={styles.noMonthlyFees}>
+                    <Grid container sx={classes.noMonthlyFeesOne}>
+                      <Grid container sx={classes.noMonthlyFees}>
+                        {t("skuber-page.cost.free-no")}
+                      </Grid>
+                    </Grid>
+                  </div>
+                </Grid>
+
+                {/* </div> */}
+                {/* <div className={styles.billedAnnuallyOrContainer}>{` `}</div> */}
+              </div>
+              <Grid container sx={classes.frameChild32}>
+                {/* <div className={styles.frameChild32} /> */}
+              </Grid>
+              <div className={styles.whatsIncludedParent}>
+                <div className={styles.whatsIncluded}>
+                  <Grid container sx={classes.whatsIncludedParent}>
+                    {t("skuber-page.cost.free-includ.title")}
                   </Grid>
                 </div>
-              </Grid>
-
+                <div>
+                  <Grid container sx={classes.upTo10Container}>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.free-includ.item-one")}</span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.free-includ.item-two")}</span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.free-includ.item-three")}
+                      </span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.free-includ.item-four")}
+                      </span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.free-includ.item-five")}
+                      </span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.free-includ.item-six")}</span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.free-includ.item-seven")}
+                      </span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.free-includ.item-eight")}
+                      </span>
+                    </Grid>
+                    <p className={styles.upTo10ContainerText}></p>
+                  </Grid>
+                </div>
+              </div>
               {/* </div> */}
-              {/* <div className={styles.billedAnnuallyOrContainer}>{` `}</div> */}
-            </div>
-            <Grid container sx={classes.frameChild32}>
-              {/* <div className={styles.frameChild32} /> */}
             </Grid>
-            <div className={styles.whatsIncludedParent}>
-              <div className={styles.whatsIncluded}>
-                <Grid container sx={classes.whatsIncludedParent}>
-                  What’s included
+          </div>
+          <div
+            className={`${
+              selectedItem == 1 || isHovered2
+                ? styles.frameParent28
+                : styles.frameParent26
+            }`}
+            // onMouseEnter={() => setIsHovered2(true)}
+            onMouseEnter={() => {
+              setIsHovered2(true);
+              setSelectedItem(null);
+            }}
+            // onMouseLeave={() => setIsHovered2(false)}
+            onMouseLeave={() => setIsHovered2(false)}
+            onClick={() => onClickItem(1)}
+          >
+            <Grid container sx={classes.freeParent}>
+              <div className={styles.pricingTit}>
+                <Grid container sx={classes.pricingTit}>
+                  {t("skuber-page.cost.category.plus")}
                 </Grid>
-              </div>
-              <div>
-                <Grid container sx={classes.upTo10Container}>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Up to 10 vCPU</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    {" "}
-                    <span className={styles.span1}>✓</span>
-                    <span> Cluster only 1</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    {" "}
-                    <span className={styles.span1}>✓</span>
-                    <span> Realtime Monitoring</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    {" "}
-                    <span className={styles.span1}>✓</span>
-                    <span> Legacy Migration tool</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    {" "}
-                    <span className={styles.span1}>✓</span>
-                    <span> Reatime Log viewer</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Service Flow Mgmt</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    {" "}
-                    <span className={styles.span1}>✓</span>
-                    <span> Service Mesh Mgmt</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Config-map/Secret Mgmt</span>
-                  </Grid>
-                  <p className={styles.upTo10ContainerText}></p>
-                </Grid>
-              </div>
-            </div>
-            {/* </div> */}
-          </Grid>
-        </div>
-        <div
-          className={`${
-            selectedItem == 1 || isHovered2
-              ? styles.frameParent28
-              : styles.frameParent26
-          }`}
-          // onMouseEnter={() => setIsHovered2(true)}
-          onMouseEnter={() => {
-            setIsHovered2(true);
-            setSelectedItem(null);
-          }}
-          // onMouseLeave={() => setIsHovered2(false)}
-          onMouseLeave={() => setIsHovered2(false)}
-          onClick={() => onClickItem(1)}
-        >
-          <Grid container sx={classes.freeParent}>
-            {/* <div className={styles.freeParent}> */}
-
-            <div className={styles.pricingTit}>
-              <Grid container sx={classes.pricingTit}>
-                Plus
-              </Grid>
-              {/* <Image
+                {/* <Image
                 className={styles.image803Icon}
                 alt=""
                 src="/1920_desktop/free-trial.png"
                 width={80}
                 height={30}
               /> */}
-            </div>
-            <div className={styles.frameParent30}>
-              <Grid container sx={classes.xVcpuParent1}>
-                <div
-                  className={styles.xVcpu1}
-                  // style={{ textDecoration: "line-through" }}
-                >
-                  <Grid container sx={classes.xVcpu2}>
-                    $300 x vCPU
+              </div>
+              <div className={styles.frameParent30}>
+                <Grid container sx={classes.xVcpuParent1}>
+                  <div
+                    className={styles.xVcpu1}
+                    // style={{ textDecoration: "line-through" }}
+                  >
+                    <Grid container sx={classes.xVcpu2}>
+                      $300 x vCPU
+                    </Grid>
+                  </div>
+                  <div className={styles.noMonthlyFees}>
+                    <Grid container sx={classes.noMonthlyFeesOne}>
+                      <Grid container sx={classes.noMonthlyFees}>
+                        {t("common.per-month")}
+                      </Grid>
+                    </Grid>
+                  </div>
+                </Grid>
+                <div className={styles.billedAnnuallyOrContainer1}></div>
+              </div>
+              <div className={styles.frameChild32} />
+              <div className={styles.whatsIncludedParent}>
+                <div className={styles.whatsIncluded}>
+                  <Grid container sx={classes.whatsIncludedParent}>
+                    {t("skuber-page.cost.plus-includ.title")}
                   </Grid>
                 </div>
-                <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFeesOne}>
-                    <Grid container sx={classes.noMonthlyFees}>
-                      per month
+                <div>
+                  <Grid container sx={classes.upTo10Container}>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> 11 - 100 vCPU</span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.plus-includ.item-one")}</span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.plus-includ.item-two")}</span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.plus-includ.item-three")}
+                      </span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.plus-includ.item-four")}
+                      </span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.plus-includ.item-five")}
+                      </span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.plus-includ.item-six")}</span>
                     </Grid>
                   </Grid>
                 </div>
-              </Grid>
-              <div className={styles.billedAnnuallyOrContainer1}>
-                {/* <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $1,990 month-to-month
-                </Grid> */}
               </div>
-            </div>
-            <div className={styles.frameChild32} />
-            <div className={styles.whatsIncludedParent}>
-              <div className={styles.whatsIncluded}>
-                <Grid container sx={classes.whatsIncludedParent}>
-                  All Free features, plus
+            </Grid>
+          </div>
+          <div
+            className={`${
+              selectedItem === 2 || isHovered3
+                ? styles.frameParent28
+                : styles.frameParent26
+            }`}
+            // onMouseEnter={() => setIsHovered3(true)}
+            onMouseEnter={() => {
+              setIsHovered3(true);
+              setSelectedItem(null);
+            }}
+            onMouseLeave={() => setIsHovered3(false)}
+            onClick={() => onClickItem(2)}
+          >
+            <Grid container sx={classes.freeParent}>
+              <div className={styles.pricingTit}>
+                <Grid container sx={classes.pricingTit}>
+                  {t("skuber-page.cost.category.pro")}
                 </Grid>
               </div>
-              <div>
-                <Grid container sx={classes.upTo10Container}>
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> 11 - 100 vCPU</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}>
-              </p> */}
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Unlimited Cluster</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}>
-                
-              </p> */}
-
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Cost Tracing</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}>
-                
-              </p> */}
-
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Account management</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}>
-                
-              </p> */}
-
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Service log viewer</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}>
-                
-              </p> */}
-
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Unlimited members</span>
-                  </Grid>
-
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Free trial for 1 month</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}>
-              </p> */}
+              <div className={styles.frameParent30}>
+                <Grid container sx={classes.xVcpuParent1}>
+                  <div className={styles.xVcpu1}>
+                    <Grid container sx={classes.xVcpu2}>
+                      $240 x vCPU
+                    </Grid>
+                  </div>
+                  <div className={styles.noMonthlyFees}>
+                    <Grid container sx={classes.noMonthlyFeesOne}>
+                      <Grid container sx={classes.noMonthlyFees}>
+                        {t("common.per-month")}
+                      </Grid>
+                    </Grid>
+                  </div>
                 </Grid>
+
+                <div className={styles.billedAnnuallyOrContainer1}></div>
               </div>
-            </div>
+              <div className={styles.frameChild32} />
+              <div className={styles.whatsIncludedParent}>
+                <div className={styles.whatsIncluded}>
+                  <Grid container sx={classes.whatsIncludedParent}>
+                    {t("skuber-page.cost.pro-includ-title")}
+                  </Grid>
+                </div>
+                <div>
+                  <Grid container sx={classes.upTo10ContainerText}>
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span> 101 - 1,000 vCPU</span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.plus-includ.item-one")}</span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span> {t("skuber-page.cost.plus-includ.item-two")}</span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.plus-includ.item-three")}
+                      </span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      {" "}
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.plus-includ.item-four")}
+                      </span>
+                    </Grid>
+
+                    <Grid container sx={classes.upTo10ContainerText}>
+                      <span className={styles.span1}>✓</span>
+                      <span>
+                        {" "}
+                        {t("skuber-page.cost.plus-includ.item-five")}
+                      </span>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
+            </Grid>
             {/* </div> */}
-          </Grid>
-        </div>
-        <div
-          className={`${
-            selectedItem === 2 || isHovered3
-              ? styles.frameParent28
-              : styles.frameParent26
-          }`}
-          // onMouseEnter={() => setIsHovered3(true)}
-          onMouseEnter={() => {
-            setIsHovered3(true);
-            setSelectedItem(null);
-          }}
-          onMouseLeave={() => setIsHovered3(false)}
-          onClick={() => onClickItem(2)}
-        >
-          <Grid container sx={classes.freeParent}>
-            {/* <div className={styles.freeParent}> */}
+          </div>
 
-            <div className={styles.pricingTit}>
-              <Grid container sx={classes.pricingTit}>
-                Pro
-              </Grid>
-            </div>
-            <div className={styles.frameParent30}>
-              {/* <Grid container sx={classes.xVcpuParent}>
-                <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu2}>
-                    $40 x vCPU
-                  </Grid>
-                </div>
-                <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFeesOne}>
-                    <Grid container sx={classes.noMonthlyFees}>
-                      per month
-                    </Grid>
-                  </Grid>
-                </div>
-              </Grid> */}
-
-              <Grid container sx={classes.xVcpuParent1}>
-                <div className={styles.xVcpu1}>
-                  <Grid container sx={classes.xVcpu2}>
-                    $240 x vCPU
-                  </Grid>
-                </div>
-                <div className={styles.noMonthlyFees}>
-                  <Grid container sx={classes.noMonthlyFeesOne}>
-                    <Grid container sx={classes.noMonthlyFees}>
-                      per month
-                    </Grid>
-                  </Grid>
-                </div>
-              </Grid>
-
-              <div className={styles.billedAnnuallyOrContainer1}>
-                {/* <Grid container sx={classes.billedAnnuallyOrContainer1}>
-                  Billed annually or $1,990 month-to-month
-                </Grid> */}
-              </div>
-            </div>
-            <div className={styles.frameChild32} />
-            <div className={styles.whatsIncludedParent}>
-              <div className={styles.whatsIncluded}>
-                <Grid container sx={classes.whatsIncludedParent}>
-                  All Plus features, plus
+          <div
+            className={`${
+              selectedItem === 4 || isHovered5
+                ? styles.frameParent28
+                : styles.frameParent26
+            }`}
+            // onMouseEnter={() => setIsHovered5(true)}
+            onMouseEnter={() => {
+              setIsHovered5(true);
+              setSelectedItem(null);
+            }}
+            onMouseLeave={() => setIsHovered5(false)}
+            onClick={() => onClickItem(4)}
+          >
+            <Grid container sx={classes.freeParent}>
+              <div className={styles.enterprise}>
+                <Grid container sx={classes.pricingTit}>
+                  {t("skuber-page.cost.category.enterprise")}
                 </Grid>
               </div>
-              <div>
+              <Grid container sx={classes.frameParent31}>
+                <img
+                  className={styles.frameChild36}
+                  alt=""
+                  src="/1920_desktop/frame-3203.svg"
+                />
+                <div className={styles.contactSalesFor}>
+                  Contact Sales for pricing
+                </div>
+                <Grid container sx={classes.fullPlatformMonitoring}>
+                  {t("skuber-page.cost.enterprise-description")}
+                </Grid>
+              </Grid>
+              <div className={styles.frameChild32} />
+              <div className={styles.whatsIncludedParent}>
+                <Grid container sx={classes.whatsIncludedParent}>
+                  {t("skuber-page.cost.enterprise-includ.title")}
+                </Grid>
                 <Grid container sx={classes.upTo10ContainerText}>
                   <Grid container sx={classes.upTo10ContainerText}>
-                    {" "}
                     <span className={styles.span1}>✓</span>
-                    <span> 101 - 1,000 vCPU</span>
+                    <span>
+                      {" "}
+                      {t("skuber-page.cost.enterprise-includ.item-one")}{" "}
+                    </span>
                   </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
+
                   <Grid container sx={classes.upTo10ContainerText}>
                     <span className={styles.span1}>✓</span>
-                    <span> Unlimited Cluster</span>
+                    <span> {t("skuber-page.cost.plus-includ.item-one")} </span>
                   </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Cost Tracing</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
-                  <Grid container sx={classes.upTo10ContainerText}>
-                    <span className={styles.span1}>✓</span>
-                    <span> Account management</span>
-                  </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
+
                   <Grid container sx={classes.upTo10ContainerText}>
                     {" "}
                     <span className={styles.span1}>✓</span>
-                    <span> Service log viewer</span>
+                    <span>
+                      {" "}
+                      {t("skuber-page.cost.enterprise-includ.item-two")}
+                    </span>
                   </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
+
                   <Grid container sx={classes.upTo10ContainerText}>
                     <span className={styles.span1}>✓</span>
-                    <span> Unlimited members</span>
+                    <span>
+                      {" "}
+                      {t("skuber-page.cost.enterprise-includ.item-three")}
+                    </span>
                   </Grid>
-                  {/* <p className={styles.upTo10ContainerText}></p> */}
+
+                  <Grid container sx={classes.upTo10ContainerText}>
+                    <span className={styles.span1}>✓</span>
+                    <span>
+                      {" "}
+                      {t("skuber-page.cost.enterprise-includ.item-four")}
+                    </span>
+                  </Grid>
+
+                  <Grid container sx={classes.upTo10ContainerText}>
+                    <span className={styles.span1}>✓</span>
+                    <span>
+                      {" "}
+                      {t("skuber-page.cost.enterprise-includ.item-five")}
+                    </span>
+                  </Grid>
+
+                  {/* </div> */}
                 </Grid>
               </div>
-            </div>
-          </Grid>
-          {/* </div> */}
-        </div>
-
-        <div
-          className={`${
-            selectedItem === 4 || isHovered5
-              ? styles.frameParent28
-              : styles.frameParent26
-          }`}
-          // onMouseEnter={() => setIsHovered5(true)}
-          onMouseEnter={() => {
-            setIsHovered5(true);
-            setSelectedItem(null);
-          }}
-          onMouseLeave={() => setIsHovered5(false)}
-          onClick={() => onClickItem(4)}
-        >
-          <Grid container sx={classes.freeParent}>
-            {/* <div className={styles.enterpriseParent}> */}
-
-            <div className={styles.enterprise}>
-              <Grid container sx={classes.pricingTit}>
-                Enterprise
-              </Grid>
-            </div>
-            <Grid container sx={classes.frameParent31}>
-              {/* <div className={styles.frameParent31}> */}
-              <img
-                className={styles.frameChild36}
-                alt=""
-                src="/1920_desktop/frame-3203.svg"
-              />
-              <div className={styles.contactSalesFor}>
-                Contact Sales for pricing
-              </div>
-              <Grid container sx={classes.fullPlatformMonitoring}>
-                {/* <div className={styles.fullPlatformMonitoring}> */}
-                Full platform monitoring with cross-project insights and
-                optional Premium Customer Success.
-                {/* </div> */}
-              </Grid>
               {/* </div> */}
             </Grid>
-            <div className={styles.frameChild32} />
-            <div className={styles.whatsIncludedParent}>
-              <Grid container sx={classes.whatsIncludedParent}>
-                All Business features, plus
-              </Grid>
-              <Grid container sx={classes.upTo10ContainerText}>
-                {/* <div className={styles.upTo10Container}> */}
-                <Grid container sx={classes.upTo10ContainerText}>
-                  <span className={styles.span1}>✓</span>
-                  <span> Unlimited vCPU</span>
-                </Grid>
-                {/* <p className={styles.upTo10ContainerText}></p> */}
-                <Grid container sx={classes.upTo10ContainerText}>
-                  <span className={styles.span1}>✓</span>
-                  <span> Unlimited Cluster</span>
-                </Grid>
-                {/* <p className={styles.upTo10ContainerText}></p> */}
-                <Grid container sx={classes.upTo10ContainerText}>
-                  {" "}
-                  <span className={styles.span1}>✓</span>
-                  <span> Installation support</span>
-                </Grid>
-                {/* <p className={styles.upTo10ContainerText}></p> */}
-                <Grid container sx={classes.upTo10ContainerText}>
-                  <span className={styles.span1}>✓</span>
-                  <span> Issue support</span>
-                </Grid>
-                {/* <p className={styles.upTo10ContainerText}></p> */}
-                <Grid container sx={classes.upTo10ContainerText}>
-                  <span className={styles.span1}>✓</span>
-                  <span> Custom Dashboard</span>
-                </Grid>
-                {/* <p className={styles.upTo10ContainerText}></p> */}
-                <Grid container sx={classes.upTo10ContainerText}>
-                  <span className={styles.span1}>✓</span>
-                  <span> Cloud Strategy Consulting</span>
-                </Grid>
-                {/* <p className={styles.upTo10ContainerText}></p> */}
-                {/* </div> */}
-              </Grid>
-            </div>
-            {/* </div> */}
-          </Grid>
-        </div>
-        {/* </div> */}
-      </Grid>
-    </div>
+          </div>
+          {/* </div> */}
+        </Grid>
+      </div>
+    </I18nextProvider>
   );
 };
 

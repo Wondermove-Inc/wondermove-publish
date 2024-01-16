@@ -4,7 +4,9 @@ import styles from "../pages/Skuber/styles.module.css";
 
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Theme } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n/index";
 
 const theme = createTheme({
   breakpoints: {
@@ -48,6 +50,7 @@ const GetInTouch = ({
   // const handleButtonClick = () => {
   //   setShowPopup(true);
   // };
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -63,21 +66,22 @@ const GetInTouch = ({
     : styles.getStartedWrapper;
 
   return (
-    <div className={styles.getStarted}>
-      <div
-        className={getStartedClassName}
-        onClick={onClick}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className={styles.pricing} style={{ cursor: "pointer" }}>
-          <Grid container sx={classes.getInTouch}>
-            Get in touch
-          </Grid>
+    <I18nextProvider i18n={i18n}>
+      <div className={styles.getStarted}>
+        <div
+          className={getStartedClassName}
+          onClick={onClick}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className={styles.pricing} style={{ cursor: "pointer" }}>
+            <Grid container sx={classes.getInTouch}>
+              {t("common.contact.send-email-button")}
+            </Grid>
+          </div>
         </div>
-      </div>
 
-      {/* {sendModalVisible && (
+        {/* {sendModalVisible && (
         <SendMessage
           onCloseOff={onCloseOff}
           toggleSuccessModalVisible={toggleSuccessModalVisible}
@@ -85,7 +89,8 @@ const GetInTouch = ({
           toggleSendModalVisible={toggleSendModalVisible}
         />
       )} */}
-    </div>
+      </div>
+    </I18nextProvider>
   );
 };
 
