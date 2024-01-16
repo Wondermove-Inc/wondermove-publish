@@ -14,6 +14,11 @@ import Image from "next/image";
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
+import Footer from "../../component/Footer";
+
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n/index";
 
 const theme: Theme = createTheme({
   breakpoints: {
@@ -818,9 +823,19 @@ const useStyles = (theme: Theme) => ({
       padding: "160px 0",
     },
   },
+  vedioText: {
+    width: "480px",
+    [theme.breakpoints.down("xl")]: {},
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      width: "300px",
+    },
+  },
 });
 
 const PLUG: NextPage = () => {
+  const { t } = useTranslation();
   const classes = useStyles(theme);
   const [isMdallScreen, setIsMdallScreen] = useState(false);
   useEffect(() => {
@@ -843,7 +858,7 @@ const PLUG: NextPage = () => {
     );
 
   return (
-    <>
+    <I18nextProvider i18n={i18n}>
       <Head>
         <title>P-LUG Integrated mobility solution | wondermove</title>
         <meta
@@ -868,11 +883,6 @@ const PLUG: NextPage = () => {
             alt=""
             src="/plug/desertlandscapewithpinkskypurplebackground-1@2x.png"
           />
-          {/* <img
-            className={styles.desertLandscapeWithPinkSkyIcon}
-            alt=""
-            src="/plug/desertlandscapewithpinkskypurplebackground-1@2x.png"
-          /> */}
         </div>
 
         <div className={styles.gnb}>
@@ -904,11 +914,6 @@ const PLUG: NextPage = () => {
                           width={800}
                           height={600}
                         />
-                        {/* <img
-                          className={styles.image803Icon}
-                          alt=""
-                          src="/plug/image-803@2x.png"
-                        /> */}
                         <div
                           className={styles.integratedMobilitySolutionPParent}
                         >
@@ -922,15 +927,14 @@ const PLUG: NextPage = () => {
                               sx={classes.integratedMobilitySolutionContainer}
                             >
                               <p className={styles.wondermoveInc}>
-                                Integrated Mobility <br /> Solution P-LUG
+                                {t("plug.main-title")} <br />
+                                {t("plug.sub-title")}
                               </p>
                             </Grid>
                           </div>
                           <div className={styles.weProvideFragmented1}>
                             <Grid container sx={classes.weProvideFragmented1}>
-                              We provide fragmented services into a single
-                              platform to deliver an integrated, dynamic
-                              customer experience.
+                              {t("plug.description")}
                             </Grid>
                           </div>
                         </div>
@@ -943,7 +947,9 @@ const PLUG: NextPage = () => {
                     >
                       <Grid container sx={classes.getInTouchContainer}>
                         <Grid container sx={classes.getInTouch}>
-                          <div className={styles.getInTouch}>Get in touch</div>
+                          <div className={styles.getInTouch}>
+                            {t("common.contact.send-email-button")}
+                          </div>
                         </Grid>
                       </Grid>
                     </div>
@@ -963,11 +969,6 @@ const PLUG: NextPage = () => {
                       width={800}
                       height={600}
                     />
-                    {/* <img
-                      className={styles.phoneImage}
-                      alt=""
-                      src="/plug/phone.png"
-                    /> */}
                   </Grid>
                 </div>
               </Grid>
@@ -990,11 +991,6 @@ const PLUG: NextPage = () => {
                             width={800}
                             height={600}
                           />
-                          {/* <img
-                            className={styles.groupImage}
-                            alt=""
-                            src="/plug/group-3177.svg"
-                          /> */}
                         </Grid>
                       </div>
 
@@ -1006,11 +1002,11 @@ const PLUG: NextPage = () => {
                           <div
                             className={styles.quickEstablishmentAndContainer}
                           >
-                            <p
-                              className={styles.manageEntireVehicle}
-                            >{`Quick establishment and `}</p>
+                            <p className={styles.manageEntireVehicle}>
+                              {t("plug.advantage.item-one-main-title")}
+                            </p>
                             <p className={styles.wondermoveInc}>
-                              personalization
+                              {t("plug.advantage.item-one-sub-title")}
                             </p>
                           </div>
                           <div className={styles.configureAPortfolioContainer}>
@@ -1019,8 +1015,7 @@ const PLUG: NextPage = () => {
                               sx={classes.configureAPortfolioContainer}
                             >
                               <div className={styles.wondermoveInc}>
-                                Configure a portfolio with the services your
-                                company needs, with modularized service units.
+                                {t("plug.advantage.item-one-description")}
                               </div>
                             </Grid>
                           </div>
@@ -1056,10 +1051,10 @@ const PLUG: NextPage = () => {
                             className={styles.quickEstablishmentAndContainer}
                           >
                             <p className={styles.manageEntireVehicle}>
-                              Easy integration
+                              {t("plug.advantage.item-two-main-title")}
                             </p>
                             <p className={styles.wondermoveInc}>
-                              with Legacy system
+                              {t("plug.advantage.item-two-sub-title")}
                             </p>
                           </div>
                           <div className={styles.configureAPortfolioContainer}>
@@ -1068,8 +1063,7 @@ const PLUG: NextPage = () => {
                               sx={classes.configureAPortfolioContainer}
                             >
                               <div className={styles.wondermoveInc}>
-                                Easy to intergrate and manage legacy systems
-                                such as CRM, DMS, and PMS.
+                                {t("plug.advantage.item-one-description")}
                               </div>
                             </Grid>
                           </div>
@@ -1104,10 +1098,10 @@ const PLUG: NextPage = () => {
                             className={styles.quickEstablishmentAndContainer}
                           >
                             <p className={styles.manageEntireVehicle}>
-                              An integrated solution
+                              {t("plug.advantage.item-three-main-title")}
                             </p>
                             <p className={styles.wondermoveInc}>
-                              for all users
+                              {t("plug.advantage.item-three-sub-title")}
                             </p>
                           </div>
                           <div className={styles.configureAPortfolioContainer}>
@@ -1116,9 +1110,7 @@ const PLUG: NextPage = () => {
                               sx={classes.configureAPortfolioContainer}
                             >
                               <div className={styles.wondermoveInc}>
-                                P-LUG provides an integrated system for
-                                customers, dealers, and OEMs who use and provide
-                                services.
+                                {t("plug.advantage.item-three-description")}
                               </div>
                             </Grid>
                           </div>
@@ -1139,7 +1131,7 @@ const PLUG: NextPage = () => {
                         <div className={styles.weLaunchedOurContainer}>
                           <Grid container sx={classes.weLaunchedOurContainer}>
                             <div className={styles.manageEntireVehicle}>
-                              We launched our service in 10 European countries
+                              {t("plug.global.title")}
                             </div>
                           </Grid>
                         </div>
@@ -1149,9 +1141,7 @@ const PLUG: NextPage = () => {
                             sx={classes.configureAPortfolioContainerDiv}
                           >
                             <div className={styles.wondermoveInc}>
-                              In collaboration with P-LUG and Hyundai Europe, we
-                              created a platform called myHyundai. The platform
-                              will be launched in 10 European countries by 2023.
+                              {t("plug.global.description")}
                             </div>
                           </Grid>
                         </div>
@@ -1165,7 +1155,9 @@ const PLUG: NextPage = () => {
                               860K+
                             </Grid>
                           </div>
-                          <div className={styles.users}>Users</div>
+                          <div className={styles.users}>
+                            {t("plug.global.users")}
+                          </div>
                         </div>
                         <div className={styles.kParent}>
                           <div className={styles.k}>
@@ -1173,7 +1165,9 @@ const PLUG: NextPage = () => {
                               10
                             </Grid>
                           </div>
-                          <div className={styles.users}>Countries</div>
+                          <div className={styles.users}>
+                            {t("plug.global.countries")}
+                          </div>
                         </div>
                         <div className={styles.kParent}>
                           <div className={styles.k}>
@@ -1181,7 +1175,9 @@ const PLUG: NextPage = () => {
                               1,500+
                             </Grid>
                           </div>
-                          <div className={styles.users}>Dealership</div>
+                          <div className={styles.users}>
+                            {t("plug.global.dealership")}
+                          </div>
                         </div>
                       </Grid>
                     </div>
@@ -1209,24 +1205,16 @@ const PLUG: NextPage = () => {
                   <div className={styles.seamlessIntegrationParent}>
                     <div className={styles.se}>
                       <Grid container sx={classes.se}>
-                        <div>Seamless Integration</div>
+                        <div>{t("plug.vedio-main-title")}</div>
                       </Grid>
                     </div>
                     <div className={styles.weProvideFragmentedContainer}>
                       <Grid container sx={classes.weProvideFragmentedContainer}>
-                        {isMdallScreen ? (
-                          <div className={styles.wondermoveInc}>
-                            We provide fragmented services into a <br />
-                            single platform to deliver an intergrated, <br />
-                            dynamic customer experience.
-                          </div>
-                        ) : (
-                          <div className={styles.wondermoveInc}>
-                            We provide fragmented services into a single
-                            platform to deliver <br /> an intergrated, dynamic
-                            customer experience.
-                          </div>
-                        )}
+                        <div className={styles.wondermoveInc}>
+                          <Typography sx={classes.vedioText}>
+                            {t("plug.vedio-sub-title")}
+                          </Typography>
+                        </div>
                       </Grid>
                     </div>
                   </div>
@@ -1286,22 +1274,17 @@ const PLUG: NextPage = () => {
                         </div>
                         <div className={styles.buyingACar}>
                           <Grid container sx={classes.buyingACar}>
-                            Buying a car
+                            {t("plug.service.item-one-main-title")}
                           </Grid>
                         </div>
                         <div className={styles.onlineVehiclePurchase}>
                           <Grid container sx={classes.onlineVehiclePurchase}>
-                            Online vehicle purchase and vehicle configuration
+                            {t("plug.service.item-one-sub-title")}
                           </Grid>
                         </div>
                         <div className={styles.customersCanQuickly}>
                           <Grid container sx={classes.customersCanQuickly}>
-                            Customers can quickly lookup and purchase a vehicle
-                            based on the inventory data of dealerships, and
-                            preview quotations by configuring interior, exterior
-                            colors and specs. Based on the configuration,
-                            customers can receive live consultation on purchases
-                            or be connected with online sales channels.
+                            {t("plug.service.item-one-description")}
                           </Grid>
                         </div>
                       </div>
@@ -1345,20 +1328,17 @@ const PLUG: NextPage = () => {
 
                         <div className={styles.buyingACar}>
                           <Grid container sx={classes.buyingACar}>
-                            Roadside assistance
+                            {t("plug.service.item-two-main-title")}
                           </Grid>
                         </div>
                         <div className={styles.onlineVehiclePurchase}>
                           <Grid container sx={classes.onlineVehiclePurchase}>
-                            Swift and reliable assistance for safe recovery
+                            {t("plug.service.item-two-sub-title")}
                           </Grid>
                         </div>
                         <div className={styles.customersCanQuickly}>
                           <Grid container sx={classes.customersCanQuickly}>
-                            {`Customers can request a roadside assistant in the case
-                          of an emergency. We provide a swift assistance based
-                          on customer's location, and customers can check
-                          real-time progress status of the assistance.`}
+                            {t("plug.service.item-two-description")}
                           </Grid>
                         </div>
                       </div>
@@ -1401,21 +1381,17 @@ const PLUG: NextPage = () => {
 
                         <div className={styles.buyingACar}>
                           <Grid container sx={classes.buyingACar}>
-                            Sell used car
+                            {t("plug.service.item-three-main-title")}
                           </Grid>
                         </div>
                         <div className={styles.onlineVehiclePurchase}>
                           <Grid container sx={classes.onlineVehiclePurchase}>
-                            Get estimates from dealers by simply taking a photo
+                            {t("plug.service.item-three-sub-title")}
                           </Grid>
                         </div>
                         <div className={styles.customersCanQuickly}>
                           <Grid container sx={classes.customersCanQuickly}>
-                            To sell a used car, customers can share the specs,
-                            option and condition of their vehicle with a dealer.
-                            Dealers can provide a quotation based on the
-                            information. A deal takes place upon the agreed
-                            quotation and schedule.
+                            {t("plug.service.item-three-description")}
                           </Grid>
                         </div>
                       </div>
@@ -1459,24 +1435,17 @@ const PLUG: NextPage = () => {
 
                         <div className={styles.buyingACar}>
                           <Grid container sx={classes.buyingACar}>
-                            Live consult
+                            {t("plug.service.item-four-main-title")}
                           </Grid>
                         </div>
                         <div className={styles.onlineVehiclePurchase}>
                           <Grid container sx={classes.onlineVehiclePurchase}>
-                            Direct communication between customer and dealers
-                            through Live Consultation and Chat functions
+                            {t("plug.service.item-four-sub-title")}
                           </Grid>
                         </div>
                         <div className={styles.customersCanQuickly}>
                           <Grid container sx={classes.customersCanQuickly}>
-                            Customers can request a live or scheduled
-                            consultation to a dealer by selecting the type of
-                            service they want. Dealers can conduct a
-                            consultation with the customer via mobile/PC
-                            application. Screen sharing and device switching
-                            features for the dealer allow a seamless
-                            consultation in a non-face-to-face environment.
+                            {t("plug.service.item-four-description")}
                           </Grid>
                         </div>
                       </div>
@@ -1509,34 +1478,22 @@ const PLUG: NextPage = () => {
                               width={800}
                               height={80}
                             />
-                            {/* <img
-                              className={styles.component224Icon}
-                              alt=""
-                              src="/plug/component-2251.svg"
-                            /> */}
                           </Grid>
                         </div>
 
                         <div className={styles.buyingACar}>
                           <Grid container sx={classes.buyingACar}>
-                            {`Exterior repair & Service booking`}
+                            {t("plug.service.item-five-main-title")}
                           </Grid>
                         </div>
                         <div className={styles.onlineVehiclePurchase}>
                           <Grid container sx={classes.onlineVehiclePurchase}>
-                            Receive reminders and schedule vehicle maintenance
-                            appointments online
+                            {t("plug.service.item-five-sub-title")}
                           </Grid>
                         </div>
                         <div className={styles.customersCanQuickly}>
                           <Grid container sx={classes.customersCanQuickly}>
-                            Customers can get assistance with scheduled or
-                            occasional maintenance services after purchasing a
-                            vehicle. They can make a request by selecting the
-                            type of service and desired schedule, then consult
-                            with a dealer for a quotation. Reminders for next
-                            service appointments are provided based on their
-                            service history.
+                            {t("plug.service.item-five-description")}
                           </Grid>
                         </div>
                       </div>
@@ -1567,23 +1524,17 @@ const PLUG: NextPage = () => {
                           </div>
                           <div className={styles.buyingACar}>
                             <Grid container sx={classes.buyingACar}>
-                              Buying a car
+                              {t("plug.service.item-one-main-title")}
                             </Grid>
                           </div>
                           <div className={styles.onlineVehiclePurchase}>
                             <Grid container sx={classes.onlineVehiclePurchase}>
-                              Online vehicle purchase and vehicle configuration
+                              {t("plug.service.item-one-sub-title")}
                             </Grid>
                           </div>
                           <div className={styles.customersCanQuickly}>
                             <Grid container sx={classes.customersCanQuickly}>
-                              Customers can quickly lookup and purchase a
-                              vehicle based on the inventory data of
-                              dealerships, and preview quotations by configuring
-                              interior, exterior colors and specs. Based on the
-                              configuration, customers can receive live
-                              consultation on purchases or be connected with
-                              online sales channels.
+                              {t("plug.service.item-one-description")}
                             </Grid>
                           </div>
                         </div>
@@ -1637,30 +1588,22 @@ const PLUG: NextPage = () => {
                                 width={800}
                                 height={100}
                               />
-                              {/* <img
-                                className={styles.component224Icon}
-                                alt=""
-                                src="/plug/component-2241.svg"
-                              /> */}
                             </Grid>
                           </div>
 
                           <div className={styles.buyingACar}>
                             <Grid container sx={classes.buyingACar}>
-                              Roadside assistance
+                              {t("plug.service.item-two-main-title")}
                             </Grid>
                           </div>
                           <div className={styles.onlineVehiclePurchase}>
                             <Grid container sx={classes.onlineVehiclePurchase}>
-                              Swift and reliable assistance for safe recovery
+                              {t("plug.service.item-two-sub-title")}
                             </Grid>
                           </div>
                           <div className={styles.customersCanQuickly}>
                             <Grid container sx={classes.customersCanQuickly}>
-                              {`Customers can request a roadside assistant in the case
-                          of an emergency. We provide a swift assistance based
-                          on customer's location, and customers can check
-                          real-time progress status of the assistance.`}
+                              {t("plug.service.item-two-description")}
                             </Grid>
                           </div>
                         </div>
@@ -1678,32 +1621,22 @@ const PLUG: NextPage = () => {
                                 width={800}
                                 height={100}
                               />
-                              {/* <img
-                                className={styles.component224Icon}
-                                alt=""
-                                src="/plug/component-2242.svg"
-                              /> */}
                             </Grid>
                           </div>
 
                           <div className={styles.buyingACar}>
                             <Grid container sx={classes.buyingACar}>
-                              Sell used car
+                              {t("plug.service.item-three-main-title")}
                             </Grid>
                           </div>
                           <div className={styles.onlineVehiclePurchase}>
                             <Grid container sx={classes.onlineVehiclePurchase}>
-                              Get estimates from dealers by simply taking a
-                              photo
+                              {t("plug.service.item-three-sub-title")}
                             </Grid>
                           </div>
                           <div className={styles.customersCanQuickly}>
                             <Grid container sx={classes.customersCanQuickly}>
-                              To sell a used car, customers can share the specs,
-                              option and condition of their vehicle with a
-                              dealer. Dealers can provide a quotation based on
-                              the information. A deal takes place upon the
-                              agreed quotation and schedule.
+                              {t("plug.service.item-three-description")}
                             </Grid>
                           </div>
                         </div>
@@ -1766,24 +1699,17 @@ const PLUG: NextPage = () => {
 
                           <div className={styles.buyingACar}>
                             <Grid container sx={classes.buyingACar}>
-                              Live consult
+                              {t("plug.service.item-four-main-title")}
                             </Grid>
                           </div>
                           <div className={styles.onlineVehiclePurchase}>
                             <Grid container sx={classes.onlineVehiclePurchase}>
-                              Direct communication between customer and dealers
-                              through Live Consultation and Chat functions
+                              {t("plug.service.item-four-sub-title")}
                             </Grid>
                           </div>
                           <div className={styles.customersCanQuickly}>
                             <Grid container sx={classes.customersCanQuickly}>
-                              Customers can request a live or scheduled
-                              consultation to a dealer by selecting the type of
-                              service they want. Dealers can conduct a
-                              consultation with the customer via mobile/PC
-                              application. Screen sharing and device switching
-                              features for the dealer allow a seamless
-                              consultation in a non-face-to-face environment.
+                              {t("plug.service.item-four-description")}
                             </Grid>
                           </div>
                         </div>
@@ -1811,24 +1737,17 @@ const PLUG: NextPage = () => {
 
                           <div className={styles.buyingACar}>
                             <Grid container sx={classes.buyingACar}>
-                              {`Exterior repair & Service booking`}
+                              {t("plug.service.item-five-main-title")}
                             </Grid>
                           </div>
                           <div className={styles.onlineVehiclePurchase}>
                             <Grid container sx={classes.onlineVehiclePurchase}>
-                              Receive reminders and schedule vehicle maintenance
-                              appointments online
+                              {t("plug.service.item-five-sub-title")}
                             </Grid>
                           </div>
                           <div className={styles.customersCanQuickly}>
                             <Grid container sx={classes.customersCanQuickly}>
-                              Customers can get assistance with scheduled or
-                              occasional maintenance services after purchasing a
-                              vehicle. They can make a request by selecting the
-                              type of service and desired schedule, then consult
-                              with a dealer for a quotation. Reminders for next
-                              service appointments are provided based on their
-                              service history.
+                              {t("plug.service.item-five-description")}
                             </Grid>
                           </div>
                         </div>
@@ -1865,8 +1784,8 @@ const PLUG: NextPage = () => {
                 <div className={styles.manageEntireVehicleContainer}>
                   <Grid container sx={classes.manageEntireVehicleContainer}>
                     <div className={styles.manageEntireVehicle}>
-                      Manage entire vehicle lifecycle <br />
-                      with P-LUG
+                      {t("plug.slogen-main")} <br />
+                      {t("plug.slogen-with-plug")}
                     </div>
                   </Grid>
                 </div>
@@ -1875,67 +1794,18 @@ const PLUG: NextPage = () => {
                   onClick={onGetInTouchClick}
                   style={{ cursor: "pointer" }}
                 >
-                  <b className={styles.getInTouch}>Get in touch</b>
+                  <b className={styles.getInTouch}>
+                    {t("common.contact.send-email-button")}
+                  </b>
                 </div>
               </Grid>
             </div>
           </div>
 
-          <div className={styles.footer}>
-            <Grid container sx={classes.footer}>
-              <div className={styles.layer1Parent}>
-                <Grid container sx={classes.layer1Parent}>
-                  <a
-                    href="https://wondermove.net/intro/"
-                    style={{
-                      color: "inherit",
-                      textDecoration: "none",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <Image
-                      className={styles.layer1Icon}
-                      alt=""
-                      src="/plug/layer-1.svg"
-                      width={800}
-                      height={600}
-                    />
-                  </a>
-                  {/* <img
-                    className={styles.layer1Icon}
-                    alt=""
-                    src="/plug/layer-1.svg"
-                  /> */}
-                  <div className={styles.wondermoveSpinOffOfHyundaiParent}>
-                    <Grid
-                      container
-                      sx={classes.wondermoveSpinOffOfHyundaiParent}
-                    >
-                      <div className={styles.wondermoveSpinOffOf}>
-                        wondermove Spin-off of Hyundai Motor Company
-                      </div>
-                      <div className={styles.wondermoveIncBusinessContainer}>
-                        <p className={styles.wondermoveInc}>wondermove Inc.</p>
-                        <p className={styles.wondermoveInc}>
-                          Business Registration Number: 518-81-01644
-                        </p>
-                        <p className={styles.wondermoveInc}>
-                          Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu,
-                          Seoul, Republic of Korea
-                        </p>
-                        <p className={styles.wondermoveInc}>
-                          Use Inquiries: hawkeye@wondermove.net
-                        </p>
-                      </div>
-                    </Grid>
-                  </div>
-                </Grid>
-              </div>
-            </Grid>
-          </div>
+          <Footer />
         </div>
       </div>
-    </>
+    </I18nextProvider>
   );
 };
 

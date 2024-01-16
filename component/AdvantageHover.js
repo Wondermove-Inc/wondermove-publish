@@ -4,6 +4,9 @@ import styles from "../pages/Skuber/styles.module.css";
 import { Grid, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Theme } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n/index";
 
 const theme = createTheme({
   breakpoints: {
@@ -100,6 +103,7 @@ const useStyles = (theme) => ({
 const classes = useStyles(theme);
 
 function AdvantageHover() {
+  const { t } = useTranslation();
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
@@ -144,239 +148,259 @@ function AdvantageHover() {
     setIsHovered3(false);
   };
   return (
-    <div className={styles.frameParent2}>
-      <Grid container sx={classes.frameParent2}>
-        {isSmallScreen ? (
-          <div
-            className={styles.frameParent4}
-            onMouseEnter={handleMouseOver1}
-            onMouseLeave={handleMouseOut1}
-          >
-            <Grid container sx={classes.frameParent3}>
-              <div className={styles.advantageImage}>
-                {isHovered1 ? (
-                  <img
-                    src="/1920_desktop/hover-on-1-100.png"
-                    alt="Hover Image"
-                  />
-                ) : (
-                  <img
-                    src="/1920_desktop/hover-off-1-100.png"
-                    alt="Default Image"
-                  />
-                )}
-              </div>
-              <div className={styles.wonderAboutCuttingContainer}>
-                <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.wonderAbout}>
-                    Reduction in <br />
-                    resource costs
-                  </div>
-                </Grid>
-              </div>
-              <div className={styles.byTransitioningFromContainer}>
-                <Grid container sx={classes.byTransitioningFromContainer}>
-                  Skuberservice can leverage eBPF to protect against unnecessary
-                  traffic and DoS attacks to avoid additional costs.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        ) : (
-          <div
-            className={isHovered1 ? styles.frameParent3 : styles.frameParent4}
-            onMouseEnter={handleMouseOver1}
-            onMouseLeave={handleMouseOut1}
-          >
-            <Grid container sx={classes.frameParent3}>
-              <div className={styles.advantageImage}>
-                {isHovered1 ? (
-                  <img
-                    src="/1920_desktop/hover-on-1-100.png"
-                    alt="Hover Image"
-                  />
-                ) : (
-                  <img
-                    src="/1920_desktop/hover-off-1-100.png"
-                    alt="Default Image"
-                  />
-                )}
-              </div>
-              <div className={styles.wonderAboutCuttingContainer}>
-                <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.wonderAbout}>
-                    Reduction in <br />
-                    resource costs
-                  </div>
-                </Grid>
-              </div>
-              <div className={styles.byTransitioningFromContainer}>
-                <Grid container sx={classes.byTransitioningFromContainer}>
-                  Skuberservice can leverage eBPF to protect against unnecessary
-                  traffic and DoS attacks to avoid additional costs.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        )}
+    <I18nextProvider i18n={i18n}>
+      <div className={styles.frameParent2}>
+        <Grid container sx={classes.frameParent2}>
+          {isSmallScreen ? (
+            <div
+              className={styles.frameParent4}
+              onMouseEnter={handleMouseOver1}
+              onMouseLeave={handleMouseOut1}
+            >
+              <Grid container sx={classes.frameParent3}>
+                <div className={styles.advantageImage}>
+                  {isHovered1 ? (
+                    <img
+                      src="/1920_desktop/hover-on-1-100.png"
+                      alt="Hover Image"
+                    />
+                  ) : (
+                    <img
+                      src="/1920_desktop/hover-off-1-100.png"
+                      alt="Default Image"
+                    />
+                  )}
+                </div>
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <Grid container sx={classes.wonderAboutCuttingContainer}>
+                    <div className={styles.wonderAbout}>
+                      {t("skuber-page.advantage.reduction-costs.first-title")}{" "}
+                      <br />
+                      {t("skuber-page.advantage.reduction-costs.second-title")}
+                    </div>
+                  </Grid>
+                </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <Grid container sx={classes.byTransitioningFromContainer}>
+                    {t("skuber-page.advantage.reduction-costs.description")}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          ) : (
+            <div
+              className={isHovered1 ? styles.frameParent3 : styles.frameParent4}
+              onMouseEnter={handleMouseOver1}
+              onMouseLeave={handleMouseOut1}
+            >
+              <Grid container sx={classes.frameParent3}>
+                <div className={styles.advantageImage}>
+                  {isHovered1 ? (
+                    <img
+                      src="/1920_desktop/hover-on-1-100.png"
+                      alt="Hover Image"
+                    />
+                  ) : (
+                    <img
+                      src="/1920_desktop/hover-off-1-100.png"
+                      alt="Default Image"
+                    />
+                  )}
+                </div>
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <Grid container sx={classes.wonderAboutCuttingContainer}>
+                    <div className={styles.wonderAbout}>
+                      {t("skuber-page.advantage.reduction-costs.first-title")}{" "}
+                      <br />
+                      {t("skuber-page.advantage.reduction-costs.second-title")}
+                    </div>
+                  </Grid>
+                </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <Grid container sx={classes.byTransitioningFromContainer}>
+                    {t("skuber-page.advantage.reduction-costs.description")}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          )}
 
-        {isSmallScreen ? (
-          <div
-            className={styles.frameParent4}
-            onMouseOver={handleMouseOver2}
-            onMouseOut={handleMouseOut2}
-          >
-            <Grid container sx={classes.frameParent3}>
-              <div className={styles.advantageImage}>
-                {isHovered2 ? (
-                  <img
-                    src="/1920_desktop/hover-on-2-100.png"
-                    alt="Hover Image"
-                  />
-                ) : (
-                  <img
-                    src="/1920_desktop/hover-off-2-100.svg"
-                    alt="Default Image"
-                  />
-                )}
-              </div>
-              <div className={styles.wonderAboutCuttingContainer}>
-                <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.wonderAbout}>
-                    Accessible management <br />
-                    for all technology levels
-                  </div>
-                </Grid>
-              </div>
+          {isSmallScreen ? (
+            <div
+              className={styles.frameParent4}
+              onMouseOver={handleMouseOver2}
+              onMouseOut={handleMouseOut2}
+            >
+              <Grid container sx={classes.frameParent3}>
+                <div className={styles.advantageImage}>
+                  {isHovered2 ? (
+                    <img
+                      src="/1920_desktop/hover-on-2-100.png"
+                      alt="Hover Image"
+                    />
+                  ) : (
+                    <img
+                      src="/1920_desktop/hover-off-2-100.svg"
+                      alt="Default Image"
+                    />
+                  )}
+                </div>
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <Grid container sx={classes.wonderAboutCuttingContainer}>
+                    <div className={styles.wonderAbout}>
+                      {t(
+                        "skuber-page.advantage.accessible-management.first-title"
+                      )}{" "}
+                      <br />
+                      {t(
+                        "skuber-page.advantage.accessible-management.second-title"
+                      )}
+                    </div>
+                  </Grid>
+                </div>
 
-              <div className={styles.byTransitioningFromContainer}>
-                <Grid container sx={classes.byTransitioningFromContainer}>
-                  Utilize a high-level control UX that can be managed without
-                  DevOps expertise, while also providing low-level access for
-                  DevOps engineers to monitor and respond to service failures in
-                  real time.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        ) : (
-          <div
-            className={isHovered2 ? styles.frameParent3 : styles.frameParent4}
-            onMouseOver={handleMouseOver2}
-            onMouseOut={handleMouseOut2}
-          >
-            <Grid container sx={classes.frameParent3}>
-              <div className={styles.advantageImage}>
-                {isHovered2 ? (
-                  <img
-                    src="/1920_desktop/hover-on-2-100.png"
-                    alt="Hover Image"
-                  />
-                ) : (
-                  <img
-                    src="/1920_desktop/hover-off-2-100.svg"
-                    alt="Default Image"
-                  />
-                )}
-              </div>
-              <div className={styles.wonderAboutCuttingContainer}>
-                <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.wonderAbout}>
-                    Accessible management <br />
-                    for all technology levels
-                  </div>
-                </Grid>
-              </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <Grid container sx={classes.byTransitioningFromContainer}>
+                    {t(
+                      "skuber-page.advantage.accessible-management.description"
+                    )}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          ) : (
+            <div
+              className={isHovered2 ? styles.frameParent3 : styles.frameParent4}
+              onMouseOver={handleMouseOver2}
+              onMouseOut={handleMouseOut2}
+            >
+              <Grid container sx={classes.frameParent3}>
+                <div className={styles.advantageImage}>
+                  {isHovered2 ? (
+                    <img
+                      src="/1920_desktop/hover-on-2-100.png"
+                      alt="Hover Image"
+                    />
+                  ) : (
+                    <img
+                      src="/1920_desktop/hover-off-2-100.svg"
+                      alt="Default Image"
+                    />
+                  )}
+                </div>
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <Grid container sx={classes.wonderAboutCuttingContainer}>
+                    <div className={styles.wonderAbout}>
+                      {t(
+                        "skuber-page.advantage.accessible-management.first-title"
+                      )}{" "}
+                      <br />
+                      {t(
+                        "skuber-page.advantage.accessible-management.second-title"
+                      )}
+                    </div>
+                  </Grid>
+                </div>
 
-              <div className={styles.byTransitioningFromContainer}>
-                <Grid container sx={classes.byTransitioningFromContainer}>
-                  Utilize a high-level control UX that can be managed without
-                  DevOps expertise, while also providing low-level access for
-                  DevOps engineers to monitor and respond to service failures in
-                  real time.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        )}
+                <div className={styles.byTransitioningFromContainer}>
+                  <Grid container sx={classes.byTransitioningFromContainer}>
+                    {t(
+                      "skuber-page.advantage.accessible-management.description"
+                    )}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          )}
 
-        {isSmallScreen ? (
-          <div
-            className={styles.frameParent4}
-            onMouseOver={handleMouseOver3}
-            onMouseOut={handleMouseOut3}
-          >
-            <Grid container sx={classes.frameParent3}>
-              <div className={styles.advantageImage}>
-                {isHovered3 ? (
-                  <img
-                    src="/1920_desktop/hover-on-3-100.png"
-                    alt="Hover Image"
-                  />
-                ) : (
-                  <img
-                    src="/1920_desktop/hover-off-3-100.png"
-                    alt="Default Image"
-                  />
-                )}
-              </div>
-              <div className={styles.wonderAboutCuttingContainer}>
-                <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.wonderAbout}>
-                    Transition to the latest <br />
-                    cloud technology
-                  </div>
-                </Grid>
-              </div>
-              <div className={styles.byTransitioningFromContainer}>
-                <Grid container sx={classes.byTransitioningFromContainer}>
-                  By transitioning from virtual machines to Kubernetes, you can
-                  reduce cloud costs by more than 40% while improving
-                  efficiency.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        ) : (
-          <div
-            className={isHovered3 ? styles.frameParent3 : styles.frameParent4}
-            onMouseOver={handleMouseOver3}
-            onMouseOut={handleMouseOut3}
-          >
-            <Grid container sx={classes.frameParent3}>
-              <div className={styles.advantageImage}>
-                {isHovered3 ? (
-                  <img
-                    src="/1920_desktop/hover-on-3-100.png"
-                    alt="Hover Image"
-                  />
-                ) : (
-                  <img
-                    src="/1920_desktop/hover-off-3-100.png"
-                    alt="Default Image"
-                  />
-                )}
-              </div>
-              <div className={styles.wonderAboutCuttingContainer}>
-                <Grid container sx={classes.wonderAboutCuttingContainer}>
-                  <div className={styles.wonderAbout}>
-                    Transition to the latest <br />
-                    cloud technology
-                  </div>
-                </Grid>
-              </div>
-              <div className={styles.byTransitioningFromContainer}>
-                <Grid container sx={classes.byTransitioningFromContainer}>
-                  By transitioning from virtual machines to Kubernetes, you can
-                  reduce cloud costs by more than 40% while improving
-                  efficiency.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        )}
-      </Grid>{" "}
-    </div>
+          {isSmallScreen ? (
+            <div
+              className={styles.frameParent4}
+              onMouseOver={handleMouseOver3}
+              onMouseOut={handleMouseOut3}
+            >
+              <Grid container sx={classes.frameParent3}>
+                <div className={styles.advantageImage}>
+                  {isHovered3 ? (
+                    <img
+                      src="/1920_desktop/hover-on-3-100.png"
+                      alt="Hover Image"
+                    />
+                  ) : (
+                    <img
+                      src="/1920_desktop/hover-off-3-100.png"
+                      alt="Default Image"
+                    />
+                  )}
+                </div>
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <Grid container sx={classes.wonderAboutCuttingContainer}>
+                    <div className={styles.wonderAbout}>
+                      {t(
+                        "skuber-page.advantage.transition-latest-technology.first-title"
+                      )}{" "}
+                      <br />
+                      {t(
+                        "skuber-page.advantage.transition-latest-technology.second-title"
+                      )}
+                    </div>
+                  </Grid>
+                </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <Grid container sx={classes.byTransitioningFromContainer}>
+                    {t(
+                      "skuber-page.advantage.transition-latest-technology.description"
+                    )}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          ) : (
+            <div
+              className={isHovered3 ? styles.frameParent3 : styles.frameParent4}
+              onMouseOver={handleMouseOver3}
+              onMouseOut={handleMouseOut3}
+            >
+              <Grid container sx={classes.frameParent3}>
+                <div className={styles.advantageImage}>
+                  {isHovered3 ? (
+                    <img
+                      src="/1920_desktop/hover-on-3-100.png"
+                      alt="Hover Image"
+                    />
+                  ) : (
+                    <img
+                      src="/1920_desktop/hover-off-3-100.png"
+                      alt="Default Image"
+                    />
+                  )}
+                </div>
+                <div className={styles.wonderAboutCuttingContainer}>
+                  <Grid container sx={classes.wonderAboutCuttingContainer}>
+                    <div className={styles.wonderAbout}>
+                      {t(
+                        "skuber-page.advantage.transition-latest-technology.first-title"
+                      )}{" "}
+                      <br />
+                      {t(
+                        "skuber-page.advantage.transition-latest-technology.second-title"
+                      )}
+                    </div>
+                  </Grid>
+                </div>
+                <div className={styles.byTransitioningFromContainer}>
+                  <Grid container sx={classes.byTransitioningFromContainer}>
+                    {t(
+                      "skuber-page.advantage.transition-latest-technology.description"
+                    )}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          )}
+        </Grid>{" "}
+      </div>
+    </I18nextProvider>
   );
 }
 
