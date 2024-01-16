@@ -1,0 +1,237 @@
+{
+  "skuber-page": {
+    "main-title": "Solution for Your",
+    "sub-title": "Cloud Strategy and Costs",
+
+    "smallscreen-title": {
+      "first-part": "Solution for",
+      "second-part": "Your Cloud",
+      "third-part": "Strategy and Costs"
+    },
+
+    "slider-bar": {
+      "main-title": "Wonder about",
+      "sub-title": "cutting your cloud costs?",
+      "smallscreen-title": {
+        "first-part": "Wonder about cutting",
+        "second-part": "your cloud costs?"
+      },
+      "left-body": {
+        "vcpu": "How many vCPUs?",
+        "ram": "How much RAM?"
+      },
+      "right-body-with": "with Skuber",
+      "right-body-kuber": "Kubernetes",
+      "right-body-cost": "cost reduction",
+      "right-body-virtual": "Virtual machine",
+      "right-footer": {
+        "first-part": "Based on using 100 VMs",
+        "second-part": "This is an approximate figure and may differ from the actual amount"
+      }
+    },
+
+    "global-validated": {
+      "title": "Globally validated solutions",
+      "description": "Running a successful proof of concept in 4 European countries with"
+    },
+
+    "advantage": {
+      "reduction-costs": {
+        "first-title": "Reduction in",
+        "second-title": "resource costs",
+        "description": "Skuber service can leverage eBPF to protect against unnecessary traffic and DoS attacks to avoid additional costs."
+      },
+      "accessible-management": {
+        "first-title": "Accessible management",
+        "second-title": "for all technology levels",
+        "description": "Utilize a high-level control UX that can be managed without DevOps expertise, while also providing low-level access for DevOps engineers to monitor and respond to service failures in real time."
+      },
+      "transition-latest-technology": {
+        "first-title": "Transition to the latest",
+        "second-title": "cloud technology",
+        "description": "By transitioning from virtual machines to Kubernetes, you can reduce cloud costs by more than 40% while improving efficiency."
+      }
+    },
+
+    "lottie": {
+      "first-item-title": "Identify issues and reduce costs with real-time monitoring",
+      "first-item-content": "Offer Kubernetes-based management/monitoring services with innovative technology not previously included and reduce cloud costs by leveraging eBPF and Service Mesh.",
+      "second-item-title": "Intelligent Server Forecasting for Reduce cloud cost",
+      "second-item-content": "Save costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.",
+      "third-item-title": "Resource Optimization during DDoS Attacks",
+      "third-item-content": "Prevent resource waste on non-compliant traffic, such as DDoS attacks, by utilizing eBPF's XDP technology for Linux Kernel control. (Limit the number of requests you receive from a specific IP address)",
+      "fourth-item-title": "Optimized large-scale service management",
+      "fourth-item-content": "Take control with Skuber's intelligent services monitoring. Seamlessly oversee the flow between connected services (MSAs) and ensure reliable management of large-scale services."
+    },
+
+    "cost": {
+      "main-title": "Pricing",
+      "first-sub-title": "Experience the Next-Generation",
+      "second-sub-title": "Cloud Solution?",
+
+      "smallscreen-sub-title": {
+        "experience": "Experience",
+        "next-generation": "the Next-Generation",
+        "cloud-solution": "Cloud Solution?"
+      },
+
+      "category": {
+        "free": "Free",
+        "plus": "Plus",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+
+      "free-no": "No monthly fees",
+
+      "free-includ": {
+        "title": "What’s included",
+        "item-one": "Up to 10 vCPU",
+        "item-two": "Cluster only 1",
+        "item-three": "Realtime Monitoring",
+        "item-four": "Legacy Migration tool",
+        "item-five": "Reatime Log viewer",
+        "item-six": "Service Flow Mgmt",
+        "item-seven": "Service Mesh Mgmt",
+        "item-eight": "Config-map/Secret Mgmt"
+      },
+
+      "plus-includ": {
+        "title": "All Free features, plus",
+        "item-one": "Unlimited Cluster",
+        "item-two": "Cost Tracing",
+        "item-three": "Account management",
+        "item-four": "Service log viewer",
+        "item-five": "Unlimited members",
+        "item-six": "Free trial for 1 month"
+      },
+
+      "pro-includ-title": "All Plus features, plus",
+
+      "enterprise-description": "Full platform monitoring with cross-project insights and optional Premium Customer Success.",
+
+      "enterprise-includ": {
+        "title": "All Business features, plus",
+        "item-one": "Unlimited vCPU",
+        "item-two": "Installation support",
+        "item-three": "Issue support",
+        "item-four": "Custom Dashboard",
+        "item-five": "Cloud Strategy Consulting"
+      }
+    },
+
+    "qa": {
+      "title": "Frequently Asked Questions",
+      "first-qusetion-title": "What is Skuber and how can it benefit my organization?",
+      "first-qusetion-anwser": "Skuber is a cloud management service that helps you optimize your resource costs and cloud technology utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby reducing additional costs. Moreover, it facilitates the transition from traditional virtual machines to Kubernetes, zenabling you to decrease your cloud costs by over 40% while enhancing efficiency.",
+
+      "second-qusetion-title": "Does Skuber require specialized knowledge to operate?",
+      "second-qusetion-anwser": "No, Skuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor and respond to service failures in real-time.",
+
+      "third-qusetion-title": "How does Skuber ensure cost reduction?",
+      "third-qusetion-anwser": "Skuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.",
+
+      "fourth-qusetion-title": "What are the key features of Skuber's service management?",
+      "fourth-qusetion-anwser": "Skuber optimizes large-scale service management by enabling you to take control of your services with intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice aArchitectures) and ensures reliable management of large-scale services.",
+
+      "fifth-qusetion-title": "What pricing plans does Skuber offer and what are their features?",
+      "fifth-qusetion-anwser-features": "Skuber offers several pricing tiers, each with its own set of features : ",
+      "fifth-qusetion-anwser-free": "Free : Includes up to 10 vCPU, one cluster, real-time monitoring, a legacy migration tool, real-time log viewer, service flow management, service mesh management, and config-map/secret management.",
+      "fifth-qusetion-anwser-plus": "Plus ($1,500/month) : Includes all Free features, plus 11-100 vCPU, unlimited clusters, cost tracing, account management, service log viewer, and unlimited members.",
+      "fifth-qusetion-anwser-pro": "Pro ($1,500 + $12 x vCPU/month) : Includes all Plus features, plus 101-1,000 vCPU. ",
+      "fifth-qusetion-anwser-business": "Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue support.",
+      "fifth-qusetion-anwser-enterprise": "Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, custom dashboard, cloud strategy consulting.",
+
+      "sixth-qusetion-title": "What measures does Skuber take against DDoS attacks?",
+      "sixth-qusetion-anwser": "Skuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of requests you receive from a specific IP address."
+    }
+  },
+  "plug": {
+    "main-title": "Integrated Mobility",
+    "sub-title": "Solution P-LUG",
+    "description": "We provide fragmented services into a single platform to deliver an integrated, dynamic customer experience.",
+
+    "advantage": {
+      "item-one-main-title": "Quick establishment and",
+      "item-one-sub-title": "personalization",
+      "item-one-description": "Configure a portfolio with the services your company needs, with modularized service units.",
+      "item-two-main-title": "Easy integration",
+      "item-two-sub-title": "with Legacy system",
+      "item-two-description": "Easy to intergrate and manage legacy systems such as CRM, DMS, and PMS.",
+      "item-three-main-title": "An integrated solution",
+      "item-three-sub-title": "for all users",
+      "item-three-description": "P-LUG provides an integrated system for customers, dealers, and OEMs who use and provide services."
+    },
+
+    "global": {
+      "title": "We launched our service in 10 European countries",
+      "description": "In collaboration with P-LUG and Hyundai Europe, we created a platform called myHyundai. The platform will be launched in 10 European countries by 2023.",
+      "users": "Users",
+      "countries": "Countries",
+      "dealership": "Dealership"
+    },
+
+    "vedio-main-title": "Seamless Integration",
+    "vedio-sub-title": "We provide fragmented services into a single platform to deliver an intergrated, dynamic customer experience.",
+
+    "service": {
+      "item-one-main-title": "Buying a car",
+      "item-one-sub-title": "Online vehicle purchase and vehicle configuration",
+      "item-one-description": "Customers can quickly lookup and purchase a vehicle based on the inventory data of dealerships, and preview quotations by configuring interior, exterior colors and specs. Based on the configuration, customers can receive live consultation on purchases or be connected with online sales channels.",
+
+      "item-two-main-title": "Roadside assistance",
+      "item-two-sub-title": "Swift and reliable assistance for safe recovery",
+      "item-two-description": "Customers can request a roadside assistant in the case of an emergency. We provide a swift assistance based on customer's location, and customers can check real-time progress status of the assistance.",
+
+      "item-three-main-title": "Sell used car",
+      "item-three-sub-title": "Get estimates from dealers by simply taking a photo",
+      "item-three-description": "To sell a used car, customers can share the specs, option and condition of their vehicle with a dealer. Dealers can provide a quotation based on the information. A deal takes place upon the agreed quotation and schedule.",
+
+      "item-four-main-title": "Live consult",
+      "item-four-sub-title": "Direct communication between customer and dealers through Live Consultation and Chat functions",
+      "item-four-description": "Customers can request a live or scheduled consultation to a dealer by selecting the type of service they want. Dealers can conduct a consultation with the customer via mobile/PC application. Screen sharing and device switching features for the dealer allow a seamless consultation in a non-face-to-face environment.",
+
+      "item-five-main-title": "Exterior repair & Service booking",
+      "item-five-sub-title": "Receive reminders and schedule vehicle maintenance appointments online",
+      "item-five-description": "Customers can get assistance with scheduled or occasional maintenance services after purchasing a vehicle. They can make a request by selecting the type of service and desired schedule, then consult with a dealer for a quotation. Reminders for next service appointments are provided based on their service history."
+    },
+    "slogen-main": "Manage entire vehicle lifecycle",
+    "slogen-with-plug": "with P-LUG"
+  },
+  "vivaui": {
+    "main-title": "React Native UI Framework",
+    "sub-title": "VIVA UI 1.6",
+    "description": "A React Native UI framework for creating flawless cross-platform mobile applications.",
+
+    "service-slogen": "All the service modules for your business are ready !",
+    "service-description": "Bring your envisioned business to life by combining service modules.",
+
+    "support-title": "Multi-OS support",
+    "support-description": "One source to support iOS, AOS. Easily deploy services up to date, reducing resources for operations.",
+    "design-title-one": "Well-structured",
+    "design-title-two": " design system",
+    "design-description-one": "Design system-based modules",
+    "design-description-two": "make customization easy to match",
+    "design-description-three": "your brand style.",
+    "implement-title": "East to implement",
+    "implement-description": "The framework is delivered on a component-by-component basis, allowing you to quickly build services by mixing and matching the features you want.",
+
+    "build-faster-title": "BUILD FASTER",
+    "with-vivaui": "WITH VIVA UI",
+
+    "slogen": "Quickly turn your dream service into a reality with VIVA UI"
+  },
+  "common": {
+    "contact": {
+      "send-email-button": "Get in touch"
+    },
+    "footer": {
+      "wondermove_intro": "wondermove Spin-off of Hyundai Motor Company",
+      "wondermove_name": "wondermove Inc.",
+      "wondermove_number": "Business Registration Number: 518-81-01644",
+      "wondermove_address": "Address: 2F, 104, Nonhyeon-ro 27-gil, Seocho-gu, Seoul, Republic of Korea",
+      "wondermove_email": "Use Inquiries: hawkeye@wondermove.net"
+    },
+    "per-month": "per month"
+  }
+}
