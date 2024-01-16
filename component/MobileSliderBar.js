@@ -51,7 +51,7 @@ const MobilrSliderBar = () => {
         <div className={styles.iconCpuParent}>
           <img
             className={styles.iconCpu}
-            alt=""
+            alt="vcpu icon"
             src="/393_mobile/-icon-cpu.svg"
           />
           <div className={styles.vcpu}>{selectedMark}vCPU</div>
@@ -87,7 +87,7 @@ const MobilrSliderBar = () => {
               >
                 <img
                   className={styles.iconRam2}
-                  alt=""
+                  alt="ram icon"
                   src="/1920_desktop/-icon-ram-2.svg"
                 />
                 <div className={styles.text}>{item.RAM} GB</div>

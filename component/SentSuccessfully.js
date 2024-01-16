@@ -60,7 +60,7 @@ const SentSuccessfully = ({ toggleSuccessModalVisible, isVisible }) => {
             <div className={styles.getInTouch1}></div>
             <img
               className={styles.frameChild}
-              alt=""
+              alt="modal off"
               src="/1920_desktop/off.svg"
               onClick={toggleSuccessModalVisible}
             />
@@ -68,7 +68,7 @@ const SentSuccessfully = ({ toggleSuccessModalVisible, isVisible }) => {
           <div className={styles.frameGroup1}>
             <img
               className={styles.frameChild1}
-              alt=""
+              alt="email icon"
               src="/1920_desktop/email.png"
             />
             <div className={styles.Thank}>

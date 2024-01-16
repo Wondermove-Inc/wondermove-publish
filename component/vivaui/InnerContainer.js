@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "../../pages/VIVAUI/mobile.module.css";
 import { Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Theme } from "@mui/material/styles";
+
+import { useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n/index";
 
 const theme = createTheme({
   breakpoints: {
@@ -268,6 +271,7 @@ const useStyles = (theme) => ({
 const classes = useStyles(theme);
 
 const InnerContainer = () => {
+  const { t } = useTranslation();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -283,176 +287,168 @@ const InnerContainer = () => {
       window.removeEventListener("resize", handleResize); // Clean up on component unmount
     };
   }, []);
-  {
-    /* {isSmallScreen ? (
-          <img
-            className={styles.maskGroupIcon1}
-            alt=""
-            src="/viva/vivaMobile/mask-group1@2x.png"
-          />
-        ) : (
-          <img
-            className={styles.maskGroupIcon1}
-            alt=""
-            src="/viva/group-4358@2x.png"
-          />
-        )} */
-  }
+
   return (
-    <div className={styles.groupContainer}>
-      <div className={styles.rectangleParent}>
-        <Grid container sx={classes.rectangleParent}>
-          {/* <Grid container sx={classes.groupChild1}>
+    <I18nextProvider i18n={i18n}>
+      <div className={styles.groupContainer}>
+        <div className={styles.rectangleParent}>
+          <Grid container sx={classes.rectangleParent}>
+            {/* <Grid container sx={classes.groupChild1}>
             <div className={styles.groupChild1} />
           </Grid> */}
 
-          <Grid container sx={classes.maskGroupIcon1}>
-            <img
-              className={styles.maskGroupIcon1}
-              alt=""
-              src="/viva/vivaMobile/mask-group1@2x.png"
-            />
-          </Grid>
-          <div className={styles.multiOsSupportParent}>
-            <Grid container sx={classes.multiOsSupportParent}>
-              <div className={styles.allTheServiceContainer}>
-                <Grid
-                  container
-                  sx={classes.wellStructuredDesignSystemContainer}
-                >
-                  <b>
-                    {`All the service modules for your business are ready `}{" "}
-                    <i className={styles.i}>!</i>
-                  </b>
-                </Grid>
-              </div>
-              <div className={styles.oneSourceTo}>
-                <Grid container sx={classes.oneSourceTo}>
-                  Bring your envisioned business to life by combining service
-                  modules.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        </Grid>
-      </div>
-
-      <div className={styles.vectorGroup}>
-        <Grid container sx={classes.vectorGroup}>
-          <img
-            className={styles.groupItem}
-            alt=""
-            src="/viva/vivaMobile/appleAn.png"
-          />
-          <div className={styles.multiOsSupportParent}>
-            <Grid container sx={classes.multiOsSupportParent}>
-              <b className={styles.wellStructuredDesignSystemContainer}>
-                <Grid
-                  container
-                  sx={classes.wellStructuredDesignSystemContainer1}
-                >
-                  Multi-OS support
-                </Grid>
-              </b>
-              <div className={styles.oneSourceTo}>
-                <Grid container sx={classes.oneSourceTo1}>
-                  One source to support iOS, AOS. Easily deploy services up to
-                  date, reducing resources for operations.
-                </Grid>
-              </div>
-            </Grid>
-          </div>
-        </Grid>
-      </div>
-      <div className={styles.vectorParent}>
-        <Grid container sx={classes.vectorParent}>
-          <img
-            className={styles.groupChild}
-            alt=""
-            src="/viva/vivaMobile/An.png"
-          />
-
-          <div className={styles.wellStructuredDesignSystemParent}>
-            <Grid container sx={classes.multiOsSupportParent}>
-              <b className={styles.wellStructuredDesignSystemContainer}>
-                <Grid
-                  container
-                  sx={classes.wellStructuredDesignSystemContainer1}
-                >
-                  <p className={styles.reactNative}>{`Well-structured `}</p>
-                  <p className={styles.reactNative}>design system</p>
-                </Grid>
-              </b>
-              <div className={styles.designSystemBasedModulesContainer}>
-                <p className={styles.reactNative}>
-                  <Grid container sx={classes.oneSourceTo1}>
-                    Design system-based modules make customization easy to match
-                    your brand style.
-                  </Grid>
-                </p>
-              </div>
-            </Grid>
-          </div>
-        </Grid>
-      </div>
-      <div>
-        <Grid container sx={classes.vectorParentChild}>
-          <img
-            className={styles.groupIcon}
-            alt=""
-            src="/viva/vivaMobile/group-4364.svg"
-          />
-        </Grid>
-      </div>
-
-      <div className={styles.rectangleGroup}>
-        <Grid container sx={classes.vectorParentChild}>
-          <Grid container sx={classes.rectangleGroup}>
-            {/* <div className={styles.groupChild2} /> */}
-
-            <Grid container sx={classes.maskGroupIcon2}>
+            <Grid container sx={classes.maskGroupIcon1}>
               <img
-                className={styles.maskGroupIcon2}
-                alt=""
-                src="/viva/vivaMobile/end.png"
+                className={styles.maskGroupIcon1}
+                alt="mobile VIVA Main Image"
+                src="/viva/vivaMobile/mask-group1@2x.png"
               />
             </Grid>
-            <div className={styles.eastToImplementParent}>
-              <Grid container sx={classes.eastToImplementParent}>
+            <div className={styles.multiOsSupportParent}>
+              <Grid container sx={classes.multiOsSupportParent}>
+                <div className={styles.allTheServiceContainer}>
+                  <Grid
+                    container
+                    sx={classes.wellStructuredDesignSystemContainer}
+                  >
+                    <b>
+                      {t("vivaui.service-slogen")}
+                      <i className={styles.i}>!</i>
+                    </b>
+                  </Grid>
+                </div>
+                <div className={styles.oneSourceTo}>
+                  <Grid container sx={classes.oneSourceTo}>
+                    {t("vivaui.service-description")}
+                  </Grid>
+                </div>
+              </Grid>
+            </div>
+          </Grid>
+        </div>
+
+        <div className={styles.vectorGroup}>
+          <Grid container sx={classes.vectorGroup}>
+            <img
+              className={styles.groupItem}
+              alt="mobile apple and Andro"
+              src="/viva/vivaMobile/appleAn.png"
+            />
+            <div className={styles.multiOsSupportParent}>
+              <Grid container sx={classes.multiOsSupportParent}>
                 <b className={styles.wellStructuredDesignSystemContainer}>
                   <Grid
                     container
                     sx={classes.wellStructuredDesignSystemContainer1}
                   >
-                    East to implement
+                    {t("vivaui.support-title")}
                   </Grid>
                 </b>
                 <div className={styles.oneSourceTo}>
-                  <p className={styles.reactNative}>
-                    <Grid container sx={classes.oneSourceTo1}>
-                      The framework is delivered on a component-by-component
-                      basis, allowing you to quickly build services by mixing
-                      and matching the features you want.
-                    </Grid>
-                  </p>
-                </div>
-              </Grid>
-            </div>
-            <div className={styles.rectangleContainer}>
-              <Grid container sx={classes.rectangleContainer}>
-                <div className={styles.groupChild3} />
-                <div className={styles.buildFasterWithContainer}>
-                  <Grid container sx={classes.buildFasterWithContainer}>
-                    <p className={styles.reactNative}>Build faster</p>
-                    <p className={styles.reactNative}>with VIVA UI</p>
+                  <Grid container sx={classes.oneSourceTo1}>
+                    {t("vivaui.support-description")}
                   </Grid>
                 </div>
               </Grid>
             </div>
           </Grid>
-        </Grid>
+        </div>
+        <div className={styles.vectorParent}>
+          <Grid container sx={classes.vectorParent}>
+            <img
+              className={styles.groupChild}
+              alt="mobile Letter A"
+              src="/viva/vivaMobile/An.png"
+            />
+
+            <div className={styles.wellStructuredDesignSystemParent}>
+              <Grid container sx={classes.multiOsSupportParent}>
+                <b className={styles.wellStructuredDesignSystemContainer}>
+                  <Grid
+                    container
+                    sx={classes.wellStructuredDesignSystemContainer1}
+                  >
+                    <p className={styles.reactNative}>
+                      {t("vivaui.design-title-one")}
+                    </p>
+                    <p className={styles.reactNative}>
+                      {t("vivaui.design-title-two")}
+                    </p>
+                  </Grid>
+                </b>
+                <div className={styles.designSystemBasedModulesContainer}>
+                  <p className={styles.reactNative}>
+                    <Grid container sx={classes.oneSourceTo1}>
+                      {t("vivaui.design-description-mobile")}
+                    </Grid>
+                  </p>
+                </div>
+              </Grid>
+            </div>
+          </Grid>
+        </div>
+        <div>
+          <Grid container sx={classes.vectorParentChild}>
+            <img
+              className={styles.groupIcon}
+              alt="mobile viva image"
+              src="/viva/vivaMobile/group-4364.svg"
+            />
+          </Grid>
+        </div>
+
+        <div className={styles.rectangleGroup}>
+          <Grid container sx={classes.vectorParentChild}>
+            <Grid container sx={classes.rectangleGroup}>
+              {/* <div className={styles.groupChild2} /> */}
+
+              <Grid container sx={classes.maskGroupIcon2}>
+                <img
+                  className={styles.maskGroupIcon2}
+                  alt="mobile east to implement"
+                  src="/viva/vivaMobile/end.png"
+                />
+              </Grid>
+              <div className={styles.eastToImplementParent}>
+                <Grid container sx={classes.eastToImplementParent}>
+                  <b className={styles.wellStructuredDesignSystemContainer}>
+                    <Grid
+                      container
+                      sx={classes.wellStructuredDesignSystemContainer1}
+                    >
+                      {t("vivaui.implement-title")}
+                    </Grid>
+                  </b>
+                  <div className={styles.oneSourceTo}>
+                    <p className={styles.reactNative}>
+                      <Grid container sx={classes.oneSourceTo1}>
+                        {t("vivaui.implement-description")}
+                      </Grid>
+                    </p>
+                  </div>
+                </Grid>
+              </div>
+              <div className={styles.rectangleContainer}>
+                <Grid container sx={classes.rectangleContainer}>
+                  <div className={styles.groupChild3} />
+                  <div className={styles.buildFasterWithContainer}>
+                    <Grid container sx={classes.buildFasterWithContainer}>
+                      <p className={styles.reactNative}>
+                        {t("vivaui.build-faster-title")}
+                      </p>
+                      <p className={styles.reactNative}>
+                        {" "}
+                        {t("vivaui.with-vivaui")}
+                      </p>
+                    </Grid>
+                  </div>
+                </Grid>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
       </div>
-    </div>
+    </I18nextProvider>
   );
 };
 

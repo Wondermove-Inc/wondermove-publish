@@ -204,13 +204,13 @@ const Footer = () => {
               <>
                 <Image
                   src="/1920_desktop/Nipa.png"
-                  alt=""
+                  alt="Nipa"
                   width="80"
                   height="80"
                 ></Image>
                 <Image
                   src="/1920_desktop/Saas.png"
-                  alt=""
+                  alt="Saas"
                   width="83"
                   height="80"
                 ></Image>
@@ -219,13 +219,13 @@ const Footer = () => {
               <>
                 <Image
                   src="/1920_desktop/Nipa.png"
-                  alt=""
+                  alt="Nipa"
                   width="120"
                   height="120"
                 ></Image>
                 <Image
                   src="/1920_desktop/Saas.png"
-                  alt=""
+                  alt="Saas"
                   width="125"
                   height="120"
                 ></Image>

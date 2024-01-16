@@ -609,19 +609,44 @@ const SKuber1920: NextPage = () => {
   return (
     <I18nextProvider i18n={i18n}>
       <Head>
-        <title>Skuber for your cloud management service | wondermove</title>
+        <title>Skuber for Your Cloud Management Service | Wondermove</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Skuber for your cloud management service"
         />
         <meta property="og:title" content="Skuber" />
         <meta
           property="og:description"
           content="Skuber for your cloud management service"
         />
-        <meta property="og:image" content="/1920_desktop/KuberOgImage.png" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://s-kuber.wondermove.net/Skuber"
+        />
+        <meta property="og:site_name" content="Wondermove" />
 
-        <link rel="icon" href="/1920_desktop/favicon.ico" type="image/x-icon" />
+        <meta
+          property="og:image"
+          content="https://s-kuber.wondermove.net/1920_desktop/KuberOgImage.png"
+        />
+
+        <link
+          rel="icon"
+          href="https://s-kuber.wondermove.net/1920_desktop/favicon.ico"
+          type="image/x-icon"
+        />
+        <link rel="canonical" href="https://s-kuber.wondermove.net/Skuber" />
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta
+          name="twitter:title"
+          content="Skuber for Your Cloud Management Service | Wondermove"
+        ></meta>
       </Head>
       <ThemeProvider theme={theme}>
         <div className={styles.sKuber1920}>

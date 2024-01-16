@@ -702,7 +702,7 @@ const SolutionCost = () => {
               <Grid container sx={classes.frameParent31}>
                 <img
                   className={styles.frameChild36}
-                  alt=""
+                  alt="chat image"
                   src="/1920_desktop/frame-3203.svg"
                 />
                 <div className={styles.contactSalesFor}>

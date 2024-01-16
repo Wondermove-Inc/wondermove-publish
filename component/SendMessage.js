@@ -113,7 +113,7 @@ const SendMessage = ({
             <div className={styles.getInTouch1}>Get in touch</div>
             <img
               className={styles.frameChild}
-              alt=""
+              alt="windows off"
               src="/1920_desktop/off.svg"
               onClick={toggleVisible}
             />

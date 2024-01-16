@@ -92,13 +92,13 @@ function SolutionMenu() {
                 {isMenuOpen ? (
                   <img
                     className={styles.iconNavArrowDown}
-                    alt=""
+                    alt="arrow up"
                     src="/1920_desktop/icon-nav-arrow-up.svg"
                   />
                 ) : (
                   <img
                     className={styles.iconNavArrowDown}
-                    alt=""
+                    alt="arrow down"
                     src="/1920_desktop/-icon-nav-arrow-down.png"
                   />
                 )}
@@ -170,35 +170,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -212,35 +212,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -252,35 +252,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -292,35 +292,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -334,35 +334,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -376,35 +376,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -416,35 +416,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -458,35 +458,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -498,35 +498,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -538,35 +538,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -580,35 +580,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -622,35 +622,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -662,35 +662,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -702,35 +702,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -742,35 +742,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -782,35 +782,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -822,35 +822,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -862,35 +862,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -902,35 +902,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -942,35 +942,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -982,35 +982,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -1022,35 +1022,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/tu re.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -1064,35 +1064,35 @@ function SolutionMenu() {
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.frameChild12}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
                     <div className={styles.wrapper}>
                       <img
                         className={styles.iconNavArrowDown}
-                        alt=""
+                        alt="ture image"
                         src="/1920_desktop/ture.svg"
                       />
                     </div>
@@ -1101,7 +1101,7 @@ function SolutionMenu() {
                     <div className={styles.pricingSee}>Hide</div>
                     <img
                       className={styles.iconNavArrowDown}
-                      alt=""
+                      alt="ture image"
                       src="/1920_desktop/icon-nav-arrow-up.svg"
                     />
                   </div>

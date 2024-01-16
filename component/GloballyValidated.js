@@ -260,7 +260,7 @@ function GloballyValidated() {
                               <Grid container sx={classes.icon}>
                                 <img
                                   className={styles.iconC}
-                                  alt=""
+                                  alt="hyundai logo"
                                   src="/1920_desktop/--2.svg"
                                 />
                               </Grid>
@@ -271,7 +271,7 @@ function GloballyValidated() {
                               <Grid container sx={classes.image646Icon}>
                                 <img
                                   className={styles.image646IconC}
-                                  alt=""
+                                  alt="hyundai auto aver logo"
                                   src="/1920_desktop/auto.png"
                                 />
                               </Grid>

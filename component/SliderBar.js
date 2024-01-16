@@ -352,7 +352,7 @@ const HowManyVcpus = () => {
                   <Grid container sx={classes.iconCpuParent}>
                     <img
                       className={styles.iconCpu}
-                      alt=""
+                      alt="vcpu icon"
                       src="/1920_desktop/-icon-cpu.svg"
                     />
                     {selectedMark && (
@@ -399,7 +399,7 @@ const HowManyVcpus = () => {
                           <Grid container sx={classes.component191}>
                             <img
                               className={styles.iconRam2}
-                              alt=""
+                              alt="ram svg"
                               src="/1920_desktop/-icon-ram-2.svg"
                             />{" "}
                             <div

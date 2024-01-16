@@ -122,7 +122,7 @@ const QA = () => {
                 </div>
                 <img
                   className={styles.frameChild20}
-                  alt=""
+                  alt="plus minus icon"
                   src={
                     isContentVisible1
                       ? "/1920_desktop/minus.svg"
@@ -157,7 +157,7 @@ const QA = () => {
                 </div>
                 <img
                   className={styles.frameChild20}
-                  alt=""
+                  alt="plus minus icon"
                   src={
                     isContentVisible2
                       ? "/1920_desktop/minus.svg"
@@ -194,7 +194,7 @@ const QA = () => {
                 </div>
                 <img
                   className={styles.frameChild20}
-                  alt=""
+                  alt="plus minus icon"
                   src={
                     isContentVisible3
                       ? "/1920_desktop/minus.svg"
@@ -233,7 +233,7 @@ const QA = () => {
                 </div>
                 <img
                   className={styles.frameChild20}
-                  alt=""
+                  alt="plus minus icon"
                   src={
                     isContentVisible4
                       ? "/1920_desktop/minus.svg"
@@ -269,7 +269,7 @@ const QA = () => {
                 </div>
                 <img
                   className={styles.frameChild20}
-                  alt=""
+                  alt="plus minus icon"
                   src={
                     isContentVisible5
                       ? "/1920_desktop/minus.svg"
@@ -324,7 +324,7 @@ const QA = () => {
                 </div>
                 <img
                   className={styles.frameChild20}
-                  alt=""
+                  alt="plus minus icon"
                   src={
                     isContentVisible6
                       ? "/1920_desktop/minus.svg"
