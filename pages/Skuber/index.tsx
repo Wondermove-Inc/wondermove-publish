@@ -621,7 +621,7 @@ const SKuber1920: NextPage = () => {
         />
         <meta
           name="google-site-verification"
-          content="2RUHwIul-IBY0A6hrprL8IOYgb5jV1rO_Gc1XpUAm3Y"
+          content="x6C4VeusL9LmNZ9aAR3qa1l_sXlh-lzqxcK7jc4i1YE"
         />
         <meta property="og:title" content="Skuber" />
         <meta
