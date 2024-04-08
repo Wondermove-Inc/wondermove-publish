@@ -177,12 +177,14 @@ const Footer = () => {
             <div className={styles.wondermoveSpinOffOfHyundaiParent}>
               <div>
                 <Grid container sx={classes.howManyVcpus}>
-                  {t("common.footer.wondermove_intro")}
+                  {/* {t("common.footer.wondermove_intro")} */}
+                  WONDERMOVE's Sangapol Distributor Company
                 </Grid>
               </div>
               <div className={styles.wondermoveIncContainer}>
                 <Grid container sx={classes.solutionForYourFooter}>
-                  {t("common.footer.wondermove_name")}
+                  {/* {t("common.footer.wondermove_name")} */}
+                  Hyper Kube Technologies
                 </Grid>
 
                 <Grid container sx={classes.solutionForYourFooter}>
