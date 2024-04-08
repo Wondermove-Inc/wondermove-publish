@@ -48,7 +48,7 @@ const useStyles = (theme) => ({
     fontWeight: "600",
     paddingBottom: "40px",
     whiteSpace: "pre-line",
-    width: "460px",
+    // width: "460px",
     textAlign: "left",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
