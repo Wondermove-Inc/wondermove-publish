@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../pages/Skuber/styles.module.css";
 import { createTheme } from "@mui/material/styles";
 import { Grid, Box } from "@mui/material";
-import Logo from "../component/Logo";
+import FootLogo from "../component/FootLogo";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { I18nextProvider } from "react-i18next";
@@ -73,7 +73,7 @@ const useStyles = (theme) => ({
     position: "relative",
     // width: "200px",
     marginBottom: "40px",
-    height: "22px",
+    height: "26px",
     overflow: "hidden",
     flexShrink: "0",
     [theme.breakpoints.down("xl")]: {},
@@ -172,7 +172,7 @@ const Footer = () => {
         <Grid container sx={classes.footerGroup}>
           <Grid container sx={classes.layer1Group}>
             <Grid container sx={classes.layer1Icon}>
-              <Logo />
+              <FootLogo />
             </Grid>
             <div className={styles.wondermoveSpinOffOfHyundaiParent}>
               <div>
@@ -190,7 +190,8 @@ const Footer = () => {
                 </Grid>
 
                 <Grid container sx={classes.solutionForYourFooter}>
-                  {t("common.footer.wondermove_address")}
+                  {/* {t("common.footer.wondermove_address")} */}8 Marina View,
+                  #39-04 Asia Square Tower 1, Singapore 018960
                 </Grid>
 
                 <Grid container sx={classes.solutionForYourFooter}>
@@ -199,7 +200,7 @@ const Footer = () => {
               </div>
             </div>
           </Grid>
-          <Box sx={classes.footerIcon}>
+          {/* <Box sx={classes.footerIcon}>
             {isSmallScreen ? (
               <>
                 <Image
@@ -231,7 +232,7 @@ const Footer = () => {
                 ></Image>
               </>
             )}
-          </Box>
+          </Box> */}
         </Grid>
       </Grid>
     </I18nextProvider>
