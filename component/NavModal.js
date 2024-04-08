@@ -87,30 +87,21 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
           <div className={styles.bar3}></div>
         </div> */}
         <ul className={styles.getInTouchMobile}>
-          <li className={styles.navS1}>
-            {/* <a onClick={() => handleButtonClick("Skuber")}>
-              <span className={styles.navText}>Skuber</span>
-            </a> */}
+          {/* <li className={styles.navS1}>
             <Link className={styles.Link1} href="/Skuber">
               Skuber
             </Link>
           </li>
           <li className={styles.navS2}>
-            {/* <a onClick={onPlugClick}>
-              <span className={styles.navText}>P-LUG</span>
-            </a> */}
             <Link href="/P-LUG" className={styles.Link1}>
               P-LUG
             </Link>
           </li>
           <li className={styles.navS3}>
-            {/* <a onClick={onVivaClick}>
-              <span className={styles.navText}>VIVA UI</span>
-            </a> */}
             <Link href="/VIVAUI" className={styles.Link1}>
               VIVA UI
             </Link>
-          </li>
+          </li> */}
           <li className={styles.navS4}>
             <a onClick={onContactClick}>
               <span className={styles.navText}>Contact</span>
