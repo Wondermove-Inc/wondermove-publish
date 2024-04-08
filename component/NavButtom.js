@@ -25,12 +25,12 @@ const useStyles = (theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
+    justifyContent: "flex-end",
     alignItems: "center",
     padding: "0px",
     gap: "80px",
     fontSize: "16px",
-    justifyContent: "space-between",
     [theme.breakpoints.down("xl")]: {},
     [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {},
@@ -61,7 +61,8 @@ const useStyles = (theme) => ({
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
-      justifyContent: "space-between",
+      // justifyContent: "space-between",
+      justifyContent: "flex-end",
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
@@ -112,7 +113,7 @@ const NavButtom = ({ onClick }) => {
           ></div>
         </Grid>
         <Grid container sx={classes.sKuberParent}>
-          <div className={styles.sKuber}>
+          {/* <div className={styles.sKuber}>
             <Link className={styles.Link1} href="/Skuber">
               Skuber
             </Link>
@@ -126,7 +127,7 @@ const NavButtom = ({ onClick }) => {
             <Link href="/VIVAUI" className={styles.Link1}>
               VIVA UI
             </Link>
-          </div>
+          </div> */}
           <div className={styles.pLug} onClick={onContactClick}>
             Contact
           </div>
