@@ -187,9 +187,9 @@ const Footer = () => {
                   Hyper Kube Technologies
                 </Grid>
 
-                <Grid container sx={classes.solutionForYourFooter}>
+                {/* <Grid container sx={classes.solutionForYourFooter}>
                   {t("common.footer.wondermove_number")}
-                </Grid>
+                </Grid> */}
 
                 <Grid container sx={classes.solutionForYourFooter}>
                   {/* {t("common.footer.wondermove_address")} */}8 Marina View,
@@ -197,7 +197,8 @@ const Footer = () => {
                 </Grid>
 
                 <Grid container sx={classes.solutionForYourFooter}>
-                  {t("common.footer.wondermove_email")}
+                  {/* {t("common.footer.wondermove_email")} */}
+                  chammoo@hanmail.net
                 </Grid>
               </div>
             </div>
