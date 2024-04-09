@@ -178,7 +178,7 @@ const Footer = () => {
               <div>
                 <Grid container sx={classes.howManyVcpus}>
                   {/* {t("common.footer.wondermove_intro")} */}
-                  WONDERMOVE's Sangapol Distributor Company
+                  WONDERMOVE's Singapore Distributor Company
                 </Grid>
               </div>
               <div className={styles.wondermoveIncContainer}>
