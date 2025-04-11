@@ -92,7 +92,7 @@ const NavModal = ({ toggleNavModalVisible, isVisible, onNavBTMPress }) => {
               <span className={styles.navText}>Skuber</span>
             </a> */}
             <Link className={styles.Link1} href="/Skuber">
-              Skuber
+              Skuber Mgmt
             </Link>
           </li>
           <li className={styles.navS2}>

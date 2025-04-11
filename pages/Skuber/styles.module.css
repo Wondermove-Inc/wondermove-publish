@@ -171,7 +171,7 @@
 .sKuber {
   position: relative;
   display: inline-block;
-  width: 80px;
+  /* width: 60px; */
   flex-shrink: 0;
 }
 .sKuberParent {

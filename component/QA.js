@@ -257,7 +257,7 @@ const QA = () => {
 
               <div className={styles.lineDiv} />
             </div>
-            <div
+            {/* <div
               className={styles.allBusinessFeaturesPlusParent}
               onClick={toggleContent5}
             >
@@ -280,7 +280,6 @@ const QA = () => {
 
               <Collapse isOpen={isContentVisible5}>
                 <div className={styles.preventResourceWasteOnOutWrapper}>
-                  {/* content */}
                   <div className={styles.solutionForYour}>
                     <Grid container sx={classes.solutionForYour}>
                       <p
@@ -311,7 +310,7 @@ const QA = () => {
               </Collapse>
 
               <div className={styles.lineDiv} />
-            </div>
+            </div> */}
             <div
               className={styles.allBusinessFeaturesPlusParent}
               onClick={toggleContent6}

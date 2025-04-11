@@ -122,28 +122,28 @@
 
     "qa": {
       "title": "Frequently Asked Questions",
-      "first-qusetion-title": "What is Skuber and how can it benefit my organization?",
-      "first-qusetion-anwser": "Skuber is a cloud management service that helps you optimize your resource costs and cloud technology utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby reducing additional costs. Moreover, it facilitates the transition from traditional virtual machines to Kubernetes, zenabling you to decrease your cloud costs by over 40% while enhancing efficiency.",
+      "first-qusetion-title": "What is Skuber Mgmt and how can it benefit my organization?",
+      "first-qusetion-anwser": "Skuber Mgmt is a cloud management service that helps you optimize your resource costs and cloud technology utilization. By leveraging eBPF, it protects your systems against unnecessary traffic and DoS attacks, thereby reducing additional costs. Moreover, it facilitates the transition from traditional virtual machines to Kubernetes, zenabling you to decrease your cloud costs by over 40% while enhancing efficiency.",
 
-      "second-qusetion-title": "Does Skuber require specialized knowledge to operate?",
-      "second-qusetion-anwser": "No, Skuber is designed to be accessible for all technology levels. It provides a high-level control UX that can be managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor and respond to service failures in real-time.",
+      "second-qusetion-title": "Does Skuber Mgmt require specialized knowledge to operate?",
+      "second-qusetion-anwser": "No, Skuber Mgmt is designed to be accessible for all technology levels. It provides a high-level control UX that can be managed without requiring DevOps expertise, but also offers low-level access for DevOps engineers to monitor and respond to service failures in real-time.",
 
-      "third-qusetion-title": "How does Skuber ensure cost reduction?",
-      "third-qusetion-anwser": "Skuber offers several strategies for cost reduction. It identifies issues and reduces costs with real-time monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.",
+      "third-qusetion-title": "How does Skuber Mgmt ensure cost reduction?",
+      "third-qusetion-anwser": "Skuber Mgmt offers several strategies for cost reduction. It identifies issues and reduces costs with real-time monitoring. Moreover, it provides Kubernetes-based management/monitoring services with innovative technology to cut down cloud costs by leveraging eBPF and Service Mesh. It also saves costs by shifting from peak-based server calculations to a minimum specification method, supporting active parallel scale-up & scale-down, and preventing service failure during emergencies with self-validation services.",
 
-      "fourth-qusetion-title": "What are the key features of Skuber's service management?",
-      "fourth-qusetion-anwser": "Skuber optimizes large-scale service management by enabling you to take control of your services with intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice aArchitectures) and ensures reliable management of large-scale services.",
+      "fourth-qusetion-title": "What are the key features of Skuber Mgmt's service management?",
+      "fourth-qusetion-anwser": "Skuber Mgmt optimizes large-scale service management by enabling you to take control of your services with intelligent monitoring. It provides seamless oversight of the flow between connected services (Microservice aArchitectures) and ensures reliable management of large-scale services.",
 
-      "fifth-qusetion-title": "What pricing plans does Skuber offer and what are their features?",
-      "fifth-qusetion-anwser-features": "Skuber offers several pricing tiers, each with its own set of features : ",
+      "fifth-qusetion-title": "What pricing plans does Skuber Mgmt offer and what are their features?",
+      "fifth-qusetion-anwser-features": "Skuber Mgmt offers several pricing tiers, each with its own set of features : ",
       "fifth-qusetion-anwser-free": "Free : Includes up to 10 vCPU, one cluster, real-time monitoring, a legacy migration tool, real-time log viewer, service flow management, service mesh management, and config-map/secret management.",
       "fifth-qusetion-anwser-plus": "Plus ($1,500/month) : Includes all Free features, plus 11-100 vCPU, unlimited clusters, cost tracing, account management, service log viewer, and unlimited members.",
       "fifth-qusetion-anwser-pro": "Pro ($1,500 + $12 x vCPU/month) : Includes all Plus features, plus 101-1,000 vCPU. ",
       "fifth-qusetion-anwser-business": "Business ($13,500 + $10 x vCPU/month) : Includes all Pro features, plus 1,001-unlimited vCPU, installation and issue support.",
       "fifth-qusetion-anwser-enterprise": "Enterprise : Includes all Business features, plus unlimited vCPU, unlimited cluster, installation and issue support, custom dashboard, cloud strategy consulting.",
 
-      "sixth-qusetion-title": "What measures does Skuber take against DDoS attacks?",
-      "sixth-qusetion-anwser": "Skuber optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of requests you receive from a specific IP address."
+      "sixth-qusetion-title": "What measures does Skuber Mgmt take against DDoS attacks?",
+      "sixth-qusetion-anwser": "Skuber Mgmt optimizes resource use during DDoS attacks. It prevents resource waste on non-compliant traffic such as DDoS attacks by utilizing eBPF's XDP technology for Linux Kernel control. This means it limits the number of requests you receive from a specific IP address."
     }
   },
   "plug": {

@@ -114,7 +114,7 @@ const NavButtom = ({ onClick }) => {
         <Grid container sx={classes.sKuberParent}>
           <div className={styles.sKuber}>
             <Link className={styles.Link1} href="/Skuber">
-              Skuber
+              Skuber Mgmt
             </Link>
           </div>
           <div className={styles.pLug}>
